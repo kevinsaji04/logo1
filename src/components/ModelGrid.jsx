@@ -640,25 +640,58 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Object.entries(RANKINGS).map(([catKey, list]) => (
-              <div key={catKey} className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-                <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Top {catKey.toUpperCase()} Models</h3>
-                <div className="space-y-2">
-                  {list.map((r, i) => (
-                    <div key={i} className="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/60 text-xs">
-                      <div className="flex items-center gap-3 min-w-0">
-                        <span className="font-mono font-bold text-slate-500 w-4">{i + 1}</span>
-                        <div className="truncate">
-                          <span className="font-bold text-white block truncate">{r[0]}</span>
-                          <span className="text-[10px] text-slate-500">{r[1]}</span>
+            {Object.entries(RANKINGS).map(([catKey, list]) => {
+              const meta = {
+                llm:    { title: 'Top LLM / Reasoning', subtitle: 'Ranked by MMLU-Pro, reasoning, knowledge', icon: '💬' },
+                image:  { title: 'Top Image Generation', subtitle: 'Ranked by prompt fidelity, aesthetics, speed', icon: '🖼️' },
+                video:  { title: 'Top Video Generation', subtitle: 'Ranked by motion consistency, physics, realism', icon: '🎬' },
+                code:   { title: 'Top Code & Software Agents', subtitle: 'Ranked by HumanEval, SWE-bench, refactoring', icon: '💻' },
+                audio:  { title: 'Top Audio / TTS', subtitle: 'Ranked by naturalness, latency, voice options', icon: '🔊' },
+                search: { title: 'Top Search / Research', subtitle: 'Ranked by accuracy, source citation, depth', icon: '🔍' },
+              }[catKey] || { title: `Top ${catKey.toUpperCase()}`, subtitle: '', icon: '🏆' };
+
+              return (
+                <div key={catKey} className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-base">{meta.icon}</span>
+                    <h3 className="text-sm font-bold text-white tracking-tight">{meta.title}</h3>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mb-4 font-mono">{meta.subtitle}</p>
+
+                  {/* Header row */}
+                  <div className="flex justify-between items-center text-[10px] uppercase font-mono tracking-wider text-slate-500 pb-2 mb-2 border-b border-slate-800/80 px-1">
+                    <div className="flex items-center gap-6">
+                      <span>RANK</span>
+                      <span>MODEL</span>
+                    </div>
+                    <span>SCORE</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    {list.map((r, i) => (
+                      <div key={i} className="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/60 text-xs hover:border-slate-700 transition-colors">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <span className="font-mono font-bold text-slate-500 w-4 text-center">{i + 1}</span>
+                          <div className="w-7 h-7 rounded-lg bg-indigo-950/60 border border-indigo-500/30 text-[10px] font-bold font-mono text-indigo-300 flex items-center justify-center shrink-0" style={{ backgroundColor: `${r[3]}20`, color: r[3], borderColor: `${r[3]}40` }}>
+                            {r[4] || r[0].substring(0, 2).toUpperCase()}
+                          </div>
+                          <div className="truncate">
+                            <span className="font-bold text-white block truncate">{r[0]}</span>
+                            <span className="text-[10px] text-slate-500">{r[1]}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="w-20 h-1.5 rounded-full bg-slate-800 overflow-hidden">
+                            <div className="h-full rounded-full bg-indigo-500" style={{ width: `${r[2]}%` }} />
+                          </div>
+                          <span className="font-mono font-bold text-slate-200 text-xs w-6 text-right">{r[2]}</span>
                         </div>
                       </div>
-                      <div className="font-mono font-bold text-indigo-400">{r[2]}</div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
@@ -676,19 +709,6 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                   <div className="text-xs text-slate-400 font-mono mb-2">{c.count} models ({c.share}%)</div>
                   <div className="text-xs text-slate-400 mb-2 leading-relaxed"><strong className="text-slate-200">Key Companies:</strong> {c.companies}</div>
                   <div className="text-xs text-indigo-400 font-semibold">{c.strategy}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Regulatory Compliance Frameworks</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {COMPLIANCE.map((c, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-                  <div className="text-2xl mb-2">{c.icon}</div>
-                  <h4 className="text-xs font-bold text-white mb-1">{c.name}</h4>
-                  <p className="text-xs text-slate-400 leading-relaxed mb-3">{c.desc}</p>
                 </div>
               ))}
             </div>

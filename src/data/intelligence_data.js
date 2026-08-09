@@ -455,6 +455,30 @@ export const RANKINGS = {
     ["GPT-5.1-Codex-Mini","OpenAI",88,"#10b981","OA"],
     ["Kimi-K2.7-Code","Moonshot AI",83,"#f97316","KI"],
   ],
+  audio: [
+    ["ElevenLabs-v3","ElevenLabs",92,"#818cf8","EL"],
+    ["ElevenLabs-v2.5-Turbo","ElevenLabs",90,"#818cf8","EL"],
+    ["Lyria-3","Google",87,"#34d399","LY"],
+    ["Deepgram-Nova-3","Deepgram",88,"#06b6d4","DG"],
+    ["Gemini-2.5-Pro-TTS","Google",88,"#34d399","GG"],
+    ["GPT-Audio","OpenAI",88,"#10b981","OA"],
+    ["Sonic-3.0","Cartesia",85,"#8b5cf6","SO"],
+    ["Gemini-2.5-Flash-TTS","Google",86,"#34d399","GG"],
+    ["Whisper-V3-Large-T","OpenAI",88,"#10b981","OA"],
+    ["Orpheus-TTS","Canopy Labs",82,"#ec4899","OR"],
+  ],
+  search: [
+    ["Perplexity-Adv-Deep-Research","Perplexity",92,"#06b6d4","PP"],
+    ["o3-deep-research","OpenAI",94,"#10b981","OA"],
+    ["Perplexity-Deep-Research","Perplexity",91,"#06b6d4","PP"],
+    ["o4-mini-deep-research","OpenAI",93,"#10b981","OA"],
+    ["Perplexity-Sonar-Pro","Perplexity",88,"#06b6d4","PP"],
+    ["GPT-4o-Search","OpenAI",89,"#10b981","OA"],
+    ["Perplexity-Sonar-Rsn-Pro","Perplexity",89,"#06b6d4","PP"],
+    ["Perplexity-Pro-Search","Perplexity",87,"#06b6d4","PP"],
+    ["Sonar 2","Perplexity",87,"#06b6d4","PP"],
+    ["Exa-Research","Exa",82,"#8b5cf6","EX"],
+  ],
 };
 
 export const COUNTRIES = [
