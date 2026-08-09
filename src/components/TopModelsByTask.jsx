@@ -344,7 +344,7 @@ export default function TopModelsByTask() {
           <h2 className="text-sm font-bold text-white tracking-tight flex items-center gap-2">
             <span className="w-5 h-5 rounded-lg flex items-center justify-center text-xs"
               style={{ background: `${g.dot}20`, color: g.dot, border: `1px solid ${g.dot}35` }}>▦</span>
-            Top Models by Task
+            Top Models
           </h2>
           <p className="text-[11px] text-slate-500 mt-0.5 font-mono">
             Each task's leading models · ranked by share of usage

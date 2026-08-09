@@ -264,7 +264,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
           {[
             { id: 'directory', label: '🎛️ Model Grid & Profile' },
             { id: 'charts', label: '📊 Market Analytics & Charts' },
-            { id: 'tasks', label: '📋 Top by Task' },
+            { id: 'tasks', label: '📋 Top Models' },
             { id: 'rankings', label: '🏆 Rankings & Benchmarks' },
             { id: 'origins', label: '🌍 Geographic Origins' },
             { id: 'clients', label: '💼 Enterprise Deployments' },
