@@ -48,6 +48,8 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
     description: desc,
     color: color,
     letter: letter,
+    cat: cat,
+    tags: tags || [],
     gradient: color === '#f59e0b' ? 'from-amber-600 to-orange-800' :
               color === '#10b981' ? 'from-emerald-600 to-teal-800' :
               color === '#ec4899' ? 'from-pink-600 to-rose-800' :
@@ -63,12 +65,23 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
   };
 });
 
-const CATEGORIES = ['All', 'Text', 'Image', 'Video', 'Audio', 'Code/Agent', 'Search'];
+const CATEGORIES = [
+  { id: 'all', label: 'All', count: 383 },
+  { id: 'llm', label: 'LLM', count: 127 },
+  { id: 'image', label: 'Image Gen', count: 72 },
+  { id: 'video', label: 'Video', count: 54 },
+  { id: 'audio', label: 'Audio/TTS', count: 28 },
+  { id: 'code', label: 'Code', count: 31 },
+  { id: 'search', label: 'Search', count: 22 },
+  { id: 'reason', label: 'Reasoning', count: 18 },
+  { id: 'multi', label: 'Multimodal', count: 18 },
+  { id: 'tool', label: 'Tools', count: 13 },
+];
 
 export default function ModelGrid({ models = FORMATTED_MODELS }) {
   const [activeTab, setActiveTab] = useState('directory'); // directory | charts | rankings | origins | clients
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('All');
+  const [category, setCategory] = useState('all');
   const [developer, setDeveloper] = useState('All');
   const [sortBy, setSortBy] = useState('default'); // default | score_desc | score_asc
   const [hovered, setHovered] = useState(models[0] || null);
@@ -79,7 +92,9 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
   const filtered = useMemo(() => {
     let r = models;
-    if (category !== 'All') r = r.filter(m => m.category === category);
+    if (category !== 'all') {
+      r = r.filter(m => m.cat === category || (m.tags && m.tags.includes(category)));
+    }
     if (developer !== 'All') r = r.filter(m => m.developer === developer);
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -299,13 +314,21 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
             {/* Category tabs */}
             <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-800">
               {CATEGORIES.map(cat => (
-                <button key={cat} onClick={() => setCategory(cat)}
-                  className={`px-4 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
-                    category === cat
-                      ? 'bg-indigo-600 text-white border-indigo-500'
-                      : 'bg-slate-950/50 text-slate-400 border-slate-800 hover:bg-slate-800 hover:text-slate-200'
+                <button
+                  key={cat.id}
+                  onClick={() => setCategory(cat.id)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all flex items-center gap-2 ${
+                    category === cat.id
+                      ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20'
+                      : 'bg-slate-900/40 border-slate-800 text-slate-400 hover:bg-slate-800/50 hover:text-white'
+                  }`}
+                >
+                  <span>{cat.label}</span>
+                  <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-mono ${
+                    category === cat.id ? 'bg-white/20 text-white' : 'bg-slate-950/60 text-slate-500'
                   }`}>
-                  {cat === 'All' ? 'All Categories' : cat}
+                    {cat.count}
+                  </span>
                 </button>
               ))}
             </div>
