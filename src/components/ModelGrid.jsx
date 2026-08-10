@@ -32,11 +32,34 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
   else if (cat === 'reason') category = 'Text';
   else if (cat === 'multi') category = 'Text';
 
+  // Derive Transformer Architecture Type:
+  let arch = 'Decoder-Only';
+  const nameLower = name.toLowerCase();
+  const descLower = (desc || '').toLowerCase();
+
+  if (
+    cat === 'audio' || cat === 'video' || cat === 'image' ||
+    nameLower.includes('whisper') || nameLower.includes('nova') || nameLower.includes('flux') ||
+    nameLower.includes('veo') || nameLower.includes('sora') || nameLower.includes('wan') ||
+    nameLower.includes('seedream') || nameLower.includes('kling') || nameLower.includes('t5') ||
+    nameLower.includes('bart') || nameLower.includes('lyria') || nameLower.includes('mochi')
+  ) {
+    arch = 'Encoder-Decoder';
+  } else if (
+    cat === 'search' || cat === 'tool' ||
+    nameLower.includes('embed') || nameLower.includes('search') || nameLower.includes('detector') ||
+    nameLower.includes('zero') || nameLower.includes('bria') || nameLower.includes('sonar') ||
+    nameLower.includes('exa') || descLower.includes('embedding') || descLower.includes('detection')
+  ) {
+    arch = 'Encoder-Only';
+  }
+
   return {
     id,
     name,
     developer,
     category,
+    arch,
     country,
     released,
     params,
@@ -57,6 +80,7 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
               color === '#3b82f6' ? 'from-blue-600 to-indigo-800' :
               color === '#8b5cf6' ? 'from-purple-600 to-violet-800' : 'from-indigo-600 to-purple-800',
     features: [
+      `Architecture: ${arch}`,
       `Parameters: ${params}`,
       `Release: ${released}`,
       `Execution: ${local ? 'Local & Cloud Supported' : 'Cloud API Only'}`,
@@ -83,6 +107,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [developer, setDeveloper] = useState('All');
+  const [architecture, setArchitecture] = useState('All');
   const [sortBy, setSortBy] = useState('default'); // default | score_desc | score_asc
   const [hovered, setHovered] = useState(models[0] || null);
   const [visible, setVisible] = useState(100);
@@ -96,14 +121,15 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
       r = r.filter(m => m.cat === category || (m.tags && m.tags.includes(category)));
     }
     if (developer !== 'All') r = r.filter(m => m.developer === developer);
+    if (architecture !== 'All') r = r.filter(m => m.arch === architecture);
     if (search.trim()) {
       const q = search.toLowerCase();
-      r = r.filter(m => m.name.toLowerCase().includes(q) || m.developer.toLowerCase().includes(q));
+      r = r.filter(m => m.name.toLowerCase().includes(q) || m.developer.toLowerCase().includes(q) || m.arch.toLowerCase().includes(q));
     }
     if (sortBy === 'score_desc') r = [...r].sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
     if (sortBy === 'score_asc')  r = [...r].sort((a, b) => (a.score ?? 0) - (b.score ?? 0));
     return r;
-  }, [models, search, category, developer, sortBy]);
+  }, [models, search, category, developer, architecture, sortBy]);
 
   useEffect(() => {
     setVisible(100);
@@ -301,13 +327,24 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                   className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-slate-950/70 border border-slate-800 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
                 />
               </div>
-              {/* Developer */}
+              {/* Developer Filter */}
               <select
                 value={developer}
                 onChange={e => setDeveloper(e.target.value)}
-                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[160px]"
+                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[150px]"
               >
                 {developers.map(d => <option key={d} value={d}>{d === 'All' ? 'All Developers' : d}</option>)}
+              </select>
+              {/* Architecture Filter */}
+              <select
+                value={architecture}
+                onChange={e => setArchitecture(e.target.value)}
+                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[160px]"
+              >
+                <option value="All">All Architectures</option>
+                <option value="Decoder-Only">⚡ Decoder-Only</option>
+                <option value="Encoder-Only">🔍 Encoder-Only</option>
+                <option value="Encoder-Decoder">🔄 Encoder-Decoder</option>
               </select>
             </div>
 
@@ -412,9 +449,20 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                           <span className="text-xs font-bold text-slate-200 group-hover:text-white line-clamp-2">
                             {model.name}
                           </span>
-                          <span className="mt-2 text-[9px] text-slate-500 bg-slate-950/50 px-1.5 py-0.5 rounded border border-slate-800 opacity-60 group-hover:opacity-100 transition-opacity">
-                            {model.developer}
-                          </span>
+                          <div className="mt-2 flex flex-wrap gap-1 items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
+                            <span className="text-[9px] text-slate-400 bg-slate-950/60 px-1.5 py-0.5 rounded border border-slate-800">
+                              {model.developer}
+                            </span>
+                            <span className={`text-[9px] px-1.5 py-0.5 rounded border font-mono ${
+                              model.arch === 'Decoder-Only'
+                                ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
+                                : model.arch === 'Encoder-Decoder'
+                                ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                                : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                            }`}>
+                              {model.arch}
+                            </span>
+                          </div>
                         </div>
                       );
                     })}
@@ -445,7 +493,14 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                       <ModelIcon model={hovered} className="w-14 h-14 shrink-0" />
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap gap-1.5 mb-1">
-                          <CategoryBadge category={hovered.category} />
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{hovered.category}</span>
+                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold font-mono border ${
+                            hovered.arch === 'Decoder-Only'
+                              ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
+                              : hovered.arch === 'Encoder-Decoder'
+                              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                              : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                          }`}>{hovered.arch}</span>
                           {hovered.local && (
                             <span className="text-[10px] bg-emerald-900/40 text-emerald-400 border border-emerald-700/40 px-2 py-0.5 rounded-full">Local</span>
                           )}
@@ -480,10 +535,10 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                   {/* Quick stats grid */}
                   <div className="grid grid-cols-2 border-t border-slate-800 divide-x divide-slate-800">
                     {[
-                      { label: 'Released',  value: hovered.released || '—' },
-                      { label: 'Params',    value: hovered.params || '—' },
-                      { label: 'Access',    value: hovered.access ? hovered.access.charAt(0).toUpperCase() + hovered.access.slice(1) : '—' },
-                      { label: 'Local Run', value: hovered.local ? '✅ Yes' : '❌ No' },
+                      { label: 'Architecture', value: hovered.arch || 'Decoder-Only' },
+                      { label: 'Released',     value: hovered.released || '—' },
+                      { label: 'Params',       value: hovered.params || '—' },
+                      { label: 'Local Run',    value: hovered.local ? '✅ Yes' : '❌ No' },
                     ].map(stat => (
                       <div key={stat.label} className="px-4 py-2.5 odd:border-b odd:border-slate-800 even:border-b even:border-slate-800 last:border-b-0 [&:nth-child(3)]:border-b-0 [&:nth-child(4)]:border-b-0">
                         <div className="text-[9px] font-mono text-slate-500 uppercase tracking-wider">{stat.label}</div>

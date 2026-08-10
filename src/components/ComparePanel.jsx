@@ -5,10 +5,11 @@ import ModelIcon from '@/components/ModelIcon';
 
 // Row definitions for comparison table
 const ROWS = [
-  { label: 'Developer',   key: 'developer' },
-  { label: 'Category',    key: 'category' },
-  { label: 'Country',     key: 'country' },
-  { label: 'Released',    key: 'released' },
+  { label: 'Developer',    key: 'developer' },
+  { label: 'Category',     key: 'category' },
+  { label: 'Architecture', key: 'arch' },
+  { label: 'Country',      key: 'country' },
+  { label: 'Released',     key: 'released' },
   { label: 'Parameters',  key: 'params' },
   { label: 'Access',      key: 'access' },
   { label: 'Price (In)',  key: 'priceIn',  format: v => v != null ? `$${v}/M tok` : '—' },
