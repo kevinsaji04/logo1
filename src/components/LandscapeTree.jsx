@@ -85,9 +85,9 @@ export default function LandscapeTree() {
     const edges = [];
 
     const startY = 80;
-    const colWidth = 240;
-    const gapX = 32;
-    let currX = 100;
+    const colWidth = 260;
+    const gapX = 42;
+    let currX = 120;
 
     filteredCompanies.forEach(comp => {
       const isCompCollapsed = collapsedCompanies.has(comp.id);
