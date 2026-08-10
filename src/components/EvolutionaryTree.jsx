@@ -27,6 +27,11 @@ export default function EvolutionaryTree() {
   const [hoveredId, setHoveredId] = useState(null);
   const [openSourceOnly, setOpenSourceOnly] = useState(false);
 
+  // Collapsible overlay legends (default collapsed to avoid overlapping model cards)
+  const [isFamilyLegendOpen, setIsFamilyLegendOpen] = useState(false);
+  const [isDevLegendOpen, setIsDevLegendOpen] = useState(false);
+  const [isNoteOpen, setIsNoteOpen] = useState(false);
+
   // Pan & zoom state
   const [zoom, setZoom] = useState(0.7);
   const [pan, setPan] = useState({ x: 0, y: 0 });
@@ -304,8 +309,8 @@ export default function EvolutionaryTree() {
               const y1 = fromC.y;
               const x2 = toC.x + NW / 2;
               const y2 = toC.y;
-              const cy1 = y1 - (y1 - y2) * 0.45;
-              const cy2 = y2 + (y1 - y2) * 0.45;
+              const cy1 = y1 + (y2 - y1) * 0.45;
+              const cy2 = y2 - (y2 - y1) * 0.45;
 
               return (
                 <path
@@ -343,7 +348,7 @@ export default function EvolutionaryTree() {
               const familyTheme = FAMILY_COLORS[node.family] || FAMILY_COLORS.closed;
               const devBadge = DEV_BADGES[node.dev] || { icon: '✦', color: '#94a3b8', bg: 'bg-slate-800 text-slate-300' };
 
-              // Company Origin Root Headers at bottom (y: 1280px)
+              // Company Origin Root Headers at top (y: 60px)
               if (node.isRoot) {
                 return (
                   <div
@@ -507,58 +512,121 @@ export default function EvolutionaryTree() {
           </div>
         </div>
 
-        {/* ── Model Family Legend (Top-Left) ── */}
-        <div className="absolute top-4 left-4 z-20 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-xl backdrop-blur-md max-w-xs">
-          <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-2.5 flex items-center gap-2">
-            <span>🗺️</span> Model Families & Ecosystems
-          </h4>
-          <div className="space-y-2">
-            {Object.entries(FAMILY_COLORS).map(([key, fam]) => (
-              <div
-                key={key}
-                onClick={() => setSelectedFamily(selectedFamily === key ? 'all' : key)}
-                className={`flex items-center justify-between p-1.5 rounded-xl border text-xs cursor-pointer transition-all ${
-                  selectedFamily === key ? 'bg-slate-800 border-indigo-500 text-white font-bold' : 'border-slate-800/60 text-slate-300 hover:bg-slate-900'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-1 rounded-full" style={{ backgroundColor: fam.stroke }} />
-                  <span>{fam.label}</span>
+        {/* ── Collapsible Model Family Legend (Top-Left) ── */}
+        <div className="absolute top-4 left-4 z-20 transition-all">
+          {isFamilyLegendOpen ? (
+            <div className="bg-slate-950/95 border border-slate-800 rounded-2xl p-4 shadow-2xl backdrop-blur-md max-w-xs">
+              <div className="flex items-center justify-between gap-3 mb-2.5">
+                <h4 className="text-xs font-extrabold text-white uppercase tracking-wider flex items-center gap-2">
+                  <span>🗺️</span> Model Families & Ecosystems
+                </h4>
+                <button
+                  onClick={() => setIsFamilyLegendOpen(false)}
+                  className="w-6 h-6 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs font-bold shrink-0"
+                >
+                  −
+                </button>
+              </div>
+
+              <div className="space-y-1.5">
+                {Object.entries(FAMILY_COLORS).map(([key, fam]) => (
+                  <div
+                    key={key}
+                    onClick={() => setSelectedFamily(selectedFamily === key ? 'all' : key)}
+                    className={`flex items-center justify-between p-1.5 rounded-xl border text-xs cursor-pointer transition-all ${
+                      selectedFamily === key ? 'bg-slate-800 border-indigo-500 text-white font-bold' : 'border-slate-800/60 text-slate-300 hover:bg-slate-900'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-1 rounded-full" style={{ backgroundColor: fam.stroke }} />
+                      <span>{fam.label}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-3 pt-3 border-t border-slate-800/80 space-y-1 text-[10px]">
+                <div className="flex items-center gap-2 text-slate-300">
+                  <span className="w-5 h-0.5 bg-indigo-400 shrink-0" />
+                  <span>Solid = Direct Model Successor</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-300">
+                  <span className="w-5 h-0.5 border-b border-dashed border-indigo-400 shrink-0" />
+                  <span>Dashed = Ecosystem Branch</span>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div className="mt-3 pt-3 border-t border-slate-800/80 space-y-1.5 text-[10px]">
-            <div className="flex items-center gap-2 text-slate-300">
-              <span className="w-5 h-0.5 bg-indigo-400 shrink-0" />
-              <span>Solid = Direct Model Successor</span>
             </div>
-            <div className="flex items-center gap-2 text-slate-300">
-              <span className="w-5 h-0.5 border-b border-dashed border-indigo-400 shrink-0" />
-              <span>Dashed = Ecosystem Branch</span>
-            </div>
-          </div>
+          ) : (
+            <button
+              onClick={() => setIsFamilyLegendOpen(true)}
+              className="flex items-center gap-2 bg-slate-950/90 border border-slate-800 hover:border-slate-700 px-3 py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white shadow-xl backdrop-blur-md transition-all"
+            >
+              <span>🗺️ Model Families Legend</span>
+              <span className="bg-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded text-[10px]">+</span>
+            </button>
+          )}
         </div>
 
-        {/* ── Developer Badges Legend (Bottom-Right) ── */}
-        <div className="absolute bottom-4 right-4 z-20 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-3.5 shadow-xl backdrop-blur-md">
-          <h4 className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider mb-2">Company Key</h4>
-          <div className="grid grid-cols-3 gap-2">
-            {Object.entries(DEV_BADGES).map(([dev, b]) => (
-              <div key={dev} className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[10px]">
-                <span className={`w-4 h-4 rounded text-[8px] font-bold flex items-center justify-center border ${b.bg}`}>{b.icon}</span>
-                <span className="text-slate-300 font-semibold truncate">{dev}</span>
+        {/* ── Collapsible Developer Badges Legend (Bottom-Right) ── */}
+        <div className="absolute bottom-4 right-4 z-20 transition-all">
+          {isDevLegendOpen ? (
+            <div className="bg-slate-950/95 border border-slate-800 rounded-2xl p-3.5 shadow-2xl backdrop-blur-md max-w-sm">
+              <div className="flex items-center justify-between gap-3 mb-2">
+                <h4 className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Company Key</h4>
+                <button
+                  onClick={() => setIsDevLegendOpen(false)}
+                  className="w-5 h-5 rounded-md bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs font-bold shrink-0"
+                >
+                  −
+                </button>
               </div>
-            ))}
-          </div>
+
+              <div className="grid grid-cols-3 gap-1.5">
+                {Object.entries(DEV_BADGES).map(([dev, b]) => (
+                  <div key={dev} className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[10px]">
+                    <span className={`w-4 h-4 rounded text-[8px] font-bold flex items-center justify-center border ${b.bg}`}>{b.icon}</span>
+                    <span className="text-slate-300 font-semibold truncate">{dev}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={() => setIsDevLegendOpen(true)}
+              className="flex items-center gap-2 bg-slate-950/90 border border-slate-800 hover:border-slate-700 px-3 py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white shadow-xl backdrop-blur-md transition-all"
+            >
+              <span>🏢 Company Key</span>
+              <span className="bg-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded text-[10px]">+</span>
+            </button>
+          )}
         </div>
 
-        {/* ── Note Card (Bottom-Left) ── */}
-        <div className="absolute bottom-4 left-4 z-20 bg-slate-950/90 border border-slate-800/90 rounded-xl p-3 max-w-sm shadow-lg backdrop-blur-md">
-          <p className="text-[10px] text-slate-400 leading-relaxed font-mono">
-            <strong className="text-slate-200">Note:</strong> This is a Model Lineage & Evolution Map. A connection indicates direct model succession or company ecosystem relationship, not raw pre-training weights.
-          </p>
+        {/* ── Collapsible Note Card (Bottom-Left) ── */}
+        <div className="absolute bottom-4 left-4 z-20 transition-all">
+          {isNoteOpen ? (
+            <div className="bg-slate-950/95 border border-slate-800 rounded-xl p-3 max-w-xs shadow-2xl backdrop-blur-md">
+              <div className="flex items-center justify-between gap-2 mb-1.5">
+                <span className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider">Note</span>
+                <button
+                  onClick={() => setIsNoteOpen(false)}
+                  className="w-5 h-5 rounded-md bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs font-bold shrink-0"
+                >
+                  −
+                </button>
+              </div>
+              <p className="text-[10px] text-slate-400 leading-relaxed font-mono">
+                This is a Model Lineage & Evolution Map. A connection indicates direct model succession or company ecosystem relationship.
+              </p>
+            </div>
+          ) : (
+            <button
+              onClick={() => setIsNoteOpen(true)}
+              className="flex items-center gap-2 bg-slate-950/90 border border-slate-800 hover:border-slate-700 px-3 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white shadow-xl backdrop-blur-md transition-all"
+            >
+              <span>ℹ️ Lineage Note</span>
+              <span className="bg-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded text-[10px]">+</span>
+            </button>
+          )}
         </div>
 
         {/* ── Cursor Hover Tooltip ── */}

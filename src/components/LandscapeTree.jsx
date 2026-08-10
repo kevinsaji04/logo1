@@ -14,6 +14,9 @@ export default function LandscapeTree() {
   const [searchQuery, setSearchQuery] = useState('');
   const [hoveredNode, setHoveredNode] = useState(null);
 
+  // Collapsible Hierarchy Legend
+  const [isHierarchyLegendOpen, setIsHierarchyLegendOpen] = useState(false);
+
   // Collapse / Expand state
   const [collapsedCompanies, setCollapsedCompanies] = useState(new Set());
   const [collapsedCategories, setCollapsedCategories] = useState(new Set());
@@ -588,29 +591,50 @@ export default function LandscapeTree() {
           </div>
         </div>
 
-        {/* ── Hierarchy Legend (Top-Left) ── */}
-        <div className="absolute top-4 left-4 z-20 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-xl backdrop-blur-md max-w-xs">
-          <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-2.5 flex items-center gap-2">
-            <span>📐</span> Landscape Hierarchy
-          </h4>
-          <div className="space-y-2 text-xs font-mono">
-            <div className="p-2 rounded-xl bg-slate-900 border border-blue-500/40 text-blue-300 font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-400" />
-              <span>Level 1: COMPANY</span>
+        {/* ── Collapsible Hierarchy Legend (Top-Left) ── */}
+        <div className="absolute top-4 left-4 z-20 transition-all">
+          {isHierarchyLegendOpen ? (
+            <div className="bg-slate-950/95 border border-slate-800 rounded-2xl p-4 shadow-2xl backdrop-blur-md max-w-xs">
+              <div className="flex items-center justify-between gap-3 mb-2.5">
+                <h4 className="text-xs font-extrabold text-white uppercase tracking-wider flex items-center gap-2">
+                  <span>📐</span> Landscape Hierarchy
+                </h4>
+                <button
+                  onClick={() => setIsHierarchyLegendOpen(false)}
+                  className="w-6 h-6 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs font-bold shrink-0"
+                >
+                  −
+                </button>
+              </div>
+
+              <div className="space-y-2 text-xs font-mono">
+                <div className="p-2 rounded-xl bg-slate-900 border border-blue-500/40 text-blue-300 font-bold flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-400" />
+                  <span>Level 1: COMPANY</span>
+                </div>
+                <div className="p-2 rounded-xl bg-slate-900 border border-emerald-500/40 text-emerald-300 font-bold flex items-center gap-2 ml-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                  <span>Level 2: MODEL CATEGORY</span>
+                </div>
+                <div className="p-2 rounded-xl bg-slate-900 border border-purple-500/40 text-purple-300 font-bold flex items-center gap-2 ml-4">
+                  <span className="w-2 h-2 rounded-full bg-purple-400" />
+                  <span>Level 3: MODEL FAMILY</span>
+                </div>
+                <div className="p-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 font-bold flex items-center gap-2 ml-6">
+                  <span className="w-2 h-2 rounded-full bg-slate-400" />
+                  <span>Level 4: MODEL / VERSION</span>
+                </div>
+              </div>
             </div>
-            <div className="p-2 rounded-xl bg-slate-900 border border-emerald-500/40 text-emerald-300 font-bold flex items-center gap-2 ml-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span>Level 2: MODEL CATEGORY</span>
-            </div>
-            <div className="p-2 rounded-xl bg-slate-900 border border-purple-500/40 text-purple-300 font-bold flex items-center gap-2 ml-4">
-              <span className="w-2 h-2 rounded-full bg-purple-400" />
-              <span>Level 3: MODEL FAMILY</span>
-            </div>
-            <div className="p-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 font-bold flex items-center gap-2 ml-6">
-              <span className="w-2 h-2 rounded-full bg-slate-400" />
-              <span>Level 4: MODEL / VERSION</span>
-            </div>
-          </div>
+          ) : (
+            <button
+              onClick={() => setIsHierarchyLegendOpen(true)}
+              className="flex items-center gap-2 bg-slate-950/90 border border-slate-800 hover:border-slate-700 px-3 py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white shadow-xl backdrop-blur-md transition-all"
+            >
+              <span>📐 Hierarchy Legend</span>
+              <span className="bg-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded text-[10px]">+</span>
+            </button>
+          )}
         </div>
 
         {/* ── Hover Tooltip ── */}
