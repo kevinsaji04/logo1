@@ -15,12 +15,15 @@ import {
   CLIENTS,
   BENCHMARKS,
   COMPLIANCE,
-  COUNTRY_FLAG
+  COUNTRY_FLAG,
+  getArchitectureDetails,
+  getModelContextInfo
 } from '@/data/intelligence_data';
 
 // Map raw 383 array models to object format compatible with original ModelGrid
 const FORMATTED_MODELS = RAW_MODELS.map((m) => {
   const [id, name, developer, cat, country, released, params, access, priceIn, priceOut, local, score, desc, tags, color, letter] = m;
+  const ctx = getModelContextInfo(m);
   
   // map category code to display category
   let category = 'Text';
@@ -68,6 +71,7 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
     priceOut,
     local,
     score,
+    context: ctx,
     description: desc,
     color: color,
     letter: letter,
@@ -80,6 +84,7 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
               color === '#3b82f6' ? 'from-blue-600 to-indigo-800' :
               color === '#8b5cf6' ? 'from-purple-600 to-violet-800' : 'from-indigo-600 to-purple-800',
     features: [
+      `Context: ${ctx?.label || '128K tokens'}`,
       `Architecture: ${arch}`,
       `Parameters: ${params}`,
       `Release: ${released}`,
@@ -89,31 +94,45 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
   };
 });
 
-const CATEGORIES = [
-  { id: 'all', label: 'All', count: 383 },
-  { id: 'llm', label: 'LLM', count: 127 },
-  { id: 'image', label: 'Image Gen', count: 72 },
-  { id: 'video', label: 'Video', count: 54 },
-  { id: 'audio', label: 'Audio/TTS', count: 28 },
-  { id: 'code', label: 'Code', count: 31 },
-  { id: 'search', label: 'Search', count: 22 },
-  { id: 'reason', label: 'Reasoning', count: 18 },
-  { id: 'multi', label: 'Multimodal', count: 18 },
-  { id: 'tool', label: 'Tools', count: 13 },
-];
-
 export default function ModelGrid({ models = FORMATTED_MODELS }) {
   const [activeTab, setActiveTab] = useState('directory'); // directory | charts | rankings | origins | clients
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [developer, setDeveloper] = useState('All');
   const [architecture, setArchitecture] = useState('All');
+  const [accessFilter, setAccessFilter] = useState('All'); // All | Open | Closed
+  const [contextFilter, setContextFilter] = useState('All'); // All | standard | extended | massive
   const [sortBy, setSortBy] = useState('default'); // default | score_desc | score_asc
-  const [hovered, setHovered] = useState(models[0] || null);
+  const [selectedModel, setSelectedModel] = useState(models[0] || null);
   const [visible, setVisible] = useState(100);
   const { compareList, toggleModel, isSelected, setShowPanel } = useCompare();
 
   const developers = useMemo(() => ['All', ...[...new Set(models.map(m => m.developer))].sort()], [models]);
+
+  // Dynamic Category Counts
+  const categoryCounts = useMemo(() => {
+    const counts = { all: models.length, llm: 0, image: 0, video: 0, audio: 0, code: 0, search: 0, reason: 0, multi: 0, tool: 0 };
+    models.forEach(m => {
+      const c = m.cat;
+      if (c === 'text' || c === 'llm') counts.llm = (counts.llm || 0) + 1;
+      else if (counts[c] !== undefined) counts[c] = (counts[c] || 0) + 1;
+      else counts.llm = (counts.llm || 0) + 1;
+    });
+    return counts;
+  }, [models]);
+
+  const categories = useMemo(() => [
+    { id: 'all', label: 'All', count: models.length },
+    { id: 'llm', label: 'LLM', count: categoryCounts.llm || 0 },
+    { id: 'image', label: 'Image Gen', count: categoryCounts.image || 0 },
+    { id: 'video', label: 'Video', count: categoryCounts.video || 0 },
+    { id: 'audio', label: 'Audio/TTS', count: categoryCounts.audio || 0 },
+    { id: 'code', label: 'Code', count: categoryCounts.code || 0 },
+    { id: 'search', label: 'Search', count: categoryCounts.search || 0 },
+    { id: 'reason', label: 'Reasoning', count: categoryCounts.reason || 0 },
+    { id: 'multi', label: 'Multimodal', count: categoryCounts.multi || 0 },
+    { id: 'tool', label: 'Tools', count: categoryCounts.tool || 0 },
+  ], [models, categoryCounts]);
 
   const filtered = useMemo(() => {
     let r = models;
@@ -122,6 +141,18 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
     }
     if (developer !== 'All') r = r.filter(m => m.developer === developer);
     if (architecture !== 'All') r = r.filter(m => m.arch === architecture);
+    if (accessFilter === 'Open') {
+      r = r.filter(m => m.access === 'open' || m.access === 'free' || m.local === true);
+    } else if (accessFilter === 'Closed') {
+      r = r.filter(m => !(m.access === 'open' || m.access === 'free' || m.local === true));
+    }
+    if (contextFilter === 'standard') {
+      r = r.filter(m => (m.context?.tokens || 128000) <= 32768);
+    } else if (contextFilter === 'extended') {
+      r = r.filter(m => (m.context?.tokens || 128000) >= 64000 && (m.context?.tokens || 128000) <= 200000);
+    } else if (contextFilter === 'massive') {
+      r = r.filter(m => (m.context?.tokens || 128000) >= 1048576);
+    }
     if (search.trim()) {
       const q = search.toLowerCase();
       r = r.filter(m => m.name.toLowerCase().includes(q) || m.developer.toLowerCase().includes(q) || m.arch.toLowerCase().includes(q));
@@ -129,11 +160,13 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
     if (sortBy === 'score_desc') r = [...r].sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
     if (sortBy === 'score_asc')  r = [...r].sort((a, b) => (a.score ?? 0) - (b.score ?? 0));
     return r;
-  }, [models, search, category, developer, architecture, sortBy]);
+  }, [models, search, category, developer, architecture, accessFilter, contextFilter, sortBy]);
 
   useEffect(() => {
     setVisible(100);
-    if (filtered.length > 0 && !filtered.find(m => m.id === hovered?.id)) setHovered(filtered[0]);
+    if (filtered.length > 0 && selectedModel && !filtered.find(m => m.id === selectedModel.id)) {
+      setSelectedModel(filtered[0]);
+    }
   }, [filtered]);
 
   // Canvas Chart References
@@ -156,13 +189,26 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
       if (catChartRef.current) {
         if (catChartRef.current._chartInstance) catChartRef.current._chartInstance.destroy();
+        const catLabels = ['LLM', 'Multimodal', 'Image Gen', 'Video', 'Audio/TTS', 'Code', 'Search', 'Reasoning', 'Tools'];
+        const catData = [
+          categoryCounts.llm || 0,
+          categoryCounts.multi || 0,
+          categoryCounts.image || 0,
+          categoryCounts.video || 0,
+          categoryCounts.audio || 0,
+          categoryCounts.code || 0,
+          categoryCounts.search || 0,
+          categoryCounts.reason || 0,
+          categoryCounts.tool || 0
+        ];
+
         catChartRef.current._chartInstance = new window.Chart(catChartRef.current, {
           type: 'doughnut',
           data: {
-            labels: ['LLM', 'Image Gen', 'Video', 'Audio/TTS', 'Code', 'Search', 'Reasoning', 'Multimodal', 'Other'],
+            labels: catLabels,
             datasets: [{
-              data: [127, 72, 54, 28, 31, 22, 18, 18, 13],
-              backgroundColor: ['#6366f1', '#ec4899', '#f59e0b', '#10b981', '#06b6d4', '#8b5cf6', '#fbbf24', '#f97316', '#64748b'],
+              data: catData,
+              backgroundColor: ['#6366f1', '#f97316', '#ec4899', '#f59e0b', '#10b981', '#06b6d4', '#8b5cf6', '#fbbf24', '#64748b'],
               borderColor: '#0b0f19',
               borderWidth: 2
             }]
@@ -173,13 +219,20 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
       if (producerChartRef.current) {
         if (producerChartRef.current._chartInstance) producerChartRef.current._chartInstance.destroy();
+        const devMap = {};
+        models.forEach(m => {
+          const d = m.developer || 'Other';
+          devMap[d] = (devMap[d] || 0) + 1;
+        });
+        const topDevs = Object.entries(devMap).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
         producerChartRef.current._chartInstance = new window.Chart(producerChartRef.current, {
           type: 'bar',
           data: {
-            labels: ['OpenAI', 'Kling', 'Qwen', 'Google', 'DeepSeek', 'GLM', 'MiniMax', 'ByteDance', 'Mistral', 'Anthropic'],
+            labels: topDevs.map(d => d[0]),
             datasets: [{
               label: 'Models Cataloged',
-              data: [58, 24, 22, 21, 16, 12, 11, 10, 9, 8],
+              data: topDevs.map(d => d[1]),
               backgroundColor: 'rgba(99, 102, 241, 0.3)',
               borderColor: '#6366f1',
               borderWidth: 1.5,
@@ -199,12 +252,19 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
       if (countryChartRef.current) {
         if (countryChartRef.current._chartInstance) countryChartRef.current._chartInstance.destroy();
+        const countryMap = {};
+        models.forEach(m => {
+          const c = m.country || 'Other';
+          countryMap[c] = (countryMap[c] || 0) + 1;
+        });
+        const topCountries = Object.entries(countryMap).sort((a, b) => b[1] - a[1]).slice(0, 8);
+
         countryChartRef.current._chartInstance = new window.Chart(countryChartRef.current, {
           type: 'doughnut',
           data: {
-            labels: ['USA 🇺🇸', 'China 🇨🇳', 'Germany 🇩🇪', 'France 🇫🇷', 'UK 🇬🇧', 'Canada 🇨🇦', 'Israel 🇮🇱', 'Other'],
+            labels: topCountries.map(c => c[0]),
             datasets: [{
-              data: [198, 144, 12, 15, 7, 5, 4, 3],
+              data: topCountries.map(c => c[1]),
               backgroundColor: ['#10b981', '#f43f5e', '#f59e0b', '#3b82f6', '#8b5cf6', '#f97316', '#14b8a6', '#64748b'],
               borderColor: '#0b0f19',
               borderWidth: 2
@@ -219,21 +279,27 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
       if (accessChartRef.current) {
         if (accessChartRef.current._chartInstance) accessChartRef.current._chartInstance.destroy();
+        const accessMap = { 'open': 0, 'free': 0, 'freemium': 0, 'api': 0, 'commercial': 0, 'paid': 0 };
+        models.forEach(m => {
+          const a = (m.access || 'commercial').toLowerCase();
+          if (accessMap[a] !== undefined) accessMap[a]++;
+          else accessMap.commercial++;
+        });
+
         accessChartRef.current._chartInstance = new window.Chart(accessChartRef.current, {
           type: 'bar',
           data: {
-            labels: ['Open Source', 'Free', 'Freemium', 'API Paid', 'Paid Sub', 'Enterprise'],
+            labels: ['Open Source', 'Free Access', 'Freemium', 'API Paid', 'Commercial'],
             datasets: [{
-              data: [60, 18, 78, 142, 38, 47],
+              data: [accessMap.open, accessMap.free, accessMap.freemium, accessMap.api, accessMap.commercial + accessMap.paid],
               backgroundColor: [
                 'rgba(16, 185, 129, 0.3)',
                 'rgba(20, 184, 166, 0.3)',
                 'rgba(245, 158, 11, 0.3)',
                 'rgba(99, 102, 241, 0.3)',
-                'rgba(244, 63, 94, 0.3)',
-                'rgba(249, 115, 22, 0.3)'
+                'rgba(244, 63, 94, 0.3)'
               ],
-              borderColor: ['#10b981', '#14b8a6', '#f59e0b', '#6366f1', '#f43f5e', '#f97316'],
+              borderColor: ['#10b981', '#14b8a6', '#f59e0b', '#6366f1', '#f43f5e'],
               borderWidth: 1.5,
               borderRadius: 6
             }]
@@ -258,7 +324,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
     } else {
       initCharts();
     }
-  }, [activeTab]);
+  }, [activeTab, models, categoryCounts]);
 
   return (
     <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-8">
@@ -285,7 +351,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
           AI Model Directory
         </h1>
         <p className="text-slate-400 max-w-lg mx-auto text-sm">
-          Explore {models.length} cutting-edge AI models. Hover any card to reveal details.
+          Explore {models.length} cutting-edge AI models. Click any card to inspect its full profile and context capacity.
         </p>
 
         {/* Original View Navigation Tabs */}
@@ -342,18 +408,39 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
               <select
                 value={architecture}
                 onChange={e => setArchitecture(e.target.value)}
-                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[160px]"
+                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[150px]"
               >
-                <option value="All">All Architectures</option>
+                <option value="All">All Transformers</option>
                 <option value="Decoder-Only">⚡ Decoder-Only</option>
                 <option value="Encoder-Only">🔍 Encoder-Only</option>
                 <option value="Encoder-Decoder">🔄 Encoder-Decoder</option>
+              </select>
+              {/* Open vs Closed Architecture Filter */}
+              <select
+                value={accessFilter}
+                onChange={e => setAccessFilter(e.target.value)}
+                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[160px]"
+              >
+                <option value="All">All Model Types</option>
+                <option value="Open">🔓 Open-Weights Models</option>
+                <option value="Closed">🔒 Closed / API Models</option>
+              </select>
+              {/* Context Window Filter */}
+              <select
+                value={contextFilter}
+                onChange={e => setContextFilter(e.target.value)}
+                className="bg-slate-950/70 border border-slate-800 text-slate-300 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 min-w-[160px]"
+              >
+                <option value="All">All Context Sizes</option>
+                <option value="standard">⚡ Standard (≤ 32K)</option>
+                <option value="extended">📚 Extended (64K - 200K)</option>
+                <option value="massive">🚀 Massive (1M - 2M+)</option>
               </select>
             </div>
 
             {/* Category tabs */}
             <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-800">
-              {CATEGORIES.map(cat => (
+              {categories.map(cat => (
                 <button
                   key={cat.id}
                   onClick={() => setCategory(cat.id)}
@@ -419,18 +506,18 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                 <>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3">
                     {filtered.slice(0, visible).map(model => {
-                      const active = hovered?.id === model.id;
+                      const active = selectedModel?.id === model.id;
                       const selected = isSelected(model.id);
                       const atLimit = compareList.length >= 4 && !selected;
                       return (
                         <div key={model.id}
-                          onMouseEnter={() => setHovered(model)}
+                          onClick={() => setSelectedModel(model)}
                           className={`relative flex flex-col items-center p-4 rounded-2xl cursor-pointer border transition-all duration-200 select-none text-center group min-h-[135px] justify-between
                             ${selected
                               ? 'bg-indigo-950/60 border-indigo-500/70 -translate-y-1 shadow-lg shadow-indigo-600/20 ring-1 ring-indigo-500/40'
                               : active
-                              ? 'bg-slate-800/80 border-indigo-500/50 -translate-y-1 shadow-lg shadow-indigo-600/5'
-                              : 'bg-slate-900/40 border-slate-800 hover:bg-slate-800/50 hover:-translate-y-0.5'
+                              ? 'bg-slate-800/90 border-indigo-500/80 -translate-y-1 shadow-xl shadow-indigo-600/15 ring-2 ring-indigo-500/50'
+                              : 'bg-slate-900/40 border-slate-800 hover:bg-slate-800/40 hover:border-slate-700 hover:-translate-y-0.5'
                             }`}>
                           {/* Compare checkbox */}
                           <button
@@ -456,6 +543,11 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                             <span className="text-[9px] text-slate-400 bg-slate-950/60 px-1.5 py-0.5 rounded border border-slate-800">
                               {model.developer}
                             </span>
+                            {model.context && (
+                              <span className="text-[9px] px-1.5 py-0.5 rounded border font-mono bg-indigo-500/10 text-indigo-300 border-indigo-500/25">
+                                {model.context.badge}
+                              </span>
+                            )}
                             <span className={`text-[9px] px-1.5 py-0.5 rounded border font-mono ${
                               model.arch === 'Decoder-Only'
                                 ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
@@ -485,63 +577,144 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
             {/* Sticky Detail Panel */}
             <div className="w-full lg:w-[32%] lg:sticky lg:top-8">
-              <span className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-4 block">Model Profile</span>
-              {hovered ? (
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Model Profile</span>
+                {selectedModel && (
+                  <span className="text-[10px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">
+                    Selected
+                  </span>
+                )}
+              </div>
+              {selectedModel ? (
                 <div className="rounded-2xl bg-slate-900/60 border border-indigo-500/30 shadow-2xl relative overflow-hidden max-h-[calc(100vh-6rem)] overflow-y-auto">
-                  <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-tr ${hovered.gradient} opacity-10 blur-3xl pointer-events-none`} />
+                  <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-tr ${selectedModel.gradient} opacity-10 blur-3xl pointer-events-none`} />
 
                   {/* Header */}
                   <div className="p-5 pb-4">
                     <div className="flex items-start gap-3 mb-3">
-                      <ModelIcon model={hovered} className="w-14 h-14 shrink-0" />
+                      <ModelIcon model={selectedModel} className="w-14 h-14 shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <div className="flex flex-wrap gap-1.5 mb-1">
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{hovered.category}</span>
-                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold font-mono border ${
-                            hovered.arch === 'Decoder-Only'
-                              ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
-                              : hovered.arch === 'Encoder-Decoder'
-                              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                              : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                          }`}>{hovered.arch}</span>
-                          {hovered.local && (
-                            <span className="text-[10px] bg-emerald-900/40 text-emerald-400 border border-emerald-700/40 px-2 py-0.5 rounded-full">Local</span>
-                          )}
-                          {hovered.country && (
-                            <span className="text-[10px] text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded-full border border-slate-800">
-                              {hovered.country === 'USA' ? '🇺🇸' : hovered.country === 'China' ? '🇨🇳' : hovered.country === 'France' ? '🇫🇷' : hovered.country === 'Germany' ? '🇩🇪' : hovered.country === 'UK' ? '🇬🇧' : hovered.country === 'Canada' ? '🇨🇦' : hovered.country === 'Israel' ? '🇮🇱' : hovered.country === 'Japan' ? '🇯🇵' : hovered.country === 'South Korea' ? '🇰🇷' : '🌐'} {hovered.country}
-                            </span>
-                          )}
-                        </div>
-                        <h2 className="text-base font-bold text-white leading-snug">{hovered.name}</h2>
-                        <span className="text-xs text-slate-400">{hovered.developer}</span>
+                        {(() => {
+                          const hArch = getArchitectureDetails(selectedModel);
+                          return (
+                            <>
+                              <div className="flex flex-wrap gap-1.5 mb-1.5">
+                                <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{selectedModel.category}</span>
+                                {hArch && (
+                                  <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold font-mono border ${hArch.badgeClass}`}>
+                                    {hArch.icon} {hArch.category}
+                                  </span>
+                                )}
+                                <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold font-mono border ${
+                                  selectedModel.arch === 'Decoder-Only'
+                                    ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
+                                    : selectedModel.arch === 'Encoder-Decoder'
+                                    ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                                    : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                                }`}>{selectedModel.arch}</span>
+                                {selectedModel.local && (
+                                  <span className="text-[10px] bg-emerald-900/40 text-emerald-400 border border-emerald-700/40 px-2 py-0.5 rounded-full">Local</span>
+                                )}
+                                {selectedModel.country && (
+                                  <span className="text-[10px] text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded-full border border-slate-800">
+                                    {selectedModel.country === 'USA' ? '🇺🇸' : selectedModel.country === 'China' ? '🇨🇳' : selectedModel.country === 'France' ? '🇫🇷' : selectedModel.country === 'Germany' ? '🇩🇪' : selectedModel.country === 'UK' ? '🇬🇧' : selectedModel.country === 'Canada' ? '🇨🇦' : selectedModel.country === 'Israel' ? '🇮🇱' : selectedModel.country === 'Japan' ? '🇯🇵' : selectedModel.country === 'South Korea' ? '🇰🇷' : '🌐'} {selectedModel.country}
+                                  </span>
+                                )}
+                              </div>
+                              <h2 className="text-base font-bold text-white leading-snug">{selectedModel.name}</h2>
+                              <span className="text-xs text-slate-400">{selectedModel.developer}</span>
+                            </>
+                          );
+                        })()}
                       </div>
                     </div>
 
                     {/* Score bar */}
-                    {hovered.score != null && (
+                    {selectedModel.score != null && (
                       <div className="mt-3">
                         <div className="flex justify-between items-center mb-1">
                           <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Intelligence Score</span>
-                          <span className="text-sm font-bold font-mono text-indigo-400">{hovered.score}<span className="text-slate-600 text-xs">/100</span></span>
+                          <span className="text-sm font-bold font-mono text-indigo-400">{selectedModel.score}<span className="text-slate-600 text-xs">/100</span></span>
                         </div>
                         <div className="h-2 rounded-full bg-slate-800">
                           <div
-                            className={`h-2 rounded-full bg-gradient-to-r ${hovered.gradient} transition-all duration-500`}
-                            style={{ width: `${hovered.score}%` }}
+                            className={`h-2 rounded-full bg-gradient-to-r ${selectedModel.gradient} transition-all duration-500`}
+                            style={{ width: `${selectedModel.score}%` }}
                           />
                         </div>
                       </div>
                     )}
                   </div>
 
+                  {/* Architecture Characteristics Box */}
+                  {(() => {
+                    const hArch = getArchitectureDetails(selectedModel);
+                    if (!hArch) return null;
+                    return (
+                      <div className="border-t border-slate-800 px-4 py-3 bg-slate-950/40">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">
+                          <span>{hArch.icon} {hArch.title}</span>
+                          <span className={hArch.category === 'Open' ? 'text-emerald-400' : 'text-blue-400'}>
+                            {hArch.category === 'Open' ? 'Self-Hostable' : 'Managed API'}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
+                          <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                            <span className="text-slate-500 block text-[9px]">WEIGHTS</span>
+                            <span className="text-slate-200">{hArch.category === 'Open' ? 'Public / Local' : 'Gated API'}</span>
+                          </div>
+                          <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                            <span className="text-slate-500 block text-[9px]">PRIVACY</span>
+                            <span className={hArch.category === 'Open' ? 'text-emerald-400' : 'text-slate-300'}>
+                              {hArch.category === 'Open' ? 'Air-Gap Safe' : 'Provider Cloud'}
+                            </span>
+                          </div>
+                          <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                            <span className="text-slate-500 block text-[9px]">FINE-TUNING</span>
+                            <span className="text-slate-200">{hArch.category === 'Open' ? 'Full LoRA/QLoRA' : 'Prompt / Managed'}</span>
+                          </div>
+                          <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                            <span className="text-slate-500 block text-[9px]">BILLING</span>
+                            <span className="text-slate-200">{hArch.category === 'Open' ? 'Zero Token Fees' : 'Per-Token API'}</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+
+                  {/* Context Window & Token Capacity Section */}
+                  {selectedModel.context && (
+                    <div className="border-t border-slate-800 px-4 py-3 bg-indigo-950/20">
+                      <div className="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-indigo-300 mb-1.5">
+                        <span className="flex items-center gap-1"><span>📚</span> Tokens & Capacity</span>
+                        <span className="text-white bg-indigo-500/20 border border-indigo-500/30 px-2 py-0.5 rounded font-mono">
+                          {selectedModel.context.label} In
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono mt-1 mb-2">
+                        <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                          <span className="text-slate-500 block text-[9px]">MAX OUTPUT</span>
+                          <span className="text-slate-200">{selectedModel.context.maxOutputTokens}</span>
+                        </div>
+                        <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                          <span className="text-slate-500 block text-[9px]">TOKEN SPEED</span>
+                          <span className="text-emerald-400">{selectedModel.context.tokenSpeed}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                        <span>Doc Capacity: <strong className="text-slate-200">{selectedModel.context.pages}</strong></span>
+                        <span className="text-indigo-300 font-semibold">{selectedModel.context.needleRecall} Recall</span>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Quick stats grid */}
                   <div className="grid grid-cols-2 border-t border-slate-800 divide-x divide-slate-800">
                     {[
-                      { label: 'Architecture', value: hovered.arch || 'Decoder-Only' },
-                      { label: 'Released',     value: hovered.released || '—' },
-                      { label: 'Params',       value: hovered.params || '—' },
-                      { label: 'Local Run',    value: hovered.local ? '✅ Yes' : '❌ No' },
+                      { label: 'Input Tokens',  value: selectedModel.context?.maxInputTokens || '128K tokens' },
+                      { label: 'Max Output',    value: selectedModel.context?.maxOutputTokens || '8,192 tokens' },
+                      { label: 'Architecture',  value: selectedModel.arch || 'Decoder-Only' },
+                      { label: 'Parameters',    value: selectedModel.params || '—' },
                     ].map(stat => (
                       <div key={stat.label} className="px-4 py-2.5 odd:border-b odd:border-slate-800 even:border-b even:border-slate-800 last:border-b-0 [&:nth-child(3)]:border-b-0 [&:nth-child(4)]:border-b-0">
                         <div className="text-[9px] font-mono text-slate-500 uppercase tracking-wider">{stat.label}</div>
@@ -557,14 +730,14 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                       <div className="flex-1 rounded-xl bg-slate-950/60 border border-slate-800 px-3 py-2 text-center">
                         <div className="text-[9px] text-slate-500 mb-0.5">Input</div>
                         <div className="text-sm font-bold font-mono text-emerald-400">
-                          {hovered.priceIn != null ? `$${hovered.priceIn}` : hovered.access === 'open' || hovered.access === 'free' ? 'Free' : '—'}
+                          {selectedModel.priceIn != null ? `$${selectedModel.priceIn}` : selectedModel.access === 'open' || selectedModel.access === 'free' ? 'Free' : '—'}
                         </div>
                       </div>
                       <div className="text-slate-700 text-xs">→</div>
                       <div className="flex-1 rounded-xl bg-slate-950/60 border border-slate-800 px-3 py-2 text-center">
                         <div className="text-[9px] text-slate-500 mb-0.5">Output</div>
                         <div className="text-sm font-bold font-mono text-amber-400">
-                          {hovered.priceOut != null ? `$${hovered.priceOut}` : hovered.access === 'open' || hovered.access === 'free' ? 'Free' : '—'}
+                          {selectedModel.priceOut != null ? `$${selectedModel.priceOut}` : selectedModel.access === 'open' || selectedModel.access === 'free' ? 'Free' : '—'}
                         </div>
                       </div>
                     </div>
@@ -573,20 +746,20 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                   {/* Overview */}
                   <div className="border-t border-slate-800 px-4 py-3">
                     <div className="text-[9px] font-mono text-slate-500 uppercase tracking-wider mb-1.5">Overview</div>
-                    <p className="text-xs text-slate-300 leading-relaxed">{hovered.description}</p>
+                    <p className="text-xs text-slate-300 leading-relaxed">{selectedModel.description}</p>
                   </div>
 
                   {/* Pipeline preview */}
                   <div className="border-t border-slate-800 px-4 py-3">
                     <div className="text-[9px] font-mono text-slate-500 uppercase tracking-wider mb-1.5">Pipeline Preview</div>
-                    <CategoryVisualMockup category={hovered.category} modelName={hovered.name} />
+                    <CategoryVisualMockup category={selectedModel.category} modelName={selectedModel.name} />
                   </div>
 
                   {/* Key features */}
                   <div className="border-t border-slate-800 px-4 py-3">
                     <div className="text-[9px] font-mono text-slate-500 uppercase tracking-wider mb-1.5">Key Features</div>
                     <ul className="space-y-1.5">
-                      {hovered.features?.map((f, i) => (
+                      {selectedModel.features?.map((f, i) => (
                         <li key={i} className="flex items-start gap-2 text-[11px] text-slate-300">
                           <span className="text-indigo-400 mt-0.5 shrink-0">✦</span> {f}
                         </li>
@@ -596,15 +769,15 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
 
                   {/* Footer */}
                   <div className="border-t border-slate-800 px-4 py-2.5 flex justify-between text-[9px] font-mono text-slate-600">
-                    <span>ID: {String(hovered.id).padStart(4, '0')}</span>
+                    <span>ID: {String(selectedModel.id).padStart(4, '0')}</span>
                     <span className="text-emerald-600">● READY</span>
                   </div>
                 </div>
               ) : (
                 <div className="rounded-2xl bg-slate-900/30 border border-slate-800 p-8 text-center min-h-[300px] flex flex-col items-center justify-center">
                   <span className="text-3xl mb-3">✦</span>
-                  <span className="text-sm font-semibold text-slate-400">Hover a model card</span>
-                  <p className="text-xs text-slate-500 mt-1">to reveal its full profile</p>
+                  <span className="text-sm font-semibold text-slate-400">Click a model card</span>
+                  <p className="text-xs text-slate-500 mt-1">to inspect its full profile & context capacity</p>
                 </div>
               )}
             </div>
@@ -622,14 +795,14 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
         <div className="space-y-6 fade-up">
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {[
-              { icon: '🤖', num: 127, label: 'LLMs' },
-              { icon: '🎨', num: 72, label: 'Image Gen' },
-              { icon: '🎬', num: 54, label: 'Video Gen' },
-              { icon: '🔊', num: 28, label: 'Audio / TTS' },
-              { icon: '💻', num: 31, label: 'Code' },
-              { icon: '🔍', num: 22, label: 'Search' },
-              { icon: '🧩', num: 18, label: 'Multimodal' },
-              { icon: '📐', num: 11, label: 'Specialty' },
+              { icon: '🤖', num: categoryCounts.llm || 0, label: 'LLMs' },
+              { icon: '🧩', num: categoryCounts.multi || 0, label: 'Multimodal' },
+              { icon: '🎨', num: categoryCounts.image || 0, label: 'Image Gen' },
+              { icon: '🎬', num: categoryCounts.video || 0, label: 'Video Gen' },
+              { icon: '🔊', num: categoryCounts.audio || 0, label: 'Audio / TTS' },
+              { icon: '💻', num: categoryCounts.code || 0, label: 'Code' },
+              { icon: '🔍', num: categoryCounts.search || 0, label: 'Search' },
+              { icon: '🧠', num: categoryCounts.reason || 0, label: 'Reasoning' },
             ].map((item, idx) => (
               <div key={idx} className="p-3.5 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
                 <div className="text-lg mb-1">{item.icon}</div>

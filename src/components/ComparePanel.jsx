@@ -2,20 +2,56 @@
 
 import { useCompare } from '@/context/CompareContext';
 import ModelIcon from '@/components/ModelIcon';
+import { getArchitectureDetails, getModelContextInfo } from '@/data/intelligence_data';
 
 // Row definitions for comparison table
 const ROWS = [
-  { label: 'Developer',    key: 'developer' },
-  { label: 'Category',     key: 'category' },
-  { label: 'Architecture', key: 'arch' },
-  { label: 'Country',      key: 'country' },
-  { label: 'Released',     key: 'released' },
-  { label: 'Parameters',  key: 'params' },
-  { label: 'Access',      key: 'access' },
-  { label: 'Price (In)',  key: 'priceIn',  format: v => v != null ? `$${v}/M tok` : '—' },
-  { label: 'Price (Out)', key: 'priceOut', format: v => v != null ? `$${v}/M tok` : '—' },
-  { label: 'Local Run',   key: 'local',    format: v => v ? '✅ Yes' : '❌ No' },
-  { label: 'Score',       key: 'score',    format: v => v != null ? `${v}/100` : '—' },
+  { label: 'Developer',         key: 'developer' },
+  { label: 'Category',          key: 'category' },
+  { label: 'Input Context Tokens', key: 'max_in_tokens', format: (_, m) => {
+    const c = getModelContextInfo(m);
+    return c ? `📚 ${c.maxInputTokens}` : '—';
+  }},
+  { label: 'Max Output Tokens', key: 'max_out_tokens', format: (_, m) => {
+    const c = getModelContextInfo(m);
+    return c ? `⚡ ${c.maxOutputTokens}` : '—';
+  }},
+  { label: 'Token Speed',       key: 'token_speed',    format: (_, m) => {
+    const c = getModelContextInfo(m);
+    return c ? `${c.tokenSpeed}` : '—';
+  }},
+  { label: 'Cost / 100K Tokens',key: 'cost_100k',      format: (_, m) => {
+    const c = getModelContextInfo(m);
+    return c ? `${c.tokenCost100K}` : '—';
+  }},
+  { label: 'Doc Capacity',      key: 'context_cap',    format: (_, m) => {
+    const c = getModelContextInfo(m);
+    return c ? `${c.pages} (${c.words})` : '—';
+  }},
+  { label: 'Architecture Model',key: 'arch_type', format: (_, m) => {
+    const a = getArchitectureDetails(m);
+    return a ? `${a.icon} ${a.category} Weights` : '—';
+  }},
+  { label: 'Weights Access',    key: 'weight_acc', format: (_, m) => {
+    const a = getArchitectureDetails(m);
+    return a ? (a.category === 'Open' ? '🔓 Public Checkpoints' : '🔒 Gated Server-Side') : '—';
+  }},
+  { label: 'Data Governance',   key: 'privacy',    format: (_, m) => {
+    const a = getArchitectureDetails(m);
+    return a ? (a.category === 'Open' ? '🛡️ 100% Air-Gap Safe' : '☁️ Provider Cloud Policy') : '—';
+  }},
+  { label: 'Fine-Tunability',   key: 'finetune',   format: (_, m) => {
+    const a = getArchitectureDetails(m);
+    return a ? (a.category === 'Open' ? '🛠️ Full LoRA / QLoRA' : '⚙️ Prompt / Managed') : '—';
+  }},
+  { label: 'Country',           key: 'country' },
+  { label: 'Released',          key: 'released' },
+  { label: 'Parameters',       key: 'params' },
+  { label: 'Access Model',     key: 'access' },
+  { label: 'Price (In)',       key: 'priceIn',  format: v => v != null ? `$${v}/M tok` : '—' },
+  { label: 'Price (Out)',      key: 'priceOut', format: v => v != null ? `$${v}/M tok` : '—' },
+  { label: 'Local Run',        key: 'local',    format: v => v ? '✅ Yes (Self-Hosted)' : '❌ No (Cloud Only)' },
+  { label: 'Score',            key: 'score',    format: v => v != null ? `${v}/100` : '—' },
 ];
 
 const ACCENT = ['#6366f1', '#ec4899', '#f59e0b', '#10b981'];
@@ -118,7 +154,7 @@ export default function ComparePanel() {
         {/* Data rows table */}
         <div className="rounded-2xl border border-slate-800 overflow-hidden mb-4">
           {ROWS.map((row, rowIdx) => {
-            const values = compareList.map(m => row.format ? row.format(m[row.key]) : (m[row.key] ?? '—'));
+            const values = compareList.map(m => row.format ? row.format(m[row.key], m) : (m[row.key] ?? '—'));
             const scores = row.key === 'score' ? compareList.map(m => m.score ?? 0) : null;
             const maxScore = scores ? Math.max(...scores) : null;
 

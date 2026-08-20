@@ -238,16 +238,16 @@ export default function IntelligenceDashboard() {
         </h1>
 
         <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-10">
-          Interactive classification, benchmark evaluation, licensing tier breakdown, and country origin analysis across 383 cutting-edge language, vision, video, and audio models.
+          Interactive classification, benchmark evaluation, licensing tier breakdown, and country origin analysis across {RAW_MODELS.length} cutting-edge language, vision, video, and audio models.
         </p>
 
         {/* Big Stat Counter Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-4xl mx-auto">
           {[
-            { label: 'Total Models', num: '383', color: 'from-indigo-500 to-purple-500' },
+            { label: 'Total Models', num: String(RAW_MODELS.length), color: 'from-indigo-500 to-purple-500' },
             { label: 'Categories', num: '14', color: 'from-purple-500 to-pink-500' },
-            { label: 'Producers', num: '18', color: 'from-cyan-500 to-blue-500' },
-            { label: 'Countries', num: '8', color: 'from-amber-500 to-orange-500' },
+            { label: 'Producers', num: '24+', color: 'from-cyan-500 to-blue-500' },
+            { label: 'Countries', num: '12+', color: 'from-amber-500 to-orange-500' },
             { label: 'Free Access', num: '~60%', color: 'from-emerald-500 to-teal-500' },
           ].map((s, idx) => (
             <div

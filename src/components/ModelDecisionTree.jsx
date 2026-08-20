@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import CategoryBadge from '@/components/CategoryBadge';
 import ModelDetailModal from '@/components/ModelDetailModal';
 import { useCompare } from '@/context/CompareContext';
 import { AI_DECISION_TREE } from '@/data/ai_decision_tree';
-import { RAW_MODELS, COUNTRY_FLAG } from '@/data/intelligence_data';
+import { RAW_MODELS, COUNTRY_FLAG, getArchitectureDetails, getModelContextInfo } from '@/data/intelligence_data';
 
 export default function ModelDecisionTree() {
   const [history, setHistory] = useState([AI_DECISION_TREE.startNodeId]);
@@ -128,7 +128,7 @@ export default function ModelDecisionTree() {
             AI Model Decision Tree
           </h1>
           <p className="text-sm md:text-base text-[#8a94b0] mt-2 max-w-xl mx-auto">
-            Navigate through requirements and constraints to match the optimal AI models across our 383-model directory.
+            Navigate through requirements and constraints to match the optimal AI models across our 553-model directory.
           </p>
         </div>
 
@@ -320,6 +320,8 @@ export default function ModelDecisionTree() {
                         const [id, name, producer, cat, country, released, params, access, priceIn, priceOut, localRun, score, desc, tags, color, letter] = m;
                         const flag = COUNTRY_FLAG[country] || '🌐';
                         const isComparing = compareList.some((item) => item[0] === id);
+                        const arch = getArchitectureDetails(m);
+                        const ctx = getModelContextInfo(m);
 
                         return (
                           <div
@@ -328,7 +330,7 @@ export default function ModelDecisionTree() {
                           >
                             <div>
                               {/* Top Bar */}
-                              <div className="flex items-center justify-between gap-2 mb-3">
+                              <div className="flex items-center justify-between gap-2 mb-2.5">
                                 <DeveloperIcon developer={producer} className="w-8 h-8 flex-shrink-0" />
                                 <div className="flex items-center gap-1.5">
                                   <span className="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
@@ -341,23 +343,68 @@ export default function ModelDecisionTree() {
                               <div className="font-bold text-sm text-white group-hover:text-[#6378ff] transition-colors line-clamp-1 mb-0.5">
                                 {name}
                               </div>
-                              <div className="text-[11px] text-[#8a94b0] flex items-center gap-1 mb-2.5">
+                              <div className="text-[11px] text-[#8a94b0] flex items-center gap-1 mb-2">
                                 <span>{flag}</span>
                                 <span className="line-clamp-1">{producer}</span>
                               </div>
 
+                              {/* Architecture Badge (Open vs Closed) */}
+                              {arch && (
+                                <div className="mb-2.5 flex items-center gap-1.5 flex-wrap">
+                                  <span className={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded-md border flex items-center gap-1 w-fit ${arch.badgeClass}`}>
+                                    <span>{arch.icon}</span>
+                                    <span>{arch.category}</span>
+                                  </span>
+                                  {ctx && (
+                                    <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300">
+                                      📚 {ctx.badge}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+
                               {/* Specs tags */}
-                              <div className="flex flex-wrap gap-1.5 mb-3">
+                              <div className="flex flex-wrap gap-1.5 mb-2.5">
                                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1a2035] text-[#ccd3e3]">
                                   {params}
                                 </span>
-                                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1a2035] text-emerald-400 uppercase">
+                                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1a2035] text-slate-300 uppercase">
                                   {access}
                                 </span>
                                 {localRun && (
                                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/30 text-emerald-300">
-                                    Local
+                                    Local Run
                                   </span>
+                                )}
+                              </div>
+
+                              {/* Architecture & Token Highlights */}
+                              <div className="bg-[#111520]/80 p-2 rounded-lg border border-[#6378ff]/10 text-[10px] space-y-1 text-[#8a94b0] mb-2.5">
+                                {ctx && (
+                                  <>
+                                    <div className="flex justify-between">
+                                      <span>Input Tokens:</span>
+                                      <span className="text-indigo-300 font-mono">{ctx.maxInputTokens}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span>Max Output:</span>
+                                      <span className="text-white font-mono">{ctx.maxOutputTokens}</span>
+                                    </div>
+                                  </>
+                                )}
+                                {arch && (
+                                  <>
+                                    <div className="flex justify-between">
+                                      <span>Weights:</span>
+                                      <span className="text-white font-mono">{arch.category === 'Open' ? 'Public / Local' : 'Gated API'}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span>Privacy:</span>
+                                      <span className={arch.category === 'Open' ? 'text-emerald-400 font-mono' : 'text-slate-300 font-mono'}>
+                                        {arch.category === 'Open' ? 'Air-Gap Safe' : 'Provider Cloud'}
+                                      </span>
+                                    </div>
+                                  </>
                                 )}
                               </div>
 

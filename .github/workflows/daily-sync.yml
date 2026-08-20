@@ -1,0 +1,34 @@
+name: Daily OpenRouter Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs everyday at 00:00 UTC (Midnight)
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  update-models:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit changes back to repo
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Live OpenRouter Models
+        run: npm run sync-models
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: automated daily OpenRouter model catalog update [skip ci]"
+          file_pattern: "src/data/openrouter_*"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
