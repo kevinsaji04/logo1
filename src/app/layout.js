@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata = {
-  title: 'NextGen AI Model Directory',
-  description: 'Explore 460+ cutting-edge AI models. Browse by category, developer, and modality.',
+  title: 'AI Model Decision Tree',
+  description: 'Interactive AI Model Decision Tree — Model Evolution & AI Landscape Analysis',
 };
 
 export default function RootLayout({ children }) {

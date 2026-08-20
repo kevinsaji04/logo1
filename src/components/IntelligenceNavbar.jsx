@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 
@@ -8,7 +8,9 @@ export default function IntelligenceNavbar({ activeSection = 'overview' }) {
     { href: '#categories', label: 'Categories' },
     { href: '#models', label: 'All Models' },
     { href: '#rankings', label: 'Rankings' },
+    { href: '/decision-tree', label: '🎯 Decision Tree', isRoute: true, isHighlight: true },
     { href: '/tree', label: '🌳 Evolutionary Tree', isRoute: true },
+    { href: '/landscape', label: '🗺️ Landscape', isRoute: true },
     { href: '#countries', label: 'Origins' },
     { href: '#clients', label: 'Top Clients' },
     { href: '#benchmarks', label: 'Benchmarks' },
@@ -26,11 +28,18 @@ export default function IntelligenceNavbar({ activeSection = 'overview' }) {
       <div className="flex items-center gap-1">
         {links.map((link) => {
           if (link.isRoute) {
+            const isActive = activeSection === link.href.replace('/', '');
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs font-semibold px-3 py-1.5 rounded-lg text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all whitespace-nowrap"
+                className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all whitespace-nowrap ${
+                  link.isHighlight
+                    ? 'text-amber-300 bg-amber-500/15 border-amber-500/30 hover:bg-amber-500/25 shadow-[0_0_12px_rgba(245,158,11,0.15)]'
+                    : isActive
+                    ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40'
+                    : 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500/20'
+                }`}
               >
                 {link.label}
               </Link>

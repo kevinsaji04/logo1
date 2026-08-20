@@ -164,6 +164,9 @@ export default function EvolutionaryTree() {
             </Link>
             <div>
               <div className="flex items-center gap-3 mb-1">
+                <span className="px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 shadow-sm">
+                  🌲 AI Model Decision Tree
+                </span>
                 <h1 className="text-xl font-extrabold text-white tracking-tight flex items-center gap-2">
                   <span>🌳</span> Evolution & Lineage of Major AI Models
                 </h1>
