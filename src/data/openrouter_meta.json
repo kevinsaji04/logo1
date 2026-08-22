@@ -1,7 +1,7 @@
 {
-  "total_models": 419,
-  "last_synced_at": "2026-08-21T01:39:51.618Z",
+  "total_models": 421,
+  "last_synced_at": "2026-08-22T01:28:23.763Z",
   "source": "https://openrouter.ai/api/v1/models",
-  "open_weights_count": 122,
+  "open_weights_count": 124,
   "commercial_api_count": 297
 }
