@@ -1,4 +1,5 @@
-﻿import IntelligenceNavbar from '@/components/IntelligenceNavbar';
+import { Suspense } from 'react';
+import IntelligenceNavbar from '@/components/IntelligenceNavbar';
 import ModelDecisionTree from '@/components/ModelDecisionTree';
 
 export const metadata = {
@@ -8,9 +9,11 @@ export const metadata = {
 
 export default function DecisionTreePage() {
   return (
-    <div className="min-h-screen bg-[#0a0d14]">
-      <IntelligenceNavbar activeSection="decision-tree" />
-      <ModelDecisionTree />
-    </div>
+    <Suspense fallback={<div className="min-h-screen bg-[#0a0d14]" />}>
+      <div className="min-h-screen bg-[#0a0d14]">
+        <IntelligenceNavbar activeSection="decision-tree" />
+        <ModelDecisionTree />
+      </div>
+    </Suspense>
   );
 }

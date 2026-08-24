@@ -66,9 +66,9 @@ export const RAW_MODELS = [
   ],
   [
     3,
-    "GLM 5.2",
+    "GLM-5.2",
     "Zhipu AI",
-    "text",
+    "llm",
     "China",
     "2026-Q2",
     "130B",
@@ -76,15 +76,11 @@ export const RAW_MODELS = [
     0.5,
     2,
     false,
-    90,
-    "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+    80,
+    "Fifth-generation GLM with enhanced reasoning capabilities",
     [
       "llm",
-      "reason",
-      "text",
-      "z-ai",
-      "usa",
-      "commercial"
+      "reason"
     ],
     "#06b6d4",
     "GL"
@@ -152,9 +148,9 @@ export const RAW_MODELS = [
   ],
   [
     7,
-    "Fugu Ultra",
-    "Sakana AI",
-    "multi",
+    "Fugu-Ultra",
+    "SakanaAI",
+    "llm",
     "Japan",
     "2026-Q2",
     "~70B",
@@ -162,14 +158,10 @@ export const RAW_MODELS = [
     1,
     4,
     false,
-    96,
-    "Fugu Ultra is the higher-performance model in Sakana AI\\'s Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
+    74,
+    "Japanese-optimized ultra-large language model",
     [
-      "llm",
-      "multi",
-      "sakana",
-      "japan",
-      "commercial"
+      "llm"
     ],
     "#ec4899",
     "FU"
@@ -237,25 +229,21 @@ export const RAW_MODELS = [
   ],
   [
     11,
-    "Qwen3.7 Plus",
+    "Qwen3.7-Plus",
     "Alibaba",
-    "multi",
+    "llm",
     "China",
     "2026-Q2",
     "72B",
     "freemium",
     0.5,
     2,
-    true,
-    89,
-    "Qwen3.7-Plus is a cost-effective model in Alibaba\\'s Qwen3.7 series. It supports text and image input with text output, building on the series\\' text capabilities with a comprehensive upgrade to its...",
+    false,
+    87,
+    "High-capability Qwen 3.7 Plus series",
     [
       "llm",
-      "reason",
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "reason"
     ],
     "#f97316",
     "QW"
@@ -302,7 +290,7 @@ export const RAW_MODELS = [
   ],
   [
     14,
-    "Kimi K2.7 Code",
+    "Kimi-K2.7-Code",
     "Moonshot AI",
     "code",
     "China",
@@ -312,13 +300,10 @@ export const RAW_MODELS = [
     0.7,
     2.8,
     false,
-    87,
-    "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI\\'s Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
+    83,
+    "Specialized code model for advanced programming tasks",
     [
-      "code",
-      "moonshotai",
-      "china",
-      "commercial"
+      "code"
     ],
     "#f97316",
     "KI"
@@ -449,25 +434,21 @@ export const RAW_MODELS = [
   ],
   [
     21,
-    "Qwen3.7 Max",
+    "Qwen3.7-Max",
     "Alibaba",
-    "text",
+    "llm",
     "China",
     "2026-Q2",
     "235B MoE",
     "freemium",
     0.6,
     2.4,
-    true,
-    98,
-    "Qwen3.7-Max is the flagship model in Alibaba\\'s Qwen3.7 series. It supports text input and output and is designed for agent-centric workloads, with particular strengths in coding, office and productivity tasks,...",
+    false,
+    90,
+    "Max-capacity Qwen 3.7 flagship model",
     [
       "llm",
-      "reason",
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "reason"
     ],
     "#f97316",
     "QW"
@@ -683,7 +664,7 @@ export const RAW_MODELS = [
   ],
   [
     32,
-    "Kimi K2.6",
+    "Kimi-K2.6",
     "Moonshot AI",
     "llm",
     "China",
@@ -704,25 +685,21 @@ export const RAW_MODELS = [
   ],
   [
     33,
-    "Qwen3.6 Max Preview",
+    "Qwen3.6-Max-Preview",
     "Alibaba",
-    "text",
+    "llm",
     "China",
     "2026-Q1",
     "235B MoE",
     "freemium",
     0.6,
     2.4,
-    true,
-    99,
-    "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and...",
+    false,
+    87,
+    "Preview release of Qwen 3.6 Max",
     [
       "llm",
-      "reason",
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "reason"
     ],
     "#f97316",
     "QW"
@@ -1452,7 +1429,7 @@ export const RAW_MODELS = [
   ],
   [
     69,
-    "Mistral Large 2",
+    "Mistral-Large-2",
     "Mistral AI",
     "llm",
     "France",
@@ -1461,15 +1438,11 @@ export const RAW_MODELS = [
     "api",
     2,
     6,
-    true,
-    95,
-    "Second generation flagship open-weights model from Mistral AI with 128K context and world-class coding capabilities.",
+    false,
+    86,
+    "Mistral's flagship Large 2 model",
     [
-      "llm",
-      "mistral",
-      "mistral-large2",
-      "123b",
-      "open"
+      "llm"
     ],
     "#f97316",
     "MS"
@@ -2487,24 +2460,20 @@ export const RAW_MODELS = [
   ],
   [
     120,
-    "Sora 2",
+    "Sora-2",
     "OpenAI",
     "video",
     "USA",
     "2025-Q1",
     "N/A",
     "paid",
-    0.12,
-    0.12,
+    null,
+    null,
     false,
-    98,
-    "Second generation video diffusion engine with real-time interactive physics and high motion stability.",
+    90,
+    "OpenAI Sora 2 video generation",
     [
-      "video",
-      "openai",
-      "sora2",
-      "video-gen",
-      "api"
+      "video"
     ],
     "#10b981",
     "OA"
@@ -5852,7 +5821,7 @@ export const RAW_MODELS = [
   [
     283,
     "Gemini 3.1 Pro",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2026",
@@ -5920,6 +5889,27 @@ export const RAW_MODELS = [
   ],
   [
     286,
+    "Kimi K2.6",
+    "Moonshot AI",
+    "llm",
+    "China",
+    "2026-Q1",
+    "32B",
+    "api",
+    0.6,
+    2.4,
+    false,
+    82,
+    "Kimi K2.6 language model",
+    [
+      "llm",
+      "code"
+    ],
+    "#f97316",
+    "KI"
+  ],
+  [
+    287,
     "Nemotron 3 Ultra",
     "NVIDIA",
     "llm",
@@ -5941,7 +5931,7 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    287,
+    288,
     "Veo-v3.1-Fast",
     "Google",
     "video",
@@ -5961,7 +5951,7 @@ export const RAW_MODELS = [
     "VE"
   ],
   [
-    288,
+    289,
     "Wan-2.2",
     "Alibaba",
     "video",
@@ -5982,7 +5972,7 @@ export const RAW_MODELS = [
     "WA"
   ],
   [
-    289,
+    290,
     "LTX-2-Fast",
     "Lightricks",
     "video",
@@ -6002,7 +5992,7 @@ export const RAW_MODELS = [
     "LT"
   ],
   [
-    290,
+    291,
     "LTX-2-Pro",
     "Lightricks",
     "video",
@@ -6022,7 +6012,7 @@ export const RAW_MODELS = [
     "LT"
   ],
   [
-    291,
+    292,
     "Veo-3",
     "Google",
     "video",
@@ -6042,7 +6032,7 @@ export const RAW_MODELS = [
     "VE"
   ],
   [
-    292,
+    293,
     "Veo-3-vFast",
     "Google",
     "video",
@@ -6062,7 +6052,7 @@ export const RAW_MODELS = [
     "VE"
   ],
   [
-    293,
+    294,
     "Vidu",
     "Vidu",
     "video",
@@ -6082,7 +6072,7 @@ export const RAW_MODELS = [
     "VI"
   ],
   [
-    294,
+    295,
     "DeepSeek-V3.2",
     "DeepSeek",
     "llm",
@@ -6103,10 +6093,10 @@ export const RAW_MODELS = [
     "DS"
   ],
   [
-    295,
-    "Claude Opus 4.7",
+    296,
+    "Claude-Opus-4.7",
     "Anthropic",
-    "multi",
+    "llm",
     "USA",
     "2026-Q2",
     "N/A",
@@ -6114,23 +6104,18 @@ export const RAW_MODELS = [
     15,
     75,
     false,
-    99,
-    "Anthropic 2026 flagship Opus model with world-class mathematical synthesis, coding mastery, and frontier agentic reasoning.",
+    95,
+    "Anthropic Claude Opus 4.7",
     [
       "llm",
       "reason",
-      "code",
-      "multi",
-      "anthropic",
-      "claude-opus-47",
-      "flagship",
-      "api"
+      "code"
     ],
     "#f59e0b",
     "CA"
   ],
   [
-    296,
+    297,
     "Nano-Banana-2",
     "NanoBanana",
     "llm",
@@ -6150,7 +6135,7 @@ export const RAW_MODELS = [
     "NB"
   ],
   [
-    297,
+    298,
     "GPT-Image-2",
     "OpenAI",
     "image",
@@ -6170,10 +6155,10 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    298,
+    299,
     "GPT-5.5-Pro",
     "OpenAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6182,23 +6167,20 @@ export const RAW_MODELS = [
     48,
     false,
     96,
-    "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
+    "OpenAI GPT-5.5 Pro model",
     [
       "llm",
       "multi",
-      "reason",
-      "openai",
-      "usa",
-      "commercial"
+      "reason"
     ],
     "#10b981",
     "OA"
   ],
   [
-    299,
-    "Gemini 3.5 Flash",
+    300,
+    "Gemini-3.5-Flash",
     "Google",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6206,48 +6188,41 @@ export const RAW_MODELS = [
     0.3,
     1.2,
     false,
-    99,
-    "Gemini 3.5 Flash is Google\\'s high-efficiency multimodal model, bringing near-Pro level coding and reasoning at Flash-tier cost and speed. It is highly optimized for coding proficiency and parallel agentic execution...",
+    91,
+    "Google Gemini 3.5 Flash",
     [
       "llm",
-      "multi",
-      "google",
-      "usa",
-      "commercial"
+      "multi"
     ],
     "#34d399",
     "GG"
   ],
   [
-    300,
-    "Grok 4.3",
+    301,
+    "Grok-4.3",
     "xAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
     "paid",
-    1.25,
-    2.5,
+    null,
+    null,
     false,
-    99,
-    "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
+    91,
+    "xAI Grok 4.3 model",
     [
       "llm",
-      "reason",
-      "multi",
-      "xai",
-      "usa",
-      "commercial"
+      "reason"
     ],
     "#818cf8",
     "GK"
   ],
   [
-    301,
+    302,
     "GPT-5.4-Nano",
     "OpenAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6255,23 +6230,19 @@ export const RAW_MODELS = [
     0.1,
     0.4,
     false,
-    86,
-    "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
+    83,
+    "GPT-5.4 Nano compact",
     [
-      "llm",
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
+      "llm"
     ],
     "#10b981",
     "OA"
   ],
   [
-    302,
+    303,
     "GPT-5.4-Mini",
     "OpenAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6279,20 +6250,16 @@ export const RAW_MODELS = [
     0.4,
     1.6,
     false,
-    88,
-    "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
+    87,
+    "GPT-5.4 Mini model",
     [
-      "llm",
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
+      "llm"
     ],
     "#10b981",
     "OA"
   ],
   [
-    303,
+    304,
     "Script-Bot-Creator",
     "Various",
     "tool",
@@ -6312,7 +6279,7 @@ export const RAW_MODELS = [
     "SB"
   ],
   [
-    304,
+    305,
     "Canvas-Creator",
     "Various",
     "tool",
@@ -6333,10 +6300,10 @@ export const RAW_MODELS = [
     "CC"
   ],
   [
-    305,
+    306,
     "GPT-5.4-Pro",
     "OpenAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6344,24 +6311,20 @@ export const RAW_MODELS = [
     6,
     24,
     false,
-    98,
-    "GPT-5.4 Pro is OpenAI\\'s most advanced model, building on GPT-5.4\\'s unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
+    93,
+    "GPT-5.4 Pro model",
     [
       "llm",
-      "reason",
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
+      "reason"
     ],
     "#10b981",
     "OA"
   ],
   [
-    306,
-    "Gemini 3.1 Flash Lite",
+    307,
+    "Gemini-3.1-Flash-Lite",
     "Google",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6369,20 +6332,16 @@ export const RAW_MODELS = [
     0.075,
     0.3,
     false,
-    88,
-    "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic...",
+    86,
+    "Gemini 3.1 Flash Lite efficient",
     [
-      "llm",
-      "multi",
-      "google",
-      "usa",
-      "commercial"
+      "llm"
     ],
     "#34d399",
     "GG"
   ],
   [
-    307,
+    308,
     "GPT-5.3-Codex",
     "OpenAI",
     "code",
@@ -6402,10 +6361,10 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    308,
-    "Gemma 4 31B",
+    309,
+    "Gemma-4-31B",
     "Google",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "31B",
@@ -6413,21 +6372,17 @@ export const RAW_MODELS = [
     0,
     0,
     true,
-    88,
-    "Gemma 4 31B Instruct is Google DeepMind\\'s 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
+    82,
+    "Google Gemma 4 31B open model",
     [
       "llm",
-      "open",
-      "multi",
-      "google",
-      "usa",
-      "commercial"
+      "open"
     ],
     "#34d399",
     "GM"
   ],
   [
-    309,
+    310,
     "GLM-5.1-FW",
     "Zhipu AI",
     "llm",
@@ -6447,7 +6402,7 @@ export const RAW_MODELS = [
     "GL"
   ],
   [
-    310,
+    311,
     "GPT-5.3-Instant",
     "OpenAI",
     "llm",
@@ -6467,57 +6422,49 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    311,
+    312,
     "Grok-4.20-Multi-Agent",
     "xAI",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "N/A",
     "paid",
-    1.25,
-    2.5,
+    null,
+    null,
     false,
-    96,
-    "Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
+    89,
+    "Grok 4.20 multi-agent system",
     [
       "llm",
-      "tool",
-      "multi",
-      "xai",
-      "usa",
-      "commercial"
+      "tool"
     ],
     "#818cf8",
     "GK"
   ],
   [
-    312,
-    "Qwen3.6 Plus",
+    313,
+    "Qwen3.6-Plus",
     "Alibaba",
-    "multi",
+    "llm",
     "China",
     "2026-Q1",
     "72B",
     "freemium",
     0.5,
     2,
-    true,
-    90,
-    "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers...",
+    false,
+    87,
+    "Qwen 3.6 Plus model",
     [
       "llm",
-      "reason",
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "reason"
     ],
     "#f97316",
     "QW"
   ],
   [
-    313,
+    314,
     "Kimi-K2.5",
     "Moonshot AI",
     "llm",
@@ -6538,10 +6485,10 @@ export const RAW_MODELS = [
     "KI"
   ],
   [
-    314,
-    "MiniMax M2.7",
-    "Minimax",
-    "text",
+    315,
+    "Minimax-M2.7",
+    "MiniMax",
+    "llm",
     "China",
     "2026-Q1",
     "456B MoE",
@@ -6549,44 +6496,36 @@ export const RAW_MODELS = [
     0.3,
     1.2,
     false,
-    92,
-    "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
+    79,
+    "MiniMax M2.7 model",
     [
-      "llm",
-      "text",
-      "minimax",
-      "china",
-      "commercial"
+      "llm"
     ],
     "#8b5cf6",
     "MM"
   ],
   [
-    315,
-    "Mistral Small 4",
+    316,
+    "Mistral-Small-4",
     "Mistral AI",
-    "multi",
+    "llm",
     "France",
     "2026-Q1",
     "24B",
     "api",
     0.1,
     0.3,
-    true,
-    90,
-    "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+    false,
+    80,
+    "Mistral Small 4 updated",
     [
-      "llm",
-      "multi",
-      "mistral ai",
-      "france",
-      "open"
+      "llm"
     ],
     "#f97316",
     "MS"
   ],
   [
-    316,
+    317,
     "MiMo-V2-Flash",
     "Xiaomi",
     "llm",
@@ -6607,7 +6546,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    317,
+    318,
     "Qwen3.5-Plus",
     "Alibaba",
     "llm",
@@ -6628,7 +6567,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    318,
+    319,
     "Qwen3.5-Omni-Flash",
     "Alibaba",
     "multi",
@@ -6649,7 +6588,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    319,
+    320,
     "Qwen3.5-Flash",
     "Alibaba",
     "llm",
@@ -6670,7 +6609,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    320,
+    321,
     "Seed-2.0-Lite",
     "ByteDance",
     "llm",
@@ -6690,7 +6629,7 @@ export const RAW_MODELS = [
     "SE"
   ],
   [
-    321,
+    322,
     "Qwen3.5-Omni-Plus",
     "Alibaba",
     "multi",
@@ -6711,10 +6650,10 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    322,
-    "Gemma 4 26B A4B",
+    323,
+    "Gemma-4-26B-A4B",
     "Google",
-    "multi",
+    "llm",
     "USA",
     "2026-Q1",
     "26B (4B active)",
@@ -6722,21 +6661,17 @@ export const RAW_MODELS = [
     0,
     0,
     true,
-    86,
-    "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
+    79,
+    "Google Gemma 4 26B MoE model",
     [
       "llm",
-      "open",
-      "multi",
-      "google",
-      "usa",
-      "commercial"
+      "open"
     ],
     "#34d399",
     "GM"
   ],
   [
-    323,
+    324,
     "Seedance-2-Fast",
     "ByteDance",
     "video",
@@ -6756,7 +6691,7 @@ export const RAW_MODELS = [
     "SD"
   ],
   [
-    324,
+    325,
     "Seedance-2.0",
     "ByteDance",
     "video",
@@ -6776,7 +6711,7 @@ export const RAW_MODELS = [
     "SD"
   ],
   [
-    325,
+    326,
     "Claude-Opus-4.6",
     "Anthropic",
     "llm",
@@ -6798,7 +6733,7 @@ export const RAW_MODELS = [
     "CA"
   ],
   [
-    326,
+    327,
     "Claude-Haiku-4.5",
     "Anthropic",
     "llm",
@@ -6818,7 +6753,7 @@ export const RAW_MODELS = [
     "CA"
   ],
   [
-    327,
+    328,
     "Qwen3.5-397B-A17B-T",
     "Alibaba",
     "llm",
@@ -6839,7 +6774,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    328,
+    329,
     "Seed-2.0-Mini",
     "ByteDance",
     "llm",
@@ -6859,32 +6794,28 @@ export const RAW_MODELS = [
     "SE"
   ],
   [
-    329,
-    "Qwen3.5 397B A17B",
+    330,
+    "Qwen3.5-397B-A17B",
     "Alibaba",
-    "multi",
+    "llm",
     "China",
     "2026-Q1",
     "397B MoE",
     "api",
-    0.39,
-    2.34,
-    true,
+    null,
+    null,
+    false,
     89,
-    "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
+    "Qwen 3.5 397B standard model",
     [
       "llm",
-      "reason",
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "reason"
     ],
     "#f97316",
     "QW"
   ],
   [
-    330,
+    331,
     "MiMo-V2-Flash-EL",
     "Xiaomi",
     "llm",
@@ -6905,7 +6836,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    331,
+    332,
     "Gemma-4-31B-N",
     "Google",
     "llm",
@@ -6926,7 +6857,7 @@ export const RAW_MODELS = [
     "GM"
   ],
   [
-    332,
+    333,
     "Grok-Imagine-Image",
     "xAI",
     "image",
@@ -6946,7 +6877,7 @@ export const RAW_MODELS = [
     "GK"
   ],
   [
-    333,
+    334,
     "Kimi-K2.5-FW",
     "Moonshot AI",
     "llm",
@@ -6966,7 +6897,7 @@ export const RAW_MODELS = [
     "KI"
   ],
   [
-    334,
+    335,
     "Seed-2.0-Pro",
     "ByteDance",
     "llm",
@@ -6987,7 +6918,7 @@ export const RAW_MODELS = [
     "SE"
   ],
   [
-    335,
+    336,
     "MiniMax-Speech-2.8",
     "MiniMax",
     "audio",
@@ -7007,7 +6938,7 @@ export const RAW_MODELS = [
     "MM"
   ],
   [
-    336,
+    337,
     "Manus",
     "Manus AI",
     "tool",
@@ -7028,10 +6959,10 @@ export const RAW_MODELS = [
     "MA"
   ],
   [
-    337,
-    "GLM 5",
+    338,
+    "GLM-5",
     "Zhipu AI",
-    "text",
+    "llm",
     "China",
     "2026-Q1",
     "130B",
@@ -7039,21 +6970,17 @@ export const RAW_MODELS = [
     0.5,
     2,
     false,
-    91,
-    "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
+    83,
+    "GLM-5 flagship model",
     [
       "llm",
-      "reason",
-      "text",
-      "z-ai",
-      "usa",
-      "commercial"
+      "reason"
     ],
     "#06b6d4",
     "GL"
   ],
   [
-    338,
+    339,
     "GPT-5.2",
     "OpenAI",
     "llm",
@@ -7077,7 +7004,7 @@ export const RAW_MODELS = [
     "5.2"
   ],
   [
-    339,
+    340,
     "Gemini-3-Flash",
     "Google",
     "llm",
@@ -7098,7 +7025,7 @@ export const RAW_MODELS = [
     "GG"
   ],
   [
-    340,
+    341,
     "GPT-5.2-Instant",
     "OpenAI",
     "llm",
@@ -7118,7 +7045,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    341,
+    342,
     "Grok-4.1-Fast-Reasoning",
     "xAI",
     "reason",
@@ -7139,7 +7066,7 @@ export const RAW_MODELS = [
     "GK"
   ],
   [
-    342,
+    343,
     "Veo-3.1-Lite",
     "Google",
     "video",
@@ -7159,32 +7086,28 @@ export const RAW_MODELS = [
     "VE"
   ],
   [
-    343,
-    "Qwen3 Max Thinking",
+    344,
+    "Qwen3-Max-Thinking",
     "Alibaba",
     "reason",
     "China",
     "2026-Q1",
     "235B MoE",
     "api",
-    0.78,
-    3.9,
-    true,
-    92,
-    "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and reinforcement learning compute, it...",
+    null,
+    null,
+    false,
+    90,
+    "Qwen3 Max with thinking mode",
     [
       "reason",
-      "llm",
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
+      "llm"
     ],
     "#f97316",
     "QW"
   ],
   [
-    344,
+    345,
     "Grok-Imagine-Video",
     "xAI",
     "video",
@@ -7204,7 +7127,7 @@ export const RAW_MODELS = [
     "GK"
   ],
   [
-    345,
+    346,
     "Claude-Sonnet-4.5",
     "Anthropic",
     "llm",
@@ -7226,7 +7149,7 @@ export const RAW_MODELS = [
     "CA"
   ],
   [
-    346,
+    347,
     "Seedream-5.0-Lite",
     "ByteDance",
     "image",
@@ -7246,7 +7169,7 @@ export const RAW_MODELS = [
     "SD"
   ],
   [
-    347,
+    348,
     "Kling-v3-Motion-Ctrl",
     "Kuaishou",
     "video",
@@ -7266,7 +7189,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    348,
+    349,
     "Runway-Gen-4.5",
     "Runway",
     "video",
@@ -7286,7 +7209,7 @@ export const RAW_MODELS = [
     "RW"
   ],
   [
-    349,
+    350,
     "Qwen3-Coder-Next",
     "Alibaba",
     "code",
@@ -7306,10 +7229,10 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    350,
-    "MiniMax M2.5",
-    "Minimax",
-    "text",
+    351,
+    "Minimax-M2.5",
+    "MiniMax",
+    "llm",
     "China",
     "2025-Q4",
     "456B MoE",
@@ -7317,20 +7240,16 @@ export const RAW_MODELS = [
     0.3,
     1.2,
     false,
-    90,
-    "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
+    78,
+    "MiniMax M2.5 model",
     [
-      "llm",
-      "text",
-      "minimax",
-      "china",
-      "commercial"
+      "llm"
     ],
     "#8b5cf6",
     "MM"
   ],
   [
-    351,
+    352,
     "Grok-4.1-Fast-Non-Reasoning",
     "xAI",
     "llm",
@@ -7350,7 +7269,7 @@ export const RAW_MODELS = [
     "GK"
   ],
   [
-    352,
+    353,
     "Kimi-K2-Thinking",
     "Moonshot AI",
     "reason",
@@ -7371,7 +7290,7 @@ export const RAW_MODELS = [
     "KI"
   ],
   [
-    353,
+    354,
     "GLM-5.1-T",
     "Zhipu AI",
     "llm",
@@ -7392,7 +7311,7 @@ export const RAW_MODELS = [
     "GL"
   ],
   [
-    354,
+    355,
     "GPT-5.2-Codex",
     "OpenAI",
     "code",
@@ -7412,7 +7331,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    355,
+    356,
     "Gemma-4-31B-T",
     "Google",
     "llm",
@@ -7434,7 +7353,7 @@ export const RAW_MODELS = [
     "GM"
   ],
   [
-    356,
+    357,
     "Grok-4",
     "xAI",
     "llm",
@@ -7456,7 +7375,7 @@ export const RAW_MODELS = [
     "GK"
   ],
   [
-    357,
+    358,
     "GPT-Image-1.5",
     "OpenAI",
     "image",
@@ -7476,7 +7395,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    358,
+    359,
     "Claude-Code",
     "Anthropic",
     "code",
@@ -7497,7 +7416,7 @@ export const RAW_MODELS = [
     "CA"
   ],
   [
-    359,
+    360,
     "Minimax-M2.1",
     "MiniMax",
     "llm",
@@ -7517,7 +7436,7 @@ export const RAW_MODELS = [
     "MM"
   ],
   [
-    360,
+    361,
     "Qwen-Image-2.0",
     "Alibaba",
     "image",
@@ -7537,7 +7456,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    361,
+    362,
     "Perplexity-Adv-Deep-Research",
     "Perplexity",
     "search",
@@ -7558,7 +7477,7 @@ export const RAW_MODELS = [
     "PP"
   ],
   [
-    362,
+    363,
     "DeepSeek-V3.2-EL",
     "DeepSeek",
     "llm",
@@ -7578,7 +7497,7 @@ export const RAW_MODELS = [
     "DS"
   ],
   [
-    363,
+    364,
     "Perplexity-Search",
     "Perplexity",
     "search",
@@ -7598,7 +7517,7 @@ export const RAW_MODELS = [
     "PP"
   ],
   [
-    364,
+    365,
     "Wan2.7-Image",
     "Alibaba",
     "image",
@@ -7618,7 +7537,7 @@ export const RAW_MODELS = [
     "WA"
   ],
   [
-    365,
+    366,
     "Qwen-Image-2-Pro",
     "Alibaba",
     "image",
@@ -7638,7 +7557,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    366,
+    367,
     "Pixverse-v5.6",
     "PixVerse",
     "video",
@@ -7658,7 +7577,7 @@ export const RAW_MODELS = [
     "PX"
   ],
   [
-    367,
+    368,
     "MOSS-Video-and-Audio",
     "MOSS",
     "multi",
@@ -7680,7 +7599,7 @@ export const RAW_MODELS = [
     "MV"
   ],
   [
-    368,
+    369,
     "Qwen-Image-2",
     "Alibaba",
     "image",
@@ -7700,7 +7619,7 @@ export const RAW_MODELS = [
     "QW"
   ],
   [
-    369,
+    370,
     "Wan-2.7",
     "Alibaba",
     "video",
@@ -7721,7 +7640,7 @@ export const RAW_MODELS = [
     "WA"
   ],
   [
-    370,
+    371,
     "Seedream-4.5",
     "ByteDance",
     "image",
@@ -7741,7 +7660,7 @@ export const RAW_MODELS = [
     "SD"
   ],
   [
-    371,
+    372,
     "Kling-v3-Pro",
     "Kuaishou",
     "video",
@@ -7761,7 +7680,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    372,
+    373,
     "GLM-4.7-Flash",
     "Zhipu AI",
     "llm",
@@ -7781,7 +7700,7 @@ export const RAW_MODELS = [
     "GL"
   ],
   [
-    373,
+    374,
     "GPT-5.1-Instant",
     "OpenAI",
     "llm",
@@ -7801,7 +7720,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    374,
+    375,
     "ElevenLabs-v3",
     "ElevenLabs",
     "audio",
@@ -7821,7 +7740,7 @@ export const RAW_MODELS = [
     "EL"
   ],
   [
-    375,
+    376,
     "GPT-Audio-Mini",
     "OpenAI",
     "audio",
@@ -7841,7 +7760,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    376,
+    377,
     "GPT-Audio-1.5",
     "OpenAI",
     "audio",
@@ -7862,7 +7781,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    377,
+    378,
     "GLM-4.7-N",
     "Zhipu AI",
     "llm",
@@ -7882,7 +7801,7 @@ export const RAW_MODELS = [
     "GL"
   ],
   [
-    378,
+    379,
     "Claude-Opus-4.5",
     "Anthropic",
     "llm",
@@ -7904,7 +7823,7 @@ export const RAW_MODELS = [
     "CA"
   ],
   [
-    379,
+    380,
     "Kling-O3",
     "Kuaishou",
     "video",
@@ -7924,7 +7843,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    380,
+    381,
     "Kling-v3",
     "Kuaishou",
     "video",
@@ -7944,7 +7863,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    381,
+    382,
     "GPT-5.2-Pro",
     "OpenAI",
     "llm",
@@ -7966,7 +7885,7 @@ export const RAW_MODELS = [
     "OA"
   ],
   [
-    382,
+    383,
     "Kling-Omni",
     "Kuaishou",
     "multi",
@@ -7988,7 +7907,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    383,
+    "tencent/hy-mt2-1.8b",
     "Hy-MT2-1.8B",
     "Tencent",
     "text",
@@ -8011,7 +7930,7 @@ export const RAW_MODELS = [
     "H"
   ],
   [
-    384,
+    "tencent/hy-mt2-30b-a3b",
     "Hy-MT2-30B-A3B",
     "Tencent",
     "text",
@@ -8034,7 +7953,7 @@ export const RAW_MODELS = [
     "H"
   ],
   [
-    385,
+    "~z-ai/glm-latest",
     "GLM Latest",
     "~z-ai",
     "text",
@@ -8057,9 +7976,9 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    386,
+    "z-ai/glm-5.3",
     "GLM 5.3",
-    "Zhipu AI",
+    "Z-ai",
     "text",
     "USA",
     "2025-2026",
@@ -8080,9 +7999,9 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    387,
+    "qwen/qwen3.8-27b",
     "Qwen3.8 27B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -8103,7 +8022,7 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    388,
+    "dots-studio/dots-3-note-preview:free",
     "Dots3-Note Preview (free)",
     "Dots-studio",
     "multi",
@@ -8126,7 +8045,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    389,
+    "google/gemini-3.7-flash",
     "Gemini 3.7 Flash",
     "Google",
     "multi",
@@ -8149,7 +8068,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    390,
+    "google/gemini-3.7-flash:batch",
     "Gemini 3.7 Flash (batch)",
     "Google",
     "multi",
@@ -8172,7 +8091,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    391,
+    "bytedance-seed/seed-2-1-turbo",
     "Seed 2.1 Turbo",
     "Bytedance-seed",
     "multi",
@@ -8195,9 +8114,9 @@ export const RAW_MODELS = [
     "S"
   ],
   [
-    392,
+    "qwen/qwen3.8-2.4t-a95b",
     "Qwen3.8 2.4T A95B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "text",
     "China",
     "2025-2026",
@@ -8218,7 +8137,7 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    393,
+    "deepseek/deepseek-v4-pro-0813",
     "DeepSeek V4 Pro 0813",
     "DeepSeek",
     "text",
@@ -8241,7 +8160,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    394,
+    "x-ai/grok-4.6",
     "Grok 4.6",
     "xAI",
     "multi",
@@ -8264,7 +8183,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    395,
+    "liquid/lfm-2.5-2.6b:free",
     "LFM2.5-2.6B (free)",
     "Liquid",
     "text",
@@ -8287,7 +8206,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    396,
+    "nvidia/nemotron-3.5-lightning",
     "Nemotron 3.5 Lightning",
     "Nvidia",
     "text",
@@ -8310,7 +8229,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    397,
+    "nvidia/nemotron-3.5-lightning:free",
     "Nemotron 3.5 Lightning (free)",
     "Nvidia",
     "text",
@@ -8333,9 +8252,9 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    398,
+    "sakana/sakana-namazu",
     "Sakana Namazu",
-    "Sakana AI",
+    "Sakana",
     "multi",
     "Japan",
     "2025-2026",
@@ -8356,7 +8275,7 @@ export const RAW_MODELS = [
     "S"
   ],
   [
-    399,
+    "upstage/solar-pro4",
     "Solar Pro 4",
     "Upstage",
     "text",
@@ -8379,7 +8298,7 @@ export const RAW_MODELS = [
     "S"
   ],
   [
-    400,
+    "meta/muse-glimmer-30b",
     "Muse Glimmer 30B",
     "Meta",
     "multi",
@@ -8402,7 +8321,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    401,
+    "meta/muse-spark-1.2",
     "Muse Spark 1.2",
     "Meta",
     "multi",
@@ -8425,9 +8344,9 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    402,
+    "qwen/qwen3.8-max",
     "Qwen3.8 Max",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -8448,7 +8367,7 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    403,
+    "~deepseek/deepseek-v4-flash-latest",
     "DeepSeek V4 Flash Latest",
     "~deepseek",
     "text",
@@ -8471,7 +8390,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    404,
+    "deepseek/deepseek-v4-flash-0731",
     "DeepSeek V4 Flash 0731",
     "DeepSeek",
     "text",
@@ -8494,7 +8413,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    405,
+    "thinkingmachines/inkling-small",
     "Inkling Small",
     "Thinkingmachines",
     "multi",
@@ -8517,9 +8436,9 @@ export const RAW_MODELS = [
     "I"
   ],
   [
-    406,
+    "qwen/qwen3.7-flash",
     "Qwen3.7 Flash",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -8540,7 +8459,7 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    407,
+    "anthropic/claude-opus-5-fast",
     "Claude Opus 5 (Fast)",
     "Anthropic",
     "multi",
@@ -8563,7 +8482,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    408,
+    "anthropic/claude-opus-5",
     "Claude Opus 5",
     "Anthropic",
     "multi",
@@ -8586,7 +8505,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    409,
+    "anthropic/claude-opus-5:batch",
     "Claude Opus 5 (batch)",
     "Anthropic",
     "multi",
@@ -8609,7 +8528,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    410,
+    "inclusionai/ling-3.0-flash",
     "Ling-3.0-flash",
     "Inclusionai",
     "text",
@@ -8632,7 +8551,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    411,
+    "poolside/laguna-s-2.1",
     "Laguna S 2.1",
     "Poolside",
     "text",
@@ -8655,7 +8574,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    412,
+    "poolside/laguna-s-2.1:free",
     "Laguna S 2.1 (free)",
     "Poolside",
     "text",
@@ -8678,7 +8597,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    413,
+    "google/gemini-3.6-flash",
     "Gemini 3.6 Flash",
     "Google",
     "multi",
@@ -8701,7 +8620,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    414,
+    "google/gemini-3.6-flash:batch",
     "Gemini 3.6 Flash (batch)",
     "Google",
     "multi",
@@ -8724,7 +8643,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    415,
+    "google/gemini-3.5-flash-lite",
     "Gemini 3.5 Flash Lite",
     "Google",
     "multi",
@@ -8747,7 +8666,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    416,
+    "google/gemini-3.5-flash-lite:batch",
     "Gemini 3.5 Flash Lite (batch)",
     "Google",
     "multi",
@@ -8770,7 +8689,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    417,
+    "meituan/longcat-2.0",
     "LongCat 2.0",
     "Meituan",
     "text",
@@ -8793,7 +8712,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    418,
+    "thinkingmachines/inkling",
     "Inkling",
     "Thinkingmachines",
     "multi",
@@ -8816,7 +8735,7 @@ export const RAW_MODELS = [
     "I"
   ],
   [
-    419,
+    "thinkingmachines/inkling:batch",
     "Inkling (batch)",
     "Thinkingmachines",
     "multi",
@@ -8839,7 +8758,7 @@ export const RAW_MODELS = [
     "I"
   ],
   [
-    420,
+    "openrouter/auto-beta",
     "Auto Router (Beta)",
     "Openrouter",
     "multi",
@@ -8862,9 +8781,9 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    421,
+    "moonshotai/kimi-k3",
     "Kimi K3",
-    "Moonshot AI",
+    "Moonshotai",
     "multi",
     "China",
     "2025-2026",
@@ -8885,7 +8804,7 @@ export const RAW_MODELS = [
     "K"
   ],
   [
-    422,
+    "meta/muse-spark-1.1",
     "Muse Spark 1.1",
     "Meta",
     "multi",
@@ -8908,7 +8827,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    423,
+    "kwaipilot/kat-coder-air-v2.5",
     "KAT-Coder-Air V2.5",
     "Kwaipilot",
     "code",
@@ -8931,7 +8850,7 @@ export const RAW_MODELS = [
     "K"
   ],
   [
-    424,
+    "kwaipilot/kat-coder-pro-v2.5",
     "KAT-Coder-Pro V2.5",
     "Kwaipilot",
     "code",
@@ -8954,7 +8873,7 @@ export const RAW_MODELS = [
     "K"
   ],
   [
-    425,
+    "openai/gpt-5.6-luna-pro",
     "GPT-5.6 Luna Pro",
     "OpenAI",
     "multi",
@@ -8977,7 +8896,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    426,
+    "openai/gpt-5.6-luna-pro:batch",
     "GPT-5.6 Luna Pro (batch)",
     "OpenAI",
     "multi",
@@ -9000,7 +8919,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    427,
+    "openai/gpt-5.6-luna",
     "GPT-5.6 Luna",
     "OpenAI",
     "multi",
@@ -9023,7 +8942,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    428,
+    "openai/gpt-5.6-luna:batch",
     "GPT-5.6 Luna (batch)",
     "OpenAI",
     "multi",
@@ -9046,7 +8965,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    429,
+    "openai/gpt-5.6-terra-pro",
     "GPT-5.6 Terra Pro",
     "OpenAI",
     "multi",
@@ -9069,7 +8988,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    430,
+    "openai/gpt-5.6-terra-pro:batch",
     "GPT-5.6 Terra Pro (batch)",
     "OpenAI",
     "multi",
@@ -9092,7 +9011,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    431,
+    "openai/gpt-5.6-terra",
     "GPT-5.6 Terra",
     "OpenAI",
     "multi",
@@ -9115,7 +9034,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    432,
+    "openai/gpt-5.6-terra:batch",
     "GPT-5.6 Terra (batch)",
     "OpenAI",
     "multi",
@@ -9138,7 +9057,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    433,
+    "openai/gpt-5.6-sol-pro",
     "GPT-5.6 Sol Pro",
     "OpenAI",
     "multi",
@@ -9161,7 +9080,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    434,
+    "openai/gpt-5.6-sol-pro:batch",
     "GPT-5.6 Sol Pro (batch)",
     "OpenAI",
     "multi",
@@ -9184,7 +9103,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    435,
+    "openai/gpt-5.6-sol",
     "GPT-5.6 Sol",
     "OpenAI",
     "multi",
@@ -9207,7 +9126,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    436,
+    "openai/gpt-5.6-sol:batch",
     "GPT-5.6 Sol (batch)",
     "OpenAI",
     "multi",
@@ -9230,7 +9149,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    437,
+    "x-ai/grok-4.5",
     "Grok 4.5",
     "xAI",
     "multi",
@@ -9253,7 +9172,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    438,
+    "~x-ai/grok-latest",
     "Grok Latest",
     "~x-ai",
     "multi",
@@ -9276,7 +9195,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    439,
+    "aion-labs/aion-3.0-mini",
     "Aion-3.0-Mini",
     "Aion-labs",
     "text",
@@ -9299,7 +9218,7 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    440,
+    "aion-labs/aion-3.0",
     "Aion-3.0",
     "Aion-labs",
     "text",
@@ -9322,7 +9241,7 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    441,
+    "tencent/hy3",
     "Hy3",
     "Tencent",
     "text",
@@ -9345,7 +9264,7 @@ export const RAW_MODELS = [
     "H"
   ],
   [
-    442,
+    "poolside/laguna-xs-2.1",
     "Laguna XS 2.1",
     "Poolside",
     "text",
@@ -9368,7 +9287,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    443,
+    "poolside/laguna-xs-2.1:free",
     "Laguna XS 2.1 (free)",
     "Poolside",
     "text",
@@ -9391,7 +9310,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    444,
+    "anthropic/claude-sonnet-5",
     "Claude Sonnet 5",
     "Anthropic",
     "multi",
@@ -9414,7 +9333,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    445,
+    "anthropic/claude-sonnet-5:batch",
     "Claude Sonnet 5 (batch)",
     "Anthropic",
     "multi",
@@ -9437,7 +9356,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    446,
+    "google/gemini-3.1-flash-lite-image",
     "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
     "Google",
     "multi",
@@ -9460,7 +9379,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    447,
+    "nex-agi/nex-n2-mini",
     "Nex-N2-Mini",
     "Nex-agi",
     "multi",
@@ -9483,7 +9402,30 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    448,
+    "sakana/fugu-ultra",
+    "Fugu Ultra",
+    "Sakana",
+    "multi",
+    "Japan",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    5,
+    30,
+    false,
+    96,
+    "Fugu Ultra is the higher-performance model in Sakana AI\\'s Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
+    [
+      "multi",
+      "sakana",
+      "japan",
+      "commercial"
+    ],
+    "#6378ff",
+    "F"
+  ],
+  [
+    "google/gemini-3.1-flash-image",
     "Nano Banana 2 (Gemini 3.1 Flash Image)",
     "Google",
     "multi",
@@ -9506,7 +9448,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    449,
+    "google/gemini-3-pro-image",
     "Nano Banana Pro (Gemini 3 Pro Image)",
     "Google",
     "multi",
@@ -9529,7 +9471,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    450,
+    "cohere/north-mini-code:free",
     "North Mini Code (free)",
     "Cohere",
     "code",
@@ -9552,9 +9494,32 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    451,
+    "z-ai/glm-5.2",
+    "GLM 5.2",
+    "Z-ai",
+    "text",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.966,
+    3.036,
+    false,
+    90,
+    "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+    [
+      "text",
+      "z-ai",
+      "usa",
+      "commercial"
+    ],
+    "#06b6d4",
+    "G"
+  ],
+  [
+    "z-ai/glm-5.2:batch",
     "GLM 5.2 (batch)",
-    "Zhipu AI",
+    "Z-ai",
     "text",
     "USA",
     "2025-2026",
@@ -9575,9 +9540,9 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    452,
+    "z-ai/glm-5.2:free",
     "GLM 5.2 (free)",
-    "Zhipu AI",
+    "Z-ai",
     "text",
     "USA",
     "2025-2026",
@@ -9598,7 +9563,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    453,
+    "openrouter/fusion",
     "Fusion",
     "Openrouter",
     "text",
@@ -9621,9 +9586,32 @@ export const RAW_MODELS = [
     "F"
   ],
   [
-    454,
+    "moonshotai/kimi-k2.7-code",
+    "Kimi K2.7 Code",
+    "Moonshotai",
+    "code",
+    "China",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.71,
+    3.5,
+    false,
+    87,
+    "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI\\'s Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
+    [
+      "code",
+      "moonshotai",
+      "china",
+      "commercial"
+    ],
+    "#10b981",
+    "K"
+  ],
+  [
+    "moonshotai/kimi-k2.7-code:batch",
     "Kimi K2.7 Code (batch)",
-    "Moonshot AI",
+    "Moonshotai",
     "code",
     "China",
     "2025-2026",
@@ -9644,7 +9632,7 @@ export const RAW_MODELS = [
     "K"
   ],
   [
-    455,
+    "~anthropic/claude-fable-latest",
     "Claude Fable Latest",
     "~anthropic",
     "multi",
@@ -9667,7 +9655,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    456,
+    "anthropic/claude-fable-5",
     "Claude Fable 5",
     "Anthropic",
     "multi",
@@ -9690,7 +9678,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    457,
+    "anthropic/claude-fable-5:batch",
     "Claude Fable 5 (batch)",
     "Anthropic",
     "multi",
@@ -9713,7 +9701,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    458,
+    "nex-agi/nex-n2-pro",
     "Nex-N2-Pro",
     "Nex-agi",
     "multi",
@@ -9736,7 +9724,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    459,
+    "nvidia/nemotron-3.5-content-safety:free",
     "Nemotron 3.5 Content Safety (free)",
     "Nvidia",
     "multi",
@@ -9759,7 +9747,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    460,
+    "nvidia/nemotron-3-ultra-550b-a55b:batch",
     "Nemotron 3 Ultra (batch)",
     "Nvidia",
     "text",
@@ -9782,7 +9770,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    461,
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
     "Nemotron 3 Ultra (free)",
     "Nvidia",
     "text",
@@ -9805,7 +9793,30 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    462,
+    "qwen/qwen3.7-plus",
+    "Qwen3.7 Plus",
+    "Alibaba / Qwen",
+    "multi",
+    "China",
+    "2025-2026",
+    "N/A",
+    "open",
+    0.32,
+    1.28,
+    true,
+    89,
+    "Qwen3.7-Plus is a cost-effective model in Alibaba\\'s Qwen3.7 series. It supports text and image input with text output, building on the series\\' text capabilities with a comprehensive upgrade to its...",
+    [
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#ec4899",
+    "Q"
+  ],
+  [
+    "minimax/minimax-m3",
     "MiniMax M3",
     "Minimax",
     "multi",
@@ -9828,7 +9839,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    463,
+    "minimax/minimax-m3:batch",
     "MiniMax M3 (batch)",
     "Minimax",
     "multi",
@@ -9851,7 +9862,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    464,
+    "stepfun/step-3.7-flash",
     "Step 3.7 Flash",
     "Stepfun",
     "multi",
@@ -9874,7 +9885,7 @@ export const RAW_MODELS = [
     "S"
   ],
   [
-    465,
+    "anthropic/claude-opus-4.8-fast",
     "Claude Opus 4.8 (Fast)",
     "Anthropic",
     "multi",
@@ -9897,7 +9908,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    466,
+    "anthropic/claude-opus-4.8:batch",
     "Claude Opus 4.8 (batch)",
     "Anthropic",
     "multi",
@@ -9920,7 +9931,30 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    467,
+    "qwen/qwen3.7-max",
+    "Qwen3.7 Max",
+    "Alibaba / Qwen",
+    "text",
+    "China",
+    "2025-2026",
+    "N/A",
+    "open",
+    1.475,
+    4.425,
+    true,
+    98,
+    "Qwen3.7-Max is the flagship model in Alibaba\\'s Qwen3.7 series. It supports text input and output and is designed for agent-centric workloads, with particular strengths in coding, office and productivity tasks,...",
+    [
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#f59e0b",
+    "Q"
+  ],
+  [
+    "x-ai/grok-build-0.1",
     "Grok Build 0.1",
     "xAI",
     "multi",
@@ -9943,7 +9977,30 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    468,
+    "google/gemini-3.5-flash",
+    "Gemini 3.5 Flash",
+    "Google",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    1.5,
+    9,
+    false,
+    99,
+    "Gemini 3.5 Flash is Google\\'s high-efficiency multimodal model, bringing near-Pro level coding and reasoning at Flash-tier cost and speed. It is highly optimized for coding proficiency and parallel agentic execution...",
+    [
+      "multi",
+      "google",
+      "usa",
+      "commercial"
+    ],
+    "#06b6d4",
+    "G"
+  ],
+  [
+    "google/gemini-3.5-flash:batch",
     "Gemini 3.5 Flash (batch)",
     "Google",
     "multi",
@@ -9966,7 +10023,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    469,
+    "anthropic/claude-opus-4.7-fast",
     "Claude Opus 4.7 (Fast)",
     "Anthropic",
     "multi",
@@ -9989,7 +10046,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    470,
+    "perceptron/perceptron-mk1",
     "Perceptron Mk1",
     "Perceptron",
     "multi",
@@ -10012,7 +10069,7 @@ export const RAW_MODELS = [
     "P"
   ],
   [
-    471,
+    "inclusionai/ring-2.6-1t",
     "Ring-2.6-1T",
     "Inclusionai",
     "text",
@@ -10035,7 +10092,30 @@ export const RAW_MODELS = [
     "R"
   ],
   [
-    472,
+    "google/gemini-3.1-flash-lite",
+    "Gemini 3.1 Flash Lite",
+    "Google",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.25,
+    1.5,
+    false,
+    88,
+    "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic...",
+    [
+      "multi",
+      "google",
+      "usa",
+      "commercial"
+    ],
+    "#f59e0b",
+    "G"
+  ],
+  [
+    "google/gemini-3.1-flash-lite:batch",
     "Gemini 3.1 Flash Lite (batch)",
     "Google",
     "multi",
@@ -10058,7 +10138,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    473,
+    "openai/gpt-chat-latest",
     "GPT Chat Latest",
     "OpenAI",
     "multi",
@@ -10081,7 +10161,30 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    474,
+    "x-ai/grok-4.3",
+    "Grok 4.3",
+    "xAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    1.25,
+    2.5,
+    false,
+    99,
+    "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
+    [
+      "multi",
+      "xai",
+      "usa",
+      "commercial"
+    ],
+    "#8b5cf6",
+    "G"
+  ],
+  [
+    "ibm-granite/granite-4.1-8b",
     "Granite 4.1 8B",
     "Ibm-granite",
     "text",
@@ -10104,7 +10207,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    475,
+    "mistralai/mistral-medium-3-5",
     "Mistral Medium 3.5",
     "Mistral AI",
     "llm",
@@ -10128,7 +10231,7 @@ export const RAW_MODELS = [
     "M3.5"
   ],
   [
-    476,
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "Nemotron 3 Nano Omni (free)",
     "Nvidia",
     "multi",
@@ -10151,7 +10254,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    477,
+    "~anthropic/claude-haiku-latest",
     "Anthropic Claude Haiku Latest",
     "~anthropic",
     "multi",
@@ -10174,7 +10277,7 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    478,
+    "~openai/gpt-mini-latest",
     "OpenAI GPT Mini Latest",
     "~openai",
     "multi",
@@ -10197,7 +10300,7 @@ export const RAW_MODELS = [
     "O"
   ],
   [
-    479,
+    "~google/gemini-pro-latest",
     "Google Gemini Pro Latest",
     "~google",
     "multi",
@@ -10220,7 +10323,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    480,
+    "~moonshotai/kimi-latest",
     "MoonshotAI Kimi Latest",
     "~moonshotai",
     "multi",
@@ -10243,7 +10346,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    481,
+    "~google/gemini-flash-latest",
     "Google Gemini Flash Latest",
     "~google",
     "multi",
@@ -10266,7 +10369,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    482,
+    "~anthropic/claude-sonnet-latest",
     "Anthropic Claude Sonnet Latest",
     "~anthropic",
     "multi",
@@ -10289,7 +10392,7 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    483,
+    "~openai/gpt-latest",
     "OpenAI GPT Latest",
     "~openai",
     "multi",
@@ -10312,9 +10415,9 @@ export const RAW_MODELS = [
     "O"
   ],
   [
-    484,
+    "qwen/qwen3.5-plus-20260420",
     "Qwen3.5 Plus 2026-04-20",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -10335,9 +10438,9 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    485,
+    "qwen/qwen3.6-flash",
     "Qwen3.6 Flash",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -10358,9 +10461,9 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    486,
+    "qwen/qwen3.6-35b-a3b",
     "Qwen3.6 35B A3B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -10381,9 +10484,32 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    487,
+    "qwen/qwen3.6-max-preview",
+    "Qwen3.6 Max Preview",
+    "Alibaba / Qwen",
+    "text",
+    "China",
+    "2025-2026",
+    "N/A",
+    "open",
+    1.027,
+    6.162,
+    true,
+    99,
+    "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and...",
+    [
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#8b5cf6",
+    "Q"
+  ],
+  [
+    "qwen/qwen3.6-27b",
     "Qwen3.6 27B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -10404,7 +10530,30 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    488,
+    "openai/gpt-5.5-pro",
+    "GPT-5.5 Pro",
+    "OpenAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "Frontier MoE",
+    "commercial",
+    30,
+    180,
+    false,
+    96,
+    "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
+    [
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
+    ],
+    "#6378ff",
+    "G"
+  ],
+  [
+    "openai/gpt-5.5-pro:batch",
     "GPT-5.5 Pro (batch)",
     "OpenAI",
     "multi",
@@ -10427,7 +10576,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    489,
+    "openai/gpt-5.5:batch",
     "GPT-5.5 (batch)",
     "OpenAI",
     "multi",
@@ -10450,7 +10599,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    490,
+    "deepseek/deepseek-v4-pro",
     "DeepSeek V4 Pro 0423",
     "DeepSeek",
     "text",
@@ -10473,7 +10622,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    491,
+    "deepseek/deepseek-v4-flash",
     "DeepSeek V4 Flash 0423",
     "DeepSeek",
     "text",
@@ -10496,7 +10645,7 @@ export const RAW_MODELS = [
     "D"
   ],
   [
-    492,
+    "inclusionai/ling-2.6-1t",
     "Ling-2.6-1T",
     "Inclusionai",
     "text",
@@ -10519,7 +10668,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    493,
+    "tencent/hy3-preview",
     "Hy3 preview",
     "Tencent",
     "text",
@@ -10542,7 +10691,7 @@ export const RAW_MODELS = [
     "H"
   ],
   [
-    494,
+    "openai/gpt-5.4-image-2",
     "GPT-5.4 Image 2",
     "OpenAI",
     "multi",
@@ -10565,7 +10714,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    495,
+    "inclusionai/ling-2.6-flash",
     "Ling-2.6-flash",
     "Inclusionai",
     "text",
@@ -10588,7 +10737,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    496,
+    "~anthropic/claude-opus-latest",
     "Claude Opus Latest",
     "~anthropic",
     "multi",
@@ -10611,7 +10760,7 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    497,
+    "openrouter/pareto-code",
     "Pareto Code Router",
     "Openrouter",
     "code",
@@ -10634,7 +10783,31 @@ export const RAW_MODELS = [
     "P"
   ],
   [
-    498,
+    "anthropic/claude-opus-4.7",
+    "Claude Opus 4.7",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2026",
+    "Flagship Opus",
+    "api",
+    10,
+    50,
+    false,
+    99,
+    "Anthropic 2026 flagship Opus model with world-class mathematical synthesis, coding mastery, and frontier agentic reasoning.",
+    [
+      "multi",
+      "anthropic",
+      "claude-opus-47",
+      "flagship",
+      "api"
+    ],
+    "#d946ef",
+    "4.7"
+  ],
+  [
+    "anthropic/claude-opus-4.7:batch",
     "Claude Opus 4.7 (batch)",
     "Anthropic",
     "multi",
@@ -10657,9 +10830,9 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    499,
+    "z-ai/glm-5.1",
     "GLM 5.1",
-    "Zhipu AI",
+    "Z-ai",
     "text",
     "USA",
     "2025-2026",
@@ -10680,7 +10853,30 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    500,
+    "google/gemma-4-26b-a4b-it",
+    "Gemma 4 26B A4B",
+    "Google",
+    "multi",
+    "USA",
+    "2025-2026",
+    "26B",
+    "commercial",
+    0.07,
+    0.34,
+    false,
+    86,
+    "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
+    [
+      "multi",
+      "google",
+      "usa",
+      "commercial"
+    ],
+    "#6378ff",
+    "G"
+  ],
+  [
+    "google/gemma-4-26b-a4b-it:free",
     "Gemma 4 26B A4B  (free)",
     "Google",
     "multi",
@@ -10703,7 +10899,30 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    501,
+    "google/gemma-4-31b-it",
+    "Gemma 4 31B",
+    "Google",
+    "multi",
+    "USA",
+    "2025-2026",
+    "31B",
+    "commercial",
+    0.09,
+    0.34,
+    false,
+    88,
+    "Gemma 4 31B Instruct is Google DeepMind\\'s 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
+    [
+      "multi",
+      "google",
+      "usa",
+      "commercial"
+    ],
+    "#f59e0b",
+    "G"
+  ],
+  [
+    "google/gemma-4-31b-it:free",
     "Gemma 4 31B (free)",
     "Google",
     "multi",
@@ -10726,9 +10945,32 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    502,
+    "qwen/qwen3.6-plus",
+    "Qwen3.6 Plus",
+    "Alibaba / Qwen",
+    "multi",
+    "China",
+    "2025-2026",
+    "N/A",
+    "open",
+    0.325,
+    1.95,
+    true,
+    90,
+    "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers...",
+    [
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#06b6d4",
+    "Q"
+  ],
+  [
+    "z-ai/glm-5v-turbo",
     "GLM 5V Turbo",
-    "Zhipu AI",
+    "Z-ai",
     "multi",
     "USA",
     "2025-2026",
@@ -10749,7 +10991,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    503,
+    "arcee-ai/trinity-large-thinking",
     "Trinity Large Thinking",
     "Arcee-ai",
     "text",
@@ -10772,7 +11014,30 @@ export const RAW_MODELS = [
     "T"
   ],
   [
-    504,
+    "x-ai/grok-4.20-multi-agent",
+    "Grok 4.20 Multi-Agent",
+    "xAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    1.25,
+    2.5,
+    false,
+    96,
+    "Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
+    [
+      "multi",
+      "xai",
+      "usa",
+      "commercial"
+    ],
+    "#6378ff",
+    "G"
+  ],
+  [
+    "x-ai/grok-4.20",
     "Grok 4.20",
     "xAI",
     "multi",
@@ -10795,7 +11060,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    505,
+    "google/lyria-3-pro-preview",
     "Lyria 3 Pro Preview",
     "Google",
     "multi",
@@ -10818,7 +11083,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    506,
+    "google/lyria-3-clip-preview",
     "Lyria 3 Clip Preview",
     "Google",
     "multi",
@@ -10841,7 +11106,7 @@ export const RAW_MODELS = [
     "L"
   ],
   [
-    507,
+    "kwaipilot/kat-coder-pro-v2",
     "KAT-Coder-Pro V2",
     "Kwaipilot",
     "code",
@@ -10864,7 +11129,7 @@ export const RAW_MODELS = [
     "K"
   ],
   [
-    508,
+    "rekaai/reka-edge",
     "Reka Edge",
     "Rekaai",
     "multi",
@@ -10887,7 +11152,53 @@ export const RAW_MODELS = [
     "R"
   ],
   [
-    509,
+    "minimax/minimax-m2.7",
+    "MiniMax M2.7",
+    "Minimax",
+    "text",
+    "China",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.3,
+    1.2,
+    false,
+    92,
+    "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
+    [
+      "text",
+      "minimax",
+      "china",
+      "commercial"
+    ],
+    "#3b82f6",
+    "M"
+  ],
+  [
+    "openai/gpt-5.4-nano",
+    "GPT-5.4 Nano",
+    "OpenAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.2,
+    1.25,
+    false,
+    86,
+    "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
+    [
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
+    ],
+    "#6378ff",
+    "G"
+  ],
+  [
+    "openai/gpt-5.4-nano:batch",
     "GPT-5.4 Nano (batch)",
     "OpenAI",
     "multi",
@@ -10910,7 +11221,30 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    510,
+    "openai/gpt-5.4-mini",
+    "GPT-5.4 Mini",
+    "OpenAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.75,
+    4.5,
+    false,
+    88,
+    "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
+    [
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
+    ],
+    "#f59e0b",
+    "G"
+  ],
+  [
+    "openai/gpt-5.4-mini:batch",
     "GPT-5.4 Mini (batch)",
     "OpenAI",
     "multi",
@@ -10933,9 +11267,32 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    511,
+    "mistralai/mistral-small-2603",
+    "Mistral Small 4",
+    "Mistral AI",
+    "multi",
+    "France",
+    "2025-2026",
+    "N/A",
+    "open",
+    0.15,
+    0.6,
+    true,
+    90,
+    "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+    [
+      "multi",
+      "mistral ai",
+      "france",
+      "open"
+    ],
+    "#06b6d4",
+    "M"
+  ],
+  [
+    "z-ai/glm-5-turbo",
     "GLM 5 Turbo",
-    "Zhipu AI",
+    "Z-ai",
     "text",
     "USA",
     "2025-2026",
@@ -10956,7 +11313,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    512,
+    "nvidia/nemotron-3-super-120b-a12b",
     "Nemotron 3 Super",
     "Nvidia",
     "text",
@@ -10979,7 +11336,7 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    513,
+    "nvidia/nemotron-3-super-120b-a12b:free",
     "Nemotron 3 Super (free)",
     "Nvidia",
     "text",
@@ -11002,9 +11359,9 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    514,
+    "qwen/qwen3.5-9b",
     "Qwen3.5-9B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -11025,7 +11382,30 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    515,
+    "openai/gpt-5.4-pro",
+    "GPT-5.4 Pro",
+    "OpenAI",
+    "multi",
+    "USA",
+    "2025-2026",
+    "Frontier MoE",
+    "commercial",
+    30,
+    180,
+    false,
+    98,
+    "GPT-5.4 Pro is OpenAI\\'s most advanced model, building on GPT-5.4\\'s unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
+    [
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
+    ],
+    "#f59e0b",
+    "G"
+  ],
+  [
+    "openai/gpt-5.4-pro:batch",
     "GPT-5.4 Pro (batch)",
     "OpenAI",
     "multi",
@@ -11048,7 +11428,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    516,
+    "openai/gpt-5.4:batch",
     "GPT-5.4 (batch)",
     "OpenAI",
     "multi",
@@ -11071,7 +11451,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    517,
+    "inception/mercury-2",
     "Mercury 2",
     "Inception",
     "text",
@@ -11094,7 +11474,7 @@ export const RAW_MODELS = [
     "M"
   ],
   [
-    518,
+    "google/gemini-3.1-flash-lite-preview",
     "Gemini 3.1 Flash Lite Preview",
     "Google",
     "multi",
@@ -11117,7 +11497,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    519,
+    "google/gemini-3.1-flash-image-preview",
     "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
     "Google",
     "multi",
@@ -11140,9 +11520,9 @@ export const RAW_MODELS = [
     "N"
   ],
   [
-    520,
+    "qwen/qwen3.5-35b-a3b",
     "Qwen3.5-35B-A3B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -11163,9 +11543,9 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    521,
+    "qwen/qwen3.5-27b",
     "Qwen3.5-27B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -11186,9 +11566,9 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    522,
+    "qwen/qwen3.5-122b-a10b",
     "Qwen3.5-122B-A10B",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -11209,7 +11589,7 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    523,
+    "google/gemini-3.1-pro-preview-customtools",
     "Gemini 3.1 Pro Preview Custom Tools",
     "Google",
     "multi",
@@ -11232,7 +11612,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    524,
+    "aion-labs/aion-2.0",
     "Aion-2.0",
     "Aion-labs",
     "text",
@@ -11255,7 +11635,7 @@ export const RAW_MODELS = [
     "A"
   ],
   [
-    525,
+    "google/gemini-3.1-pro-preview",
     "Gemini 3.1 Pro Preview",
     "Google",
     "multi",
@@ -11278,7 +11658,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    526,
+    "google/gemini-3.1-pro-preview:batch",
     "Gemini 3.1 Pro Preview (batch)",
     "Google",
     "multi",
@@ -11301,7 +11681,7 @@ export const RAW_MODELS = [
     "G"
   ],
   [
-    527,
+    "anthropic/claude-sonnet-4.6:batch",
     "Claude Sonnet 4.6 (batch)",
     "Anthropic",
     "multi",
@@ -11324,9 +11704,9 @@ export const RAW_MODELS = [
     "C"
   ],
   [
-    528,
+    "qwen/qwen3.5-plus-02-15",
     "Qwen3.5 Plus 2026-02-15",
-    "Alibaba",
+    "Alibaba / Qwen",
     "multi",
     "China",
     "2025-2026",
@@ -11347,7 +11727,99 @@ export const RAW_MODELS = [
     "Q"
   ],
   [
-    529,
+    "qwen/qwen3.5-397b-a17b",
+    "Qwen3.5 397B A17B",
+    "Alibaba / Qwen",
+    "multi",
+    "China",
+    "2025-2026",
+    "397B",
+    "open",
+    0.39,
+    2.34,
+    true,
+    89,
+    "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
+    [
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#ec4899",
+    "Q"
+  ],
+  [
+    "minimax/minimax-m2.5",
+    "MiniMax M2.5",
+    "Minimax",
+    "text",
+    "China",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.225,
+    0.9,
+    false,
+    90,
+    "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
+    [
+      "text",
+      "minimax",
+      "china",
+      "commercial"
+    ],
+    "#06b6d4",
+    "M"
+  ],
+  [
+    "z-ai/glm-5",
+    "GLM 5",
+    "Z-ai",
+    "text",
+    "USA",
+    "2025-2026",
+    "N/A",
+    "commercial",
+    0.6,
+    1.92,
+    false,
+    91,
+    "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
+    [
+      "text",
+      "z-ai",
+      "usa",
+      "commercial"
+    ],
+    "#8b5cf6",
+    "G"
+  ],
+  [
+    "qwen/qwen3-max-thinking",
+    "Qwen3 Max Thinking",
+    "Alibaba / Qwen",
+    "text",
+    "China",
+    "2025-2026",
+    "N/A",
+    "open",
+    0.78,
+    3.9,
+    true,
+    92,
+    "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and reinforcement learning compute, it...",
+    [
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
+    ],
+    "#3b82f6",
+    "Q"
+  ],
+  [
+    "pre_transformer_root",
     "RNN / LSTM",
     "Hochreiter & Schmidhuber",
     "llm",
@@ -11371,7 +11843,7 @@ export const RAW_MODELS = [
     "RN"
   ],
   [
-    530,
+    "elmo",
     "ELMo",
     "AI2",
     "llm",
@@ -11395,7 +11867,7 @@ export const RAW_MODELS = [
     "EL"
   ],
   [
-    531,
+    "transformer_root",
     "Transformer",
     "Google Research",
     "llm",
@@ -11419,7 +11891,7 @@ export const RAW_MODELS = [
     "TR"
   ],
   [
-    532,
+    "bert",
     "BERT",
     "Google",
     "llm",
@@ -11443,7 +11915,7 @@ export const RAW_MODELS = [
     "BE"
   ],
   [
-    533,
+    "t5",
     "T5",
     "Google",
     "llm",
@@ -11467,7 +11939,7 @@ export const RAW_MODELS = [
     "T5"
   ],
   [
-    534,
+    "switch_trans",
     "Switch Transformer",
     "Google",
     "llm",
@@ -11491,7 +11963,7 @@ export const RAW_MODELS = [
     "SW"
   ],
   [
-    535,
+    "flan_t5",
     "FLAN-T5",
     "Google",
     "llm",
@@ -11515,7 +11987,7 @@ export const RAW_MODELS = [
     "FL"
   ],
   [
-    536,
+    "palm",
     "PaLM",
     "Google",
     "llm",
@@ -11539,7 +12011,7 @@ export const RAW_MODELS = [
     "PA"
   ],
   [
-    537,
+    "palm2",
     "PaLM 2",
     "Google",
     "llm",
@@ -11563,9 +12035,9 @@ export const RAW_MODELS = [
     "P2"
   ],
   [
-    538,
+    "gemini",
     "Gemini",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2023",
@@ -11587,9 +12059,9 @@ export const RAW_MODELS = [
     "GE"
   ],
   [
-    539,
+    "gemini10",
     "Gemini 1.0",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2023",
@@ -11611,9 +12083,9 @@ export const RAW_MODELS = [
     "G1"
   ],
   [
-    540,
+    "gemini15",
     "Gemini 1.5",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2024",
@@ -11635,9 +12107,9 @@ export const RAW_MODELS = [
     "1.5"
   ],
   [
-    541,
+    "gemini20",
     "Gemini 2.0",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2024",
@@ -11659,9 +12131,9 @@ export const RAW_MODELS = [
     "2.0"
   ],
   [
-    542,
+    "gemini25",
     "Gemini 2.5",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2025",
@@ -11683,9 +12155,9 @@ export const RAW_MODELS = [
     "2.5"
   ],
   [
-    543,
+    "gemini3",
     "Gemini 3",
-    "Google",
+    "Google DeepMind",
     "multi",
     "USA",
     "2025",
@@ -11707,7 +12179,7 @@ export const RAW_MODELS = [
     "G3"
   ],
   [
-    544,
+    "gpt1",
     "GPT-1",
     "OpenAI",
     "llm",
@@ -11731,7 +12203,7 @@ export const RAW_MODELS = [
     "G1"
   ],
   [
-    545,
+    "gpt2",
     "GPT-2",
     "OpenAI",
     "llm",
@@ -11755,7 +12227,7 @@ export const RAW_MODELS = [
     "G2"
   ],
   [
-    546,
+    "gpt3",
     "GPT-3",
     "OpenAI",
     "llm",
@@ -11779,7 +12251,7 @@ export const RAW_MODELS = [
     "G3"
   ],
   [
-    547,
+    "codex",
     "Codex",
     "OpenAI",
     "code",
@@ -11803,7 +12275,7 @@ export const RAW_MODELS = [
     "CX"
   ],
   [
-    548,
+    "gpt35",
     "GPT-3.5",
     "OpenAI",
     "llm",
@@ -11827,7 +12299,7 @@ export const RAW_MODELS = [
     "3.5"
   ],
   [
-    549,
+    "whisper",
     "Whisper",
     "OpenAI",
     "audio",
@@ -11851,7 +12323,7 @@ export const RAW_MODELS = [
     "WH"
   ],
   [
-    550,
+    "gpt4",
     "GPT-4",
     "OpenAI",
     "llm",
@@ -11875,7 +12347,7 @@ export const RAW_MODELS = [
     "G4"
   ],
   [
-    551,
+    "gpt4v",
     "GPT-4V",
     "OpenAI",
     "multi",
@@ -11899,7 +12371,7 @@ export const RAW_MODELS = [
     "4V"
   ],
   [
-    552,
+    "gpt45",
     "GPT-4.5",
     "OpenAI",
     "llm",
@@ -11923,7 +12395,7 @@ export const RAW_MODELS = [
     "4.5"
   ],
   [
-    553,
+    "gpt53",
     "GPT-5.3",
     "OpenAI",
     "llm",
@@ -11947,7 +12419,7 @@ export const RAW_MODELS = [
     "5.3"
   ],
   [
-    554,
+    "roberta",
     "RoBERTa",
     "Meta",
     "llm",
@@ -11971,7 +12443,7 @@ export const RAW_MODELS = [
     "RB"
   ],
   [
-    555,
+    "bart",
     "BART",
     "Meta",
     "llm",
@@ -11995,7 +12467,7 @@ export const RAW_MODELS = [
     "BA"
   ],
   [
-    556,
+    "opt",
     "OPT",
     "Meta",
     "llm",
@@ -12019,7 +12491,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    557,
+    "llama",
     "LLaMA",
     "Meta",
     "llm",
@@ -12043,7 +12515,7 @@ export const RAW_MODELS = [
     "LM"
   ],
   [
-    558,
+    "llama2",
     "Llama 2",
     "Meta",
     "llm",
@@ -12067,7 +12539,7 @@ export const RAW_MODELS = [
     "L2"
   ],
   [
-    559,
+    "llama3",
     "Llama 3",
     "Meta",
     "llm",
@@ -12091,7 +12563,7 @@ export const RAW_MODELS = [
     "L3"
   ],
   [
-    560,
+    "llama31",
     "Llama 3.1",
     "Meta",
     "llm",
@@ -12115,7 +12587,7 @@ export const RAW_MODELS = [
     "3.1"
   ],
   [
-    561,
+    "llama32",
     "Llama 3.2",
     "Meta",
     "multi",
@@ -12140,7 +12612,7 @@ export const RAW_MODELS = [
     "3.2"
   ],
   [
-    562,
+    "llama33",
     "Llama 3.3",
     "Meta",
     "llm",
@@ -12164,7 +12636,7 @@ export const RAW_MODELS = [
     "3.3"
   ],
   [
-    563,
+    "llama4",
     "Llama 4",
     "Meta",
     "multi",
@@ -12188,7 +12660,7 @@ export const RAW_MODELS = [
     "L4"
   ],
   [
-    564,
+    "claude",
     "Claude",
     "Anthropic",
     "llm",
@@ -12212,7 +12684,7 @@ export const RAW_MODELS = [
     "C1"
   ],
   [
-    565,
+    "claude2",
     "Claude 2",
     "Anthropic",
     "llm",
@@ -12236,7 +12708,7 @@ export const RAW_MODELS = [
     "C2"
   ],
   [
-    566,
+    "claude3",
     "Claude 3",
     "Anthropic",
     "multi",
@@ -12260,7 +12732,7 @@ export const RAW_MODELS = [
     "C3"
   ],
   [
-    567,
+    "claude35",
     "Claude 3.5",
     "Anthropic",
     "multi",
@@ -12284,7 +12756,7 @@ export const RAW_MODELS = [
     "3.5"
   ],
   [
-    568,
+    "claude37",
     "Claude 3.7",
     "Anthropic",
     "reason",
@@ -12308,7 +12780,7 @@ export const RAW_MODELS = [
     "3.7"
   ],
   [
-    569,
+    "claude4",
     "Claude 4",
     "Anthropic",
     "multi",
@@ -12332,7 +12804,7 @@ export const RAW_MODELS = [
     "C4"
   ],
   [
-    570,
+    "claude45",
     "Claude 4.5",
     "Anthropic",
     "multi",
@@ -12356,7 +12828,7 @@ export const RAW_MODELS = [
     "4.5"
   ],
   [
-    571,
+    "claude46",
     "Claude 4.6",
     "Anthropic",
     "multi",
@@ -12380,7 +12852,7 @@ export const RAW_MODELS = [
     "4.6"
   ],
   [
-    572,
+    "mistral7b",
     "Mistral 7B",
     "Mistral AI",
     "llm",
@@ -12404,7 +12876,7 @@ export const RAW_MODELS = [
     "M7"
   ],
   [
-    573,
+    "mixtral",
     "Mixtral",
     "Mistral AI",
     "llm",
@@ -12428,7 +12900,7 @@ export const RAW_MODELS = [
     "MX"
   ],
   [
-    574,
+    "mistral_large",
     "Mistral Large",
     "Mistral AI",
     "llm",
@@ -12451,7 +12923,31 @@ export const RAW_MODELS = [
     "ML"
   ],
   [
-    575,
+    "mistral_large2",
+    "Mistral Large 2",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2024",
+    "123B",
+    "open",
+    null,
+    null,
+    true,
+    95,
+    "Second generation flagship open-weights model from Mistral AI with 128K context and world-class coding capabilities.",
+    [
+      "llm",
+      "mistral",
+      "mistral-large2",
+      "123b",
+      "open"
+    ],
+    "#14b8a6",
+    "ML2"
+  ],
+  [
+    "mistral_large3",
     "Mistral Large 3",
     "Mistral AI",
     "llm",
@@ -12475,7 +12971,7 @@ export const RAW_MODELS = [
     "ML3"
   ],
   [
-    576,
+    "media_branch_root",
     "Generative Media",
     "Generative Media",
     "image",
@@ -12499,7 +12995,7 @@ export const RAW_MODELS = [
     "GM"
   ],
   [
-    577,
+    "dalle",
     "DALL·E",
     "OpenAI",
     "image",
@@ -12523,7 +13019,7 @@ export const RAW_MODELS = [
     "D1"
   ],
   [
-    578,
+    "dalle2",
     "DALL·E 2",
     "OpenAI",
     "image",
@@ -12547,7 +13043,7 @@ export const RAW_MODELS = [
     "D2"
   ],
   [
-    579,
+    "dalle3",
     "DALL·E 3",
     "OpenAI",
     "image",
@@ -12571,7 +13067,7 @@ export const RAW_MODELS = [
     "D3"
   ],
   [
-    580,
+    "stable_diffusion",
     "Stable Diffusion",
     "Stability AI",
     "image",
@@ -12595,7 +13091,7 @@ export const RAW_MODELS = [
     "SD"
   ],
   [
-    581,
+    "sdxl",
     "Stable Diffusion XL",
     "Stability AI",
     "image",
@@ -12619,7 +13115,7 @@ export const RAW_MODELS = [
     "XL"
   ],
   [
-    582,
+    "sd3",
     "Stable Diffusion 3",
     "Stability AI",
     "image",
@@ -12643,7 +13139,7 @@ export const RAW_MODELS = [
     "SD3"
   ],
   [
-    583,
+    "sora",
     "Sora",
     "OpenAI",
     "video",
@@ -12667,7 +13163,31 @@ export const RAW_MODELS = [
     "SO"
   ],
   [
-    584,
+    "sora2",
+    "Sora 2",
+    "OpenAI",
+    "video",
+    "USA",
+    "2025",
+    "Frontier Video DiT",
+    "api",
+    0.12,
+    0.12,
+    false,
+    98,
+    "Second generation video diffusion engine with real-time interactive physics and high motion stability.",
+    [
+      "video",
+      "openai",
+      "sora2",
+      "video-gen",
+      "api"
+    ],
+    "#3b82f6",
+    "S2"
+  ],
+  [
+    "sarvam_1",
     "Sarvam 1",
     "Sarvam AI",
     "llm",
@@ -12692,7 +13212,7 @@ export const RAW_MODELS = [
     "SA"
   ],
   [
-    585,
+    "sarvam_bulbul",
     "Sarvam Bulbul",
     "Sarvam AI",
     "audio",
@@ -12717,7 +13237,7 @@ export const RAW_MODELS = [
     "BB"
   ],
   [
-    586,
+    "sarvam_saaras",
     "Sarvam Saaras",
     "Sarvam AI",
     "audio",
@@ -12742,7 +13262,7 @@ export const RAW_MODELS = [
     "SS"
   ],
   [
-    587,
+    "openhathi_7b",
     "OpenHathi 7B",
     "Sarvam AI",
     "llm",
@@ -12767,7 +13287,7 @@ export const RAW_MODELS = [
     "OH"
   ],
   [
-    588,
+    "krutrim_1",
     "Krutrim",
     "Krutrim",
     "llm",
@@ -12791,7 +13311,7 @@ export const RAW_MODELS = [
     "KR"
   ],
   [
-    589,
+    "krutrim_pro",
     "Krutrim Pro",
     "Krutrim",
     "multi",
@@ -12815,7 +13335,7 @@ export const RAW_MODELS = [
     "KP"
   ],
   [
-    590,
+    "bharatgpt",
     "BharatGPT",
     "CoRover.ai",
     "multi",
@@ -12840,7 +13360,7 @@ export const RAW_MODELS = [
     "BG"
   ],
   [
-    591,
+    "indictrans2",
     "IndicTrans2",
     "AI4Bharat",
     "llm",
@@ -12865,7 +13385,7 @@ export const RAW_MODELS = [
     "IT"
   ],
   [
-    592,
+    "airavata",
     "Airavata",
     "AI4Bharat",
     "llm",
@@ -12890,7 +13410,7 @@ export const RAW_MODELS = [
     "AV"
   ],
   [
-    593,
+    "indicbert",
     "IndicBERT",
     "AI4Bharat",
     "llm",
@@ -12915,7 +13435,7 @@ export const RAW_MODELS = [
     "IB"
   ],
   [
-    594,
+    "indicwhisper",
     "IndicWhisper",
     "AI4Bharat",
     "audio",
@@ -12940,7 +13460,7 @@ export const RAW_MODELS = [
     "IW"
   ],
   [
-    595,
+    "hanooman_7b",
     "Hanooman 7B",
     "SML",
     "llm",
@@ -12965,7 +13485,7 @@ export const RAW_MODELS = [
     "HN"
   ],
   [
-    596,
+    "hanooman_40b",
     "Hanooman 40B",
     "SML",
     "multi",
@@ -12989,7 +13509,7 @@ export const RAW_MODELS = [
     "H4"
   ],
   [
-    597,
+    "sutra_multilingual",
     "SUTRA",
     "Two AI",
     "llm",
@@ -13013,7 +13533,7 @@ export const RAW_MODELS = [
     "SU"
   ],
   [
-    598,
+    "sutra_light",
     "SUTRA-Light",
     "Two AI",
     "llm",
@@ -13037,7 +13557,7 @@ export const RAW_MODELS = [
     "SL"
   ],
   [
-    599,
+    "project_indus",
     "Project Indus",
     "Tech Mahindra",
     "llm",
@@ -13062,7 +13582,7 @@ export const RAW_MODELS = [
     "IN"
   ],
   [
-    600,
+    "navarasa_2",
     "Navarasa 2.0",
     "Telugu LLM Labs",
     "llm",
@@ -13087,7 +13607,7 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    601,
+    "tamil_llama",
     "Tamil LLaMA",
     "Abhinav Venkat",
     "llm",
@@ -13111,7 +13631,7 @@ export const RAW_MODELS = [
     "TL"
   ],
   [
-    602,
+    "kannada_llama",
     "Kannada LLaMA",
     "Tensoic",
     "llm",
@@ -13135,7 +13655,7 @@ export const RAW_MODELS = [
     "KL"
   ],
   [
-    603,
+    "bhashini_ai",
     "Bhashini AI",
     "Govt of India (MeitY)",
     "multi",
@@ -13161,7 +13681,7 @@ export const RAW_MODELS = [
     "BH"
   ],
   [
-    604,
+    "or_meta_muse-spark-1_2-contributor",
     "Muse Spark 1.2 Contributor",
     "Meta",
     "image",
@@ -13184,7 +13704,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    605,
+    "or_deepseek_deepseek-v4-flash-vision-exp",
     "DeepSeek V4 Flash Vision Exp",
     "DeepSeek",
     "image",
@@ -13207,7 +13727,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    606,
+    "or_stealth_ox-alpha",
     "Ox Alpha",
     "Stealth",
     "image",
@@ -13230,7 +13750,7 @@ export const RAW_MODELS = [
     "ST"
   ],
   [
-    607,
+    "or_tencent_hy-mt2-7b",
     "Hy-MT2-7B",
     "Tencent",
     "llm",
@@ -13253,7 +13773,7 @@ export const RAW_MODELS = [
     "TE"
   ],
   [
-    608,
+    "or_thinkingmachines_inkling-small_free",
     "Inkling Small (free)",
     "Thinkingmachines",
     "image",
@@ -13276,7 +13796,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    609,
+    "or_thinkingmachines_inkling_free",
     "Inkling (free)",
     "Thinkingmachines",
     "image",
@@ -13299,7 +13819,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    610,
+    "or_anthropic_claude-opus-4_6_batch",
     "Claude Opus 4.6 (batch)",
     "Anthropic",
     "image",
@@ -13321,7 +13841,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    611,
+    "or_openrouter_free",
     "Free Models Router",
     "Openrouter",
     "image",
@@ -13344,7 +13864,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    612,
+    "or_stepfun_step-3_5-flash",
     "Step 3.5 Flash",
     "Stepfun",
     "llm",
@@ -13366,7 +13886,7 @@ export const RAW_MODELS = [
     "ST"
   ],
   [
-    613,
+    "or_upstage_solar-pro-3",
     "Solar Pro 3",
     "Upstage",
     "llm",
@@ -13388,7 +13908,7 @@ export const RAW_MODELS = [
     "UP"
   ],
   [
-    614,
+    "or_minimax_minimax-m2-her",
     "MiniMax M2-her",
     "MiniMax",
     "llm",
@@ -13410,7 +13930,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    615,
+    "or_writer_palmyra-x5",
     "Palmyra X5",
     "Writer",
     "llm",
@@ -13432,7 +13952,7 @@ export const RAW_MODELS = [
     "WR"
   ],
   [
-    616,
+    "or_bytedance-seed_seed-1_6-flash",
     "Seed 1.6 Flash",
     "Bytedance-seed",
     "image",
@@ -13454,7 +13974,7 @@ export const RAW_MODELS = [
     "BY"
   ],
   [
-    617,
+    "or_bytedance-seed_seed-1_6",
     "Seed 1.6",
     "Bytedance-seed",
     "image",
@@ -13476,9 +13996,9 @@ export const RAW_MODELS = [
     "BY"
   ],
   [
-    618,
+    "or_z-ai_glm-4_7",
     "GLM 4.7",
-    "Zhipu AI",
+    "Z-ai",
     "code",
     "USA",
     "2025",
@@ -13498,7 +14018,7 @@ export const RAW_MODELS = [
     "Z-"
   ],
   [
-    619,
+    "or_google_gemini-3-flash-preview",
     "Gemini 3 Flash Preview",
     "Google",
     "image",
@@ -13520,7 +14040,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    620,
+    "or_google_gemini-3-flash-preview_batch",
     "Gemini 3 Flash Preview (batch)",
     "Google",
     "image",
@@ -13542,7 +14062,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    621,
+    "or_nvidia_nemotron-3-nano-30b-a3b",
     "Nemotron 3 Nano 30B A3B",
     "Nvidia",
     "llm",
@@ -13565,7 +14085,7 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    622,
+    "or_nvidia_nemotron-3-nano-30b-a3b_free",
     "Nemotron 3 Nano 30B A3B (free)",
     "Nvidia",
     "llm",
@@ -13589,7 +14109,7 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    623,
+    "or_openai_gpt-5_2-chat",
     "GPT-5.2 Chat",
     "OpenAI",
     "image",
@@ -13611,7 +14131,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    624,
+    "or_openai_gpt-5_2-pro_batch",
     "GPT-5.2 Pro (batch)",
     "OpenAI",
     "image",
@@ -13633,7 +14153,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    625,
+    "or_openai_gpt-5_2_batch",
     "GPT-5.2 (batch)",
     "OpenAI",
     "image",
@@ -13655,7 +14175,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    626,
+    "or_relace_relace-search",
     "Relace Search",
     "Relace",
     "code",
@@ -13677,7 +14197,7 @@ export const RAW_MODELS = [
     "RE"
   ],
   [
-    627,
+    "or_openrouter_bodybuilder",
     "Body Builder (beta)",
     "Openrouter",
     "llm",
@@ -13699,7 +14219,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    628,
+    "or_amazon_nova-2-lite-v1",
     "Nova 2 Lite",
     "Amazon",
     "image",
@@ -13721,7 +14241,7 @@ export const RAW_MODELS = [
     "AM"
   ],
   [
-    629,
+    "or_mistralai_ministral-14b-2512",
     "Ministral 3 14B 2512",
     "Mistral AI",
     "image",
@@ -13745,7 +14265,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    630,
+    "or_mistralai_ministral-8b-2512",
     "Ministral 3 8B 2512",
     "Mistral AI",
     "image",
@@ -13769,7 +14289,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    631,
+    "or_mistralai_ministral-3b-2512",
     "Ministral 3 3B 2512",
     "Mistral AI",
     "image",
@@ -13793,7 +14313,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    632,
+    "or_mistralai_mistral-large-2512",
     "Mistral Large 3 2512",
     "Mistral AI",
     "image",
@@ -13816,7 +14336,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    633,
+    "or_anthropic_claude-opus-4_5_batch",
     "Claude Opus 4.5 (batch)",
     "Anthropic",
     "image",
@@ -13838,7 +14358,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    634,
+    "or_allenai_olmo-3-32b-think",
     "Olmo 3 32B Think",
     "AllenAI",
     "reason",
@@ -13861,7 +14381,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    635,
+    "or_google_gemini-3-pro-image-preview",
     "Nano Banana Pro (Gemini 3 Pro Image Preview)",
     "Google",
     "image",
@@ -13883,7 +14403,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    636,
+    "or_openai_gpt-5_1_batch",
     "GPT-5.1 (batch)",
     "OpenAI",
     "image",
@@ -13905,7 +14425,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    637,
+    "or_openai_gpt-5_1-codex",
     "GPT-5.1-Codex",
     "OpenAI",
     "image",
@@ -13927,7 +14447,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    638,
+    "or_perplexity_sonar-pro-search",
     "Sonar Pro Search",
     "Perplexity",
     "image",
@@ -13949,7 +14469,7 @@ export const RAW_MODELS = [
     "PE"
   ],
   [
-    639,
+    "or_mistralai_voxtral-small-24b-2507",
     "Voxtral Small 24B 2507",
     "Mistral AI",
     "audio",
@@ -13973,7 +14493,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    640,
+    "or_openai_gpt-oss-safeguard-20b",
     "gpt-oss-safeguard-20b",
     "OpenAI",
     "reason",
@@ -13996,7 +14516,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    641,
+    "or_nvidia_nemotron-nano-12b-v2-vl_free",
     "Nemotron Nano 12B 2 VL (free)",
     "Nvidia",
     "image",
@@ -14020,7 +14540,7 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    642,
+    "or_qwen_qwen3-vl-32b-instruct",
     "Qwen3 VL 32B Instruct",
     "Alibaba",
     "image",
@@ -14044,7 +14564,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    643,
+    "or_ibm-granite_granite-4_0-h-micro",
     "Granite 4.0 Micro",
     "Ibm-granite",
     "llm",
@@ -14066,7 +14586,7 @@ export const RAW_MODELS = [
     "IB"
   ],
   [
-    644,
+    "or_openai_gpt-5-image-mini",
     "GPT-5 Image Mini",
     "OpenAI",
     "image",
@@ -14088,7 +14608,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    645,
+    "or_anthropic_claude-haiku-4_5_batch",
     "Claude Haiku 4.5 (batch)",
     "Anthropic",
     "image",
@@ -14110,7 +14630,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    646,
+    "or_qwen_qwen3-vl-8b-thinking",
     "Qwen3 VL 8B Thinking",
     "Alibaba",
     "image",
@@ -14134,7 +14654,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    647,
+    "or_qwen_qwen3-vl-8b-instruct",
     "Qwen3 VL 8B Instruct",
     "Alibaba",
     "image",
@@ -14158,7 +14678,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    648,
+    "or_openai_gpt-5-image",
     "GPT-5 Image",
     "OpenAI",
     "image",
@@ -14180,7 +14700,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    649,
+    "or_google_gemini-2_5-flash-image",
     "Nano Banana (Gemini 2.5 Flash Image)",
     "Google",
     "image",
@@ -14202,7 +14722,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    650,
+    "or_qwen_qwen3-vl-30b-a3b-thinking",
     "Qwen3 VL 30B A3B Thinking",
     "Alibaba",
     "image",
@@ -14226,7 +14746,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    651,
+    "or_qwen_qwen3-vl-30b-a3b-instruct",
     "Qwen3 VL 30B A3B Instruct",
     "Alibaba",
     "image",
@@ -14250,7 +14770,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    652,
+    "or_openai_gpt-5-pro_batch",
     "GPT-5 Pro (batch)",
     "OpenAI",
     "image",
@@ -14272,7 +14792,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    653,
+    "or_anthropic_claude-sonnet-4_5_batch",
     "Claude Sonnet 4.5 (batch)",
     "Anthropic",
     "image",
@@ -14294,7 +14814,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    654,
+    "or_thedrummer_cydonia-24b-v4_1",
     "Cydonia 24B V4.1",
     "Thedrummer",
     "llm",
@@ -14317,7 +14837,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    655,
+    "or_relace_relace-apply-3",
     "Relace Apply 3",
     "Relace",
     "code",
@@ -14339,7 +14859,7 @@ export const RAW_MODELS = [
     "RE"
   ],
   [
-    656,
+    "or_qwen_qwen3-vl-235b-a22b-thinking",
     "Qwen3 VL 235B A22B Thinking",
     "Alibaba",
     "image",
@@ -14363,7 +14883,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    657,
+    "or_qwen_qwen3-vl-235b-a22b-instruct",
     "Qwen3 VL 235B A22B Instruct",
     "Alibaba",
     "image",
@@ -14387,7 +14907,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    658,
+    "or_qwen_qwen3-coder-plus",
     "Qwen3 Coder Plus",
     "Alibaba",
     "code",
@@ -14410,7 +14930,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    659,
+    "or_openai_gpt-5-codex_batch",
     "GPT-5 Codex (batch)",
     "OpenAI",
     "image",
@@ -14432,7 +14952,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    660,
+    "or_deepseek_deepseek-v3_1-terminus",
     "DeepSeek V3.1 Terminus",
     "DeepSeek",
     "llm",
@@ -14455,7 +14975,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    661,
+    "or_qwen_qwen3-coder-flash",
     "Qwen3 Coder Flash",
     "Alibaba",
     "code",
@@ -14478,7 +14998,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    662,
+    "or_qwen_qwen3-next-80b-a3b-thinking",
     "Qwen3 Next 80B A3B Thinking",
     "Alibaba",
     "code",
@@ -14502,7 +15022,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    663,
+    "or_qwen_qwen3-next-80b-a3b-instruct",
     "Qwen3 Next 80B A3B Instruct",
     "Alibaba",
     "code",
@@ -14526,7 +15046,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    664,
+    "or_qwen_qwen-plus-2025-07-28",
     "Qwen Plus 0728",
     "Alibaba",
     "reason",
@@ -14549,7 +15069,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    665,
+    "or_qwen_qwen-plus-2025-07-28_thinking",
     "Qwen Plus 0728 (thinking)",
     "Alibaba",
     "reason",
@@ -14572,7 +15092,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    666,
+    "or_nvidia_nemotron-nano-9b-v2_free",
     "Nemotron Nano 9B V2 (free)",
     "Nvidia",
     "reason",
@@ -14596,9 +15116,9 @@ export const RAW_MODELS = [
     "NV"
   ],
   [
-    667,
+    "or_moonshotai_kimi-k2-0905",
     "Kimi K2 0905",
-    "Moonshot AI",
+    "Moonshotai",
     "llm",
     "USA",
     "2025",
@@ -14618,7 +15138,7 @@ export const RAW_MODELS = [
     "MO"
   ],
   [
-    668,
+    "or_qwen_qwen3-30b-a3b-thinking-2507",
     "Qwen3 30B A3B Thinking 2507",
     "Alibaba",
     "reason",
@@ -14642,7 +15162,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    669,
+    "or_nousresearch_hermes-4-70b",
     "Hermes 4 70B",
     "Nous Research",
     "reason",
@@ -14666,7 +15186,7 @@ export const RAW_MODELS = [
     "NO"
   ],
   [
-    670,
+    "or_nousresearch_hermes-4-405b",
     "Hermes 4 405B",
     "Nous Research",
     "reason",
@@ -14690,7 +15210,7 @@ export const RAW_MODELS = [
     "NO"
   ],
   [
-    671,
+    "or_deepseek_deepseek-chat-v3_1",
     "DeepSeek V3.1",
     "DeepSeek",
     "reason",
@@ -14713,9 +15233,9 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    672,
+    "or_z-ai_glm-4_5v",
     "GLM 4.5V",
-    "Zhipu AI",
+    "Z-ai",
     "image",
     "USA",
     "2025",
@@ -14735,7 +15255,7 @@ export const RAW_MODELS = [
     "Z-"
   ],
   [
-    673,
+    "or_openai_gpt-5_batch",
     "GPT-5 (batch)",
     "OpenAI",
     "image",
@@ -14757,7 +15277,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    674,
+    "or_openai_gpt-5-mini_batch",
     "GPT-5 Mini (batch)",
     "OpenAI",
     "image",
@@ -14779,7 +15299,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    675,
+    "or_openai_gpt-5-nano_batch",
     "GPT-5 Nano (batch)",
     "OpenAI",
     "image",
@@ -14801,7 +15321,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    676,
+    "or_anthropic_claude-opus-4_1_batch",
     "Claude Opus 4.1 (batch)",
     "Anthropic",
     "image",
@@ -14823,7 +15343,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    677,
+    "or_mistralai_codestral-2508",
     "Codestral 2508",
     "Mistral AI",
     "code",
@@ -14846,7 +15366,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    678,
+    "or_qwen_qwen3-coder-30b-a3b-instruct",
     "Qwen3 Coder 30B A3B Instruct",
     "Alibaba",
     "code",
@@ -14870,7 +15390,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    679,
+    "or_qwen_qwen3-30b-a3b-instruct-2507",
     "Qwen3 30B A3B Instruct 2507",
     "Alibaba",
     "llm",
@@ -14894,9 +15414,9 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    680,
+    "or_z-ai_glm-4_5",
     "GLM 4.5",
-    "Zhipu AI",
+    "Z-ai",
     "llm",
     "USA",
     "2025",
@@ -14916,9 +15436,9 @@ export const RAW_MODELS = [
     "Z-"
   ],
   [
-    681,
+    "or_z-ai_glm-4_5-air",
     "GLM 4.5 Air",
-    "Zhipu AI",
+    "Z-ai",
     "llm",
     "USA",
     "2025",
@@ -14938,7 +15458,7 @@ export const RAW_MODELS = [
     "Z-"
   ],
   [
-    682,
+    "or_qwen_qwen3-235b-a22b-thinking-2507",
     "Qwen3 235B A22B Thinking 2507",
     "Alibaba",
     "reason",
@@ -14962,7 +15482,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    683,
+    "or_qwen_qwen3-coder",
     "Qwen3 Coder 480B A35B",
     "Alibaba",
     "code",
@@ -14986,7 +15506,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    684,
+    "or_bytedance_ui-tars-1_5-7b",
     "UI-TARS 7B ",
     "ByteDance",
     "image",
@@ -15009,7 +15529,7 @@ export const RAW_MODELS = [
     "BY"
   ],
   [
-    685,
+    "or_google_gemini-2_5-flash-lite_batch",
     "Gemini 2.5 Flash Lite (batch)",
     "Google",
     "image",
@@ -15031,7 +15551,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    686,
+    "or_qwen_qwen3-235b-a22b-2507",
     "Qwen3 235B A22B Instruct 2507",
     "Alibaba",
     "llm",
@@ -15055,9 +15575,9 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    687,
+    "or_moonshotai_kimi-k2",
     "Kimi K2 0711",
-    "Moonshot AI",
+    "Moonshotai",
     "llm",
     "USA",
     "2025",
@@ -15077,7 +15597,7 @@ export const RAW_MODELS = [
     "MO"
   ],
   [
-    688,
+    "or_cognitivecomputations_dolphin-mistral-24b-venice-edition",
     "Uncensored",
     "Cognitive Computations",
     "llm",
@@ -15100,7 +15620,7 @@ export const RAW_MODELS = [
     "CO"
   ],
   [
-    689,
+    "or_tencent_hunyuan-a13b-instruct",
     "Hunyuan A13B Instruct",
     "Tencent",
     "reason",
@@ -15123,7 +15643,7 @@ export const RAW_MODELS = [
     "TE"
   ],
   [
-    690,
+    "or_morph_morph-v3-large",
     "Morph V3 Large",
     "Morph",
     "code",
@@ -15145,7 +15665,7 @@ export const RAW_MODELS = [
     "MO"
   ],
   [
-    691,
+    "or_morph_morph-v3-fast",
     "Morph V3 Fast",
     "Morph",
     "code",
@@ -15167,7 +15687,7 @@ export const RAW_MODELS = [
     "MO"
   ],
   [
-    692,
+    "or_baidu_ernie-4_5-vl-424b-a47b",
     "ERNIE 4.5 VL 424B A47B ",
     "Baidu",
     "image",
@@ -15190,7 +15710,7 @@ export const RAW_MODELS = [
     "BA"
   ],
   [
-    693,
+    "or_mistralai_mistral-small-3_2-24b-instruct",
     "Mistral Small 3.2 24B",
     "Mistral AI",
     "image",
@@ -15214,7 +15734,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    694,
+    "or_minimax_minimax-m1",
     "MiniMax M1",
     "MiniMax",
     "reason",
@@ -15236,7 +15756,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    695,
+    "or_google_gemini-2_5-flash",
     "Gemini 2.5 Flash",
     "Google",
     "image",
@@ -15258,7 +15778,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    696,
+    "or_google_gemini-2_5-flash_batch",
     "Gemini 2.5 Flash (batch)",
     "Google",
     "image",
@@ -15280,7 +15800,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    697,
+    "or_google_gemini-2_5-pro",
     "Gemini 2.5 Pro",
     "Google",
     "image",
@@ -15302,7 +15822,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    698,
+    "or_google_gemini-2_5-pro_batch",
     "Gemini 2.5 Pro (batch)",
     "Google",
     "image",
@@ -15324,7 +15844,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    699,
+    "or_openai_o3-pro_batch",
     "o3 Pro (batch)",
     "OpenAI",
     "image",
@@ -15346,7 +15866,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    700,
+    "or_google_gemini-2_5-pro-preview",
     "Gemini 2.5 Pro Preview 06-05",
     "Google",
     "image",
@@ -15368,7 +15888,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    701,
+    "or_deepseek_deepseek-r1-0528",
     "R1 0528",
     "DeepSeek",
     "reason",
@@ -15391,7 +15911,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    702,
+    "or_anthropic_claude-opus-4",
     "Claude Opus 4",
     "Anthropic",
     "image",
@@ -15413,7 +15933,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    703,
+    "or_anthropic_claude-sonnet-4",
     "Claude Sonnet 4",
     "Anthropic",
     "image",
@@ -15435,7 +15955,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    704,
+    "or_google_gemma-3n-e4b-it",
     "Gemma 3n 4B",
     "Google",
     "multi",
@@ -15459,7 +15979,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    705,
+    "or_google_gemini-2_5-pro-preview-05-06",
     "Gemini 2.5 Pro Preview 05-06",
     "Google",
     "image",
@@ -15481,7 +16001,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    706,
+    "or_arcee-ai_virtuoso-large",
     "Virtuoso Large",
     "Arcee-ai",
     "reason",
@@ -15503,7 +16023,7 @@ export const RAW_MODELS = [
     "AR"
   ],
   [
-    707,
+    "or_meta-llama_llama-guard-4-12b",
     "Llama Guard 4 12B",
     "Meta",
     "image",
@@ -15527,7 +16047,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    708,
+    "or_qwen_qwen3-30b-a3b",
     "Qwen3 30B A3B",
     "Alibaba",
     "reason",
@@ -15551,7 +16071,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    709,
+    "or_qwen_qwen3-8b",
     "Qwen3 8B",
     "Alibaba",
     "reason",
@@ -15575,7 +16095,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    710,
+    "or_qwen_qwen3-14b",
     "Qwen3 14B",
     "Alibaba",
     "reason",
@@ -15599,7 +16119,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    711,
+    "or_qwen_qwen3-32b",
     "Qwen3 32B",
     "Alibaba",
     "reason",
@@ -15623,7 +16143,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    712,
+    "or_qwen_qwen3-235b-a22b",
     "Qwen3 235B A22B",
     "Alibaba",
     "reason",
@@ -15647,7 +16167,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    713,
+    "or_openai_o4-mini-high",
     "o4 Mini High",
     "OpenAI",
     "image",
@@ -15669,7 +16189,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    714,
+    "or_openai_o4-mini-high_batch",
     "o4 Mini High (batch)",
     "OpenAI",
     "image",
@@ -15691,7 +16211,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    715,
+    "or_openai_o3",
     "OpenAI: o3",
     "OpenAI",
     "image",
@@ -15713,7 +16233,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    716,
+    "or_openai_o3_batch",
     "o3 (batch)",
     "OpenAI",
     "image",
@@ -15735,7 +16255,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    717,
+    "or_openai_o4-mini_batch",
     "o4 Mini (batch)",
     "OpenAI",
     "image",
@@ -15757,7 +16277,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    718,
+    "or_openai_gpt-4_1_batch",
     "GPT-4.1 (batch)",
     "OpenAI",
     "image",
@@ -15779,7 +16299,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    719,
+    "or_openai_gpt-4_1-mini_batch",
     "GPT-4.1 Mini (batch)",
     "OpenAI",
     "image",
@@ -15801,7 +16321,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    720,
+    "or_openai_gpt-4_1-nano_batch",
     "GPT-4.1 Nano (batch)",
     "OpenAI",
     "image",
@@ -15823,7 +16343,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    721,
+    "or_meta-llama_llama-4-maverick",
     "Llama 4 Maverick",
     "Meta",
     "image",
@@ -15846,7 +16366,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    722,
+    "or_meta-llama_llama-4-scout",
     "Llama 4 Scout",
     "Meta",
     "image",
@@ -15869,7 +16389,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    723,
+    "or_deepseek_deepseek-chat-v3-0324",
     "DeepSeek V3 0324",
     "DeepSeek",
     "llm",
@@ -15892,7 +16412,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    724,
+    "or_openai_o1-pro_batch",
     "o1-pro (batch)",
     "OpenAI",
     "image",
@@ -15914,7 +16434,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    725,
+    "or_mistralai_mistral-small-3_1-24b-instruct",
     "Mistral Small 3.1 24B",
     "Mistral AI",
     "image",
@@ -15938,7 +16458,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    726,
+    "or_google_gemma-3-4b-it",
     "Gemma 3 4B",
     "Google",
     "image",
@@ -15962,7 +16482,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    727,
+    "or_google_gemma-3-12b-it",
     "Gemma 3 12B",
     "Google",
     "image",
@@ -15986,7 +16506,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    728,
+    "or_cohere_command-a",
     "Command A",
     "Cohere",
     "llm",
@@ -16008,7 +16528,7 @@ export const RAW_MODELS = [
     "CO"
   ],
   [
-    729,
+    "or_rekaai_reka-flash-3",
     "Reka Flash 3",
     "Rekaai",
     "llm",
@@ -16030,7 +16550,7 @@ export const RAW_MODELS = [
     "RE"
   ],
   [
-    730,
+    "or_thedrummer_skyfall-36b-v2",
     "Skyfall 36B V2",
     "Thedrummer",
     "llm",
@@ -16053,7 +16573,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    731,
+    "or_perplexity_sonar-reasoning-pro",
     "Sonar Reasoning Pro",
     "Perplexity",
     "image",
@@ -16075,7 +16595,7 @@ export const RAW_MODELS = [
     "PE"
   ],
   [
-    732,
+    "or_perplexity_sonar-pro",
     "Sonar Pro",
     "Perplexity",
     "image",
@@ -16097,7 +16617,7 @@ export const RAW_MODELS = [
     "PE"
   ],
   [
-    733,
+    "or_perplexity_sonar-deep-research",
     "Sonar Deep Research",
     "Perplexity",
     "reason",
@@ -16119,7 +16639,7 @@ export const RAW_MODELS = [
     "PE"
   ],
   [
-    734,
+    "or_mistralai_mistral-saba",
     "Saba",
     "Mistral AI",
     "llm",
@@ -16142,7 +16662,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    735,
+    "or_openai_o3-mini-high_batch",
     "o3 Mini High (batch)",
     "OpenAI",
     "reason",
@@ -16164,7 +16684,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    736,
+    "or_aion-labs_aion-rp-llama-3_1-8b",
     "Aion-RP 1.0 (8B)",
     "Aion-labs",
     "llm",
@@ -16187,7 +16707,7 @@ export const RAW_MODELS = [
     "AI"
   ],
   [
-    737,
+    "or_qwen_qwen2_5-vl-72b-instruct",
     "Qwen2.5 VL 72B Instruct",
     "Alibaba",
     "image",
@@ -16211,7 +16731,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    738,
+    "or_qwen_qwen-plus",
     "Qwen-Plus",
     "Alibaba",
     "llm",
@@ -16234,7 +16754,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    739,
+    "or_openai_o3-mini_batch",
     "o3 Mini (batch)",
     "OpenAI",
     "reason",
@@ -16256,7 +16776,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    740,
+    "or_perplexity_sonar",
     "Sonar",
     "Perplexity",
     "image",
@@ -16278,7 +16798,7 @@ export const RAW_MODELS = [
     "PE"
   ],
   [
-    741,
+    "or_deepseek_deepseek-r1-distill-llama-70b",
     "R1 Distill Llama 70B",
     "DeepSeek",
     "reason",
@@ -16302,7 +16822,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    742,
+    "or_deepseek_deepseek-r1",
     "DeepSeek: R1",
     "DeepSeek",
     "reason",
@@ -16325,7 +16845,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    743,
+    "or_minimax_minimax-01",
     "MiniMax-01",
     "MiniMax",
     "image",
@@ -16347,7 +16867,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    744,
+    "or_microsoft_phi-4",
     "Phi 4",
     "Microsoft",
     "reason",
@@ -16370,7 +16890,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    745,
+    "or_deepseek_deepseek-chat",
     "DeepSeek V3",
     "DeepSeek",
     "llm",
@@ -16393,7 +16913,7 @@ export const RAW_MODELS = [
     "DE"
   ],
   [
-    746,
+    "or_sao10k_l3_3-euryale-70b",
     "Llama 3.3 Euryale 70B",
     "Sao10k",
     "llm",
@@ -16416,7 +16936,7 @@ export const RAW_MODELS = [
     "SA"
   ],
   [
-    747,
+    "or_openai_o1",
     "OpenAI: o1",
     "OpenAI",
     "image",
@@ -16438,7 +16958,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    748,
+    "or_openai_o1_batch",
     "o1 (batch)",
     "OpenAI",
     "image",
@@ -16460,7 +16980,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    749,
+    "or_cohere_command-r7b-12-2024",
     "Command R7B (12-2024)",
     "Cohere",
     "reason",
@@ -16483,7 +17003,7 @@ export const RAW_MODELS = [
     "CO"
   ],
   [
-    750,
+    "or_meta-llama_llama-3_3-70b-instruct",
     "Llama 3.3 70B Instruct",
     "Meta",
     "llm",
@@ -16507,7 +17027,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    751,
+    "or_openai_gpt-4o-2024-11-20",
     "GPT-4o (2024-11-20)",
     "OpenAI",
     "image",
@@ -16529,7 +17049,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    752,
+    "or_mistralai_mistral-large-2407",
     "Mistral Large 2407",
     "Mistral AI",
     "code",
@@ -16552,7 +17072,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    753,
+    "or_qwen_qwen-2_5-coder-32b-instruct",
     "Qwen2.5 Coder 32B Instruct",
     "Alibaba",
     "code",
@@ -16576,7 +17096,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    754,
+    "or_thedrummer_unslopnemo-12b",
     "UnslopNemo 12B",
     "Thedrummer",
     "llm",
@@ -16599,7 +17119,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    755,
+    "or_anthracite-org_magnum-v4-72b",
     "Magnum v4 72B",
     "Anthracite-org",
     "llm",
@@ -16622,7 +17142,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    756,
+    "or_mistralai_ministral-8b",
     "Ministral 8B",
     "Mistral AI",
     "llm",
@@ -16646,7 +17166,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    757,
+    "or_qwen_qwen-2_5-7b-instruct",
     "Qwen2.5 7B Instruct",
     "Alibaba",
     "llm",
@@ -16670,7 +17190,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    758,
+    "or_thedrummer_rocinante-12b",
     "Rocinante 12B",
     "Thedrummer",
     "llm",
@@ -16693,7 +17213,7 @@ export const RAW_MODELS = [
     "TH"
   ],
   [
-    759,
+    "or_meta-llama_llama-3_2-1b-instruct",
     "Llama 3.2 1B Instruct",
     "Meta",
     "llm",
@@ -16717,7 +17237,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    760,
+    "or_meta-llama_llama-3_2-3b-instruct",
     "Llama 3.2 3B Instruct",
     "Meta",
     "reason",
@@ -16741,7 +17261,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    761,
+    "or_qwen_qwen-2_5-72b-instruct",
     "Qwen2.5 72B Instruct",
     "Alibaba",
     "llm",
@@ -16765,7 +17285,7 @@ export const RAW_MODELS = [
     "AL"
   ],
   [
-    762,
+    "or_cohere_command-r-08-2024",
     "Command R (08-2024)",
     "Cohere",
     "code",
@@ -16787,7 +17307,7 @@ export const RAW_MODELS = [
     "CO"
   ],
   [
-    763,
+    "or_sao10k_l3_1-euryale-70b",
     "Llama 3.1 Euryale 70B v2.2",
     "Sao10k",
     "llm",
@@ -16810,7 +17330,7 @@ export const RAW_MODELS = [
     "SA"
   ],
   [
-    764,
+    "or_nousresearch_hermes-3-llama-3_1-70b",
     "Hermes 3 70B Instruct",
     "Nous Research",
     "reason",
@@ -16834,7 +17354,7 @@ export const RAW_MODELS = [
     "NO"
   ],
   [
-    765,
+    "or_nousresearch_hermes-3-llama-3_1-405b",
     "Hermes 3 405B Instruct",
     "Nous Research",
     "reason",
@@ -16858,7 +17378,7 @@ export const RAW_MODELS = [
     "NO"
   ],
   [
-    766,
+    "or_sao10k_l3-lunaris-8b",
     "Llama 3 8B Lunaris",
     "Sao10k",
     "llm",
@@ -16881,7 +17401,7 @@ export const RAW_MODELS = [
     "SA"
   ],
   [
-    767,
+    "or_openai_gpt-4o-2024-08-06",
     "GPT-4o (2024-08-06)",
     "OpenAI",
     "image",
@@ -16903,7 +17423,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    768,
+    "or_meta-llama_llama-3_1-70b-instruct",
     "Llama 3.1 70B Instruct",
     "Meta",
     "llm",
@@ -16927,7 +17447,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    769,
+    "or_meta-llama_llama-3_1-8b-instruct",
     "Llama 3.1 8B Instruct",
     "Meta",
     "llm",
@@ -16951,7 +17471,7 @@ export const RAW_MODELS = [
     "ME"
   ],
   [
-    770,
+    "or_mistralai_mistral-nemo",
     "Mistral Nemo",
     "Mistral AI",
     "llm",
@@ -16974,7 +17494,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    771,
+    "or_openai_gpt-4o-mini-2024-07-18",
     "GPT-4o-mini (2024-07-18)",
     "OpenAI",
     "image",
@@ -16996,7 +17516,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    772,
+    "or_openai_gpt-4o-mini_batch",
     "GPT-4o-mini (batch)",
     "OpenAI",
     "image",
@@ -17018,7 +17538,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    773,
+    "or_google_gemma-2-27b-it",
     "Gemma 2 27B",
     "Google",
     "llm",
@@ -17042,7 +17562,7 @@ export const RAW_MODELS = [
     "GO"
   ],
   [
-    774,
+    "or_openai_gpt-4o-2024-05-13",
     "GPT-4o (2024-05-13)",
     "OpenAI",
     "image",
@@ -17064,7 +17584,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    775,
+    "or_openai_gpt-4o_batch",
     "GPT-4o (batch)",
     "OpenAI",
     "image",
@@ -17086,7 +17606,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    776,
+    "or_mistralai_mixtral-8x22b-instruct",
     "Mixtral 8x22B Instruct",
     "Mistral AI",
     "reason",
@@ -17110,7 +17630,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    777,
+    "or_microsoft_wizardlm-2-8x22b",
     "WizardLM-2 8x22B",
     "Microsoft",
     "llm",
@@ -17133,7 +17653,7 @@ export const RAW_MODELS = [
     "MI"
   ],
   [
-    778,
+    "or_openai_gpt-4-turbo_batch",
     "GPT-4 Turbo (batch)",
     "OpenAI",
     "image",
@@ -17155,7 +17675,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    779,
+    "or_anthropic_claude-3-haiku",
     "Claude 3 Haiku",
     "Anthropic",
     "image",
@@ -17177,7 +17697,7 @@ export const RAW_MODELS = [
     "AN"
   ],
   [
-    780,
+    "or_openai_gpt-3_5-turbo-0613",
     "GPT-3.5 Turbo (older v0613)",
     "OpenAI",
     "code",
@@ -17199,7 +17719,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    781,
+    "or_openai_gpt-4-turbo-preview",
     "GPT-4 Turbo Preview",
     "OpenAI",
     "llm",
@@ -17221,7 +17741,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    782,
+    "or_openrouter_auto",
     "Auto Router",
     "Openrouter",
     "image",
@@ -17243,7 +17763,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    783,
+    "or_openai_gpt-3_5-turbo-16k",
     "GPT-3.5 Turbo 16k",
     "OpenAI",
     "llm",
@@ -17265,7 +17785,7 @@ export const RAW_MODELS = [
     "OP"
   ],
   [
-    784,
+    "or_mancer_weaver",
     "Weaver (alpha)",
     "Mancer",
     "llm",
@@ -17287,7 +17807,7 @@ export const RAW_MODELS = [
     "MA"
   ],
   [
-    785,
+    "or_undi95_remm-slerp-l2-13b",
     "ReMM SLERP 13B",
     "Undi95",
     "llm",
@@ -17310,7 +17830,7 @@ export const RAW_MODELS = [
     "UN"
   ],
   [
-    786,
+    "or_gryphe_mythomax-l2-13b",
     "MythoMax 13B",
     "Gryphe",
     "llm",
@@ -17333,7 +17853,7 @@ export const RAW_MODELS = [
     "GR"
   ],
   [
-    787,
+    "or_openai_gpt-3_5-turbo_batch",
     "GPT-3.5 Turbo (batch)",
     "OpenAI",
     "code",
@@ -17356,148 +17876,143 @@ export const RAW_MODELS = [
   ]
 ];
 
-// ── Dynamically Computed Data Structures (Derived from Active RAW_MODELS Catalog) ──
+export const RANKINGS = {
+  llm: [
+    ["Claude Opus 4.8","Anthropic",96,"#f59e0b","CA"],
+    ["GPT-5.5-Pro","OpenAI",96,"#10b981","OA"],
+    ["o1-pro","OpenAI",95,"#10b981","OA"],
+    ["GPT-5-Pro","OpenAI",95,"#10b981","OA"],
+    ["Claude-Opus-4.7","Anthropic",95,"#f59e0b","CA"],
+    ["o3-pro","OpenAI",96,"#10b981","OA"],
+    ["GPT-5","OpenAI",96,"#10b981","OA"],
+    ["Gemini 3.1 Pro","Google",93,"#34d399","GG"],
+    ["Qwen3-235B-A22B-DI","Alibaba",91,"#f97316","QW"],
+    ["DeepSeek-V4-Pro-E","DeepSeek",91,"#3b82f6","DS"],
+  ],
+  image: [
+    ["Imagen-4-Ultra","Google",93,"#34d399","IM"],
+    ["FLUX-2-Pro","Black Forest Labs",92,"#ec4899","FL"],
+    ["Flux-2-Max","Black Forest Labs",91,"#ec4899","FL"],
+    ["Imagen-4","Google",91,"#34d399","IM"],
+    ["FLUX-pro-1.1-ultra","Black Forest Labs",91,"#ec4899","FL"],
+    ["Flux-Kontext-Max","Black Forest Labs",90,"#ec4899","FL"],
+    ["GPT-Image-1","OpenAI",90,"#10b981","OA"],
+    ["Ideogram-v3","Ideogram",89,"#818cf8","ID"],
+    ["FLUX-pro-1.1","Black Forest Labs",88,"#ec4899","FL"],
+    ["Imagen-4-Fast","Google",88,"#34d399","IM"],
+  ],
+  video: [
+    ["Veo-3.1","Google",94,"#34d399","VE"],
+    ["Veo-v3.1","Google",93,"#34d399","VE"],
+    ["Veo-3","Google",93,"#34d399","VE"],
+    ["Sora-2-Pro","OpenAI",92,"#10b981","OA"],
+    ["Kling-v3-Pro","Kuaishou",90,"#f59e0b","KL"],
+    ["Sora-2","OpenAI",90,"#10b981","OA"],
+    ["Veo-3-Fast","Google",91,"#34d399","VE"],
+    ["Kling-2.6-Pro","Kuaishou",89,"#f59e0b","KL"],
+    ["Kling-2.5-Turbo-Pro","Kuaishou",88,"#f59e0b","KL"],
+    ["Runway-Gen-4.5","Runway",88,"#a78bfa","RW"],
+  ],
+  code: [
+    ["Claude-Code","Anthropic",92,"#f59e0b","CA"],
+    ["GPT-5.1-Codex-Max","OpenAI",92,"#10b981","OA"],
+    ["GPT-5-Codex","OpenAI",91,"#10b981","OA"],
+    ["Qwen3-Coder-480B-N","Alibaba",91,"#f97316","QW"],
+    ["GPT-5.2-Codex","OpenAI",90,"#10b981","OA"],
+    ["GPT-5.3-Codex","OpenAI",90,"#10b981","OA"],
+    ["Qwen3-Coder-Next","Alibaba",89,"#f97316","QW"],
+    ["DeepSeek-R1-DI","DeepSeek",88,"#3b82f6","DS"],
+    ["GPT-5.1-Codex-Mini","OpenAI",88,"#10b981","OA"],
+    ["Kimi-K2.7-Code","Moonshot AI",83,"#f97316","KI"],
+  ],
+  audio: [
+    ["ElevenLabs-v3","ElevenLabs",92,"#818cf8","EL"],
+    ["ElevenLabs-v2.5-Turbo","ElevenLabs",90,"#818cf8","EL"],
+    ["Lyria-3","Google",87,"#34d399","LY"],
+    ["Deepgram-Nova-3","Deepgram",88,"#06b6d4","DG"],
+    ["Gemini-2.5-Pro-TTS","Google",88,"#34d399","GG"],
+    ["GPT-Audio","OpenAI",88,"#10b981","OA"],
+    ["Sonic-3.0","Cartesia",85,"#8b5cf6","SO"],
+    ["Gemini-2.5-Flash-TTS","Google",86,"#34d399","GG"],
+    ["Whisper-V3-Large-T","OpenAI",88,"#10b981","OA"],
+    ["Orpheus-TTS","Canopy Labs",82,"#ec4899","OR"],
+  ],
+  search: [
+    ["Perplexity-Adv-Deep-Research","Perplexity",92,"#06b6d4","PP"],
+    ["o3-deep-research","OpenAI",94,"#10b981","OA"],
+    ["Perplexity-Deep-Research","Perplexity",91,"#06b6d4","PP"],
+    ["o4-mini-deep-research","OpenAI",93,"#10b981","OA"],
+    ["Perplexity-Sonar-Pro","Perplexity",88,"#06b6d4","PP"],
+    ["GPT-4o-Search","OpenAI",89,"#10b981","OA"],
+    ["Perplexity-Sonar-Rsn-Pro","Perplexity",89,"#06b6d4","PP"],
+    ["Perplexity-Pro-Search","Perplexity",87,"#06b6d4","PP"],
+    ["Sonar 2","Perplexity",87,"#06b6d4","PP"],
+    ["Exa-Research","Exa",82,"#8b5cf6","EX"],
+  ],
+};
 
-export const RANKINGS = (() => {
-  const getTopForCat = (filterFn, limit = 10) => {
-    return RAW_MODELS.filter(filterFn)
-      .sort((a, b) => (b[11] || 0) - (a[11] || 0) || a[1].localeCompare(b[1]))
-      .slice(0, limit)
-      .map(m => [
-        m[1], // name
-        m[2], // producer
-        m[11] || 88, // score
-        m[14] || '#6366f1', // color
-        m[15] || m[1].substring(0, 2).toUpperCase() // letter
-      ]);
-  };
+export const COUNTRIES = [
+  { name: "India", flag: "🇮🇳", count: 20, share: 3.2, color: "#f97316", companies: "Sarvam AI, Krutrim, AI4Bharat (IIT Madras), Two AI, SML (Hanooman), Tech Mahindra, CoRover, MeitY (Bhashini)", strategy: "IndiaAI Mission, sovereign multilingual Indic stack, open research", models: "Sarvam 1, Krutrim Pro, SUTRA, IndicTrans2, Hanooman, BharatGPT" },
+  { name: "USA", flag: "🇺🇸", count: 198, share: 52, color: "#10b981", companies: "OpenAI, Google, Anthropic, xAI, Meta, Amazon, Microsoft, Runway, Perplexity, ElevenLabs, Luma, Deepgram, Exa, Reka", strategy: "Private-led innovation, NIST AI RMF compliance focus", models: "GPT-5, Claude, Gemini, Grok, Llama, Nova" },
+  { name: "China", flag: "🇨🇳", count: 144, share: 38, color: "#ef4444", companies: "Alibaba (Qwen), DeepSeek, Zhipu AI, MiniMax, ByteDance, Kuaishou, Moonshot AI, Xiaomi, Tencent", strategy: "State-supported AI development, domestic-first deployment", models: "Qwen, DeepSeek, GLM, Kling, Hailuo, Seedream" },
+  { name: "France", flag: "🇫🇷", count: 15, share: 4, color: "#3b82f6", companies: "Mistral AI, Linkup", strategy: "EU AI Act compliance, sovereign AI push", models: "Mistral-Large, Mistral-Small, Magistral, Linkup" },
+  { name: "Germany", flag: "🇩🇪", count: 12, share: 3, color: "#f59e0b", companies: "Black Forest Labs", strategy: "EU regulations, open-source focus", models: "FLUX series (FLUX.1, FLUX-2, Kontext)" },
+  { name: "UK", flag: "🇬🇧", count: 7, share: 2, color: "#818cf8", companies: "Stability AI", strategy: "UK AI Safety Institute oversight", models: "StableDiffusion, Stable-Audio, SVI" },
+  { name: "Canada", flag: "🇨🇦", count: 5, share: 1, color: "#f97316", companies: "Ideogram", strategy: "AIDA compliance, responsible AI", models: "Ideogram v1-v3" },
+  { name: "Israel", flag: "🇮🇱", count: 4, share: 1, color: "#34d399", companies: "Bria AI, Lightricks", strategy: "Commercial safety-first", models: "Bria-Eraser, LTX-2" },
+  { name: "Japan", flag: "🇯🇵", count: 2, share: 0.5, color: "#ec4899", companies: "SakanaAI", strategy: "Japanese language optimization", models: "Fugu-Ultra" },
+];
 
-  return {
-    llm: getTopForCat(m => m[3] === 'llm' || m[3] === 'reason'),
-    code: getTopForCat(m => m[3] === 'code' || m[1].toLowerCase().includes('code') || m[1].toLowerCase().includes('coder')),
-    reason: getTopForCat(m => m[3] === 'reason' || m[1].toLowerCase().includes('r1') || m[1].toLowerCase().includes('o1') || m[1].toLowerCase().includes('o3') || m[1].toLowerCase().includes('think')),
-    multi: getTopForCat(m => m[3] === 'multi' || (m[13] && m[13].includes('multi'))),
-    audio: getTopForCat(m => m[3] === 'audio' || m[1].toLowerCase().includes('audio') || m[1].toLowerCase().includes('whisper') || m[1].toLowerCase().includes('tts')),
-    image: getTopForCat(m => m[3] === 'image' || m[1].toLowerCase().includes('flux') || m[1].toLowerCase().includes('image') || m[1].toLowerCase().includes('diffusion')),
-    search: getTopForCat(m => m[3] === 'search' || m[1].toLowerCase().includes('sonar') || m[1].toLowerCase().includes('search') || m[1].toLowerCase().includes('perplexity')),
-  };
-})();
+export const CLIENTS = [
+  ["Microsoft","Enterprise AI across Azure, Office 365, GitHub Copilot","GPT-4o, GPT-5, FLUX"],
+  ["Google","Search, Workspace, Cloud AI APIs","Gemini, Veo, Imagen"],
+  ["Meta","Social platforms, Meta AI assistant","Llama 3.x, Whisper"],
+  ["Apple","On-device AI, Siri, Apple Intelligence","GPT-4o, Claude, Gemma"],
+  ["Amazon","Alexa, AWS AI services, Amazon.com","Nova, Titan, Claude"],
+  ["Salesforce","Einstein AI, CRM automation","GPT-4o, Claude Sonnet"],
+  ["Adobe","Firefly, Creative Cloud AI","Firefly (internal), FLUX"],
+  ["Canva","Magic Studio image & video tools","FLUX, Imagen, Runway"],
+  ["Shopify","Merchant AI tools, product descriptions","GPT-4.1, Claude"],
+  ["Notion","Notion AI writing assistant","GPT-4o, Claude"],
+  ["GitHub","GitHub Copilot code assistant","GPT-4o, Claude Code, Codex"],
+  ["Netflix","Content recommendation, metadata","GPT-4o, Gemini"],
+  ["Spotify","Podcast transcription, DJ AI","Whisper, ElevenLabs"],
+  ["Duolingo","Max tutoring product","GPT-4o, Claude"],
+  ["Khan Academy","Khanmigo AI tutor","GPT-4o"],
+  ["Stripe","Fraud detection, customer AI","Claude, GPT-4"],
+  ["Uber","Ride safety, driver AI tools","GPT-4o, Claude"],
+  ["Airbnb","Listing descriptions, travel AI","GPT-4, Gemini"],
+  ["HubSpot","Marketing AI, email generation","GPT-4o, Claude Haiku"],
+  ["Zoom","AI Companion, meeting summaries","GPT-4o, Whisper"],
+  ["Slack","AI search, message summaries","Claude, GPT-4o"],
+  ["Dropbox","AI doc summaries, search","GPT-4o, Claude"],
+  ["Figma","AI design features","DALL-E, FLUX, Claude"],
+  ["Grammarly","Writing AI, full rewrite","GPT-4, Claude"],
+  ["Jasper","Marketing content generation","GPT-4o, Claude"],
+  ["Copy.ai","Marketing copy generation","GPT-4o, Anthropic"],
+  ["Harvey AI","Legal AI platform","Claude Opus, GPT-4"],
+  ["Perplexity","AI search product","Own Sonar, GPT-4o"],
+  ["You.com","AI search engine","GPT-4, Claude, Gemini"],
+  ["Character.ai","Roleplaying AI chatbots","Custom LLM, Claude"],
+];
 
-export const COUNTRIES = (() => {
-  const countMap = {};
-  const devMap = {};
-  const modelSampleMap = {};
-
-  RAW_MODELS.forEach(m => {
-    const [id, name, producer, cat, country] = m;
-    const c = country || 'USA';
-    countMap[c] = (countMap[c] || 0) + 1;
-    if (!devMap[c]) devMap[c] = new Set();
-    devMap[c].add(producer);
-    if (!modelSampleMap[c]) modelSampleMap[c] = [];
-    if (modelSampleMap[c].length < 6) modelSampleMap[c].push(name);
-  });
-
-  const total = RAW_MODELS.length || 1;
-  const countryMeta = {
-    'USA': { color: '#10b981', strategy: 'Private-led frontier innovation & multi-modal APIs', flag: '🇺🇸' },
-    'China': { color: '#ef4444', strategy: 'Open-weights frontier MoE & low-cost inference', flag: '🇨🇳' },
-    'France': { color: '#3b82f6', strategy: 'EU AI sovereignty & high-efficiency MoE architectures', flag: '🇫🇷' },
-    'Germany': { color: '#f59e0b', strategy: 'Generative image/diffusion foundation research', flag: '🇩🇪' },
-    'UK': { color: '#818cf8', strategy: 'Generative media & AI safety institute alignment', flag: '🇬🇧' },
-    'Canada': { color: '#f97316', strategy: 'Multilingual enterprise search & embeddings', flag: '🇨🇦' },
-    'India': { color: '#f97316', strategy: 'IndiaAI Mission & sovereign multilingual Indic LLMs', flag: '🇮🇳' },
-    'Israel': { color: '#34d399', strategy: 'Enterprise video & vision safety foundation models', flag: '🇮🇱' },
-    'Japan': { color: '#ec4899', strategy: 'Automated evolutionary model merge & Japanese LLMs', flag: '🇯🇵' },
-  };
-
-  return Object.keys(countMap)
-    .sort((a, b) => countMap[b] - countMap[a])
-    .map(c => {
-      const meta = countryMeta[c] || { color: '#6366f1', strategy: 'Global open AI ecosystem & research', flag: COUNTRY_FLAG[c] || '🌐' };
-      const count = countMap[c];
-      const share = Math.round((count / total) * 100);
-      const companies = Array.from(devMap[c] || []).slice(0, 8).join(', ');
-      const models = (modelSampleMap[c] || []).slice(0, 6).join(', ');
-      return {
-        name: c,
-        flag: meta.flag,
-        count,
-        share,
-        color: meta.color,
-        companies: companies || 'Open Ecosystem',
-        strategy: meta.strategy,
-        models: models || 'Foundational Models'
-      };
-    });
-})();
-
-export const BENCHMARKS = (() => {
-  const topFlagships = RAW_MODELS
-    .filter(m => m[11] >= 85 || ['OpenAI', 'Anthropic', 'Google', 'Meta', 'DeepSeek', 'Alibaba', 'Mistral AI', 'Microsoft', 'xAI', 'Cohere'].includes(m[2]))
-    .sort((a, b) => (b[11] || 0) - (a[11] || 0))
-    .slice(0, 16);
-
-  return topFlagships.map((m, idx) => {
-    const [id, name, producer, cat, country, released, params, access, priceIn, priceOut, local, score] = m;
-    const ctxK = 128;
-    
-    const base = score || 85;
-    const mmlu = (Math.min(99.4, (base * 0.96) + ((idx % 3) * 0.4))).toFixed(1);
-    const humanEval = (Math.min(99.0, (base * 0.98) - ((idx % 4) * 0.5))).toFixed(1);
-    const math = (Math.min(98.2, (base * 0.95) - ((idx % 2) * 0.7))).toFixed(1);
-    const gpqa = (Math.min(86.5, (base * 0.82) + ((idx % 5) * 0.3))).toFixed(1);
-    const mtBench = (Math.min(9.9, 7.5 + (base - 75) * 0.11)).toFixed(1);
-
-    return [
-      name,
-      producer,
-      parseFloat(mmlu),
-      parseFloat(humanEval),
-      parseFloat(math),
-      parseFloat(gpqa),
-      parseFloat(mtBench),
-      ctxK
-    ];
-  });
-})();
-
-export const CLIENTS = (() => {
-  const devModels = {};
-  RAW_MODELS.forEach(m => {
-    const [id, name, producer] = m;
-    if (!devModels[producer]) devModels[producer] = [];
-    if (devModels[producer].length < 4) devModels[producer].push(name);
-  });
-
-  const enterpriseMap = [
-    { company: 'Microsoft', use: 'Enterprise AI across Azure, Office 365, GitHub Copilot', dev: 'OpenAI' },
-    { company: 'Google Cloud', use: 'Global Search, Workspace, Enterprise Vertex AI APIs', dev: 'Google' },
-    { company: 'Meta Platforms', use: 'Llama social ecosystem, Ray-Ban smart glasses, Instagram AI', dev: 'Meta' },
-    { company: 'Amazon AWS', use: 'AWS Bedrock foundation model hub, SageMaker deployments', dev: 'Anthropic' },
-    { company: 'Apple', use: 'Apple Intelligence on-device & Private Cloud Compute', dev: 'OpenAI' },
-    { company: 'Salesforce', use: 'Agentforce autonomous CRM agents & Einstein Copilot', dev: 'Anthropic' },
-    { company: 'GitHub', use: 'Copilot Workspace, multi-file code editing & debugging', dev: 'OpenAI' },
-    { company: 'Together AI', use: 'Ultra-fast serverless inference & fine-tuning cloud', dev: 'Meta' },
-    { company: 'Fireworks AI', use: 'Production-grade compound AI systems & JSON mode', dev: 'DeepSeek' },
-    { company: 'DeepInfra', use: 'Serverless low-latency scalable model hosting', dev: 'Alibaba' },
-    { company: 'Perplexity', use: 'Real-time conversational search & citation engine', dev: 'Perplexity' },
-    { company: 'Notion', use: 'Notion AI workspace summaries & document drafts', dev: 'Anthropic' },
-    { company: 'Stripe', use: 'Automated fraud detection & developer documentation AI', dev: 'OpenAI' },
-    { company: 'Duolingo', use: 'Max language roleplay & grammar explanation tutor', dev: 'OpenAI' },
-    { company: 'Canva', use: 'Magic Media design assistant & text-to-graphics generator', dev: 'Black Forest Labs' },
-    { company: 'Figma', use: 'First-draft generative UI designs & asset generation', dev: 'OpenAI' },
-    { company: 'Uber', use: 'Real-time driver support automation & route intelligence', dev: 'OpenAI' },
-    { company: 'Shopify', use: 'Merchant AI tools, automated catalog descriptions', dev: 'Anthropic' },
-    { company: 'Zoom', use: 'AI Companion live meeting transcripts & action items', dev: 'OpenAI' },
-    { company: 'Slack', use: 'Channel summaries, catch-up search & huddle notes', dev: 'Anthropic' }
-  ];
-
-  return enterpriseMap.map(item => {
-    const topModels = (devModels[item.dev] || []).slice(0, 3).join(', ') || 'Frontier Models';
-    return [item.company, item.use, topModels];
-  });
-})();
+export const BENCHMARKS = [
+  ["GPT-5 / GPT-5-Pro","OpenAI",89.2,99.1,97.3,82.1,9.8,1000],
+  ["Claude Opus 4.8","Anthropic",88.9,98.7,96.8,81.4,9.7,200],
+  ["Gemini 3.1 Pro","Google",88.1,97.4,95.9,80.8,9.6,1000],
+  ["Grok-4","xAI",87.3,96.8,95.2,79.5,9.5,128],
+  ["o3-pro","OpenAI",87.0,99.0,97.8,83.2,9.8,200],
+  ["DeepSeek-V4-Pro","DeepSeek",86.4,96.1,94.7,78.9,9.4,64],
+  ["Claude Sonnet 4.6","Anthropic",85.9,97.2,94.1,77.8,9.3,200],
+  ["Qwen3-235B-MoE","Alibaba",85.2,95.8,93.4,77.2,9.2,128],
+  ["GPT-4.1","OpenAI",84.8,92.7,91.9,75.4,9.0,128],
+  ["Llama-3.3-70B","Meta",83.4,88.2,84.1,71.2,8.6,128],
+  ["Mistral-Large-2","Mistral AI",81.2,84.5,82.3,68.4,8.2,128],
+  ["Gemma-4-31B","Google",79.8,82.1,79.4,65.8,8.0,128],
+  ["DeepSeek-V3","DeepSeek",86.9,93.4,91.2,76.8,9.1,64],
+  ["GPT-4o","OpenAI",85.7,90.2,88.7,74.1,8.9,128],
+  ["Phi-4","Microsoft",80.6,82.0,78.9,64.2,7.9,128],
+];
 
 export const COMPLIANCE = [
   { icon: "🛡️", name: "SOC 2 Type II", org: "AICPA", desc: "Security and availability controls audit", models: ["Claude", "GPT-4", "Gemini", "Grok", "Nova"] },

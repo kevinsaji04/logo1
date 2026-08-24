@@ -1,62 +1,54 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
-export default function IntelligenceNavbar({ activeSection = 'overview' }) {
+export default function IntelligenceNavbar({ activeSection = '' }) {
+  const searchParams = useSearchParams();
+  const currentTab = searchParams?.get('tab') || 'directory';
+
   const links = [
-    { href: '#overview', label: 'Overview' },
-    { href: '#categories', label: 'Categories' },
-    { href: '#models', label: 'All Models' },
-    { href: '#rankings', label: 'Rankings' },
-    { href: '/decision-tree', label: '🎯 Decision Tree', isRoute: true, isHighlight: true },
-    { href: '/tree', label: '🌳 Evolutionary Tree', isRoute: true },
-    { href: '#countries', label: 'Origins' },
-    { href: '#clients', label: 'Top Clients' },
-    { href: '#benchmarks', label: 'Benchmarks' },
-    { href: '#compliance', label: 'Compliance' },
+    { href: '/?tab=directory', tab: 'directory', label: '🎛️ All Models' },
+    { href: '/?tab=charts',    tab: 'charts',    label: '📊 Analytics & Charts' },
+    { href: '/?tab=tasks',     tab: 'tasks',     label: '📋 Top Models' },
+    { href: '/?tab=rankings',  tab: 'rankings',  label: '🏆 Rankings' },
+    { href: '/?tab=origins',   tab: 'origins',   label: '🌍 Origins' },
+    { href: '/?tab=clients',   tab: 'clients',   label: '💼 Top Clients' },
+    { href: '/decision-tree',  isRoute: true,    section: 'decision-tree', label: '🎯 Decision Tree', isHighlight: true },
+    { href: '/tree',           isRoute: true,    section: 'tree',          label: '🌳 Evolutionary Tree' },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0a0d14]/90 backdrop-blur-md border-b border-[#6378ff]/15 px-6 h-14 flex items-center gap-1 overflow-x-auto scrollbar-none">
-      <Link href="/" className="font-bold text-sm text-[#6378ff] mr-4 whitespace-nowrap tracking-tight flex items-center gap-2">
-        <span>🧠</span> AI Intel
-      </Link>
-
-      <div className="w-px h-5 bg-[#6378ff]/20 mx-2 flex-shrink-0" />
-
-      <div className="flex items-center gap-1">
+    <nav className="sticky top-0 z-50 bg-[#0a0d14]/95 backdrop-blur-md border-b border-slate-800/80 px-4 md:px-6 h-14 flex items-center justify-center gap-1.5 overflow-x-auto scrollbar-none shadow-lg">
+      <div className="flex items-center gap-1.5 shrink-0">
         {links.map((link) => {
+          let isActive = false;
           if (link.isRoute) {
-            const isActive = activeSection === link.href.replace('/', '');
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all whitespace-nowrap ${
-                  link.isHighlight
-                    ? 'text-amber-300 bg-amber-500/15 border-amber-500/30 hover:bg-amber-500/25 shadow-[0_0_12px_rgba(245,158,11,0.15)]'
-                    : isActive
-                    ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40'
-                    : 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500/20'
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
+            isActive = activeSection === link.section;
+          } else if (!activeSection || activeSection === 'home') {
+            isActive = currentTab === link.tab;
           }
 
           return (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className={`text-xs font-medium px-3 py-1.5 rounded-lg transition-all whitespace-nowrap ${
-                activeSection === link.href.replace('#', '')
-                  ? 'bg-[#1a2035] text-white font-semibold'
-                  : 'text-[#8a94b0] hover:bg-[#1a2035]/60 hover:text-white'
+              className={`text-xs font-semibold px-3 py-1.5 rounded-xl border transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                link.isHighlight
+                  ? isActive
+                    ? 'text-amber-200 bg-amber-500/25 border-amber-500/50 shadow-[0_0_12px_rgba(245,158,11,0.25)]'
+                    : 'text-amber-300 bg-amber-500/15 border-amber-500/30 hover:bg-amber-500/25 shadow-[0_0_12px_rgba(245,158,11,0.15)]'
+                  : link.section === 'tree'
+                  ? isActive
+                    ? 'text-emerald-300 bg-emerald-500/25 border-emerald-500/50'
+                    : 'text-emerald-400 bg-emerald-500/10 border-emerald-500/25 hover:bg-emerald-500/20'
+                  : isActive
+                  ? 'bg-indigo-600 text-white border-indigo-500 shadow-md shadow-indigo-600/20'
+                  : 'text-slate-400 bg-slate-900/60 border-slate-800/80 hover:bg-slate-800 hover:text-white'
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           );
         })}
       </div>

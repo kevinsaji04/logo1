@@ -43,9 +43,9 @@
   ],
   [
     3,
-    "GLM-5.2",
+    "GLM 5.2",
     "Zhipu AI",
-    "llm",
+    "text",
     "China",
     "2026-Q2",
     "130B",
@@ -53,11 +53,15 @@
     0.5,
     2,
     false,
-    80,
-    "Fifth-generation GLM with enhanced reasoning capabilities",
+    90,
+    "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     [
       "llm",
-      "reason"
+      "reason",
+      "text",
+      "z-ai",
+      "usa",
+      "commercial"
     ],
     "#06b6d4",
     "GL"
@@ -125,9 +129,9 @@
   ],
   [
     7,
-    "Fugu-Ultra",
-    "SakanaAI",
-    "llm",
+    "Fugu Ultra",
+    "Sakana AI",
+    "multi",
     "Japan",
     "2026-Q2",
     "~70B",
@@ -135,10 +139,14 @@
     1,
     4,
     false,
-    74,
-    "Japanese-optimized ultra-large language model",
+    96,
+    "Fugu Ultra is the higher-performance model in Sakana AI\\'s Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
     [
-      "llm"
+      "llm",
+      "multi",
+      "sakana",
+      "japan",
+      "commercial"
     ],
     "#ec4899",
     "FU"
@@ -206,21 +214,25 @@
   ],
   [
     11,
-    "Qwen3.7-Plus",
+    "Qwen3.7 Plus",
     "Alibaba",
-    "llm",
+    "multi",
     "China",
     "2026-Q2",
     "72B",
     "freemium",
     0.5,
     2,
-    false,
-    87,
-    "High-capability Qwen 3.7 Plus series",
+    true,
+    89,
+    "Qwen3.7-Plus is a cost-effective model in Alibaba\\'s Qwen3.7 series. It supports text and image input with text output, building on the series\\' text capabilities with a comprehensive upgrade to its...",
     [
       "llm",
-      "reason"
+      "reason",
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
@@ -267,7 +279,7 @@
   ],
   [
     14,
-    "Kimi-K2.7-Code",
+    "Kimi K2.7 Code",
     "Moonshot AI",
     "code",
     "China",
@@ -277,10 +289,13 @@
     0.7,
     2.8,
     false,
-    83,
-    "Specialized code model for advanced programming tasks",
+    87,
+    "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI\\'s Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     [
-      "code"
+      "code",
+      "moonshotai",
+      "china",
+      "commercial"
     ],
     "#f97316",
     "KI"
@@ -411,21 +426,25 @@
   ],
   [
     21,
-    "Qwen3.7-Max",
+    "Qwen3.7 Max",
     "Alibaba",
-    "llm",
+    "text",
     "China",
     "2026-Q2",
     "235B MoE",
     "freemium",
     0.6,
     2.4,
-    false,
-    90,
-    "Max-capacity Qwen 3.7 flagship model",
+    true,
+    98,
+    "Qwen3.7-Max is the flagship model in Alibaba\\'s Qwen3.7 series. It supports text input and output and is designed for agent-centric workloads, with particular strengths in coding, office and productivity tasks,...",
     [
       "llm",
-      "reason"
+      "reason",
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
@@ -641,7 +660,7 @@
   ],
   [
     32,
-    "Kimi-K2.6",
+    "Kimi K2.6",
     "Moonshot AI",
     "llm",
     "China",
@@ -662,21 +681,25 @@
   ],
   [
     33,
-    "Qwen3.6-Max-Preview",
+    "Qwen3.6 Max Preview",
     "Alibaba",
-    "llm",
+    "text",
     "China",
     "2026-Q1",
     "235B MoE",
     "freemium",
     0.6,
     2.4,
-    false,
-    87,
-    "Preview release of Qwen 3.6 Max",
+    true,
+    99,
+    "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and...",
     [
       "llm",
-      "reason"
+      "reason",
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
@@ -1406,7 +1429,7 @@
   ],
   [
     69,
-    "Mistral-Large-2",
+    "Mistral Large 2",
     "Mistral AI",
     "llm",
     "France",
@@ -1415,11 +1438,15 @@
     "api",
     2,
     6,
-    false,
-    86,
-    "Mistral's flagship Large 2 model",
+    true,
+    95,
+    "Second generation flagship open-weights model from Mistral AI with 128K context and world-class coding capabilities.",
     [
-      "llm"
+      "llm",
+      "mistral",
+      "mistral-large2",
+      "123b",
+      "open"
     ],
     "#f97316",
     "MS"
@@ -2437,20 +2464,24 @@
   ],
   [
     120,
-    "Sora-2",
+    "Sora 2",
     "OpenAI",
     "video",
     "USA",
     "2025-Q1",
     "N/A",
     "paid",
-    null,
-    null,
+    0.12,
+    0.12,
     false,
-    90,
-    "OpenAI Sora 2 video generation",
+    98,
+    "Second generation video diffusion engine with real-time interactive physics and high motion stability.",
     [
-      "video"
+      "video",
+      "openai",
+      "sora2",
+      "video-gen",
+      "api"
     ],
     "#10b981",
     "OA"
@@ -5798,7 +5829,7 @@
   [
     283,
     "Gemini 3.1 Pro",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2026",
@@ -5866,27 +5897,6 @@
   ],
   [
     286,
-    "Kimi K2.6",
-    "Moonshot AI",
-    "llm",
-    "China",
-    "2026-Q1",
-    "32B",
-    "api",
-    0.6,
-    2.4,
-    false,
-    82,
-    "Kimi K2.6 language model",
-    [
-      "llm",
-      "code"
-    ],
-    "#f97316",
-    "KI"
-  ],
-  [
-    287,
     "Nemotron 3 Ultra",
     "NVIDIA",
     "llm",
@@ -5908,7 +5918,7 @@
     "NV"
   ],
   [
-    288,
+    287,
     "Veo-v3.1-Fast",
     "Google",
     "video",
@@ -5928,7 +5938,7 @@
     "VE"
   ],
   [
-    289,
+    288,
     "Wan-2.2",
     "Alibaba",
     "video",
@@ -5949,7 +5959,7 @@
     "WA"
   ],
   [
-    290,
+    289,
     "LTX-2-Fast",
     "Lightricks",
     "video",
@@ -5969,7 +5979,7 @@
     "LT"
   ],
   [
-    291,
+    290,
     "LTX-2-Pro",
     "Lightricks",
     "video",
@@ -5989,7 +5999,7 @@
     "LT"
   ],
   [
-    292,
+    291,
     "Veo-3",
     "Google",
     "video",
@@ -6009,7 +6019,7 @@
     "VE"
   ],
   [
-    293,
+    292,
     "Veo-3-vFast",
     "Google",
     "video",
@@ -6029,7 +6039,7 @@
     "VE"
   ],
   [
-    294,
+    293,
     "Vidu",
     "Vidu",
     "video",
@@ -6049,7 +6059,7 @@
     "VI"
   ],
   [
-    295,
+    294,
     "DeepSeek-V3.2",
     "DeepSeek",
     "llm",
@@ -6070,10 +6080,10 @@
     "DS"
   ],
   [
-    296,
-    "Claude-Opus-4.7",
+    295,
+    "Claude Opus 4.7",
     "Anthropic",
-    "llm",
+    "multi",
     "USA",
     "2026-Q2",
     "N/A",
@@ -6081,18 +6091,23 @@
     15,
     75,
     false,
-    95,
-    "Anthropic Claude Opus 4.7",
+    99,
+    "Anthropic 2026 flagship Opus model with world-class mathematical synthesis, coding mastery, and frontier agentic reasoning.",
     [
       "llm",
       "reason",
-      "code"
+      "code",
+      "multi",
+      "anthropic",
+      "claude-opus-47",
+      "flagship",
+      "api"
     ],
     "#f59e0b",
     "CA"
   ],
   [
-    297,
+    296,
     "Nano-Banana-2",
     "NanoBanana",
     "llm",
@@ -6112,7 +6127,7 @@
     "NB"
   ],
   [
-    298,
+    297,
     "GPT-Image-2",
     "OpenAI",
     "image",
@@ -6132,10 +6147,10 @@
     "OA"
   ],
   [
-    299,
+    298,
     "GPT-5.5-Pro",
     "OpenAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6144,20 +6159,23 @@
     48,
     false,
     96,
-    "OpenAI GPT-5.5 Pro model",
+    "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
     [
       "llm",
       "multi",
-      "reason"
+      "reason",
+      "openai",
+      "usa",
+      "commercial"
     ],
     "#10b981",
     "OA"
   ],
   [
-    300,
-    "Gemini-3.5-Flash",
+    299,
+    "Gemini 3.5 Flash",
     "Google",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6165,41 +6183,48 @@
     0.3,
     1.2,
     false,
-    91,
-    "Google Gemini 3.5 Flash",
+    99,
+    "Gemini 3.5 Flash is Google\\'s high-efficiency multimodal model, bringing near-Pro level coding and reasoning at Flash-tier cost and speed. It is highly optimized for coding proficiency and parallel agentic execution...",
     [
       "llm",
-      "multi"
+      "multi",
+      "google",
+      "usa",
+      "commercial"
     ],
     "#34d399",
     "GG"
   ],
   [
-    301,
-    "Grok-4.3",
+    300,
+    "Grok 4.3",
     "xAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
     "paid",
-    null,
-    null,
+    1.25,
+    2.5,
     false,
-    91,
-    "xAI Grok 4.3 model",
+    99,
+    "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
     [
       "llm",
-      "reason"
+      "reason",
+      "multi",
+      "xai",
+      "usa",
+      "commercial"
     ],
     "#818cf8",
     "GK"
   ],
   [
-    302,
+    301,
     "GPT-5.4-Nano",
     "OpenAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6207,19 +6232,23 @@
     0.1,
     0.4,
     false,
-    83,
-    "GPT-5.4 Nano compact",
+    86,
+    "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
     [
-      "llm"
+      "llm",
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
     ],
     "#10b981",
     "OA"
   ],
   [
-    303,
+    302,
     "GPT-5.4-Mini",
     "OpenAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6227,16 +6256,20 @@
     0.4,
     1.6,
     false,
-    87,
-    "GPT-5.4 Mini model",
+    88,
+    "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
     [
-      "llm"
+      "llm",
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
     ],
     "#10b981",
     "OA"
   ],
   [
-    304,
+    303,
     "Script-Bot-Creator",
     "Various",
     "tool",
@@ -6256,7 +6289,7 @@
     "SB"
   ],
   [
-    305,
+    304,
     "Canvas-Creator",
     "Various",
     "tool",
@@ -6277,10 +6310,10 @@
     "CC"
   ],
   [
-    306,
+    305,
     "GPT-5.4-Pro",
     "OpenAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6288,20 +6321,24 @@
     6,
     24,
     false,
-    93,
-    "GPT-5.4 Pro model",
+    98,
+    "GPT-5.4 Pro is OpenAI\\'s most advanced model, building on GPT-5.4\\'s unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
     [
       "llm",
-      "reason"
+      "reason",
+      "multi",
+      "openai",
+      "usa",
+      "commercial"
     ],
     "#10b981",
     "OA"
   ],
   [
-    307,
-    "Gemini-3.1-Flash-Lite",
+    306,
+    "Gemini 3.1 Flash Lite",
     "Google",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
@@ -6309,16 +6346,20 @@
     0.075,
     0.3,
     false,
-    86,
-    "Gemini 3.1 Flash Lite efficient",
+    88,
+    "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic...",
     [
-      "llm"
+      "llm",
+      "multi",
+      "google",
+      "usa",
+      "commercial"
     ],
     "#34d399",
     "GG"
   ],
   [
-    308,
+    307,
     "GPT-5.3-Codex",
     "OpenAI",
     "code",
@@ -6338,10 +6379,10 @@
     "OA"
   ],
   [
-    309,
-    "Gemma-4-31B",
+    308,
+    "Gemma 4 31B",
     "Google",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "31B",
@@ -6349,17 +6390,21 @@
     0,
     0,
     true,
-    82,
-    "Google Gemma 4 31B open model",
+    88,
+    "Gemma 4 31B Instruct is Google DeepMind\\'s 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
     [
       "llm",
-      "open"
+      "open",
+      "multi",
+      "google",
+      "usa",
+      "commercial"
     ],
     "#34d399",
     "GM"
   ],
   [
-    310,
+    309,
     "GLM-5.1-FW",
     "Zhipu AI",
     "llm",
@@ -6379,7 +6424,7 @@
     "GL"
   ],
   [
-    311,
+    310,
     "GPT-5.3-Instant",
     "OpenAI",
     "llm",
@@ -6399,49 +6444,57 @@
     "OA"
   ],
   [
-    312,
+    311,
     "Grok-4.20-Multi-Agent",
     "xAI",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "N/A",
     "paid",
-    null,
-    null,
+    1.25,
+    2.5,
     false,
-    89,
-    "Grok 4.20 multi-agent system",
+    96,
+    "Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
     [
       "llm",
-      "tool"
+      "tool",
+      "multi",
+      "xai",
+      "usa",
+      "commercial"
     ],
     "#818cf8",
     "GK"
   ],
   [
-    313,
-    "Qwen3.6-Plus",
+    312,
+    "Qwen3.6 Plus",
     "Alibaba",
-    "llm",
+    "multi",
     "China",
     "2026-Q1",
     "72B",
     "freemium",
     0.5,
     2,
-    false,
-    87,
-    "Qwen 3.6 Plus model",
+    true,
+    90,
+    "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers...",
     [
       "llm",
-      "reason"
+      "reason",
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
   ],
   [
-    314,
+    313,
     "Kimi-K2.5",
     "Moonshot AI",
     "llm",
@@ -6462,10 +6515,10 @@
     "KI"
   ],
   [
-    315,
-    "Minimax-M2.7",
-    "MiniMax",
-    "llm",
+    314,
+    "MiniMax M2.7",
+    "Minimax",
+    "text",
     "China",
     "2026-Q1",
     "456B MoE",
@@ -6473,36 +6526,44 @@
     0.3,
     1.2,
     false,
-    79,
-    "MiniMax M2.7 model",
+    92,
+    "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
     [
-      "llm"
+      "llm",
+      "text",
+      "minimax",
+      "china",
+      "commercial"
     ],
     "#8b5cf6",
     "MM"
   ],
   [
-    316,
-    "Mistral-Small-4",
+    315,
+    "Mistral Small 4",
     "Mistral AI",
-    "llm",
+    "multi",
     "France",
     "2026-Q1",
     "24B",
     "api",
     0.1,
     0.3,
-    false,
-    80,
-    "Mistral Small 4 updated",
+    true,
+    90,
+    "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
     [
-      "llm"
+      "llm",
+      "multi",
+      "mistral ai",
+      "france",
+      "open"
     ],
     "#f97316",
     "MS"
   ],
   [
-    317,
+    316,
     "MiMo-V2-Flash",
     "Xiaomi",
     "llm",
@@ -6523,7 +6584,7 @@
     "MI"
   ],
   [
-    318,
+    317,
     "Qwen3.5-Plus",
     "Alibaba",
     "llm",
@@ -6544,7 +6605,7 @@
     "QW"
   ],
   [
-    319,
+    318,
     "Qwen3.5-Omni-Flash",
     "Alibaba",
     "multi",
@@ -6565,7 +6626,7 @@
     "QW"
   ],
   [
-    320,
+    319,
     "Qwen3.5-Flash",
     "Alibaba",
     "llm",
@@ -6586,7 +6647,7 @@
     "QW"
   ],
   [
-    321,
+    320,
     "Seed-2.0-Lite",
     "ByteDance",
     "llm",
@@ -6606,7 +6667,7 @@
     "SE"
   ],
   [
-    322,
+    321,
     "Qwen3.5-Omni-Plus",
     "Alibaba",
     "multi",
@@ -6627,10 +6688,10 @@
     "QW"
   ],
   [
-    323,
-    "Gemma-4-26B-A4B",
+    322,
+    "Gemma 4 26B A4B",
     "Google",
-    "llm",
+    "multi",
     "USA",
     "2026-Q1",
     "26B (4B active)",
@@ -6638,17 +6699,21 @@
     0,
     0,
     true,
-    79,
-    "Google Gemma 4 26B MoE model",
+    86,
+    "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     [
       "llm",
-      "open"
+      "open",
+      "multi",
+      "google",
+      "usa",
+      "commercial"
     ],
     "#34d399",
     "GM"
   ],
   [
-    324,
+    323,
     "Seedance-2-Fast",
     "ByteDance",
     "video",
@@ -6668,7 +6733,7 @@
     "SD"
   ],
   [
-    325,
+    324,
     "Seedance-2.0",
     "ByteDance",
     "video",
@@ -6688,7 +6753,7 @@
     "SD"
   ],
   [
-    326,
+    325,
     "Claude-Opus-4.6",
     "Anthropic",
     "llm",
@@ -6710,7 +6775,7 @@
     "CA"
   ],
   [
-    327,
+    326,
     "Claude-Haiku-4.5",
     "Anthropic",
     "llm",
@@ -6730,7 +6795,7 @@
     "CA"
   ],
   [
-    328,
+    327,
     "Qwen3.5-397B-A17B-T",
     "Alibaba",
     "llm",
@@ -6751,7 +6816,7 @@
     "QW"
   ],
   [
-    329,
+    328,
     "Seed-2.0-Mini",
     "ByteDance",
     "llm",
@@ -6771,28 +6836,32 @@
     "SE"
   ],
   [
-    330,
-    "Qwen3.5-397B-A17B",
+    329,
+    "Qwen3.5 397B A17B",
     "Alibaba",
-    "llm",
+    "multi",
     "China",
     "2026-Q1",
     "397B MoE",
     "api",
-    null,
-    null,
-    false,
+    0.39,
+    2.34,
+    true,
     89,
-    "Qwen 3.5 397B standard model",
+    "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     [
       "llm",
-      "reason"
+      "reason",
+      "multi",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
   ],
   [
-    331,
+    330,
     "MiMo-V2-Flash-EL",
     "Xiaomi",
     "llm",
@@ -6813,7 +6882,7 @@
     "MI"
   ],
   [
-    332,
+    331,
     "Gemma-4-31B-N",
     "Google",
     "llm",
@@ -6834,7 +6903,7 @@
     "GM"
   ],
   [
-    333,
+    332,
     "Grok-Imagine-Image",
     "xAI",
     "image",
@@ -6854,7 +6923,7 @@
     "GK"
   ],
   [
-    334,
+    333,
     "Kimi-K2.5-FW",
     "Moonshot AI",
     "llm",
@@ -6874,7 +6943,7 @@
     "KI"
   ],
   [
-    335,
+    334,
     "Seed-2.0-Pro",
     "ByteDance",
     "llm",
@@ -6895,7 +6964,7 @@
     "SE"
   ],
   [
-    336,
+    335,
     "MiniMax-Speech-2.8",
     "MiniMax",
     "audio",
@@ -6915,7 +6984,7 @@
     "MM"
   ],
   [
-    337,
+    336,
     "Manus",
     "Manus AI",
     "tool",
@@ -6936,10 +7005,10 @@
     "MA"
   ],
   [
-    338,
-    "GLM-5",
+    337,
+    "GLM 5",
     "Zhipu AI",
-    "llm",
+    "text",
     "China",
     "2026-Q1",
     "130B",
@@ -6947,17 +7016,21 @@
     0.5,
     2,
     false,
-    83,
-    "GLM-5 flagship model",
+    91,
+    "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
     [
       "llm",
-      "reason"
+      "reason",
+      "text",
+      "z-ai",
+      "usa",
+      "commercial"
     ],
     "#06b6d4",
     "GL"
   ],
   [
-    339,
+    338,
     "GPT-5.2",
     "OpenAI",
     "llm",
@@ -6981,7 +7054,7 @@
     "5.2"
   ],
   [
-    340,
+    339,
     "Gemini-3-Flash",
     "Google",
     "llm",
@@ -7002,7 +7075,7 @@
     "GG"
   ],
   [
-    341,
+    340,
     "GPT-5.2-Instant",
     "OpenAI",
     "llm",
@@ -7022,7 +7095,7 @@
     "OA"
   ],
   [
-    342,
+    341,
     "Grok-4.1-Fast-Reasoning",
     "xAI",
     "reason",
@@ -7043,7 +7116,7 @@
     "GK"
   ],
   [
-    343,
+    342,
     "Veo-3.1-Lite",
     "Google",
     "video",
@@ -7063,28 +7136,32 @@
     "VE"
   ],
   [
-    344,
-    "Qwen3-Max-Thinking",
+    343,
+    "Qwen3 Max Thinking",
     "Alibaba",
     "reason",
     "China",
     "2026-Q1",
     "235B MoE",
     "api",
-    null,
-    null,
-    false,
-    90,
-    "Qwen3 Max with thinking mode",
+    0.78,
+    3.9,
+    true,
+    92,
+    "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and reinforcement learning compute, it...",
     [
       "reason",
-      "llm"
+      "llm",
+      "text",
+      "alibaba / qwen",
+      "china",
+      "open"
     ],
     "#f97316",
     "QW"
   ],
   [
-    345,
+    344,
     "Grok-Imagine-Video",
     "xAI",
     "video",
@@ -7104,7 +7181,7 @@
     "GK"
   ],
   [
-    346,
+    345,
     "Claude-Sonnet-4.5",
     "Anthropic",
     "llm",
@@ -7126,7 +7203,7 @@
     "CA"
   ],
   [
-    347,
+    346,
     "Seedream-5.0-Lite",
     "ByteDance",
     "image",
@@ -7146,7 +7223,7 @@
     "SD"
   ],
   [
-    348,
+    347,
     "Kling-v3-Motion-Ctrl",
     "Kuaishou",
     "video",
@@ -7166,7 +7243,7 @@
     "KL"
   ],
   [
-    349,
+    348,
     "Runway-Gen-4.5",
     "Runway",
     "video",
@@ -7186,7 +7263,7 @@
     "RW"
   ],
   [
-    350,
+    349,
     "Qwen3-Coder-Next",
     "Alibaba",
     "code",
@@ -7206,10 +7283,10 @@
     "QW"
   ],
   [
-    351,
-    "Minimax-M2.5",
-    "MiniMax",
-    "llm",
+    350,
+    "MiniMax M2.5",
+    "Minimax",
+    "text",
     "China",
     "2025-Q4",
     "456B MoE",
@@ -7217,16 +7294,20 @@
     0.3,
     1.2,
     false,
-    78,
-    "MiniMax M2.5 model",
+    90,
+    "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     [
-      "llm"
+      "llm",
+      "text",
+      "minimax",
+      "china",
+      "commercial"
     ],
     "#8b5cf6",
     "MM"
   ],
   [
-    352,
+    351,
     "Grok-4.1-Fast-Non-Reasoning",
     "xAI",
     "llm",
@@ -7246,7 +7327,7 @@
     "GK"
   ],
   [
-    353,
+    352,
     "Kimi-K2-Thinking",
     "Moonshot AI",
     "reason",
@@ -7267,7 +7348,7 @@
     "KI"
   ],
   [
-    354,
+    353,
     "GLM-5.1-T",
     "Zhipu AI",
     "llm",
@@ -7288,7 +7369,7 @@
     "GL"
   ],
   [
-    355,
+    354,
     "GPT-5.2-Codex",
     "OpenAI",
     "code",
@@ -7308,7 +7389,7 @@
     "OA"
   ],
   [
-    356,
+    355,
     "Gemma-4-31B-T",
     "Google",
     "llm",
@@ -7330,7 +7411,7 @@
     "GM"
   ],
   [
-    357,
+    356,
     "Grok-4",
     "xAI",
     "llm",
@@ -7352,7 +7433,7 @@
     "GK"
   ],
   [
-    358,
+    357,
     "GPT-Image-1.5",
     "OpenAI",
     "image",
@@ -7372,7 +7453,7 @@
     "OA"
   ],
   [
-    359,
+    358,
     "Claude-Code",
     "Anthropic",
     "code",
@@ -7393,7 +7474,7 @@
     "CA"
   ],
   [
-    360,
+    359,
     "Minimax-M2.1",
     "MiniMax",
     "llm",
@@ -7413,7 +7494,7 @@
     "MM"
   ],
   [
-    361,
+    360,
     "Qwen-Image-2.0",
     "Alibaba",
     "image",
@@ -7433,7 +7514,7 @@
     "QW"
   ],
   [
-    362,
+    361,
     "Perplexity-Adv-Deep-Research",
     "Perplexity",
     "search",
@@ -7454,7 +7535,7 @@
     "PP"
   ],
   [
-    363,
+    362,
     "DeepSeek-V3.2-EL",
     "DeepSeek",
     "llm",
@@ -7474,7 +7555,7 @@
     "DS"
   ],
   [
-    364,
+    363,
     "Perplexity-Search",
     "Perplexity",
     "search",
@@ -7494,7 +7575,7 @@
     "PP"
   ],
   [
-    365,
+    364,
     "Wan2.7-Image",
     "Alibaba",
     "image",
@@ -7514,7 +7595,7 @@
     "WA"
   ],
   [
-    366,
+    365,
     "Qwen-Image-2-Pro",
     "Alibaba",
     "image",
@@ -7534,7 +7615,7 @@
     "QW"
   ],
   [
-    367,
+    366,
     "Pixverse-v5.6",
     "PixVerse",
     "video",
@@ -7554,7 +7635,7 @@
     "PX"
   ],
   [
-    368,
+    367,
     "MOSS-Video-and-Audio",
     "MOSS",
     "multi",
@@ -7576,7 +7657,7 @@
     "MV"
   ],
   [
-    369,
+    368,
     "Qwen-Image-2",
     "Alibaba",
     "image",
@@ -7596,7 +7677,7 @@
     "QW"
   ],
   [
-    370,
+    369,
     "Wan-2.7",
     "Alibaba",
     "video",
@@ -7617,7 +7698,7 @@
     "WA"
   ],
   [
-    371,
+    370,
     "Seedream-4.5",
     "ByteDance",
     "image",
@@ -7637,7 +7718,7 @@
     "SD"
   ],
   [
-    372,
+    371,
     "Kling-v3-Pro",
     "Kuaishou",
     "video",
@@ -7657,7 +7738,7 @@
     "KL"
   ],
   [
-    373,
+    372,
     "GLM-4.7-Flash",
     "Zhipu AI",
     "llm",
@@ -7677,7 +7758,7 @@
     "GL"
   ],
   [
-    374,
+    373,
     "GPT-5.1-Instant",
     "OpenAI",
     "llm",
@@ -7697,7 +7778,7 @@
     "OA"
   ],
   [
-    375,
+    374,
     "ElevenLabs-v3",
     "ElevenLabs",
     "audio",
@@ -7717,7 +7798,7 @@
     "EL"
   ],
   [
-    376,
+    375,
     "GPT-Audio-Mini",
     "OpenAI",
     "audio",
@@ -7737,7 +7818,7 @@
     "OA"
   ],
   [
-    377,
+    376,
     "GPT-Audio-1.5",
     "OpenAI",
     "audio",
@@ -7758,7 +7839,7 @@
     "OA"
   ],
   [
-    378,
+    377,
     "GLM-4.7-N",
     "Zhipu AI",
     "llm",
@@ -7778,7 +7859,7 @@
     "GL"
   ],
   [
-    379,
+    378,
     "Claude-Opus-4.5",
     "Anthropic",
     "llm",
@@ -7800,7 +7881,7 @@
     "CA"
   ],
   [
-    380,
+    379,
     "Kling-O3",
     "Kuaishou",
     "video",
@@ -7820,7 +7901,7 @@
     "KL"
   ],
   [
-    381,
+    380,
     "Kling-v3",
     "Kuaishou",
     "video",
@@ -7840,7 +7921,7 @@
     "KL"
   ],
   [
-    382,
+    381,
     "GPT-5.2-Pro",
     "OpenAI",
     "llm",
@@ -7862,7 +7943,7 @@
     "OA"
   ],
   [
-    383,
+    382,
     "Kling-Omni",
     "Kuaishou",
     "multi",
@@ -7884,7 +7965,7 @@
     "KL"
   ],
   [
-    "tencent/hy-mt2-1.8b",
+    383,
     "Hy-MT2-1.8B",
     "Tencent",
     "text",
@@ -7907,7 +7988,7 @@
     "H"
   ],
   [
-    "tencent/hy-mt2-30b-a3b",
+    384,
     "Hy-MT2-30B-A3B",
     "Tencent",
     "text",
@@ -7930,7 +8011,7 @@
     "H"
   ],
   [
-    "~z-ai/glm-latest",
+    385,
     "GLM Latest",
     "~z-ai",
     "text",
@@ -7953,9 +8034,9 @@
     "G"
   ],
   [
-    "z-ai/glm-5.3",
+    386,
     "GLM 5.3",
-    "Z-ai",
+    "Zhipu AI",
     "text",
     "USA",
     "2025-2026",
@@ -7976,9 +8057,9 @@
     "G"
   ],
   [
-    "qwen/qwen3.8-27b",
+    387,
     "Qwen3.8 27B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -7999,7 +8080,7 @@
     "Q"
   ],
   [
-    "dots-studio/dots-3-note-preview:free",
+    388,
     "Dots3-Note Preview (free)",
     "Dots-studio",
     "multi",
@@ -8022,7 +8103,7 @@
     "D"
   ],
   [
-    "google/gemini-3.7-flash",
+    389,
     "Gemini 3.7 Flash",
     "Google",
     "multi",
@@ -8045,7 +8126,7 @@
     "G"
   ],
   [
-    "google/gemini-3.7-flash:batch",
+    390,
     "Gemini 3.7 Flash (batch)",
     "Google",
     "multi",
@@ -8068,7 +8149,7 @@
     "G"
   ],
   [
-    "bytedance-seed/seed-2-1-turbo",
+    391,
     "Seed 2.1 Turbo",
     "Bytedance-seed",
     "multi",
@@ -8091,9 +8172,9 @@
     "S"
   ],
   [
-    "qwen/qwen3.8-2.4t-a95b",
+    392,
     "Qwen3.8 2.4T A95B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "text",
     "China",
     "2025-2026",
@@ -8114,7 +8195,7 @@
     "Q"
   ],
   [
-    "deepseek/deepseek-v4-pro-0813",
+    393,
     "DeepSeek V4 Pro 0813",
     "DeepSeek",
     "text",
@@ -8137,7 +8218,7 @@
     "D"
   ],
   [
-    "x-ai/grok-4.6",
+    394,
     "Grok 4.6",
     "xAI",
     "multi",
@@ -8160,7 +8241,7 @@
     "G"
   ],
   [
-    "liquid/lfm-2.5-2.6b:free",
+    395,
     "LFM2.5-2.6B (free)",
     "Liquid",
     "text",
@@ -8183,7 +8264,7 @@
     "L"
   ],
   [
-    "nvidia/nemotron-3.5-lightning",
+    396,
     "Nemotron 3.5 Lightning",
     "Nvidia",
     "text",
@@ -8206,7 +8287,7 @@
     "N"
   ],
   [
-    "nvidia/nemotron-3.5-lightning:free",
+    397,
     "Nemotron 3.5 Lightning (free)",
     "Nvidia",
     "text",
@@ -8229,9 +8310,9 @@
     "N"
   ],
   [
-    "sakana/sakana-namazu",
+    398,
     "Sakana Namazu",
-    "Sakana",
+    "Sakana AI",
     "multi",
     "Japan",
     "2025-2026",
@@ -8252,7 +8333,7 @@
     "S"
   ],
   [
-    "upstage/solar-pro4",
+    399,
     "Solar Pro 4",
     "Upstage",
     "text",
@@ -8275,7 +8356,7 @@
     "S"
   ],
   [
-    "meta/muse-glimmer-30b",
+    400,
     "Muse Glimmer 30B",
     "Meta",
     "multi",
@@ -8298,7 +8379,7 @@
     "M"
   ],
   [
-    "meta/muse-spark-1.2",
+    401,
     "Muse Spark 1.2",
     "Meta",
     "multi",
@@ -8321,9 +8402,9 @@
     "M"
   ],
   [
-    "qwen/qwen3.8-max",
+    402,
     "Qwen3.8 Max",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -8344,7 +8425,7 @@
     "Q"
   ],
   [
-    "~deepseek/deepseek-v4-flash-latest",
+    403,
     "DeepSeek V4 Flash Latest",
     "~deepseek",
     "text",
@@ -8367,7 +8448,7 @@
     "D"
   ],
   [
-    "deepseek/deepseek-v4-flash-0731",
+    404,
     "DeepSeek V4 Flash 0731",
     "DeepSeek",
     "text",
@@ -8390,7 +8471,7 @@
     "D"
   ],
   [
-    "thinkingmachines/inkling-small",
+    405,
     "Inkling Small",
     "Thinkingmachines",
     "multi",
@@ -8413,9 +8494,9 @@
     "I"
   ],
   [
-    "qwen/qwen3.7-flash",
+    406,
     "Qwen3.7 Flash",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -8436,7 +8517,7 @@
     "Q"
   ],
   [
-    "anthropic/claude-opus-5-fast",
+    407,
     "Claude Opus 5 (Fast)",
     "Anthropic",
     "multi",
@@ -8459,7 +8540,7 @@
     "C"
   ],
   [
-    "anthropic/claude-opus-5",
+    408,
     "Claude Opus 5",
     "Anthropic",
     "multi",
@@ -8482,7 +8563,7 @@
     "C"
   ],
   [
-    "anthropic/claude-opus-5:batch",
+    409,
     "Claude Opus 5 (batch)",
     "Anthropic",
     "multi",
@@ -8505,7 +8586,7 @@
     "C"
   ],
   [
-    "inclusionai/ling-3.0-flash",
+    410,
     "Ling-3.0-flash",
     "Inclusionai",
     "text",
@@ -8528,7 +8609,7 @@
     "L"
   ],
   [
-    "poolside/laguna-s-2.1",
+    411,
     "Laguna S 2.1",
     "Poolside",
     "text",
@@ -8551,7 +8632,7 @@
     "L"
   ],
   [
-    "poolside/laguna-s-2.1:free",
+    412,
     "Laguna S 2.1 (free)",
     "Poolside",
     "text",
@@ -8574,7 +8655,7 @@
     "L"
   ],
   [
-    "google/gemini-3.6-flash",
+    413,
     "Gemini 3.6 Flash",
     "Google",
     "multi",
@@ -8597,7 +8678,7 @@
     "G"
   ],
   [
-    "google/gemini-3.6-flash:batch",
+    414,
     "Gemini 3.6 Flash (batch)",
     "Google",
     "multi",
@@ -8620,7 +8701,7 @@
     "G"
   ],
   [
-    "google/gemini-3.5-flash-lite",
+    415,
     "Gemini 3.5 Flash Lite",
     "Google",
     "multi",
@@ -8643,7 +8724,7 @@
     "G"
   ],
   [
-    "google/gemini-3.5-flash-lite:batch",
+    416,
     "Gemini 3.5 Flash Lite (batch)",
     "Google",
     "multi",
@@ -8666,7 +8747,7 @@
     "G"
   ],
   [
-    "meituan/longcat-2.0",
+    417,
     "LongCat 2.0",
     "Meituan",
     "text",
@@ -8689,7 +8770,7 @@
     "L"
   ],
   [
-    "thinkingmachines/inkling",
+    418,
     "Inkling",
     "Thinkingmachines",
     "multi",
@@ -8712,7 +8793,7 @@
     "I"
   ],
   [
-    "thinkingmachines/inkling:batch",
+    419,
     "Inkling (batch)",
     "Thinkingmachines",
     "multi",
@@ -8735,7 +8816,7 @@
     "I"
   ],
   [
-    "openrouter/auto-beta",
+    420,
     "Auto Router (Beta)",
     "Openrouter",
     "multi",
@@ -8758,9 +8839,9 @@
     "A"
   ],
   [
-    "moonshotai/kimi-k3",
+    421,
     "Kimi K3",
-    "Moonshotai",
+    "Moonshot AI",
     "multi",
     "China",
     "2025-2026",
@@ -8781,7 +8862,7 @@
     "K"
   ],
   [
-    "meta/muse-spark-1.1",
+    422,
     "Muse Spark 1.1",
     "Meta",
     "multi",
@@ -8804,7 +8885,7 @@
     "M"
   ],
   [
-    "kwaipilot/kat-coder-air-v2.5",
+    423,
     "KAT-Coder-Air V2.5",
     "Kwaipilot",
     "code",
@@ -8827,7 +8908,7 @@
     "K"
   ],
   [
-    "kwaipilot/kat-coder-pro-v2.5",
+    424,
     "KAT-Coder-Pro V2.5",
     "Kwaipilot",
     "code",
@@ -8850,7 +8931,7 @@
     "K"
   ],
   [
-    "openai/gpt-5.6-luna-pro",
+    425,
     "GPT-5.6 Luna Pro",
     "OpenAI",
     "multi",
@@ -8873,7 +8954,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-luna-pro:batch",
+    426,
     "GPT-5.6 Luna Pro (batch)",
     "OpenAI",
     "multi",
@@ -8896,7 +8977,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-luna",
+    427,
     "GPT-5.6 Luna",
     "OpenAI",
     "multi",
@@ -8919,7 +9000,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-luna:batch",
+    428,
     "GPT-5.6 Luna (batch)",
     "OpenAI",
     "multi",
@@ -8942,7 +9023,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-terra-pro",
+    429,
     "GPT-5.6 Terra Pro",
     "OpenAI",
     "multi",
@@ -8965,7 +9046,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-terra-pro:batch",
+    430,
     "GPT-5.6 Terra Pro (batch)",
     "OpenAI",
     "multi",
@@ -8988,7 +9069,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-terra",
+    431,
     "GPT-5.6 Terra",
     "OpenAI",
     "multi",
@@ -9011,7 +9092,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-terra:batch",
+    432,
     "GPT-5.6 Terra (batch)",
     "OpenAI",
     "multi",
@@ -9034,7 +9115,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-sol-pro",
+    433,
     "GPT-5.6 Sol Pro",
     "OpenAI",
     "multi",
@@ -9057,7 +9138,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-sol-pro:batch",
+    434,
     "GPT-5.6 Sol Pro (batch)",
     "OpenAI",
     "multi",
@@ -9080,7 +9161,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-sol",
+    435,
     "GPT-5.6 Sol",
     "OpenAI",
     "multi",
@@ -9103,7 +9184,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.6-sol:batch",
+    436,
     "GPT-5.6 Sol (batch)",
     "OpenAI",
     "multi",
@@ -9126,7 +9207,7 @@
     "G"
   ],
   [
-    "x-ai/grok-4.5",
+    437,
     "Grok 4.5",
     "xAI",
     "multi",
@@ -9149,7 +9230,7 @@
     "G"
   ],
   [
-    "~x-ai/grok-latest",
+    438,
     "Grok Latest",
     "~x-ai",
     "multi",
@@ -9172,7 +9253,7 @@
     "G"
   ],
   [
-    "aion-labs/aion-3.0-mini",
+    439,
     "Aion-3.0-Mini",
     "Aion-labs",
     "text",
@@ -9195,7 +9276,7 @@
     "A"
   ],
   [
-    "aion-labs/aion-3.0",
+    440,
     "Aion-3.0",
     "Aion-labs",
     "text",
@@ -9218,7 +9299,7 @@
     "A"
   ],
   [
-    "tencent/hy3",
+    441,
     "Hy3",
     "Tencent",
     "text",
@@ -9241,7 +9322,7 @@
     "H"
   ],
   [
-    "poolside/laguna-xs-2.1",
+    442,
     "Laguna XS 2.1",
     "Poolside",
     "text",
@@ -9264,7 +9345,7 @@
     "L"
   ],
   [
-    "poolside/laguna-xs-2.1:free",
+    443,
     "Laguna XS 2.1 (free)",
     "Poolside",
     "text",
@@ -9287,7 +9368,7 @@
     "L"
   ],
   [
-    "anthropic/claude-sonnet-5",
+    444,
     "Claude Sonnet 5",
     "Anthropic",
     "multi",
@@ -9310,7 +9391,7 @@
     "C"
   ],
   [
-    "anthropic/claude-sonnet-5:batch",
+    445,
     "Claude Sonnet 5 (batch)",
     "Anthropic",
     "multi",
@@ -9333,7 +9414,7 @@
     "C"
   ],
   [
-    "google/gemini-3.1-flash-lite-image",
+    446,
     "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
     "Google",
     "multi",
@@ -9356,7 +9437,7 @@
     "N"
   ],
   [
-    "nex-agi/nex-n2-mini",
+    447,
     "Nex-N2-Mini",
     "Nex-agi",
     "multi",
@@ -9379,30 +9460,7 @@
     "N"
   ],
   [
-    "sakana/fugu-ultra",
-    "Fugu Ultra",
-    "Sakana",
-    "multi",
-    "Japan",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    5,
-    30,
-    false,
-    96,
-    "Fugu Ultra is the higher-performance model in Sakana AI\\'s Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
-    [
-      "multi",
-      "sakana",
-      "japan",
-      "commercial"
-    ],
-    "#6378ff",
-    "F"
-  ],
-  [
-    "google/gemini-3.1-flash-image",
+    448,
     "Nano Banana 2 (Gemini 3.1 Flash Image)",
     "Google",
     "multi",
@@ -9425,7 +9483,7 @@
     "N"
   ],
   [
-    "google/gemini-3-pro-image",
+    449,
     "Nano Banana Pro (Gemini 3 Pro Image)",
     "Google",
     "multi",
@@ -9448,7 +9506,7 @@
     "N"
   ],
   [
-    "cohere/north-mini-code:free",
+    450,
     "North Mini Code (free)",
     "Cohere",
     "code",
@@ -9471,32 +9529,9 @@
     "N"
   ],
   [
-    "z-ai/glm-5.2",
-    "GLM 5.2",
-    "Z-ai",
-    "text",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.966,
-    3.036,
-    false,
-    90,
-    "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
-    [
-      "text",
-      "z-ai",
-      "usa",
-      "commercial"
-    ],
-    "#06b6d4",
-    "G"
-  ],
-  [
-    "z-ai/glm-5.2:batch",
+    451,
     "GLM 5.2 (batch)",
-    "Z-ai",
+    "Zhipu AI",
     "text",
     "USA",
     "2025-2026",
@@ -9517,9 +9552,9 @@
     "G"
   ],
   [
-    "z-ai/glm-5.2:free",
+    452,
     "GLM 5.2 (free)",
-    "Z-ai",
+    "Zhipu AI",
     "text",
     "USA",
     "2025-2026",
@@ -9540,7 +9575,7 @@
     "G"
   ],
   [
-    "openrouter/fusion",
+    453,
     "Fusion",
     "Openrouter",
     "text",
@@ -9563,32 +9598,9 @@
     "F"
   ],
   [
-    "moonshotai/kimi-k2.7-code",
-    "Kimi K2.7 Code",
-    "Moonshotai",
-    "code",
-    "China",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.71,
-    3.5,
-    false,
-    87,
-    "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI\\'s Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
-    [
-      "code",
-      "moonshotai",
-      "china",
-      "commercial"
-    ],
-    "#10b981",
-    "K"
-  ],
-  [
-    "moonshotai/kimi-k2.7-code:batch",
+    454,
     "Kimi K2.7 Code (batch)",
-    "Moonshotai",
+    "Moonshot AI",
     "code",
     "China",
     "2025-2026",
@@ -9609,7 +9621,7 @@
     "K"
   ],
   [
-    "~anthropic/claude-fable-latest",
+    455,
     "Claude Fable Latest",
     "~anthropic",
     "multi",
@@ -9632,7 +9644,7 @@
     "C"
   ],
   [
-    "anthropic/claude-fable-5",
+    456,
     "Claude Fable 5",
     "Anthropic",
     "multi",
@@ -9655,7 +9667,7 @@
     "C"
   ],
   [
-    "anthropic/claude-fable-5:batch",
+    457,
     "Claude Fable 5 (batch)",
     "Anthropic",
     "multi",
@@ -9678,7 +9690,7 @@
     "C"
   ],
   [
-    "nex-agi/nex-n2-pro",
+    458,
     "Nex-N2-Pro",
     "Nex-agi",
     "multi",
@@ -9701,7 +9713,7 @@
     "N"
   ],
   [
-    "nvidia/nemotron-3.5-content-safety:free",
+    459,
     "Nemotron 3.5 Content Safety (free)",
     "Nvidia",
     "multi",
@@ -9724,7 +9736,7 @@
     "N"
   ],
   [
-    "nvidia/nemotron-3-ultra-550b-a55b:batch",
+    460,
     "Nemotron 3 Ultra (batch)",
     "Nvidia",
     "text",
@@ -9747,7 +9759,7 @@
     "N"
   ],
   [
-    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    461,
     "Nemotron 3 Ultra (free)",
     "Nvidia",
     "text",
@@ -9770,30 +9782,7 @@
     "N"
   ],
   [
-    "qwen/qwen3.7-plus",
-    "Qwen3.7 Plus",
-    "Alibaba / Qwen",
-    "multi",
-    "China",
-    "2025-2026",
-    "N/A",
-    "open",
-    0.32,
-    1.28,
-    true,
-    89,
-    "Qwen3.7-Plus is a cost-effective model in Alibaba\\'s Qwen3.7 series. It supports text and image input with text output, building on the series\\' text capabilities with a comprehensive upgrade to its...",
-    [
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#ec4899",
-    "Q"
-  ],
-  [
-    "minimax/minimax-m3",
+    462,
     "MiniMax M3",
     "Minimax",
     "multi",
@@ -9816,7 +9805,7 @@
     "M"
   ],
   [
-    "minimax/minimax-m3:batch",
+    463,
     "MiniMax M3 (batch)",
     "Minimax",
     "multi",
@@ -9839,7 +9828,7 @@
     "M"
   ],
   [
-    "stepfun/step-3.7-flash",
+    464,
     "Step 3.7 Flash",
     "Stepfun",
     "multi",
@@ -9862,7 +9851,7 @@
     "S"
   ],
   [
-    "anthropic/claude-opus-4.8-fast",
+    465,
     "Claude Opus 4.8 (Fast)",
     "Anthropic",
     "multi",
@@ -9885,7 +9874,7 @@
     "C"
   ],
   [
-    "anthropic/claude-opus-4.8:batch",
+    466,
     "Claude Opus 4.8 (batch)",
     "Anthropic",
     "multi",
@@ -9908,30 +9897,7 @@
     "C"
   ],
   [
-    "qwen/qwen3.7-max",
-    "Qwen3.7 Max",
-    "Alibaba / Qwen",
-    "text",
-    "China",
-    "2025-2026",
-    "N/A",
-    "open",
-    1.475,
-    4.425,
-    true,
-    98,
-    "Qwen3.7-Max is the flagship model in Alibaba\\'s Qwen3.7 series. It supports text input and output and is designed for agent-centric workloads, with particular strengths in coding, office and productivity tasks,...",
-    [
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#f59e0b",
-    "Q"
-  ],
-  [
-    "x-ai/grok-build-0.1",
+    467,
     "Grok Build 0.1",
     "xAI",
     "multi",
@@ -9954,30 +9920,7 @@
     "G"
   ],
   [
-    "google/gemini-3.5-flash",
-    "Gemini 3.5 Flash",
-    "Google",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    1.5,
-    9,
-    false,
-    99,
-    "Gemini 3.5 Flash is Google\\'s high-efficiency multimodal model, bringing near-Pro level coding and reasoning at Flash-tier cost and speed. It is highly optimized for coding proficiency and parallel agentic execution...",
-    [
-      "multi",
-      "google",
-      "usa",
-      "commercial"
-    ],
-    "#06b6d4",
-    "G"
-  ],
-  [
-    "google/gemini-3.5-flash:batch",
+    468,
     "Gemini 3.5 Flash (batch)",
     "Google",
     "multi",
@@ -10000,7 +9943,7 @@
     "G"
   ],
   [
-    "anthropic/claude-opus-4.7-fast",
+    469,
     "Claude Opus 4.7 (Fast)",
     "Anthropic",
     "multi",
@@ -10023,7 +9966,7 @@
     "C"
   ],
   [
-    "perceptron/perceptron-mk1",
+    470,
     "Perceptron Mk1",
     "Perceptron",
     "multi",
@@ -10046,7 +9989,7 @@
     "P"
   ],
   [
-    "inclusionai/ring-2.6-1t",
+    471,
     "Ring-2.6-1T",
     "Inclusionai",
     "text",
@@ -10069,30 +10012,7 @@
     "R"
   ],
   [
-    "google/gemini-3.1-flash-lite",
-    "Gemini 3.1 Flash Lite",
-    "Google",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.25,
-    1.5,
-    false,
-    88,
-    "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic...",
-    [
-      "multi",
-      "google",
-      "usa",
-      "commercial"
-    ],
-    "#f59e0b",
-    "G"
-  ],
-  [
-    "google/gemini-3.1-flash-lite:batch",
+    472,
     "Gemini 3.1 Flash Lite (batch)",
     "Google",
     "multi",
@@ -10115,7 +10035,7 @@
     "G"
   ],
   [
-    "openai/gpt-chat-latest",
+    473,
     "GPT Chat Latest",
     "OpenAI",
     "multi",
@@ -10138,30 +10058,7 @@
     "G"
   ],
   [
-    "x-ai/grok-4.3",
-    "Grok 4.3",
-    "xAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    1.25,
-    2.5,
-    false,
-    99,
-    "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
-    [
-      "multi",
-      "xai",
-      "usa",
-      "commercial"
-    ],
-    "#8b5cf6",
-    "G"
-  ],
-  [
-    "ibm-granite/granite-4.1-8b",
+    474,
     "Granite 4.1 8B",
     "Ibm-granite",
     "text",
@@ -10184,7 +10081,7 @@
     "G"
   ],
   [
-    "mistralai/mistral-medium-3-5",
+    475,
     "Mistral Medium 3.5",
     "Mistral AI",
     "llm",
@@ -10208,7 +10105,7 @@
     "M3.5"
   ],
   [
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    476,
     "Nemotron 3 Nano Omni (free)",
     "Nvidia",
     "multi",
@@ -10231,7 +10128,7 @@
     "N"
   ],
   [
-    "~anthropic/claude-haiku-latest",
+    477,
     "Anthropic Claude Haiku Latest",
     "~anthropic",
     "multi",
@@ -10254,7 +10151,7 @@
     "A"
   ],
   [
-    "~openai/gpt-mini-latest",
+    478,
     "OpenAI GPT Mini Latest",
     "~openai",
     "multi",
@@ -10277,7 +10174,7 @@
     "O"
   ],
   [
-    "~google/gemini-pro-latest",
+    479,
     "Google Gemini Pro Latest",
     "~google",
     "multi",
@@ -10300,7 +10197,7 @@
     "G"
   ],
   [
-    "~moonshotai/kimi-latest",
+    480,
     "MoonshotAI Kimi Latest",
     "~moonshotai",
     "multi",
@@ -10323,7 +10220,7 @@
     "M"
   ],
   [
-    "~google/gemini-flash-latest",
+    481,
     "Google Gemini Flash Latest",
     "~google",
     "multi",
@@ -10346,7 +10243,7 @@
     "G"
   ],
   [
-    "~anthropic/claude-sonnet-latest",
+    482,
     "Anthropic Claude Sonnet Latest",
     "~anthropic",
     "multi",
@@ -10369,7 +10266,7 @@
     "A"
   ],
   [
-    "~openai/gpt-latest",
+    483,
     "OpenAI GPT Latest",
     "~openai",
     "multi",
@@ -10392,9 +10289,9 @@
     "O"
   ],
   [
-    "qwen/qwen3.5-plus-20260420",
+    484,
     "Qwen3.5 Plus 2026-04-20",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -10415,9 +10312,9 @@
     "Q"
   ],
   [
-    "qwen/qwen3.6-flash",
+    485,
     "Qwen3.6 Flash",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -10438,9 +10335,9 @@
     "Q"
   ],
   [
-    "qwen/qwen3.6-35b-a3b",
+    486,
     "Qwen3.6 35B A3B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -10461,32 +10358,9 @@
     "Q"
   ],
   [
-    "qwen/qwen3.6-max-preview",
-    "Qwen3.6 Max Preview",
-    "Alibaba / Qwen",
-    "text",
-    "China",
-    "2025-2026",
-    "N/A",
-    "open",
-    1.027,
-    6.162,
-    true,
-    99,
-    "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and...",
-    [
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#8b5cf6",
-    "Q"
-  ],
-  [
-    "qwen/qwen3.6-27b",
+    487,
     "Qwen3.6 27B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -10507,30 +10381,7 @@
     "Q"
   ],
   [
-    "openai/gpt-5.5-pro",
-    "GPT-5.5 Pro",
-    "OpenAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "Frontier MoE",
-    "commercial",
-    30,
-    180,
-    false,
-    96,
-    "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
-    [
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
-    ],
-    "#6378ff",
-    "G"
-  ],
-  [
-    "openai/gpt-5.5-pro:batch",
+    488,
     "GPT-5.5 Pro (batch)",
     "OpenAI",
     "multi",
@@ -10553,7 +10404,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.5:batch",
+    489,
     "GPT-5.5 (batch)",
     "OpenAI",
     "multi",
@@ -10576,7 +10427,7 @@
     "G"
   ],
   [
-    "deepseek/deepseek-v4-pro",
+    490,
     "DeepSeek V4 Pro 0423",
     "DeepSeek",
     "text",
@@ -10599,7 +10450,7 @@
     "D"
   ],
   [
-    "deepseek/deepseek-v4-flash",
+    491,
     "DeepSeek V4 Flash 0423",
     "DeepSeek",
     "text",
@@ -10622,7 +10473,7 @@
     "D"
   ],
   [
-    "inclusionai/ling-2.6-1t",
+    492,
     "Ling-2.6-1T",
     "Inclusionai",
     "text",
@@ -10645,7 +10496,7 @@
     "L"
   ],
   [
-    "tencent/hy3-preview",
+    493,
     "Hy3 preview",
     "Tencent",
     "text",
@@ -10668,7 +10519,7 @@
     "H"
   ],
   [
-    "openai/gpt-5.4-image-2",
+    494,
     "GPT-5.4 Image 2",
     "OpenAI",
     "multi",
@@ -10691,7 +10542,7 @@
     "G"
   ],
   [
-    "inclusionai/ling-2.6-flash",
+    495,
     "Ling-2.6-flash",
     "Inclusionai",
     "text",
@@ -10714,7 +10565,7 @@
     "L"
   ],
   [
-    "~anthropic/claude-opus-latest",
+    496,
     "Claude Opus Latest",
     "~anthropic",
     "multi",
@@ -10737,7 +10588,7 @@
     "C"
   ],
   [
-    "openrouter/pareto-code",
+    497,
     "Pareto Code Router",
     "Openrouter",
     "code",
@@ -10760,31 +10611,7 @@
     "P"
   ],
   [
-    "anthropic/claude-opus-4.7",
-    "Claude Opus 4.7",
-    "Anthropic",
-    "multi",
-    "USA",
-    "2026",
-    "Flagship Opus",
-    "api",
-    10,
-    50,
-    false,
-    99,
-    "Anthropic 2026 flagship Opus model with world-class mathematical synthesis, coding mastery, and frontier agentic reasoning.",
-    [
-      "multi",
-      "anthropic",
-      "claude-opus-47",
-      "flagship",
-      "api"
-    ],
-    "#d946ef",
-    "4.7"
-  ],
-  [
-    "anthropic/claude-opus-4.7:batch",
+    498,
     "Claude Opus 4.7 (batch)",
     "Anthropic",
     "multi",
@@ -10807,9 +10634,9 @@
     "C"
   ],
   [
-    "z-ai/glm-5.1",
+    499,
     "GLM 5.1",
-    "Z-ai",
+    "Zhipu AI",
     "text",
     "USA",
     "2025-2026",
@@ -10830,30 +10657,7 @@
     "G"
   ],
   [
-    "google/gemma-4-26b-a4b-it",
-    "Gemma 4 26B A4B",
-    "Google",
-    "multi",
-    "USA",
-    "2025-2026",
-    "26B",
-    "commercial",
-    0.07,
-    0.34,
-    false,
-    86,
-    "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
-    [
-      "multi",
-      "google",
-      "usa",
-      "commercial"
-    ],
-    "#6378ff",
-    "G"
-  ],
-  [
-    "google/gemma-4-26b-a4b-it:free",
+    500,
     "Gemma 4 26B A4B  (free)",
     "Google",
     "multi",
@@ -10876,30 +10680,7 @@
     "G"
   ],
   [
-    "google/gemma-4-31b-it",
-    "Gemma 4 31B",
-    "Google",
-    "multi",
-    "USA",
-    "2025-2026",
-    "31B",
-    "commercial",
-    0.09,
-    0.34,
-    false,
-    88,
-    "Gemma 4 31B Instruct is Google DeepMind\\'s 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-    [
-      "multi",
-      "google",
-      "usa",
-      "commercial"
-    ],
-    "#f59e0b",
-    "G"
-  ],
-  [
-    "google/gemma-4-31b-it:free",
+    501,
     "Gemma 4 31B (free)",
     "Google",
     "multi",
@@ -10922,32 +10703,9 @@
     "G"
   ],
   [
-    "qwen/qwen3.6-plus",
-    "Qwen3.6 Plus",
-    "Alibaba / Qwen",
-    "multi",
-    "China",
-    "2025-2026",
-    "N/A",
-    "open",
-    0.325,
-    1.95,
-    true,
-    90,
-    "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers...",
-    [
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#06b6d4",
-    "Q"
-  ],
-  [
-    "z-ai/glm-5v-turbo",
+    502,
     "GLM 5V Turbo",
-    "Z-ai",
+    "Zhipu AI",
     "multi",
     "USA",
     "2025-2026",
@@ -10968,7 +10726,7 @@
     "G"
   ],
   [
-    "arcee-ai/trinity-large-thinking",
+    503,
     "Trinity Large Thinking",
     "Arcee-ai",
     "text",
@@ -10991,30 +10749,7 @@
     "T"
   ],
   [
-    "x-ai/grok-4.20-multi-agent",
-    "Grok 4.20 Multi-Agent",
-    "xAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    1.25,
-    2.5,
-    false,
-    96,
-    "Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
-    [
-      "multi",
-      "xai",
-      "usa",
-      "commercial"
-    ],
-    "#6378ff",
-    "G"
-  ],
-  [
-    "x-ai/grok-4.20",
+    504,
     "Grok 4.20",
     "xAI",
     "multi",
@@ -11037,7 +10772,7 @@
     "G"
   ],
   [
-    "google/lyria-3-pro-preview",
+    505,
     "Lyria 3 Pro Preview",
     "Google",
     "multi",
@@ -11060,7 +10795,7 @@
     "L"
   ],
   [
-    "google/lyria-3-clip-preview",
+    506,
     "Lyria 3 Clip Preview",
     "Google",
     "multi",
@@ -11083,7 +10818,7 @@
     "L"
   ],
   [
-    "kwaipilot/kat-coder-pro-v2",
+    507,
     "KAT-Coder-Pro V2",
     "Kwaipilot",
     "code",
@@ -11106,7 +10841,7 @@
     "K"
   ],
   [
-    "rekaai/reka-edge",
+    508,
     "Reka Edge",
     "Rekaai",
     "multi",
@@ -11129,53 +10864,7 @@
     "R"
   ],
   [
-    "minimax/minimax-m2.7",
-    "MiniMax M2.7",
-    "Minimax",
-    "text",
-    "China",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.3,
-    1.2,
-    false,
-    92,
-    "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
-    [
-      "text",
-      "minimax",
-      "china",
-      "commercial"
-    ],
-    "#3b82f6",
-    "M"
-  ],
-  [
-    "openai/gpt-5.4-nano",
-    "GPT-5.4 Nano",
-    "OpenAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.2,
-    1.25,
-    false,
-    86,
-    "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
-    [
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
-    ],
-    "#6378ff",
-    "G"
-  ],
-  [
-    "openai/gpt-5.4-nano:batch",
+    509,
     "GPT-5.4 Nano (batch)",
     "OpenAI",
     "multi",
@@ -11198,30 +10887,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.4-mini",
-    "GPT-5.4 Mini",
-    "OpenAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.75,
-    4.5,
-    false,
-    88,
-    "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
-    [
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
-    ],
-    "#f59e0b",
-    "G"
-  ],
-  [
-    "openai/gpt-5.4-mini:batch",
+    510,
     "GPT-5.4 Mini (batch)",
     "OpenAI",
     "multi",
@@ -11244,32 +10910,9 @@
     "G"
   ],
   [
-    "mistralai/mistral-small-2603",
-    "Mistral Small 4",
-    "Mistral AI",
-    "multi",
-    "France",
-    "2025-2026",
-    "N/A",
-    "open",
-    0.15,
-    0.6,
-    true,
-    90,
-    "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
-    [
-      "multi",
-      "mistral ai",
-      "france",
-      "open"
-    ],
-    "#06b6d4",
-    "M"
-  ],
-  [
-    "z-ai/glm-5-turbo",
+    511,
     "GLM 5 Turbo",
-    "Z-ai",
+    "Zhipu AI",
     "text",
     "USA",
     "2025-2026",
@@ -11290,7 +10933,7 @@
     "G"
   ],
   [
-    "nvidia/nemotron-3-super-120b-a12b",
+    512,
     "Nemotron 3 Super",
     "Nvidia",
     "text",
@@ -11313,7 +10956,7 @@
     "N"
   ],
   [
-    "nvidia/nemotron-3-super-120b-a12b:free",
+    513,
     "Nemotron 3 Super (free)",
     "Nvidia",
     "text",
@@ -11336,9 +10979,9 @@
     "N"
   ],
   [
-    "qwen/qwen3.5-9b",
+    514,
     "Qwen3.5-9B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -11359,30 +11002,7 @@
     "Q"
   ],
   [
-    "openai/gpt-5.4-pro",
-    "GPT-5.4 Pro",
-    "OpenAI",
-    "multi",
-    "USA",
-    "2025-2026",
-    "Frontier MoE",
-    "commercial",
-    30,
-    180,
-    false,
-    98,
-    "GPT-5.4 Pro is OpenAI\\'s most advanced model, building on GPT-5.4\\'s unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
-    [
-      "multi",
-      "openai",
-      "usa",
-      "commercial"
-    ],
-    "#f59e0b",
-    "G"
-  ],
-  [
-    "openai/gpt-5.4-pro:batch",
+    515,
     "GPT-5.4 Pro (batch)",
     "OpenAI",
     "multi",
@@ -11405,7 +11025,7 @@
     "G"
   ],
   [
-    "openai/gpt-5.4:batch",
+    516,
     "GPT-5.4 (batch)",
     "OpenAI",
     "multi",
@@ -11428,7 +11048,7 @@
     "G"
   ],
   [
-    "inception/mercury-2",
+    517,
     "Mercury 2",
     "Inception",
     "text",
@@ -11451,7 +11071,7 @@
     "M"
   ],
   [
-    "google/gemini-3.1-flash-lite-preview",
+    518,
     "Gemini 3.1 Flash Lite Preview",
     "Google",
     "multi",
@@ -11474,7 +11094,7 @@
     "G"
   ],
   [
-    "google/gemini-3.1-flash-image-preview",
+    519,
     "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
     "Google",
     "multi",
@@ -11497,9 +11117,9 @@
     "N"
   ],
   [
-    "qwen/qwen3.5-35b-a3b",
+    520,
     "Qwen3.5-35B-A3B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -11520,9 +11140,9 @@
     "Q"
   ],
   [
-    "qwen/qwen3.5-27b",
+    521,
     "Qwen3.5-27B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -11543,9 +11163,9 @@
     "Q"
   ],
   [
-    "qwen/qwen3.5-122b-a10b",
+    522,
     "Qwen3.5-122B-A10B",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -11566,7 +11186,7 @@
     "Q"
   ],
   [
-    "google/gemini-3.1-pro-preview-customtools",
+    523,
     "Gemini 3.1 Pro Preview Custom Tools",
     "Google",
     "multi",
@@ -11589,7 +11209,7 @@
     "G"
   ],
   [
-    "aion-labs/aion-2.0",
+    524,
     "Aion-2.0",
     "Aion-labs",
     "text",
@@ -11612,7 +11232,7 @@
     "A"
   ],
   [
-    "google/gemini-3.1-pro-preview",
+    525,
     "Gemini 3.1 Pro Preview",
     "Google",
     "multi",
@@ -11635,7 +11255,7 @@
     "G"
   ],
   [
-    "google/gemini-3.1-pro-preview:batch",
+    526,
     "Gemini 3.1 Pro Preview (batch)",
     "Google",
     "multi",
@@ -11658,7 +11278,7 @@
     "G"
   ],
   [
-    "anthropic/claude-sonnet-4.6:batch",
+    527,
     "Claude Sonnet 4.6 (batch)",
     "Anthropic",
     "multi",
@@ -11681,9 +11301,9 @@
     "C"
   ],
   [
-    "qwen/qwen3.5-plus-02-15",
+    528,
     "Qwen3.5 Plus 2026-02-15",
-    "Alibaba / Qwen",
+    "Alibaba",
     "multi",
     "China",
     "2025-2026",
@@ -11704,99 +11324,7 @@
     "Q"
   ],
   [
-    "qwen/qwen3.5-397b-a17b",
-    "Qwen3.5 397B A17B",
-    "Alibaba / Qwen",
-    "multi",
-    "China",
-    "2025-2026",
-    "397B",
-    "open",
-    0.39,
-    2.34,
-    true,
-    89,
-    "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
-    [
-      "multi",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#ec4899",
-    "Q"
-  ],
-  [
-    "minimax/minimax-m2.5",
-    "MiniMax M2.5",
-    "Minimax",
-    "text",
-    "China",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.225,
-    0.9,
-    false,
-    90,
-    "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
-    [
-      "text",
-      "minimax",
-      "china",
-      "commercial"
-    ],
-    "#06b6d4",
-    "M"
-  ],
-  [
-    "z-ai/glm-5",
-    "GLM 5",
-    "Z-ai",
-    "text",
-    "USA",
-    "2025-2026",
-    "N/A",
-    "commercial",
-    0.6,
-    1.92,
-    false,
-    91,
-    "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
-    [
-      "text",
-      "z-ai",
-      "usa",
-      "commercial"
-    ],
-    "#8b5cf6",
-    "G"
-  ],
-  [
-    "qwen/qwen3-max-thinking",
-    "Qwen3 Max Thinking",
-    "Alibaba / Qwen",
-    "text",
-    "China",
-    "2025-2026",
-    "N/A",
-    "open",
-    0.78,
-    3.9,
-    true,
-    92,
-    "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and reinforcement learning compute, it...",
-    [
-      "text",
-      "alibaba / qwen",
-      "china",
-      "open"
-    ],
-    "#3b82f6",
-    "Q"
-  ],
-  [
-    "pre_transformer_root",
+    529,
     "RNN / LSTM",
     "Hochreiter & Schmidhuber",
     "llm",
@@ -11820,7 +11348,7 @@
     "RN"
   ],
   [
-    "elmo",
+    530,
     "ELMo",
     "AI2",
     "llm",
@@ -11844,7 +11372,7 @@
     "EL"
   ],
   [
-    "transformer_root",
+    531,
     "Transformer",
     "Google Research",
     "llm",
@@ -11868,7 +11396,7 @@
     "TR"
   ],
   [
-    "bert",
+    532,
     "BERT",
     "Google",
     "llm",
@@ -11892,7 +11420,7 @@
     "BE"
   ],
   [
-    "t5",
+    533,
     "T5",
     "Google",
     "llm",
@@ -11916,7 +11444,7 @@
     "T5"
   ],
   [
-    "switch_trans",
+    534,
     "Switch Transformer",
     "Google",
     "llm",
@@ -11940,7 +11468,7 @@
     "SW"
   ],
   [
-    "flan_t5",
+    535,
     "FLAN-T5",
     "Google",
     "llm",
@@ -11964,7 +11492,7 @@
     "FL"
   ],
   [
-    "palm",
+    536,
     "PaLM",
     "Google",
     "llm",
@@ -11988,7 +11516,7 @@
     "PA"
   ],
   [
-    "palm2",
+    537,
     "PaLM 2",
     "Google",
     "llm",
@@ -12012,9 +11540,9 @@
     "P2"
   ],
   [
-    "gemini",
+    538,
     "Gemini",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2023",
@@ -12036,9 +11564,9 @@
     "GE"
   ],
   [
-    "gemini10",
+    539,
     "Gemini 1.0",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2023",
@@ -12060,9 +11588,9 @@
     "G1"
   ],
   [
-    "gemini15",
+    540,
     "Gemini 1.5",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2024",
@@ -12084,9 +11612,9 @@
     "1.5"
   ],
   [
-    "gemini20",
+    541,
     "Gemini 2.0",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2024",
@@ -12108,9 +11636,9 @@
     "2.0"
   ],
   [
-    "gemini25",
+    542,
     "Gemini 2.5",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2025",
@@ -12132,9 +11660,9 @@
     "2.5"
   ],
   [
-    "gemini3",
+    543,
     "Gemini 3",
-    "Google DeepMind",
+    "Google",
     "multi",
     "USA",
     "2025",
@@ -12156,7 +11684,7 @@
     "G3"
   ],
   [
-    "gpt1",
+    544,
     "GPT-1",
     "OpenAI",
     "llm",
@@ -12180,7 +11708,7 @@
     "G1"
   ],
   [
-    "gpt2",
+    545,
     "GPT-2",
     "OpenAI",
     "llm",
@@ -12204,7 +11732,7 @@
     "G2"
   ],
   [
-    "gpt3",
+    546,
     "GPT-3",
     "OpenAI",
     "llm",
@@ -12228,7 +11756,7 @@
     "G3"
   ],
   [
-    "codex",
+    547,
     "Codex",
     "OpenAI",
     "code",
@@ -12252,7 +11780,7 @@
     "CX"
   ],
   [
-    "gpt35",
+    548,
     "GPT-3.5",
     "OpenAI",
     "llm",
@@ -12276,7 +11804,7 @@
     "3.5"
   ],
   [
-    "whisper",
+    549,
     "Whisper",
     "OpenAI",
     "audio",
@@ -12300,7 +11828,7 @@
     "WH"
   ],
   [
-    "gpt4",
+    550,
     "GPT-4",
     "OpenAI",
     "llm",
@@ -12324,7 +11852,7 @@
     "G4"
   ],
   [
-    "gpt4v",
+    551,
     "GPT-4V",
     "OpenAI",
     "multi",
@@ -12348,7 +11876,7 @@
     "4V"
   ],
   [
-    "gpt45",
+    552,
     "GPT-4.5",
     "OpenAI",
     "llm",
@@ -12372,7 +11900,7 @@
     "4.5"
   ],
   [
-    "gpt53",
+    553,
     "GPT-5.3",
     "OpenAI",
     "llm",
@@ -12396,7 +11924,7 @@
     "5.3"
   ],
   [
-    "roberta",
+    554,
     "RoBERTa",
     "Meta",
     "llm",
@@ -12420,7 +11948,7 @@
     "RB"
   ],
   [
-    "bart",
+    555,
     "BART",
     "Meta",
     "llm",
@@ -12444,7 +11972,7 @@
     "BA"
   ],
   [
-    "opt",
+    556,
     "OPT",
     "Meta",
     "llm",
@@ -12468,7 +11996,7 @@
     "OP"
   ],
   [
-    "llama",
+    557,
     "LLaMA",
     "Meta",
     "llm",
@@ -12492,7 +12020,7 @@
     "LM"
   ],
   [
-    "llama2",
+    558,
     "Llama 2",
     "Meta",
     "llm",
@@ -12516,7 +12044,7 @@
     "L2"
   ],
   [
-    "llama3",
+    559,
     "Llama 3",
     "Meta",
     "llm",
@@ -12540,7 +12068,7 @@
     "L3"
   ],
   [
-    "llama31",
+    560,
     "Llama 3.1",
     "Meta",
     "llm",
@@ -12564,7 +12092,7 @@
     "3.1"
   ],
   [
-    "llama32",
+    561,
     "Llama 3.2",
     "Meta",
     "multi",
@@ -12589,7 +12117,7 @@
     "3.2"
   ],
   [
-    "llama33",
+    562,
     "Llama 3.3",
     "Meta",
     "llm",
@@ -12613,7 +12141,7 @@
     "3.3"
   ],
   [
-    "llama4",
+    563,
     "Llama 4",
     "Meta",
     "multi",
@@ -12637,7 +12165,7 @@
     "L4"
   ],
   [
-    "claude",
+    564,
     "Claude",
     "Anthropic",
     "llm",
@@ -12661,7 +12189,7 @@
     "C1"
   ],
   [
-    "claude2",
+    565,
     "Claude 2",
     "Anthropic",
     "llm",
@@ -12685,7 +12213,7 @@
     "C2"
   ],
   [
-    "claude3",
+    566,
     "Claude 3",
     "Anthropic",
     "multi",
@@ -12709,7 +12237,7 @@
     "C3"
   ],
   [
-    "claude35",
+    567,
     "Claude 3.5",
     "Anthropic",
     "multi",
@@ -12733,7 +12261,7 @@
     "3.5"
   ],
   [
-    "claude37",
+    568,
     "Claude 3.7",
     "Anthropic",
     "reason",
@@ -12757,7 +12285,7 @@
     "3.7"
   ],
   [
-    "claude4",
+    569,
     "Claude 4",
     "Anthropic",
     "multi",
@@ -12781,7 +12309,7 @@
     "C4"
   ],
   [
-    "claude45",
+    570,
     "Claude 4.5",
     "Anthropic",
     "multi",
@@ -12805,7 +12333,7 @@
     "4.5"
   ],
   [
-    "claude46",
+    571,
     "Claude 4.6",
     "Anthropic",
     "multi",
@@ -12829,7 +12357,7 @@
     "4.6"
   ],
   [
-    "mistral7b",
+    572,
     "Mistral 7B",
     "Mistral AI",
     "llm",
@@ -12853,7 +12381,7 @@
     "M7"
   ],
   [
-    "mixtral",
+    573,
     "Mixtral",
     "Mistral AI",
     "llm",
@@ -12877,7 +12405,7 @@
     "MX"
   ],
   [
-    "mistral_large",
+    574,
     "Mistral Large",
     "Mistral AI",
     "llm",
@@ -12900,31 +12428,7 @@
     "ML"
   ],
   [
-    "mistral_large2",
-    "Mistral Large 2",
-    "Mistral AI",
-    "llm",
-    "France",
-    "2024",
-    "123B",
-    "open",
-    null,
-    null,
-    true,
-    95,
-    "Second generation flagship open-weights model from Mistral AI with 128K context and world-class coding capabilities.",
-    [
-      "llm",
-      "mistral",
-      "mistral-large2",
-      "123b",
-      "open"
-    ],
-    "#14b8a6",
-    "ML2"
-  ],
-  [
-    "mistral_large3",
+    575,
     "Mistral Large 3",
     "Mistral AI",
     "llm",
@@ -12948,7 +12452,7 @@
     "ML3"
   ],
   [
-    "media_branch_root",
+    576,
     "Generative Media",
     "Generative Media",
     "image",
@@ -12972,7 +12476,7 @@
     "GM"
   ],
   [
-    "dalle",
+    577,
     "DALL·E",
     "OpenAI",
     "image",
@@ -12996,7 +12500,7 @@
     "D1"
   ],
   [
-    "dalle2",
+    578,
     "DALL·E 2",
     "OpenAI",
     "image",
@@ -13020,7 +12524,7 @@
     "D2"
   ],
   [
-    "dalle3",
+    579,
     "DALL·E 3",
     "OpenAI",
     "image",
@@ -13044,7 +12548,7 @@
     "D3"
   ],
   [
-    "stable_diffusion",
+    580,
     "Stable Diffusion",
     "Stability AI",
     "image",
@@ -13068,7 +12572,7 @@
     "SD"
   ],
   [
-    "sdxl",
+    581,
     "Stable Diffusion XL",
     "Stability AI",
     "image",
@@ -13092,7 +12596,7 @@
     "XL"
   ],
   [
-    "sd3",
+    582,
     "Stable Diffusion 3",
     "Stability AI",
     "image",
@@ -13116,7 +12620,7 @@
     "SD3"
   ],
   [
-    "sora",
+    583,
     "Sora",
     "OpenAI",
     "video",
@@ -13140,31 +12644,7 @@
     "SO"
   ],
   [
-    "sora2",
-    "Sora 2",
-    "OpenAI",
-    "video",
-    "USA",
-    "2025",
-    "Frontier Video DiT",
-    "api",
-    0.12,
-    0.12,
-    false,
-    98,
-    "Second generation video diffusion engine with real-time interactive physics and high motion stability.",
-    [
-      "video",
-      "openai",
-      "sora2",
-      "video-gen",
-      "api"
-    ],
-    "#3b82f6",
-    "S2"
-  ],
-  [
-    "sarvam_1",
+    584,
     "Sarvam 1",
     "Sarvam AI",
     "llm",
@@ -13189,7 +12669,7 @@
     "SA"
   ],
   [
-    "sarvam_bulbul",
+    585,
     "Sarvam Bulbul",
     "Sarvam AI",
     "audio",
@@ -13214,7 +12694,7 @@
     "BB"
   ],
   [
-    "sarvam_saaras",
+    586,
     "Sarvam Saaras",
     "Sarvam AI",
     "audio",
@@ -13239,7 +12719,7 @@
     "SS"
   ],
   [
-    "openhathi_7b",
+    587,
     "OpenHathi 7B",
     "Sarvam AI",
     "llm",
@@ -13264,7 +12744,7 @@
     "OH"
   ],
   [
-    "krutrim_1",
+    588,
     "Krutrim",
     "Krutrim",
     "llm",
@@ -13288,7 +12768,7 @@
     "KR"
   ],
   [
-    "krutrim_pro",
+    589,
     "Krutrim Pro",
     "Krutrim",
     "multi",
@@ -13312,7 +12792,7 @@
     "KP"
   ],
   [
-    "bharatgpt",
+    590,
     "BharatGPT",
     "CoRover.ai",
     "multi",
@@ -13337,7 +12817,7 @@
     "BG"
   ],
   [
-    "indictrans2",
+    591,
     "IndicTrans2",
     "AI4Bharat",
     "llm",
@@ -13362,7 +12842,7 @@
     "IT"
   ],
   [
-    "airavata",
+    592,
     "Airavata",
     "AI4Bharat",
     "llm",
@@ -13387,7 +12867,7 @@
     "AV"
   ],
   [
-    "indicbert",
+    593,
     "IndicBERT",
     "AI4Bharat",
     "llm",
@@ -13412,7 +12892,7 @@
     "IB"
   ],
   [
-    "indicwhisper",
+    594,
     "IndicWhisper",
     "AI4Bharat",
     "audio",
@@ -13437,7 +12917,7 @@
     "IW"
   ],
   [
-    "hanooman_7b",
+    595,
     "Hanooman 7B",
     "SML",
     "llm",
@@ -13462,7 +12942,7 @@
     "HN"
   ],
   [
-    "hanooman_40b",
+    596,
     "Hanooman 40B",
     "SML",
     "multi",
@@ -13486,7 +12966,7 @@
     "H4"
   ],
   [
-    "sutra_multilingual",
+    597,
     "SUTRA",
     "Two AI",
     "llm",
@@ -13510,7 +12990,7 @@
     "SU"
   ],
   [
-    "sutra_light",
+    598,
     "SUTRA-Light",
     "Two AI",
     "llm",
@@ -13534,7 +13014,7 @@
     "SL"
   ],
   [
-    "project_indus",
+    599,
     "Project Indus",
     "Tech Mahindra",
     "llm",
@@ -13559,7 +13039,7 @@
     "IN"
   ],
   [
-    "navarasa_2",
+    600,
     "Navarasa 2.0",
     "Telugu LLM Labs",
     "llm",
@@ -13584,7 +13064,7 @@
     "NV"
   ],
   [
-    "tamil_llama",
+    601,
     "Tamil LLaMA",
     "Abhinav Venkat",
     "llm",
@@ -13608,7 +13088,7 @@
     "TL"
   ],
   [
-    "kannada_llama",
+    602,
     "Kannada LLaMA",
     "Tensoic",
     "llm",
@@ -13632,7 +13112,7 @@
     "KL"
   ],
   [
-    "bhashini_ai",
+    603,
     "Bhashini AI",
     "Govt of India (MeitY)",
     "multi",
@@ -13656,5 +13136,4199 @@
     ],
     "#22c55e",
     "BH"
+  ],
+  [
+    604,
+    "Muse Spark 1.2 Contributor",
+    "Meta",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0.1,
+    0.2,
+    true,
+    87,
+    "Muse Spark 1.2 contributor tier is a reasoning model from Meta designed for developers who want to start building at an even lower cost. It’s meaningfully cheaper than Muse Spark...",
+    [
+      "image",
+      "usa",
+      "meta",
+      "open"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    605,
+    "DeepSeek V4 Flash Vision Exp",
+    "DeepSeek",
+    "image",
+    "China",
+    "2026",
+    "Frontier",
+    "open",
+    0.22,
+    0.66,
+    true,
+    90,
+    "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
+    [
+      "image",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    606,
+    "Ox Alpha",
+    "Stealth",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    84,
+    "Ox Alpha is a reasoning model designed for coding, sustained agentic work, and production workloads. It is suited for long-horizon software engineering, complex reasoning, and workflows that combine text with...",
+    [
+      "image",
+      "usa",
+      "stealth",
+      "open"
+    ],
+    "#6366f1",
+    "ST"
+  ],
+  [
+    607,
+    "Hy-MT2-7B",
+    "Tencent",
+    "llm",
+    "USA",
+    "2026",
+    "7B",
+    "api",
+    0.074,
+    0.295,
+    false,
+    87,
+    "Hy-MT2-7B is a 7B-parameter translation model from Tencent. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and style-guided translation.",
+    [
+      "llm",
+      "usa",
+      "tencent",
+      "7b"
+    ],
+    "#6366f1",
+    "TE"
+  ],
+  [
+    608,
+    "Inkling Small (free)",
+    "Thinkingmachines",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    84,
+    "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
+    [
+      "image",
+      "usa",
+      "thinkingmachines",
+      "open"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    609,
+    "Inkling (free)",
+    "Thinkingmachines",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    85,
+    "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
+    [
+      "image",
+      "usa",
+      "thinkingmachines",
+      "open"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    610,
+    "Claude Opus 4.6 (batch)",
+    "Anthropic",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    2.5,
+    12.5,
+    false,
+    87,
+    "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    611,
+    "Free Models Router",
+    "Openrouter",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    82,
+    "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
+    [
+      "image",
+      "usa",
+      "openrouter",
+      "open"
+    ],
+    "#6366f1",
+    "OP"
+  ],
+  [
+    612,
+    "Step 3.5 Flash",
+    "Stepfun",
+    "llm",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    0.1,
+    0.3,
+    false,
+    88,
+    "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
+    [
+      "llm",
+      "usa",
+      "stepfun"
+    ],
+    "#6366f1",
+    "ST"
+  ],
+  [
+    613,
+    "Solar Pro 3",
+    "Upstage",
+    "llm",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    0.15,
+    0.6,
+    false,
+    82,
+    "Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 102B total parameters and 12B active parameters per forward pass, it delivers exceptional performance while maintaining computational efficiency. Optimized...",
+    [
+      "llm",
+      "usa",
+      "upstage"
+    ],
+    "#6366f1",
+    "UP"
+  ],
+  [
+    614,
+    "MiniMax M2-her",
+    "MiniMax",
+    "llm",
+    "China",
+    "2026",
+    "Frontier",
+    "api",
+    0.3,
+    1.2,
+    false,
+    81,
+    "MiniMax M2-her is a dialogue-first large language model built for immersive roleplay, character-driven chat, and expressive multi-turn conversations. Designed to stay consistent in tone and personality, it supports rich message...",
+    [
+      "llm",
+      "china",
+      "minimax"
+    ],
+    "#6366f1",
+    "MI"
+  ],
+  [
+    615,
+    "Palmyra X5",
+    "Writer",
+    "llm",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    0.6,
+    6,
+    false,
+    92,
+    "Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million...",
+    [
+      "llm",
+      "usa",
+      "writer"
+    ],
+    "#6366f1",
+    "WR"
+  ],
+  [
+    616,
+    "Seed 1.6 Flash",
+    "Bytedance-seed",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.075,
+    0.3,
+    false,
+    83,
+    "Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance Seed, supporting both text and visual understanding. It features a 256k context window and can generate outputs of...",
+    [
+      "image",
+      "usa",
+      "bytedance-seed"
+    ],
+    "#6366f1",
+    "BY"
+  ],
+  [
+    617,
+    "Seed 1.6",
+    "Bytedance-seed",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.25,
+    2,
+    false,
+    93,
+    "Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It incorporates multimodal capabilities and adaptive deep thinking with a 256K context window.",
+    [
+      "image",
+      "usa",
+      "bytedance-seed"
+    ],
+    "#6366f1",
+    "BY"
+  ],
+  [
+    618,
+    "GLM 4.7",
+    "Zhipu AI",
+    "code",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.4,
+    1.75,
+    false,
+    84,
+    "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while...",
+    [
+      "code",
+      "usa",
+      "z-ai"
+    ],
+    "#6366f1",
+    "Z-"
+  ],
+  [
+    619,
+    "Gemini 3 Flash Preview",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.5,
+    3,
+    false,
+    81,
+    "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    620,
+    "Gemini 3 Flash Preview (batch)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.25,
+    1.5,
+    false,
+    90,
+    "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    621,
+    "Nemotron 3 Nano 30B A3B",
+    "Nvidia",
+    "llm",
+    "USA",
+    "2025",
+    "30B",
+    "api",
+    0.05,
+    0.2,
+    false,
+    87,
+    "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
+    [
+      "llm",
+      "usa",
+      "nvidia",
+      "30b"
+    ],
+    "#6366f1",
+    "NV"
+  ],
+  [
+    622,
+    "Nemotron 3 Nano 30B A3B (free)",
+    "Nvidia",
+    "llm",
+    "USA",
+    "2025",
+    "30B",
+    "open",
+    0,
+    0,
+    true,
+    88,
+    "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
+    [
+      "llm",
+      "usa",
+      "nvidia",
+      "open",
+      "30b"
+    ],
+    "#6366f1",
+    "NV"
+  ],
+  [
+    623,
+    "GPT-5.2 Chat",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.75,
+    14,
+    false,
+    80,
+    "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “think” on...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    624,
+    "GPT-5.2 Pro (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    10.5,
+    84,
+    false,
+    88,
+    "GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reasoning,...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    625,
+    "GPT-5.2 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.875,
+    7,
+    false,
+    85,
+    "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    626,
+    "Relace Search",
+    "Relace",
+    "code",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1,
+    3,
+    false,
+    85,
+    "The relace-search model uses 4-12 `view_file` and `grep` tools in parallel to explore a codebase and return relevant files to the user request. In contrast to RAG, relace-search performs agentic...",
+    [
+      "code",
+      "usa",
+      "relace"
+    ],
+    "#6366f1",
+    "RE"
+  ],
+  [
+    627,
+    "Body Builder (beta)",
+    "Openrouter",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    null,
+    null,
+    false,
+    90,
+    "Transform your natural language requests into structured OpenRouter API request objects. Describe what you want to accomplish with AI models, and Body Builder will construct the appropriate API calls. Example:...",
+    [
+      "llm",
+      "usa",
+      "openrouter"
+    ],
+    "#6366f1",
+    "OP"
+  ],
+  [
+    628,
+    "Nova 2 Lite",
+    "Amazon",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.3,
+    2.5,
+    false,
+    86,
+    "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text. Nova 2 Lite demonstrates standout capabilities in processing...",
+    [
+      "image",
+      "usa",
+      "amazon"
+    ],
+    "#ff9900",
+    "AM"
+  ],
+  [
+    629,
+    "Ministral 3 14B 2512",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "14B",
+    "open",
+    0.2,
+    0.2,
+    true,
+    84,
+    "The largest model in the Ministral 3 family, Ministral 3 14B offers frontier capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart. A powerful and efficient language...",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open",
+      "14b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    630,
+    "Ministral 3 8B 2512",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "8B",
+    "open",
+    0.15,
+    0.15,
+    true,
+    86,
+    "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open",
+      "8b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    631,
+    "Ministral 3 3B 2512",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "3B",
+    "open",
+    0.1,
+    0.1,
+    true,
+    91,
+    "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities.",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open",
+      "3b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    632,
+    "Mistral Large 3 2512",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "Frontier",
+    "open",
+    0.5,
+    1.5,
+    true,
+    87,
+    "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    633,
+    "Claude Opus 4.5 (batch)",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2.5,
+    12.5,
+    false,
+    92,
+    "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    634,
+    "Olmo 3 32B Think",
+    "AllenAI",
+    "reason",
+    "USA",
+    "2025",
+    "32B",
+    "api",
+    0.15,
+    0.5,
+    false,
+    89,
+    "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios. Its capacity enables strong performance on demanding evaluation tasks and...",
+    [
+      "reason",
+      "usa",
+      "allenai",
+      "32b"
+    ],
+    "#6366f1",
+    "AL"
+  ],
+  [
+    635,
+    "Nano Banana Pro (Gemini 3 Pro Image Preview)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2,
+    12,
+    false,
+    83,
+    "Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro. It extends the original Nano Banana with significantly improved multimodal reasoning, real-world grounding, and...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    636,
+    "GPT-5.1 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.625,
+    5,
+    false,
+    86,
+    "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    637,
+    "GPT-5.1-Codex",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.25,
+    10,
+    false,
+    91,
+    "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks....",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    638,
+    "Sonar Pro Search",
+    "Perplexity",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    3,
+    15,
+    false,
+    82,
+    "Exclusively available on the OpenRouter API, Sonar Pro's new Pro Search mode is Perplexity's most advanced agentic search system. It is designed for deeper reasoning and analysis. Pricing is based...",
+    [
+      "image",
+      "usa",
+      "perplexity"
+    ],
+    "#1fb8cd",
+    "PE"
+  ],
+  [
+    639,
+    "Voxtral Small 24B 2507",
+    "Mistral AI",
+    "audio",
+    "France",
+    "2025",
+    "24B",
+    "open",
+    0.1,
+    0.3,
+    true,
+    89,
+    "Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance. It excels at speech transcription, translation and audio understanding. Input audio...",
+    [
+      "audio",
+      "france",
+      "mistralai",
+      "open",
+      "24b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    640,
+    "gpt-oss-safeguard-20b",
+    "OpenAI",
+    "reason",
+    "USA",
+    "2025",
+    "20B",
+    "api",
+    0.075,
+    0.3,
+    false,
+    89,
+    "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust...",
+    [
+      "reason",
+      "usa",
+      "openai",
+      "20b"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    641,
+    "Nemotron Nano 12B 2 VL (free)",
+    "Nvidia",
+    "image",
+    "USA",
+    "2025",
+    "12B",
+    "open",
+    0,
+    0,
+    true,
+    92,
+    "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s...",
+    [
+      "image",
+      "usa",
+      "nvidia",
+      "open",
+      "12b"
+    ],
+    "#6366f1",
+    "NV"
+  ],
+  [
+    642,
+    "Qwen3 VL 32B Instruct",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "32B",
+    "open",
+    0.104,
+    0.416,
+    true,
+    86,
+    "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video. With 32 billion parameters, it combines deep visual perception with advanced text...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "32b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    643,
+    "Granite 4.0 Micro",
+    "Ibm-granite",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.017,
+    0.112,
+    false,
+    80,
+    "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. These models are the latest in a series of models released by IBM. They are fine-tuned for long...",
+    [
+      "llm",
+      "usa",
+      "ibm-granite"
+    ],
+    "#6366f1",
+    "IB"
+  ],
+  [
+    644,
+    "GPT-5 Image Mini",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2.5,
+    2,
+    false,
+    81,
+    "GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [GPT-5 Mini](https://openrouter.ai/openai/gpt-5-mini), with GPT Image 1 Mini for efficient image generation. This natively multimodal model features superior instruction following, text...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    645,
+    "Claude Haiku 4.5 (batch)",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.5,
+    2.5,
+    false,
+    92,
+    "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    646,
+    "Qwen3 VL 8B Thinking",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "8B",
+    "open",
+    0.18,
+    2.1,
+    true,
+    85,
+    "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences. It integrates enhanced multimodal alignment and...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "8b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    647,
+    "Qwen3 VL 8B Instruct",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "8B",
+    "open",
+    0.117,
+    0.455,
+    true,
+    88,
+    "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video. It features improved multimodal fusion with Interleaved-MRoPE for long-horizon...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "8b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    648,
+    "GPT-5 Image",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    10,
+    10,
+    false,
+    81,
+    "[GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's GPT-5 model with state-of-the-art image generation capabilities. It offers major improvements in reasoning, code quality, and user experience while incorporating GPT Image 1's superior instruction following,...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    649,
+    "Nano Banana (Gemini 2.5 Flash Image)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.3,
+    2.5,
+    false,
+    87,
+    "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It is a state of the art image generation model with contextual understanding. It is capable of image generation,...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    650,
+    "Qwen3 VL 30B A3B Thinking",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.2,
+    2.4,
+    true,
+    84,
+    "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    651,
+    "Qwen3 VL 30B A3B Instruct",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.13,
+    0.52,
+    true,
+    82,
+    "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Instruct variant optimizes instruction-following for general multimodal tasks. It excels in perception...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    652,
+    "GPT-5 Pro (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    7.5,
+    60,
+    false,
+    88,
+    "GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    653,
+    "Claude Sonnet 4.5 (batch)",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.5,
+    7.5,
+    false,
+    82,
+    "Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    654,
+    "Cydonia 24B V4.1",
+    "Thedrummer",
+    "llm",
+    "USA",
+    "2025",
+    "24B",
+    "api",
+    0.3,
+    0.5,
+    false,
+    89,
+    "Uncensored and creative writing model based on Mistral Small 3.2 24B with good recall, prompt adherence, and intelligence.",
+    [
+      "llm",
+      "usa",
+      "thedrummer",
+      "24b"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    655,
+    "Relace Apply 3",
+    "Relace",
+    "code",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.85,
+    1.25,
+    false,
+    92,
+    "Relace Apply 3 is a specialized code-patching LLM that merges AI-suggested edits straight into your source files. It can apply updates from GPT-4o, Claude, and others into your files at...",
+    [
+      "code",
+      "usa",
+      "relace"
+    ],
+    "#6366f1",
+    "RE"
+  ],
+  [
+    656,
+    "Qwen3 VL 235B A22B Thinking",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "235B",
+    "open",
+    0.4,
+    4,
+    true,
+    94,
+    "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math....",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "235b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    657,
+    "Qwen3 VL 235B A22B Instruct",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "235B",
+    "open",
+    0.21,
+    1.9,
+    true,
+    87,
+    "Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies strong text generation with visual understanding across images and video. The Instruct model targets general vision-language use (VQA, document parsing, chart/table...",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "235b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    658,
+    "Qwen3 Coder Plus",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.65,
+    3.25,
+    true,
+    92,
+    "Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Coder 480B A35B. It is a powerful coding agent model specializing in autonomous programming via tool calling and...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    659,
+    "GPT-5 Codex (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.625,
+    5,
+    false,
+    80,
+    "GPT-5-Codex is a specialized version of GPT-5 optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks....",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    660,
+    "DeepSeek V3.1 Terminus",
+    "DeepSeek",
+    "llm",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.27,
+    1,
+    true,
+    90,
+    "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
+    [
+      "llm",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    661,
+    "Qwen3 Coder Flash",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.195,
+    0.975,
+    true,
+    84,
+    "Qwen3 Coder Flash is Alibaba's fast and cost efficient version of their proprietary Qwen3 Coder Plus. It is a powerful coding agent model specializing in autonomous programming via tool calling...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    662,
+    "Qwen3 Next 80B A3B Thinking",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "80B",
+    "open",
+    0.15,
+    1.2,
+    true,
+    80,
+    "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured “thinking” traces by default. It’s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open",
+      "80b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    663,
+    "Qwen3 Next 80B A3B Instruct",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "80B",
+    "open",
+    0.1,
+    1.1,
+    true,
+    84,
+    "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open",
+      "80b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    664,
+    "Qwen Plus 0728",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.26,
+    0.78,
+    true,
+    88,
+    "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybrid reasoning model with a balanced performance, speed, and cost combination.",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    665,
+    "Qwen Plus 0728 (thinking)",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.26,
+    0.78,
+    true,
+    90,
+    "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybrid reasoning model with a balanced performance, speed, and cost combination.",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    666,
+    "Nemotron Nano 9B V2 (free)",
+    "Nvidia",
+    "reason",
+    "USA",
+    "2025",
+    "9B",
+    "open",
+    0,
+    0,
+    true,
+    80,
+    "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and...",
+    [
+      "reason",
+      "usa",
+      "nvidia",
+      "open",
+      "9b"
+    ],
+    "#6366f1",
+    "NV"
+  ],
+  [
+    667,
+    "Kimi K2 0905",
+    "Moonshot AI",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.6,
+    2.5,
+    false,
+    86,
+    "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
+    [
+      "llm",
+      "usa",
+      "moonshotai"
+    ],
+    "#6366f1",
+    "MO"
+  ],
+  [
+    668,
+    "Qwen3 30B A3B Thinking 2507",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.2,
+    2.4,
+    true,
+    81,
+    "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for “thinking mode,” where internal reasoning traces are separated...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    669,
+    "Hermes 4 70B",
+    "Nous Research",
+    "reason",
+    "USA",
+    "2025",
+    "70B",
+    "open",
+    0.13,
+    0.4,
+    true,
+    89,
+    "Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama-3.1-70B. It introduces the same hybrid mode as the larger 405B release, allowing the model to either...",
+    [
+      "reason",
+      "usa",
+      "nousresearch",
+      "open",
+      "70b"
+    ],
+    "#6366f1",
+    "NO"
+  ],
+  [
+    670,
+    "Hermes 4 405B",
+    "Nous Research",
+    "reason",
+    "USA",
+    "2025",
+    "405B",
+    "open",
+    1,
+    3,
+    true,
+    91,
+    "Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with...",
+    [
+      "reason",
+      "usa",
+      "nousresearch",
+      "open",
+      "405b"
+    ],
+    "#6366f1",
+    "NO"
+  ],
+  [
+    671,
+    "DeepSeek V3.1",
+    "DeepSeek",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.55,
+    1.65,
+    true,
+    93,
+    "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context...",
+    [
+      "reason",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    672,
+    "GLM 4.5V",
+    "Zhipu AI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.6,
+    1.8,
+    false,
+    89,
+    "GLM-4.5V is a vision-language foundation model for multimodal agent applications. Built on a Mixture-of-Experts (MoE) architecture with 106B parameters and 12B activated parameters, it achieves state-of-the-art results in video understanding,...",
+    [
+      "image",
+      "usa",
+      "z-ai"
+    ],
+    "#6366f1",
+    "Z-"
+  ],
+  [
+    673,
+    "GPT-5 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.625,
+    5,
+    false,
+    93,
+    "GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    674,
+    "GPT-5 Mini (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.125,
+    1,
+    false,
+    94,
+    "GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost....",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    675,
+    "GPT-5 Nano (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.025,
+    0.2,
+    false,
+    94,
+    "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    676,
+    "Claude Opus 4.1 (batch)",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    7.5,
+    37.5,
+    false,
+    82,
+    "Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable gains...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    677,
+    "Codestral 2508",
+    "Mistral AI",
+    "code",
+    "France",
+    "2025",
+    "Frontier",
+    "open",
+    0.3,
+    0.9,
+    true,
+    91,
+    "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+    [
+      "code",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    678,
+    "Qwen3 Coder 30B A3B Instruct",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.07,
+    0.28,
+    true,
+    93,
+    "Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    679,
+    "Qwen3 30B A3B Instruct 2507",
+    "Alibaba",
+    "llm",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.048,
+    0.193,
+    true,
+    84,
+    "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
+    [
+      "llm",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    680,
+    "GLM 4.5",
+    "Zhipu AI",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.6,
+    2.2,
+    false,
+    93,
+    "GLM-4.5 is our latest flagship foundation model, purpose-built for agent-based applications. It leverages a Mixture-of-Experts (MoE) architecture and supports a context length of up to 128k tokens. GLM-4.5 delivers significantly...",
+    [
+      "llm",
+      "usa",
+      "z-ai"
+    ],
+    "#6366f1",
+    "Z-"
+  ],
+  [
+    681,
+    "GLM 4.5 Air",
+    "Zhipu AI",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.13,
+    0.85,
+    false,
+    83,
+    "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter...",
+    [
+      "llm",
+      "usa",
+      "z-ai"
+    ],
+    "#6366f1",
+    "Z-"
+  ],
+  [
+    682,
+    "Qwen3 235B A22B Thinking 2507",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "235B",
+    "open",
+    0.23,
+    2.3,
+    true,
+    80,
+    "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "235b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    683,
+    "Qwen3 Coder 480B A35B",
+    "Alibaba",
+    "code",
+    "China",
+    "2025",
+    "480B",
+    "open",
+    0.3,
+    1,
+    true,
+    80,
+    "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open",
+      "480b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    684,
+    "UI-TARS 7B ",
+    "ByteDance",
+    "image",
+    "China",
+    "2025",
+    "7B",
+    "api",
+    0.1,
+    0.2,
+    false,
+    86,
+    "UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based environments, including desktop interfaces, web browsers, mobile systems, and games. Built by ByteDance, it builds upon the UI-TARS framework with reinforcement...",
+    [
+      "image",
+      "china",
+      "bytedance",
+      "7b"
+    ],
+    "#6366f1",
+    "BY"
+  ],
+  [
+    685,
+    "Gemini 2.5 Flash Lite (batch)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.05,
+    0.2,
+    false,
+    89,
+    "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    686,
+    "Qwen3 235B A22B Instruct 2507",
+    "Alibaba",
+    "llm",
+    "China",
+    "2025",
+    "235B",
+    "open",
+    0.09,
+    0.55,
+    true,
+    89,
+    "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
+    [
+      "llm",
+      "china",
+      "alibaba",
+      "open",
+      "235b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    687,
+    "Kimi K2 0711",
+    "Moonshot AI",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.57,
+    2.3,
+    false,
+    87,
+    "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for...",
+    [
+      "llm",
+      "usa",
+      "moonshotai"
+    ],
+    "#6366f1",
+    "MO"
+  ],
+  [
+    688,
+    "Uncensored",
+    "Cognitive Computations",
+    "llm",
+    "USA",
+    "2025",
+    "24B",
+    "api",
+    0.2,
+    0.9,
+    false,
+    86,
+    "Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “uncensored” instruct-tuned LLM, preserving...",
+    [
+      "llm",
+      "usa",
+      "cognitivecomputations",
+      "24b"
+    ],
+    "#6366f1",
+    "CO"
+  ],
+  [
+    689,
+    "Hunyuan A13B Instruct",
+    "Tencent",
+    "reason",
+    "USA",
+    "2025",
+    "13B",
+    "api",
+    0.14,
+    0.57,
+    false,
+    91,
+    "Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model developed by Tencent, with a total parameter count of 80B and support for reasoning via Chain-of-Thought. It offers competitive benchmark...",
+    [
+      "reason",
+      "usa",
+      "tencent",
+      "13b"
+    ],
+    "#6366f1",
+    "TE"
+  ],
+  [
+    690,
+    "Morph V3 Large",
+    "Morph",
+    "code",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.9,
+    1.9,
+    false,
+    92,
+    "Morph's high-accuracy apply model for complex code edits. ~4,500 tokens/sec with 98% accuracy for precise code transformations. The model requires the prompt to be in the following format: <instruction>{instruction}</instruction> <code>{initial_code}</code>...",
+    [
+      "code",
+      "usa",
+      "morph"
+    ],
+    "#6366f1",
+    "MO"
+  ],
+  [
+    691,
+    "Morph V3 Fast",
+    "Morph",
+    "code",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.8,
+    1.2,
+    false,
+    91,
+    "Morph's fastest apply model for code edits. ~10,500 tokens/sec with 96% accuracy for rapid code transformations. The model requires the prompt to be in the following format: <instruction>{instruction}</instruction> <code>{initial_code}</code> <update>{edit_snippet}</update>...",
+    [
+      "code",
+      "usa",
+      "morph"
+    ],
+    "#6366f1",
+    "MO"
+  ],
+  [
+    692,
+    "ERNIE 4.5 VL 424B A47B ",
+    "Baidu",
+    "image",
+    "USA",
+    "2025",
+    "424B",
+    "api",
+    0.42,
+    1.25,
+    false,
+    83,
+    "ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu’s ERNIE 4.5 series, featuring 424B total parameters with 47B active per token. It is trained jointly on text and image data...",
+    [
+      "image",
+      "usa",
+      "baidu",
+      "424b"
+    ],
+    "#6366f1",
+    "BA"
+  ],
+  [
+    693,
+    "Mistral Small 3.2 24B",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "24B",
+    "open",
+    0.075,
+    0.2,
+    true,
+    88,
+    "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open",
+      "24b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    694,
+    "MiniMax M1",
+    "MiniMax",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "api",
+    0.55,
+    2.2,
+    false,
+    93,
+    "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
+    [
+      "reason",
+      "china",
+      "minimax"
+    ],
+    "#6366f1",
+    "MI"
+  ],
+  [
+    695,
+    "Gemini 2.5 Flash",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.3,
+    2.5,
+    false,
+    90,
+    "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in \"thinking\" capabilities, enabling it to provide responses with greater...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    696,
+    "Gemini 2.5 Flash (batch)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.15,
+    1.25,
+    false,
+    82,
+    "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in \"thinking\" capabilities, enabling it to provide responses with greater...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    697,
+    "Gemini 2.5 Pro",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.25,
+    10,
+    false,
+    80,
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    698,
+    "Gemini 2.5 Pro (batch)",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.625,
+    5,
+    false,
+    81,
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    699,
+    "o3 Pro (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    10,
+    40,
+    false,
+    87,
+    "The o-series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o3-pro model uses more compute to think harder and provide consistently...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    700,
+    "Gemini 2.5 Pro Preview 06-05",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.25,
+    10,
+    false,
+    87,
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    701,
+    "R1 0528",
+    "DeepSeek",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.5,
+    2.15,
+    true,
+    85,
+    "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active...",
+    [
+      "reason",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    702,
+    "Claude Opus 4",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    15,
+    75,
+    false,
+    86,
+    "Claude Opus 4 is benchmarked as the world’s best coding model, at time of release, bringing sustained performance on complex, long-running tasks and agent workflows. It sets new benchmarks in...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    703,
+    "Claude Sonnet 4",
+    "Anthropic",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    3,
+    15,
+    false,
+    93,
+    "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),...",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    704,
+    "Gemma 3n 4B",
+    "Google",
+    "multi",
+    "USA",
+    "2025",
+    "4B",
+    "open",
+    0.06,
+    0.12,
+    true,
+    80,
+    "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs—including text, visual data, and audio—enabling diverse tasks...",
+    [
+      "multi",
+      "usa",
+      "google",
+      "open",
+      "4b"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    705,
+    "Gemini 2.5 Pro Preview 05-06",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.25,
+    10,
+    false,
+    81,
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
+    [
+      "image",
+      "usa",
+      "google"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    706,
+    "Virtuoso Large",
+    "Arcee-ai",
+    "reason",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.75,
+    1.2,
+    false,
+    83,
+    "Virtuoso‑Large is Arcee's top‑tier general‑purpose LLM at 72 B parameters, tuned to tackle cross‑domain reasoning, creative writing and enterprise QA. Unlike many 70 B peers, it retains the 128 k...",
+    [
+      "reason",
+      "usa",
+      "arcee-ai"
+    ],
+    "#6366f1",
+    "AR"
+  ],
+  [
+    707,
+    "Llama Guard 4 12B",
+    "Meta",
+    "image",
+    "USA",
+    "2025",
+    "12B",
+    "open",
+    0.18,
+    0.18,
+    true,
+    84,
+    "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM...",
+    [
+      "image",
+      "usa",
+      "meta",
+      "open",
+      "12b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    708,
+    "Qwen3 30B A3B",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "30B",
+    "open",
+    0.12,
+    0.5,
+    true,
+    82,
+    "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "30b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    709,
+    "Qwen3 8B",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "8B",
+    "open",
+    0.117,
+    0.455,
+    true,
+    80,
+    "Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, designed for both reasoning-heavy tasks and efficient dialogue. It supports seamless switching between \"thinking\" mode for math,...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "8b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    710,
+    "Qwen3 14B",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "14B",
+    "open",
+    0.12,
+    0.24,
+    true,
+    93,
+    "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "14b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    711,
+    "Qwen3 32B",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "32B",
+    "open",
+    0.08,
+    0.28,
+    true,
+    89,
+    "Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 series, optimized for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "32b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    712,
+    "Qwen3 235B A22B",
+    "Alibaba",
+    "reason",
+    "China",
+    "2025",
+    "235B",
+    "open",
+    0.455,
+    1.82,
+    true,
+    87,
+    "Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by Qwen, activating 22B parameters per forward pass. It supports seamless switching between a \"thinking\" mode for complex reasoning, math, and...",
+    [
+      "reason",
+      "china",
+      "alibaba",
+      "open",
+      "235b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    713,
+    "o4 Mini High",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1.1,
+    4.4,
+    false,
+    89,
+    "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    714,
+    "o4 Mini High (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.55,
+    2.2,
+    false,
+    86,
+    "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    715,
+    "OpenAI: o3",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2,
+    8,
+    false,
+    86,
+    "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following....",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    716,
+    "o3 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1,
+    4,
+    false,
+    81,
+    "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following....",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    717,
+    "o4 Mini (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.55,
+    2.2,
+    false,
+    94,
+    "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    718,
+    "GPT-4.1 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1,
+    4,
+    false,
+    91,
+    "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    719,
+    "GPT-4.1 Mini (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.2,
+    0.8,
+    false,
+    82,
+    "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    720,
+    "GPT-4.1 Nano (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.05,
+    0.2,
+    false,
+    88,
+    "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    721,
+    "Llama 4 Maverick",
+    "Meta",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "open",
+    0.2,
+    0.8,
+    true,
+    90,
+    "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
+    [
+      "image",
+      "usa",
+      "meta",
+      "open"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    722,
+    "Llama 4 Scout",
+    "Meta",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "open",
+    0.1,
+    0.3,
+    true,
+    85,
+    "Llama 4 Scout 17B Instruct (16E) is a mixture-of-experts (MoE) language model developed by Meta, activating 17 billion parameters out of a total of 109B. It supports native multimodal input...",
+    [
+      "image",
+      "usa",
+      "meta",
+      "open"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    723,
+    "DeepSeek V3 0324",
+    "DeepSeek",
+    "llm",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.25,
+    1,
+    true,
+    82,
+    "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well...",
+    [
+      "llm",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    724,
+    "o1-pro (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    75,
+    300,
+    false,
+    93,
+    "The o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    725,
+    "Mistral Small 3.1 24B",
+    "Mistral AI",
+    "image",
+    "France",
+    "2025",
+    "24B",
+    "open",
+    0.351,
+    0.555,
+    true,
+    84,
+    "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and...",
+    [
+      "image",
+      "france",
+      "mistralai",
+      "open",
+      "24b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    726,
+    "Gemma 3 4B",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "4B",
+    "open",
+    0.05,
+    0.1,
+    true,
+    82,
+    "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
+    [
+      "image",
+      "usa",
+      "google",
+      "open",
+      "4b"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    727,
+    "Gemma 3 12B",
+    "Google",
+    "image",
+    "USA",
+    "2025",
+    "12B",
+    "open",
+    0.05,
+    0.15,
+    true,
+    82,
+    "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
+    [
+      "image",
+      "usa",
+      "google",
+      "open",
+      "12b"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    728,
+    "Command A",
+    "Cohere",
+    "llm",
+    "Canada",
+    "2025",
+    "Frontier",
+    "api",
+    2.5,
+    10,
+    false,
+    89,
+    "Command A is an open-weights 111B parameter model with a 256k context window focused on delivering great performance across agentic, multilingual, and coding use cases. Compared to other leading proprietary...",
+    [
+      "llm",
+      "canada",
+      "cohere"
+    ],
+    "#39594d",
+    "CO"
+  ],
+  [
+    729,
+    "Reka Flash 3",
+    "Rekaai",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.1,
+    0.2,
+    false,
+    94,
+    "Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a...",
+    [
+      "llm",
+      "usa",
+      "rekaai"
+    ],
+    "#6366f1",
+    "RE"
+  ],
+  [
+    730,
+    "Skyfall 36B V2",
+    "Thedrummer",
+    "llm",
+    "USA",
+    "2025",
+    "36B",
+    "api",
+    0.55,
+    0.8,
+    false,
+    82,
+    "Skyfall 36B v2 is an enhanced iteration of Mistral Small 2501, specifically fine-tuned for improved creativity, nuanced writing, role-playing, and coherent storytelling.",
+    [
+      "llm",
+      "usa",
+      "thedrummer",
+      "36b"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    731,
+    "Sonar Reasoning Pro",
+    "Perplexity",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2,
+    8,
+    false,
+    89,
+    "Note: Sonar Pro pricing includes Perplexity search pricing. See [details here](https://docs.perplexity.ai/guides/pricing#detailed-pricing-breakdown-for-sonar-reasoning-pro-and-sonar-pro) Sonar Reasoning Pro is a premier reasoning model powered by DeepSeek R1 with Chain of Thought (CoT). Designed for...",
+    [
+      "image",
+      "usa",
+      "perplexity"
+    ],
+    "#1fb8cd",
+    "PE"
+  ],
+  [
+    732,
+    "Sonar Pro",
+    "Perplexity",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    3,
+    15,
+    false,
+    85,
+    "Note: Sonar Pro pricing includes Perplexity search pricing. See [details here](https://docs.perplexity.ai/guides/pricing#detailed-pricing-breakdown-for-sonar-reasoning-pro-and-sonar-pro) For enterprises seeking more advanced capabilities, the Sonar Pro API can handle in-depth, multi-step queries with added extensibility, like...",
+    [
+      "image",
+      "usa",
+      "perplexity"
+    ],
+    "#1fb8cd",
+    "PE"
+  ],
+  [
+    733,
+    "Sonar Deep Research",
+    "Perplexity",
+    "reason",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    2,
+    8,
+    false,
+    94,
+    "Sonar Deep Research is a research-focused model designed for multi-step retrieval, synthesis, and reasoning across complex topics. It autonomously searches, reads, and evaluates sources, refining its approach as it gathers...",
+    [
+      "reason",
+      "usa",
+      "perplexity"
+    ],
+    "#1fb8cd",
+    "PE"
+  ],
+  [
+    734,
+    "Saba",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2025",
+    "Frontier",
+    "open",
+    0.2,
+    0.6,
+    true,
+    93,
+    "Mistral Saba is a 24B-parameter language model specifically designed for the Middle East and South Asia, delivering accurate and contextually relevant responses while maintaining efficient performance. Trained on curated regional...",
+    [
+      "llm",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    735,
+    "o3 Mini High (batch)",
+    "OpenAI",
+    "reason",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.55,
+    2.2,
+    false,
+    91,
+    "OpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reasoning_effort set to high. o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and...",
+    [
+      "reason",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    736,
+    "Aion-RP 1.0 (8B)",
+    "Aion-labs",
+    "llm",
+    "USA",
+    "2025",
+    "8B",
+    "api",
+    0.8,
+    1.6,
+    false,
+    85,
+    "Aion-RP-Llama-3.1-8B ranks the highest in the character evaluation portion of the RPBench-Auto benchmark, a roleplaying-specific variant of Arena-Hard-Auto, where LLMs evaluate each other’s responses. It is a fine-tuned base model...",
+    [
+      "llm",
+      "usa",
+      "aion-labs",
+      "8b"
+    ],
+    "#6366f1",
+    "AI"
+  ],
+  [
+    737,
+    "Qwen2.5 VL 72B Instruct",
+    "Alibaba",
+    "image",
+    "China",
+    "2025",
+    "72B",
+    "open",
+    0.8,
+    1,
+    true,
+    88,
+    "Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, fish, and insects. It is also highly capable of analyzing texts, charts, icons, graphics, and layouts within images.",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open",
+      "72b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    738,
+    "Qwen-Plus",
+    "Alibaba",
+    "llm",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.26,
+    0.78,
+    true,
+    88,
+    "Qwen-Plus, based on the Qwen2.5 foundation model, is a 131K context model with a balanced performance, speed, and cost combination.",
+    [
+      "llm",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    739,
+    "o3 Mini (batch)",
+    "OpenAI",
+    "reason",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    0.55,
+    2.2,
+    false,
+    93,
+    "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
+    [
+      "reason",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    740,
+    "Sonar",
+    "Perplexity",
+    "image",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    1,
+    1,
+    false,
+    90,
+    "Sonar is lightweight, affordable, fast, and simple to use — now featuring citations and the ability to customize sources. It is designed for companies seeking to integrate lightweight question-and-answer features...",
+    [
+      "image",
+      "usa",
+      "perplexity"
+    ],
+    "#1fb8cd",
+    "PE"
+  ],
+  [
+    741,
+    "R1 Distill Llama 70B",
+    "DeepSeek",
+    "reason",
+    "China",
+    "2025",
+    "70B",
+    "open",
+    0.8,
+    0.8,
+    true,
+    85,
+    "DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across...",
+    [
+      "reason",
+      "china",
+      "deepseek",
+      "open",
+      "70b"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    742,
+    "DeepSeek: R1",
+    "DeepSeek",
+    "reason",
+    "China",
+    "2025",
+    "Frontier",
+    "open",
+    0.7,
+    2.5,
+    true,
+    88,
+    "DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass....",
+    [
+      "reason",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    743,
+    "MiniMax-01",
+    "MiniMax",
+    "image",
+    "China",
+    "2025",
+    "Frontier",
+    "api",
+    0.2,
+    1.1,
+    false,
+    85,
+    "MiniMax-01 is a combines MiniMax-Text-01 for text generation and MiniMax-VL-01 for image understanding. It has 456 billion parameters, with 45.9 billion parameters activated per inference, and can handle a context...",
+    [
+      "image",
+      "china",
+      "minimax"
+    ],
+    "#6366f1",
+    "MI"
+  ],
+  [
+    744,
+    "Phi 4",
+    "Microsoft",
+    "reason",
+    "USA",
+    "2025",
+    "Frontier",
+    "open",
+    0.07,
+    0.14,
+    true,
+    84,
+    "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. At 14 billion...",
+    [
+      "reason",
+      "usa",
+      "microsoft",
+      "open"
+    ],
+    "#00a4ef",
+    "MI"
+  ],
+  [
+    745,
+    "DeepSeek V3",
+    "DeepSeek",
+    "llm",
+    "China",
+    "2024",
+    "Frontier",
+    "open",
+    0.257,
+    1.029,
+    true,
+    82,
+    "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
+    [
+      "llm",
+      "china",
+      "deepseek",
+      "open"
+    ],
+    "#4D6BFE",
+    "DE"
+  ],
+  [
+    746,
+    "Llama 3.3 Euryale 70B",
+    "Sao10k",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "api",
+    0.65,
+    0.75,
+    false,
+    80,
+    "Euryale L3.3 70B is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.2](/models/sao10k/l3-euryale-70b).",
+    [
+      "llm",
+      "usa",
+      "sao10k",
+      "70b"
+    ],
+    "#6366f1",
+    "SA"
+  ],
+  [
+    747,
+    "OpenAI: o1",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    15,
+    60,
+    false,
+    89,
+    "The latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    748,
+    "o1 (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    7.5,
+    30,
+    false,
+    94,
+    "The latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    749,
+    "Command R7B (12-2024)",
+    "Cohere",
+    "reason",
+    "Canada",
+    "2024",
+    "7B",
+    "api",
+    0.037,
+    0.15,
+    false,
+    92,
+    "Command R7B (12-2024) is a small, fast update of the Command R+ model, delivered in December 2024. It excels at RAG, tool use, agents, and similar tasks requiring complex reasoning...",
+    [
+      "reason",
+      "canada",
+      "cohere",
+      "7b"
+    ],
+    "#39594d",
+    "CO"
+  ],
+  [
+    750,
+    "Llama 3.3 70B Instruct",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "open",
+    0.1,
+    0.32,
+    true,
+    90,
+    "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
+    [
+      "llm",
+      "usa",
+      "meta",
+      "open",
+      "70b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    751,
+    "GPT-4o (2024-11-20)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    2.5,
+    10,
+    false,
+    86,
+    "The 2024-11-20 version of GPT-4o offers a leveled-up creative writing ability with more natural, engaging, and tailored writing to improve relevance & readability. It’s also better at working with uploaded...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    752,
+    "Mistral Large 2407",
+    "Mistral AI",
+    "code",
+    "France",
+    "2024",
+    "Frontier",
+    "open",
+    2,
+    6,
+    true,
+    90,
+    "This is Mistral AI's flagship model, Mistral Large 2 (version mistral-large-2407). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/)....",
+    [
+      "code",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    753,
+    "Qwen2.5 Coder 32B Instruct",
+    "Alibaba",
+    "code",
+    "China",
+    "2024",
+    "32B",
+    "open",
+    0.66,
+    1,
+    true,
+    88,
+    "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5: - Significantly improvements in **code generation**, **code reasoning**...",
+    [
+      "code",
+      "china",
+      "alibaba",
+      "open",
+      "32b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    754,
+    "UnslopNemo 12B",
+    "Thedrummer",
+    "llm",
+    "USA",
+    "2024",
+    "12B",
+    "api",
+    0.4,
+    0.4,
+    false,
+    89,
+    "UnslopNemo v4.1 is the latest addition from the creator of Rocinante, designed for adventure writing and role-play scenarios.",
+    [
+      "llm",
+      "usa",
+      "thedrummer",
+      "12b"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    755,
+    "Magnum v4 72B",
+    "Anthracite-org",
+    "llm",
+    "USA",
+    "2024",
+    "72B",
+    "api",
+    3,
+    5,
+    false,
+    87,
+    "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).",
+    [
+      "llm",
+      "usa",
+      "anthracite-org",
+      "72b"
+    ],
+    "#6366f1",
+    "AN"
+  ],
+  [
+    756,
+    "Ministral 8B",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2024",
+    "8B",
+    "open",
+    0.11,
+    0.11,
+    true,
+    82,
+    "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length...",
+    [
+      "llm",
+      "france",
+      "mistralai",
+      "open",
+      "8b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    757,
+    "Qwen2.5 7B Instruct",
+    "Alibaba",
+    "llm",
+    "China",
+    "2024",
+    "7B",
+    "open",
+    0.1,
+    0.2,
+    true,
+    82,
+    "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2: - Significantly more knowledge and has greatly improved capabilities in coding and...",
+    [
+      "llm",
+      "china",
+      "alibaba",
+      "open",
+      "7b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    758,
+    "Rocinante 12B",
+    "Thedrummer",
+    "llm",
+    "USA",
+    "2024",
+    "12B",
+    "api",
+    0.25,
+    0.5,
+    false,
+    93,
+    "Rocinante 12B is designed for engaging storytelling and rich prose. Early testers have reported: - Expanded vocabulary with unique and expressive word choices - Enhanced creativity for vivid narratives -...",
+    [
+      "llm",
+      "usa",
+      "thedrummer",
+      "12b"
+    ],
+    "#6366f1",
+    "TH"
+  ],
+  [
+    759,
+    "Llama 3.2 1B Instruct",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "1B",
+    "open",
+    0.027,
+    0.201,
+    true,
+    92,
+    "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate...",
+    [
+      "llm",
+      "usa",
+      "meta",
+      "open",
+      "1b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    760,
+    "Llama 3.2 3B Instruct",
+    "Meta",
+    "reason",
+    "USA",
+    "2024",
+    "3B",
+    "open",
+    0.05,
+    0.33,
+    true,
+    81,
+    "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
+    [
+      "reason",
+      "usa",
+      "meta",
+      "open",
+      "3b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    761,
+    "Qwen2.5 72B Instruct",
+    "Alibaba",
+    "llm",
+    "China",
+    "2024",
+    "72B",
+    "open",
+    0.36,
+    0.4,
+    true,
+    84,
+    "Qwen2.5 72B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2: - Significantly more knowledge and has greatly improved capabilities in coding and...",
+    [
+      "llm",
+      "china",
+      "alibaba",
+      "open",
+      "72b"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    762,
+    "Command R (08-2024)",
+    "Cohere",
+    "code",
+    "Canada",
+    "2024",
+    "Frontier",
+    "api",
+    0.15,
+    0.6,
+    false,
+    83,
+    "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
+    [
+      "code",
+      "canada",
+      "cohere"
+    ],
+    "#39594d",
+    "CO"
+  ],
+  [
+    763,
+    "Llama 3.1 Euryale 70B v2.2",
+    "Sao10k",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "api",
+    0.85,
+    0.85,
+    false,
+    93,
+    "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b).",
+    [
+      "llm",
+      "usa",
+      "sao10k",
+      "70b"
+    ],
+    "#6366f1",
+    "SA"
+  ],
+  [
+    764,
+    "Hermes 3 70B Instruct",
+    "Nous Research",
+    "reason",
+    "USA",
+    "2024",
+    "70B",
+    "open",
+    0.7,
+    0.7,
+    true,
+    83,
+    "Hermes 3 is a generalist language model with many improvements over [Hermes 2](/models/nousresearch/nous-hermes-2-mistral-7b-dpo), including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the...",
+    [
+      "reason",
+      "usa",
+      "nousresearch",
+      "open",
+      "70b"
+    ],
+    "#6366f1",
+    "NO"
+  ],
+  [
+    765,
+    "Hermes 3 405B Instruct",
+    "Nous Research",
+    "reason",
+    "USA",
+    "2024",
+    "405B",
+    "open",
+    1,
+    1,
+    true,
+    86,
+    "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the...",
+    [
+      "reason",
+      "usa",
+      "nousresearch",
+      "open",
+      "405b"
+    ],
+    "#6366f1",
+    "NO"
+  ],
+  [
+    766,
+    "Llama 3 8B Lunaris",
+    "Sao10k",
+    "llm",
+    "USA",
+    "2024",
+    "8B",
+    "api",
+    0.04,
+    0.05,
+    false,
+    80,
+    "Lunaris 8B is a versatile generalist and roleplaying model based on Llama 3. It's a strategic merge of multiple models, designed to balance creativity with improved logic and general knowledge....",
+    [
+      "llm",
+      "usa",
+      "sao10k",
+      "8b"
+    ],
+    "#6366f1",
+    "SA"
+  ],
+  [
+    767,
+    "GPT-4o (2024-08-06)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    2.5,
+    10,
+    false,
+    88,
+    "The 2024-08-06 version of GPT-4o offers improved performance in structured outputs, with the ability to supply a JSON schema in the respone_format. Read more [here](https://openai.com/index/introducing-structured-outputs-in-the-api/). GPT-4o (\"o\" for \"omni\") is...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    768,
+    "Llama 3.1 70B Instruct",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "open",
+    0.4,
+    0.4,
+    true,
+    89,
+    "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
+    [
+      "llm",
+      "usa",
+      "meta",
+      "open",
+      "70b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    769,
+    "Llama 3.1 8B Instruct",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "8B",
+    "open",
+    0.05,
+    0.08,
+    true,
+    82,
+    "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
+    [
+      "llm",
+      "usa",
+      "meta",
+      "open",
+      "8b"
+    ],
+    "#0082fb",
+    "ME"
+  ],
+  [
+    770,
+    "Mistral Nemo",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2024",
+    "Frontier",
+    "open",
+    0.019,
+    0.03,
+    true,
+    93,
+    "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,...",
+    [
+      "llm",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    771,
+    "GPT-4o-mini (2024-07-18)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    0.15,
+    0.6,
+    false,
+    87,
+    "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    772,
+    "GPT-4o-mini (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    0.075,
+    0.3,
+    false,
+    86,
+    "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    773,
+    "Gemma 2 27B",
+    "Google",
+    "llm",
+    "USA",
+    "2024",
+    "27B",
+    "open",
+    0.65,
+    0.65,
+    true,
+    82,
+    "Gemma 2 27B by Google is an open model built from the same research and technology used to create the [Gemini models](/models?q=gemini). Gemma models are well-suited for a variety of...",
+    [
+      "llm",
+      "usa",
+      "google",
+      "open",
+      "27b"
+    ],
+    "#4285F4",
+    "GO"
+  ],
+  [
+    774,
+    "GPT-4o (2024-05-13)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    5,
+    15,
+    false,
+    82,
+    "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    775,
+    "GPT-4o (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    1.25,
+    5,
+    false,
+    83,
+    "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    776,
+    "Mixtral 8x22B Instruct",
+    "Mistral AI",
+    "reason",
+    "France",
+    "2024",
+    "22B",
+    "open",
+    2,
+    6,
+    true,
+    84,
+    "Mistral's official instruct fine-tuned version of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b). It uses 39B active parameters out of 141B, offering unparalleled cost efficiency for its size. Its strengths include: - strong math, coding,...",
+    [
+      "reason",
+      "france",
+      "mistralai",
+      "open",
+      "22b"
+    ],
+    "#ff7000",
+    "MI"
+  ],
+  [
+    777,
+    "WizardLM-2 8x22B",
+    "Microsoft",
+    "llm",
+    "USA",
+    "2024",
+    "22B",
+    "api",
+    0.62,
+    0.62,
+    false,
+    83,
+    "WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrates highly competitive performance compared to leading proprietary models, and it consistently outperforms all existing state-of-the-art opensource models. It is...",
+    [
+      "llm",
+      "usa",
+      "microsoft",
+      "22b"
+    ],
+    "#00a4ef",
+    "MI"
+  ],
+  [
+    778,
+    "GPT-4 Turbo (batch)",
+    "OpenAI",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    5,
+    15,
+    false,
+    93,
+    "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
+    [
+      "image",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    779,
+    "Claude 3 Haiku",
+    "Anthropic",
+    "image",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    0.25,
+    1.25,
+    false,
+    85,
+    "Claude 3 Haiku is Anthropic's fastest and most compact model for\nnear-instant responsiveness. Quick and accurate targeted performance.\n\nSee the launch announcement and benchmark results [here](https://www.anthropic.com/news/claude-3-haiku)\n\n#multimodal",
+    [
+      "image",
+      "usa",
+      "anthropic"
+    ],
+    "#cc785c",
+    "AN"
+  ],
+  [
+    780,
+    "GPT-3.5 Turbo (older v0613)",
+    "OpenAI",
+    "code",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    1,
+    2,
+    false,
+    81,
+    "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    [
+      "code",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    781,
+    "GPT-4 Turbo Preview",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2024",
+    "Frontier",
+    "api",
+    10,
+    30,
+    false,
+    84,
+    "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while...",
+    [
+      "llm",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    782,
+    "Auto Router",
+    "Openrouter",
+    "image",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    null,
+    null,
+    false,
+    81,
+    "Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,...",
+    [
+      "image",
+      "usa",
+      "openrouter"
+    ],
+    "#6366f1",
+    "OP"
+  ],
+  [
+    783,
+    "GPT-3.5 Turbo 16k",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    3,
+    4,
+    false,
+    89,
+    "This model offers four times the context length of gpt-3.5-turbo, allowing it to support approximately 20 pages of text in a single request at a higher cost. Training data: up...",
+    [
+      "llm",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
+  ],
+  [
+    784,
+    "Weaver (alpha)",
+    "Mancer",
+    "llm",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    0.5,
+    0.75,
+    false,
+    86,
+    "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
+    [
+      "llm",
+      "usa",
+      "mancer"
+    ],
+    "#6366f1",
+    "MA"
+  ],
+  [
+    785,
+    "ReMM SLERP 13B",
+    "Undi95",
+    "llm",
+    "USA",
+    "2023",
+    "13B",
+    "api",
+    0.45,
+    0.65,
+    false,
+    90,
+    "A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge",
+    [
+      "llm",
+      "usa",
+      "undi95",
+      "13b"
+    ],
+    "#6366f1",
+    "UN"
+  ],
+  [
+    786,
+    "MythoMax 13B",
+    "Gryphe",
+    "llm",
+    "USA",
+    "2023",
+    "13B",
+    "api",
+    0.06,
+    0.06,
+    false,
+    88,
+    "One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge",
+    [
+      "llm",
+      "usa",
+      "gryphe",
+      "13b"
+    ],
+    "#6366f1",
+    "GR"
+  ],
+  [
+    787,
+    "GPT-3.5 Turbo (batch)",
+    "OpenAI",
+    "code",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    0.25,
+    0.75,
+    false,
+    81,
+    "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    [
+      "code",
+      "usa",
+      "openai"
+    ],
+    "#10b981",
+    "OP"
   ]
 ]

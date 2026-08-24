@@ -1,12 +1,8 @@
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export async function fetchOpenRouterModels() {
-  const res = await fetch('https://openrouter.ai/api/v1/models');
-  if (!res.ok) throw new Error(`Failed to fetch OpenRouter models: ${res.statusText}`);
-  const json = await res.json();
-  return json.data || [];
-}
+export const dynamic = 'force-dynamic';
 
 const DEV_MAP = {
   'openai': 'OpenAI',
@@ -65,7 +61,7 @@ const BRAND_COLORS = {
   'Two AI': '#8b5cf6', 'Cohere': '#39594d', 'Amazon': '#ff9900', 'Perplexity': '#1fb8cd'
 };
 
-export function transformModel(item, index) {
+function transformModel(item, index) {
   const parts = (item.id || '').split('/');
   const rawDevSlug = parts[0]?.toLowerCase() || 'other';
   const rawModelSlug = parts[1] || item.id;
@@ -133,11 +129,13 @@ export function transformModel(item, index) {
   ];
 }
 
-export async function runSync(projectRoot = 'C:/Users/Admin/Desktop/logo1/logo1') {
-  console.log('Fetching OpenRouter models from https://openrouter.ai/api/v1/models ...');
-  const openRouterModels = await fetchOpenRouterModels();
-  console.log(`Fetched ${openRouterModels.length} models from OpenRouter.`);
+async function performSync() {
+  const res = await fetch('https://openrouter.ai/api/v1/models', { next: { revalidate: 3600 } });
+  if (!res.ok) throw new Error(`OpenRouter API error: ${res.statusText}`);
+  const data = await res.json();
+  const openRouterModels = data.data || [];
 
+  const projectRoot = process.cwd();
   const modelsJsonPath = path.join(projectRoot, 'src/data/models.json');
   const syncMetaPath = path.join(projectRoot, 'src/data/sync_meta.json');
   const intelPath = path.join(projectRoot, 'src/data/intelligence_data.js');
@@ -185,10 +183,62 @@ export async function runSync(projectRoot = 'C:/Users/Admin/Desktop/logo1/logo1'
   );
   fs.writeFileSync(intelPath, intelContent, 'utf8');
 
-  console.log(`Sync complete! Added ${addedCount} new models. Total in catalog: ${merged.length}`);
   return meta;
 }
 
-if (process.argv[1]?.includes('sync-openrouter') || process.argv[1]?.includes('syncOpenRouter')) {
-  runSync().catch(console.error);
+export async function GET(request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const force = searchParams.get('force') === 'true';
+
+    const projectRoot = process.cwd();
+    const syncMetaPath = path.join(projectRoot, 'src/data/sync_meta.json');
+
+    let meta = null;
+    if (fs.existsSync(syncMetaPath)) {
+      meta = JSON.parse(fs.readFileSync(syncMetaPath, 'utf8'));
+    }
+
+    const lastSyncTime = meta?.lastSynced ? new Date(meta.lastSynced).getTime() : 0;
+    const isStale = (Date.now() - lastSyncTime) > 24 * 60 * 60 * 1000;
+
+    if (force || isStale) {
+      const result = await performSync();
+      return NextResponse.json({
+        success: true,
+        action: 'synced',
+        ...result
+      });
+    }
+
+    return NextResponse.json({
+      success: true,
+      action: 'cached',
+      message: 'Models are up to date (synced within last 24h). Pass ?force=true to re-sync.',
+      ...meta
+    });
+  } catch (error) {
+    console.error('OpenRouter sync failed:', error);
+    return NextResponse.json(
+      { success: false, error: error.message },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST() {
+  try {
+    const result = await performSync();
+    return NextResponse.json({
+      success: true,
+      action: 'synced_post',
+      ...result
+    });
+  } catch (error) {
+    console.error('OpenRouter sync failed:', error);
+    return NextResponse.json(
+      { success: false, error: error.message },
+      { status: 500 }
+    );
+  }
 }

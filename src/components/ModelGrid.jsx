@@ -9,6 +9,7 @@ import CategoryBadge from '@/components/CategoryBadge';
 import { useCompare } from '@/context/CompareContext';
 import CategoryVisualMockup from '@/components/CategoryVisualMockup';
 import TopModelsByTask from '@/components/TopModelsByTask';
+import syncMeta from '@/data/sync_meta.json';
 import {
   RAW_MODELS,
   RANKINGS,
@@ -21,6 +22,23 @@ import {
   getModelContextInfo,
   getModelHardwareRequirements
 } from '@/data/intelligence_data';
+
+const formatSyncTime = (iso) => {
+  if (!iso) return 'Today';
+  try {
+    const d = new Date(iso);
+    return d.toLocaleString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+  } catch {
+    return 'Recently';
+  }
+};
 
 // Map raw 610 array models to object format compatible with original ModelGrid
 const FORMATTED_MODELS = RAW_MODELS.map((m) => {
@@ -118,8 +136,16 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
   const [visible, setVisible] = useState(100);
   const { compareList, toggleModel, isSelected, setShowPanel } = useCompare();
 
-  // Support direct URL query parameter routing from Evolutionary Tree
+  // Support direct URL query parameter routing (tab, category, model, search)
   useEffect(() => {
+    const tabParam = searchParams?.get('tab');
+    if (tabParam && ['directory', 'charts', 'tasks', 'rankings', 'origins', 'clients'].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+    const catParam = searchParams?.get('cat');
+    if (catParam) {
+      setCategory(catParam);
+    }
     const modelParam = searchParams?.get('model');
     const searchParam = searchParams?.get('search');
     const target = modelParam || searchParam;
@@ -366,20 +392,6 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
     <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-8">
       {/* Original Header */}
       <header className="text-center mb-8 fade-up">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <Link
-            href="/decision-tree"
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 hover:bg-amber-500/25 text-xs font-bold transition-all shadow-sm"
-          >
-            <span>🎯</span> AI Decision Tree Wizard →
-          </Link>
-          <Link
-            href="/tree"
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all shadow-sm"
-          >
-            <span>🌳</span> Evolutionary Tree →
-          </Link>
-        </div>
         <h1
           className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent mb-3"
           style={{ fontFamily: 'var(--font-outfit)' }}
@@ -389,29 +401,14 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
         <p className="text-slate-400 max-w-lg mx-auto text-sm">
           Explore {models.length} cutting-edge AI models. Click any card to inspect its full profile and context capacity.
         </p>
-
-        {/* Original View Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-          {[
-            { id: 'directory', label: '🎛️ Model Grid & Profile' },
-            { id: 'charts', label: '📊 Market Analytics & Charts' },
-            { id: 'tasks', label: '📋 Top Models' },
-            { id: 'rankings', label: '🏆 Rankings & Benchmarks' },
-            { id: 'origins', label: '🌍 Geographic Origins' },
-            { id: 'clients', label: '💼 Enterprise Deployments' },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all ${
-                activeTab === tab.id
-                  ? 'bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-600/20'
-                  : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:bg-slate-800/60 hover:text-slate-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="flex items-center justify-center gap-2 mt-3 flex-wrap">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 text-xs font-medium shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span>OpenRouter Live Sync:</span>
+            <strong className="text-emerald-400 font-mono font-bold">{formatSyncTime(syncMeta?.lastSynced)}</strong>
+            <span className="text-slate-600">·</span>
+            <span className="text-indigo-400 font-mono font-semibold">{models.length} Models Active</span>
+          </span>
         </div>
       </header>
 
@@ -1021,11 +1018,13 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
       )}
 
       {/* Footer */}
-      <footer className="mt-16 pt-6 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-600 gap-2">
+      <footer className="mt-16 pt-6 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
         <span>© 2026 AI Model Directory</span>
-        <div className="flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
-          {models.length} models loaded · Next.js + Tailwind CSS
+        <div className="flex items-center gap-2 font-mono text-[11px] flex-wrap justify-center">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+          <span>Last updated from OpenRouter: <strong className="text-slate-200">{formatSyncTime(syncMeta?.lastSynced)}</strong></span>
+          <span className="text-slate-700">·</span>
+          <span className="text-indigo-400 font-semibold">{models.length} models verified</span>
         </div>
       </footer>
 
