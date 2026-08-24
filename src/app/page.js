@@ -2,8 +2,8 @@ import { Suspense } from 'react';
 import ModelGrid from '@/components/ModelGrid';
 
 export const metadata = {
-  title: 'NextGen AI Model Directory — 610 Models',
-  description: 'Explore 610 cutting-edge AI models. Browse by category, developer, and modality.',
+  title: 'NextGen AI Model Directory — 630 Models',
+  description: 'Explore 630 cutting-edge AI models. Browse by category, developer, and modality.',
 };
 
 export default function Home() {

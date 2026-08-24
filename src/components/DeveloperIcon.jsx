@@ -32,6 +32,17 @@ const FALLBACK = {
   'Moonshot AI':       { grad: 'from-emerald-500 to-teal-700', letter: 'Ki' },
   'Black Forest Labs': { grad: 'from-fuchsia-600 to-pink-700', letter: 'F' },
   'Wan':               { grad: 'from-sky-600 to-indigo-800',   letter: 'W' },
+  'Sarvam AI':         { grad: 'from-orange-500 to-amber-700', letter: 'SA' },
+  'Krutrim':           { grad: 'from-emerald-500 to-teal-700', letter: 'KR' },
+  'AI4Bharat':         { grad: 'from-indigo-500 to-blue-700',  letter: 'A4B' },
+  'CoRover.ai':        { grad: 'from-blue-500 to-cyan-700',    letter: 'CR' },
+  'SML':               { grad: 'from-red-500 to-orange-700',   letter: 'HN' },
+  'Two AI':            { grad: 'from-purple-500 to-violet-700',letter: '2AI' },
+  'Tech Mahindra':     { grad: 'from-cyan-500 to-blue-700',    letter: 'TM' },
+  'Telugu LLM Labs':   { grad: 'from-amber-500 to-orange-700', letter: 'TL' },
+  'Tensoic':           { grad: 'from-yellow-500 to-amber-700', letter: 'TN' },
+  'Abhinav Venkat':    { grad: 'from-pink-500 to-rose-700',    letter: 'AV' },
+  'Govt of India (MeitY)': { grad: 'from-emerald-600 to-teal-800', letter: 'BH' },
 };
 
 export default function DeveloperIcon({ developer, className = 'w-11 h-11' }) {
