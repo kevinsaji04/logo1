@@ -2,12 +2,36 @@
 
 import { useCompare } from '@/context/CompareContext';
 import ModelIcon from '@/components/ModelIcon';
-import { getArchitectureDetails, getModelContextInfo } from '@/data/intelligence_data';
+import { getArchitectureDetails, getModelContextInfo, getModelHardwareRequirements } from '@/data/intelligence_data';
 
 // Row definitions for comparison table
 const ROWS = [
   { label: 'Developer',         key: 'developer' },
   { label: 'Category',          key: 'category' },
+  { label: 'Hardware Tier',     key: 'hw_tier', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `🖥️ ${h.hardwareTier}` : '—';
+  }},
+  { label: 'Minimum VRAM',      key: 'min_vram', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `${h.minVram}` : '—';
+  }},
+  { label: 'Recommended GPU',   key: 'rec_gpu', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `${h.recGpu}` : '—';
+  }},
+  { label: 'System RAM Req.',   key: 'min_ram', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `${h.minRam}` : '—';
+  }},
+  { label: 'Storage Space',     key: 'hw_storage', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `${h.storage}` : '—';
+  }},
+  { label: 'Supported Runtime', key: 'hw_runtime', format: (_, m) => {
+    const h = getModelHardwareRequirements(m);
+    return h ? `${h.runtimeEngine}` : '—';
+  }},
   { label: 'Input Context Tokens', key: 'max_in_tokens', format: (_, m) => {
     const c = getModelContextInfo(m);
     return c ? `📚 ${c.maxInputTokens}` : '—';

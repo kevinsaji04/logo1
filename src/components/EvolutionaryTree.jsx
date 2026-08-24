@@ -2,8 +2,10 @@
 
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import ModelIcon from '@/components/ModelIcon';
 import { NODES, EDGES, FAMILY_COLORS, W, H, NW, NH, YEAR_Y } from '@/data/ai_tree';
+import { getModelHardwareRequirements } from '@/data/intelligence_data';
 
 const MIN_ZOOM = 0.25;
 const MAX_ZOOM = 2.5;
@@ -22,6 +24,7 @@ const DEV_BADGES = {
 };
 
 export default function EvolutionaryTree() {
+  const router = useRouter();
   const [selectedFamily, setSelectedFamily] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [hoveredId, setHoveredId] = useState(null);
@@ -75,6 +78,17 @@ export default function EvolutionaryTree() {
     });
     return coords;
   }, []);
+
+  const handleNodeClick = (node) => {
+    if (!node) return;
+    if (node.isRoot) {
+      router.push(`/?search=${encodeURIComponent(node.dev || node.name)}`);
+    } else if (node.isBranchHead) {
+      router.push(`/?search=image`);
+    } else {
+      router.push(`/?model=${encodeURIComponent(node.name)}`);
+    }
+  };
 
   const hoveredNode = hoveredId ? nodeMap.get(hoveredId) : null;
 
@@ -165,24 +179,11 @@ export default function EvolutionaryTree() {
             <div>
               <div className="flex items-center gap-3 mb-1">
                 <span className="px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 shadow-sm">
-                  🌲 AI Model Decision Tree
+                  🌳 AI Model Evolution Tree
                 </span>
                 <h1 className="text-xl font-extrabold text-white tracking-tight flex items-center gap-2">
                   <span>🌳</span> Evolution & Lineage of Major AI Models
                 </h1>
-
-                {/* Navigation Switcher between Evolution Tree and Landscape Tree */}
-                <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
-                  <span className="px-3 py-1 rounded-lg text-xs font-extrabold bg-indigo-600 text-white shadow-md shadow-indigo-500/20">
-                    🌳 Model Evolution
-                  </span>
-                  <Link
-                    href="/landscape"
-                    className="px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all"
-                  >
-                    🏢 AI Model Landscape
-                  </Link>
-                </div>
               </div>
 
               <p className="text-[11px] text-slate-400">
@@ -356,8 +357,10 @@ export default function EvolutionaryTree() {
                 return (
                   <div
                     key={node.id}
+                    onClick={(e) => { e.stopPropagation(); handleNodeClick(node); }}
                     onMouseEnter={() => setHoveredId(node.id)}
                     onMouseLeave={() => setHoveredId(null)}
+                    title={`Click to view all ${node.name} models in Directory`}
                     style={{
                       position: 'absolute',
                       left: c.x - 20,
@@ -403,8 +406,10 @@ export default function EvolutionaryTree() {
                 return (
                   <div
                     key={node.id}
+                    onClick={(e) => { e.stopPropagation(); handleNodeClick(node); }}
                     onMouseEnter={() => setHoveredId(node.id)}
                     onMouseLeave={() => setHoveredId(null)}
+                    title="Click to search Transformers in Directory"
                     style={{
                       position: 'absolute',
                       left: c.x - 25,
@@ -439,8 +444,10 @@ export default function EvolutionaryTree() {
                 return (
                   <div
                     key={node.id}
+                    onClick={(e) => { e.stopPropagation(); handleNodeClick(node); }}
                     onMouseEnter={() => setHoveredId(node.id)}
                     onMouseLeave={() => setHoveredId(null)}
+                    title="Click to view Generative Media models in Directory"
                     style={{
                       position: 'absolute',
                       left: c.x - 20,
@@ -473,8 +480,10 @@ export default function EvolutionaryTree() {
               return (
                 <div
                   key={node.id}
+                  onClick={(e) => { e.stopPropagation(); handleNodeClick(node); }}
                   onMouseEnter={() => setHoveredId(node.id)}
                   onMouseLeave={() => setHoveredId(null)}
+                  title={`Click to inspect ${node.name} in Model Directory`}
                   style={{
                     position: 'absolute',
                     left: c.x,
@@ -666,6 +675,24 @@ export default function EvolutionaryTree() {
                 {hoveredNode.desc}
               </p>
 
+              {/* Hardware Requirements Badge in Tooltip */}
+              {(() => {
+                const hw = getModelHardwareRequirements(hoveredNode);
+                if (!hw) return null;
+                return (
+                  <div className="mb-3 p-2.5 rounded-xl bg-cyan-950/30 border border-cyan-500/30 text-[11px]">
+                    <div className="flex items-center justify-between text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-300 mb-1">
+                      <span>🖥️ Min Hardware to Run</span>
+                      <span className={`px-1.5 py-0.2 rounded border ${hw.badgeClass}`}>{hw.badge}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-1 text-[10px] font-mono text-slate-300">
+                      <div><span className="text-slate-500">Min VRAM: </span><span className="text-cyan-300 font-semibold">{hw.minVram}</span></div>
+                      <div><span className="text-slate-500">RAM: </span><span className="text-slate-200">{hw.minRam}</span></div>
+                    </div>
+                  </div>
+                );
+              })()}
+
               {hoveredNode.features && hoveredNode.features.length > 0 && (
                 <div>
                   <span className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block mb-1.5 font-bold">
@@ -681,6 +708,13 @@ export default function EvolutionaryTree() {
                   </ul>
                 </div>
               )}
+
+              <div className="mt-3 pt-2.5 border-t border-slate-800 flex items-center justify-between">
+                <span className="text-[10px] font-bold text-indigo-400 flex items-center gap-1">
+                  <span>🖱️</span> Click card to view full profile
+                </span>
+                <span className="text-[10px] font-mono text-slate-500">Directory →</span>
+              </div>
             </div>
           </div>
         )}

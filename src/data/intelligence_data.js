@@ -4447,20 +4447,23 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2025-Q1",
-    "N/A",
-    "paid",
+    "2025",
+    "Frontier",
+    "api",
     2,
     8,
     false,
     91,
-    "OpenAI GPT-4.1 improved flagship",
+    "Refined GPT-4 series model with enhanced reasoning efficiency and optimized developer API latency.",
     [
       "llm",
-      "multi"
+      "openai",
+      "gpt41",
+      "developer",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "4.1"
   ],
   [
     218,
@@ -4860,22 +4863,25 @@ export const RAW_MODELS = [
     237,
     "GPT-4o",
     "OpenAI",
-    "llm",
+    "multi",
     "USA",
-    "2024-Q2",
-    "N/A",
-    "paid",
+    "2024",
+    "Omni MoE",
+    "api",
     2.5,
     10,
     false,
     92,
-    "OpenAI GPT-4o omni model",
+    "Omni multimodal model natively integrating text, audio, and visual reasoning with sub-second speech latency.",
     [
-      "llm",
-      "multi"
+      "multi",
+      "openai",
+      "gpt4o",
+      "omni",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "4o"
   ],
   [
     238,
@@ -5555,21 +5561,23 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2025-Q2",
-    "N/A",
-    "paid",
-    10,
-    40,
+    "2025",
+    "Frontier MoE",
+    "api",
+    3,
+    12,
     false,
     96,
-    "OpenAI GPT-5 flagship model",
+    "OpenAI next-generation flagship intelligence system with unified reasoning, planning, and autonomous execution.",
     [
       "llm",
-      "multi",
-      "reason"
+      "openai",
+      "gpt5",
+      "frontier",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "G5"
   ],
   [
     272,
@@ -5618,20 +5626,23 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2025-Q2",
-    "N/A",
-    "paid",
-    6,
-    24,
+    "2025",
+    "Frontier MoE",
+    "api",
+    2,
+    8,
     false,
     93,
-    "OpenAI GPT-5.1 enhanced model",
+    "GPT-5 iteration focusing on speed, cost efficiency, and advanced real-world function calling.",
     [
       "llm",
-      "multi"
+      "openai",
+      "gpt51",
+      "fast",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "5.1"
   ],
   [
     275,
@@ -5764,20 +5775,23 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2025-Q2",
-    "N/A",
-    "paid",
-    6,
-    24,
+    "2026",
+    "Frontier MoE",
+    "api",
+    2,
+    8,
     false,
     94,
-    "OpenAI GPT-5.4 model",
+    "OpenAI 2026 advanced reasoning model with self-correcting verification and enterprise agentic capabilities.",
     [
       "llm",
-      "multi"
+      "openai",
+      "gpt54",
+      "reasoning",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "5.4"
   ],
   [
     282,
@@ -5785,43 +5799,47 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2025-Q2",
-    "N/A",
-    "paid",
-    8,
-    32,
+    "2026",
+    "Flagship Orion MoE",
+    "api",
+    3.5,
+    14,
     false,
     95,
-    "OpenAI GPT-5.5 model",
+    "OpenAI 2026 flagship Orion-tier model delivering universal omni intelligence and deep autonomous reasoning.",
     [
       "llm",
-      "multi",
-      "reason"
+      "openai",
+      "gpt55",
+      "flagship",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "5.5"
   ],
   [
     283,
     "Gemini 3.1 Pro",
-    "Google",
-    "llm",
+    "Google DeepMind",
+    "multi",
     "USA",
-    "2025-Q2",
-    "N/A",
+    "2026",
+    "Frontier Pro",
     "api",
-    null,
-    null,
+    2.5,
+    10,
     false,
     93,
-    "Google Gemini 3.1 Pro flagship",
+    "Google 2026 flagship Pro frontier model delivering state-of-the-art reasoning and multimodal understanding.",
     [
-      "llm",
       "multi",
-      "reason"
+      "google",
+      "gemini31pro",
+      "flagship",
+      "api"
     ],
-    "#34d399",
-    "GG"
+    "#ea4335",
+    "3.1"
   ],
   [
     284,
@@ -6966,20 +6984,23 @@ export const RAW_MODELS = [
     "OpenAI",
     "llm",
     "USA",
-    "2026-Q1",
-    "N/A",
-    "paid",
-    4,
-    16,
+    "2025",
+    "Frontier MoE",
+    "api",
+    2.5,
+    10,
     false,
     93,
-    "OpenAI GPT-5.2",
+    "GPT-5 iteration with expanded context window, long-horizon planning, and deterministic code generation.",
     [
       "llm",
-      "multi"
+      "openai",
+      "gpt52",
+      "planning",
+      "api"
     ],
-    "#10b981",
-    "OA"
+    "#3b82f6",
+    "5.2"
   ],
   [
     340,
@@ -10188,24 +10209,25 @@ export const RAW_MODELS = [
     "mistralai/mistral-medium-3-5",
     "Mistral Medium 3.5",
     "Mistral AI",
-    "multi",
+    "llm",
     "France",
-    "2025-2026",
-    "N/A",
+    "2026",
+    "Medium MoE",
     "open",
-    1.5,
-    7.5,
+    null,
+    null,
     true,
     96,
-    "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
+    "Mistral AI 2026 medium-tier open weights model optimized for ultra-fast inference and agentic coding.",
     [
-      "multi",
-      "mistral ai",
-      "france",
+      "llm",
+      "mistral",
+      "mistral-medium",
+      "fast",
       "open"
     ],
-    "#6378ff",
-    "M"
+    "#14b8a6",
+    "M3.5"
   ],
   [
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -10765,22 +10787,23 @@ export const RAW_MODELS = [
     "Anthropic",
     "multi",
     "USA",
-    "2025-2026",
-    "Frontier MoE",
-    "commercial",
-    5,
-    25,
+    "2026",
+    "Flagship Opus",
+    "api",
+    10,
+    50,
     false,
     99,
-    "Opus 4.7 is the next generation of Anthropic\\'s Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on...",
+    "Anthropic 2026 flagship Opus model with world-class mathematical synthesis, coding mastery, and frontier agentic reasoning.",
     [
       "multi",
       "anthropic",
-      "usa",
-      "commercial"
+      "claude-opus-47",
+      "flagship",
+      "api"
     ],
-    "#06b6d4",
-    "C"
+    "#d946ef",
+    "4.7"
   ],
   [
     "anthropic/claude-opus-4.7:batch",
@@ -11793,6 +11816,1374 @@ export const RAW_MODELS = [
     ],
     "#3b82f6",
     "Q"
+  ],
+  [
+    "pre_transformer_root",
+    "RNN / LSTM",
+    "Hochreiter & Schmidhuber",
+    "llm",
+    "Germany",
+    "1997",
+    "50M",
+    "open",
+    null,
+    null,
+    true,
+    75,
+    "Pre-Transformer recurrent neural network architectures (bi-directional LSTMs) that pioneered sequential context processing in deep NLP.",
+    [
+      "llm",
+      "lstm",
+      "rnn",
+      "pre-transformer",
+      "open"
+    ],
+    "#f97316",
+    "RN"
+  ],
+  [
+    "elmo",
+    "ELMo",
+    "AI2",
+    "llm",
+    "USA",
+    "2018",
+    "93.6M",
+    "open",
+    null,
+    null,
+    true,
+    80,
+    "Embeddings from Language Models using deep bi-directional LSTMs for contextualized word representations.",
+    [
+      "llm",
+      "ai2",
+      "embeddings",
+      "lstm",
+      "open"
+    ],
+    "#ec4899",
+    "EL"
+  ],
+  [
+    "transformer_root",
+    "Transformer",
+    "Google Research",
+    "llm",
+    "USA",
+    "2017",
+    "213M",
+    "open",
+    null,
+    null,
+    true,
+    95,
+    "The foundational architecture introduced in \"Attention Is All You Need\" (Vaswani et al., 2017) replacing recurrent layers with multi-head self-attention.",
+    [
+      "llm",
+      "google",
+      "transformer",
+      "foundation",
+      "open"
+    ],
+    "#ea4335",
+    "TR"
+  ],
+  [
+    "bert",
+    "BERT",
+    "Google",
+    "llm",
+    "USA",
+    "2018",
+    "340M",
+    "open",
+    null,
+    null,
+    true,
+    88,
+    "Bidirectional Encoder Representations from Transformers; revolutionized NLP with masked language modeling pre-training.",
+    [
+      "llm",
+      "google",
+      "bert",
+      "encoder",
+      "open"
+    ],
+    "#ea4335",
+    "BE"
+  ],
+  [
+    "t5",
+    "T5",
+    "Google",
+    "llm",
+    "USA",
+    "2019",
+    "11B",
+    "open",
+    null,
+    null,
+    true,
+    89,
+    "Text-to-Text Transfer Transformer unifying every NLP task into a text-in, text-out formulation trained on the C4 dataset.",
+    [
+      "llm",
+      "google",
+      "t5",
+      "seq2seq",
+      "open"
+    ],
+    "#ea4335",
+    "T5"
+  ],
+  [
+    "switch_trans",
+    "Switch Transformer",
+    "Google",
+    "llm",
+    "USA",
+    "2021",
+    "1.6T MoE",
+    "open",
+    null,
+    null,
+    true,
+    87,
+    "Trillion-parameter Sparse Mixture-of-Experts (MoE) scaling model pioneering switch routing algorithms.",
+    [
+      "llm",
+      "google",
+      "moe",
+      "switch",
+      "open"
+    ],
+    "#ea4335",
+    "SW"
+  ],
+  [
+    "flan_t5",
+    "FLAN-T5",
+    "Google",
+    "llm",
+    "USA",
+    "2022",
+    "11B",
+    "open",
+    null,
+    null,
+    true,
+    86,
+    "Instruction-finetuned T5 model achieving impressive zero-shot and few-shot performance across hundreds of tasks.",
+    [
+      "llm",
+      "google",
+      "flan",
+      "open",
+      "instruction"
+    ],
+    "#ea4335",
+    "FL"
+  ],
+  [
+    "palm",
+    "PaLM",
+    "Google",
+    "llm",
+    "USA",
+    "2022",
+    "540B",
+    "closed",
+    null,
+    null,
+    false,
+    90,
+    "Pathways Language Model: 540B dense decoder transformer demonstrating breakthrough few-shot reasoning, arithmetic, and code synthesis.",
+    [
+      "llm",
+      "google",
+      "palm",
+      "pathways",
+      "closed"
+    ],
+    "#ea4335",
+    "PA"
+  ],
+  [
+    "palm2",
+    "PaLM 2",
+    "Google",
+    "llm",
+    "USA",
+    "2023",
+    "340B",
+    "api",
+    0.25,
+    0.5,
+    false,
+    92,
+    "Google second-generation PaLM model family with advanced multilingual mastery, math reasoning, and code generation.",
+    [
+      "llm",
+      "google",
+      "palm2",
+      "closed",
+      "multilingual"
+    ],
+    "#ea4335",
+    "P2"
+  ],
+  [
+    "gemini",
+    "Gemini",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    0.5,
+    1.5,
+    false,
+    94,
+    "Google DeepMind flagship multimodal model ecosystem built natively from the ground up for text, image, audio, and video.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "multimodal",
+      "api"
+    ],
+    "#ea4335",
+    "GE"
+  ],
+  [
+    "gemini10",
+    "Gemini 1.0",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2023",
+    "Ultra / Pro / Nano",
+    "api",
+    0.5,
+    1.5,
+    false,
+    93,
+    "Initial release of Gemini foundation models across Ultra, Pro, and Nano tiers, matching or exceeding human expert performance on MMLU.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "ultra",
+      "api"
+    ],
+    "#ea4335",
+    "G1"
+  ],
+  [
+    "gemini15",
+    "Gemini 1.5",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2024",
+    "Pro / Flash MoE",
+    "api",
+    1.25,
+    5,
+    false,
+    96,
+    "Breakthrough 2M token context window model with native audio, video, document, and cross-modal reasoning.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "2m-context",
+      "api"
+    ],
+    "#ea4335",
+    "1.5"
+  ],
+  [
+    "gemini20",
+    "Gemini 2.0",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2024",
+    "Flash / Pro MoE",
+    "api",
+    0.1,
+    0.4,
+    false,
+    96,
+    "Real-time low latency multimodal model with native voice conversation, camera streaming, and thinking mode reasoning.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "realtime",
+      "api"
+    ],
+    "#ea4335",
+    "2.0"
+  ],
+  [
+    "gemini25",
+    "Gemini 2.5",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2025",
+    "Frontier MoE",
+    "api",
+    1.5,
+    6,
+    false,
+    97,
+    "Deep reasoning multimodal model with universal inputs, extended CoT deliberation, and long-horizon tool execution.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "reasoning",
+      "api"
+    ],
+    "#ea4335",
+    "2.5"
+  ],
+  [
+    "gemini3",
+    "Gemini 3",
+    "Google DeepMind",
+    "multi",
+    "USA",
+    "2025",
+    "Frontier MoE",
+    "api",
+    2,
+    8,
+    false,
+    98,
+    "Google 3rd generation frontier intelligence system with next-gen multimodal synthesis and autonomous agentic workflows.",
+    [
+      "multi",
+      "google",
+      "gemini",
+      "frontier",
+      "agentic"
+    ],
+    "#ea4335",
+    "G3"
+  ],
+  [
+    "gpt1",
+    "GPT-1",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2018",
+    "117M",
+    "open",
+    null,
+    null,
+    true,
+    82,
+    "First Generative Pre-trained Transformer model demonstrating unsupervised pre-training followed by supervised fine-tuning.",
+    [
+      "llm",
+      "openai",
+      "gpt",
+      "transformer",
+      "open"
+    ],
+    "#3b82f6",
+    "G1"
+  ],
+  [
+    "gpt2",
+    "GPT-2",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2019",
+    "1.5B",
+    "open",
+    null,
+    null,
+    true,
+    85,
+    "1.5B parameter autoregressive language model demonstrating zero-shot task transfer without explicit supervision.",
+    [
+      "llm",
+      "openai",
+      "gpt2",
+      "open-weights",
+      "open"
+    ],
+    "#3b82f6",
+    "G2"
+  ],
+  [
+    "gpt3",
+    "GPT-3",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2020",
+    "175B",
+    "api",
+    1.5,
+    2,
+    false,
+    91,
+    "175B parameter landmark model establishing in-context few-shot learning and sparking the modern generative AI revolution.",
+    [
+      "llm",
+      "openai",
+      "gpt3",
+      "few-shot",
+      "api"
+    ],
+    "#3b82f6",
+    "G3"
+  ],
+  [
+    "codex",
+    "Codex",
+    "OpenAI",
+    "code",
+    "USA",
+    "2021",
+    "12B",
+    "api",
+    0.8,
+    2.4,
+    false,
+    89,
+    "Code-specialized GPT branch model trained on billions of lines of public code, powering the original GitHub Copilot.",
+    [
+      "code",
+      "openai",
+      "copilot",
+      "programming",
+      "api"
+    ],
+    "#3b82f6",
+    "CX"
+  ],
+  [
+    "gpt35",
+    "GPT-3.5",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2022",
+    "175B",
+    "api",
+    0.5,
+    1.5,
+    false,
+    90,
+    "Instruction and RLHF fine-tuned model backbone that powered the viral launch of ChatGPT in November 2022.",
+    [
+      "llm",
+      "openai",
+      "chatgpt",
+      "rlhf",
+      "api"
+    ],
+    "#3b82f6",
+    "3.5"
+  ],
+  [
+    "whisper",
+    "Whisper",
+    "OpenAI",
+    "audio",
+    "USA",
+    "2022",
+    "1.55B",
+    "open",
+    null,
+    null,
+    true,
+    94,
+    "OpenAI specialized speech-to-text encoder-decoder model trained on 680,000 hours of multilingual, multitask supervised audio.",
+    [
+      "audio",
+      "openai",
+      "whisper",
+      "speech-to-text",
+      "open"
+    ],
+    "#3b82f6",
+    "WH"
+  ],
+  [
+    "gpt4",
+    "GPT-4",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2023",
+    "~1.8T MoE",
+    "api",
+    10,
+    30,
+    false,
+    95,
+    "Multimodal frontier model exhibiting human-level performance on academic and professional benchmarks.",
+    [
+      "llm",
+      "openai",
+      "gpt4",
+      "frontier",
+      "api"
+    ],
+    "#3b82f6",
+    "G4"
+  ],
+  [
+    "gpt4v",
+    "GPT-4V",
+    "OpenAI",
+    "multi",
+    "USA",
+    "2023",
+    "~1.8T MoE",
+    "api",
+    10,
+    30,
+    false,
+    95,
+    "GPT-4 with Vision enabling visual comprehension, chart interpretation, and multi-image document analysis.",
+    [
+      "multi",
+      "openai",
+      "gpt4v",
+      "vision",
+      "api"
+    ],
+    "#3b82f6",
+    "4V"
+  ],
+  [
+    "gpt45",
+    "GPT-4.5",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2025",
+    "Frontier MoE",
+    "api",
+    5,
+    15,
+    false,
+    96,
+    "OpenAI scaling milestone model with enhanced intuition, improved tone alignment, and deep conversational nuance.",
+    [
+      "llm",
+      "openai",
+      "gpt45",
+      "frontier",
+      "api"
+    ],
+    "#3b82f6",
+    "4.5"
+  ],
+  [
+    "gpt53",
+    "GPT-5.3",
+    "OpenAI",
+    "llm",
+    "USA",
+    "2026",
+    "Frontier MoE",
+    "api",
+    1.5,
+    6,
+    false,
+    98,
+    "OpenAI 2026 early iteration frontier model featuring autonomous task execution and deep mathematical synthesis.",
+    [
+      "llm",
+      "openai",
+      "gpt53",
+      "agentic",
+      "api"
+    ],
+    "#3b82f6",
+    "5.3"
+  ],
+  [
+    "roberta",
+    "RoBERTa",
+    "Meta",
+    "llm",
+    "USA",
+    "2019",
+    "355M",
+    "open",
+    null,
+    null,
+    true,
+    87,
+    "Robustly Optimized BERT Pretraining Approach modifying key hyperparameters and removing the Next Sentence Prediction objective.",
+    [
+      "llm",
+      "meta",
+      "roberta",
+      "encoder",
+      "open"
+    ],
+    "#22c55e",
+    "RB"
+  ],
+  [
+    "bart",
+    "BART",
+    "Meta",
+    "llm",
+    "USA",
+    "2019",
+    "406M",
+    "open",
+    null,
+    null,
+    true,
+    86,
+    "Denoising sequence-to-sequence autoencoder for pre-training sequence-to-sequence models; excellent for summarization and translation.",
+    [
+      "llm",
+      "meta",
+      "bart",
+      "seq2seq",
+      "open"
+    ],
+    "#22c55e",
+    "BA"
+  ],
+  [
+    "opt",
+    "OPT",
+    "Meta",
+    "llm",
+    "USA",
+    "2022",
+    "175B",
+    "open",
+    null,
+    null,
+    true,
+    88,
+    "Open Pre-trained Transformer 175B open-sourced by Meta with full training logs to democratize LLM research.",
+    [
+      "llm",
+      "meta",
+      "opt",
+      "open-weights",
+      "open"
+    ],
+    "#22c55e",
+    "OP"
+  ],
+  [
+    "llama",
+    "LLaMA",
+    "Meta",
+    "llm",
+    "USA",
+    "2023",
+    "65B",
+    "open",
+    null,
+    null,
+    true,
+    91,
+    "Meta foundational open-source LLaMA model family that catalyzed the open-source LLM research explosion.",
+    [
+      "llm",
+      "meta",
+      "llama",
+      "foundation",
+      "open"
+    ],
+    "#22c55e",
+    "LM"
+  ],
+  [
+    "llama2",
+    "Llama 2",
+    "Meta",
+    "llm",
+    "USA",
+    "2023",
+    "70B",
+    "open",
+    null,
+    null,
+    true,
+    92,
+    "Meta Llama 2 open-weights model family trained on 2T tokens, introducing Grouped-Query Attention and Ghost Attention.",
+    [
+      "llm",
+      "meta",
+      "llama2",
+      "open-weights",
+      "open"
+    ],
+    "#22c55e",
+    "L2"
+  ],
+  [
+    "llama3",
+    "Llama 3",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "open",
+    null,
+    null,
+    true,
+    94,
+    "Meta Llama 3 8B and 70B state-of-the-art open models trained on over 15T tokens with 128K context support.",
+    [
+      "llm",
+      "meta",
+      "llama3",
+      "open-weights",
+      "open"
+    ],
+    "#22c55e",
+    "L3"
+  ],
+  [
+    "llama31",
+    "Llama 3.1",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "405B",
+    "open",
+    null,
+    null,
+    true,
+    96,
+    "Meta flagship open weights release headlined by the 405B dense model with 128K context and frontier benchmark performance.",
+    [
+      "llm",
+      "meta",
+      "llama31",
+      "405b",
+      "open"
+    ],
+    "#22c55e",
+    "3.1"
+  ],
+  [
+    "llama32",
+    "Llama 3.2",
+    "Meta",
+    "multi",
+    "USA",
+    "2024",
+    "90B Vision",
+    "open",
+    null,
+    null,
+    true,
+    95,
+    "Multimodal vision and edge-optimized Llama models supporting high-resolution image understanding and on-device execution.",
+    [
+      "multi",
+      "meta",
+      "llama32",
+      "vision",
+      "edge",
+      "open"
+    ],
+    "#22c55e",
+    "3.2"
+  ],
+  [
+    "llama33",
+    "Llama 3.3",
+    "Meta",
+    "llm",
+    "USA",
+    "2024",
+    "70B",
+    "open",
+    null,
+    null,
+    true,
+    96,
+    "Llama 3.3 70B model delivering 405B-level capabilities at a fraction of inference compute cost.",
+    [
+      "llm",
+      "meta",
+      "llama33",
+      "70b",
+      "open"
+    ],
+    "#22c55e",
+    "3.3"
+  ],
+  [
+    "llama4",
+    "Llama 4",
+    "Meta",
+    "multi",
+    "USA",
+    "2025",
+    "Frontier MoE",
+    "open",
+    null,
+    null,
+    true,
+    97,
+    "Meta 4th generation open-source foundation model family with native multimodal MoE architecture.",
+    [
+      "multi",
+      "meta",
+      "llama4",
+      "moe",
+      "open"
+    ],
+    "#22c55e",
+    "L4"
+  ],
+  [
+    "claude",
+    "Claude",
+    "Anthropic",
+    "llm",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    1.63,
+    5.51,
+    false,
+    91,
+    "Anthropic first-generation Helpful, Harmless, and Honest AI assistant built on Constitutional AI principles.",
+    [
+      "llm",
+      "anthropic",
+      "claude",
+      "constitutional-ai",
+      "api"
+    ],
+    "#d946ef",
+    "C1"
+  ],
+  [
+    "claude2",
+    "Claude 2",
+    "Anthropic",
+    "llm",
+    "USA",
+    "2023",
+    "Frontier",
+    "api",
+    8,
+    24,
+    false,
+    92,
+    "Anthropic second-generation model featuring 100K token context window and enhanced coding and math performance.",
+    [
+      "llm",
+      "anthropic",
+      "claude2",
+      "100k-context",
+      "api"
+    ],
+    "#d946ef",
+    "C2"
+  ],
+  [
+    "claude3",
+    "Claude 3",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2024",
+    "Opus / Sonnet / Haiku",
+    "api",
+    15,
+    75,
+    false,
+    95,
+    "Anthropic Opus, Sonnet, and Haiku frontier model family introducing multimodal vision comprehension.",
+    [
+      "multi",
+      "anthropic",
+      "claude3",
+      "opus",
+      "api"
+    ],
+    "#d946ef",
+    "C3"
+  ],
+  [
+    "claude35",
+    "Claude 3.5",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2024",
+    "Sonnet / Haiku",
+    "api",
+    3,
+    15,
+    false,
+    97,
+    "Industry-leading reasoning, coding, and Computer Use model setting new benchmarks in software engineering.",
+    [
+      "multi",
+      "anthropic",
+      "claude35",
+      "computer-use",
+      "api"
+    ],
+    "#d946ef",
+    "3.5"
+  ],
+  [
+    "claude37",
+    "Claude 3.7",
+    "Anthropic",
+    "reason",
+    "USA",
+    "2025",
+    "Sonnet Thinking",
+    "api",
+    3,
+    15,
+    false,
+    98,
+    "Hybrid reasoning model combining instant responses with extended thinking budgets for deep code and math deliberation.",
+    [
+      "reason",
+      "anthropic",
+      "claude37",
+      "hybrid-reasoning",
+      "api"
+    ],
+    "#d946ef",
+    "3.7"
+  ],
+  [
+    "claude4",
+    "Claude 4",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    5,
+    25,
+    false,
+    97,
+    "Anthropic 4th generation Constitutional AI assistant with self-correcting reasoning and autonomous task execution.",
+    [
+      "multi",
+      "anthropic",
+      "claude4",
+      "frontier",
+      "api"
+    ],
+    "#d946ef",
+    "C4"
+  ],
+  [
+    "claude45",
+    "Claude 4.5",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2025",
+    "Frontier",
+    "api",
+    4,
+    20,
+    false,
+    98,
+    "Anthropic mid-generation model upgrade with enhanced code synthesis and 1M token long-context grounding.",
+    [
+      "multi",
+      "anthropic",
+      "claude45",
+      "long-context",
+      "api"
+    ],
+    "#d946ef",
+    "4.5"
+  ],
+  [
+    "claude46",
+    "Claude 4.6",
+    "Anthropic",
+    "multi",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    3.5,
+    17.5,
+    false,
+    98,
+    "Anthropic 2026 advanced reasoning model with zero hallucination verification mode.",
+    [
+      "multi",
+      "anthropic",
+      "claude46",
+      "agentic",
+      "api"
+    ],
+    "#d946ef",
+    "4.6"
+  ],
+  [
+    "mistral7b",
+    "Mistral 7B",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2023",
+    "7.3B",
+    "open",
+    null,
+    null,
+    true,
+    90,
+    "High-performance 7B open model using sliding window attention and grouped-query attention, outperforming Llama 2 13B.",
+    [
+      "llm",
+      "mistral",
+      "mistral7b",
+      "open-weights",
+      "open"
+    ],
+    "#14b8a6",
+    "M7"
+  ],
+  [
+    "mixtral",
+    "Mixtral",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2023",
+    "8x7B MoE",
+    "open",
+    null,
+    null,
+    true,
+    93,
+    "Sparse Mixture-of-Experts open weights model from Mistral AI routing each token to 2 of 8 experts per layer.",
+    [
+      "llm",
+      "mistral",
+      "mixtral",
+      "moe",
+      "open"
+    ],
+    "#14b8a6",
+    "MX"
+  ],
+  [
+    "mistral_large",
+    "Mistral Large",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2024",
+    "Frontier",
+    "api",
+    2,
+    6,
+    false,
+    94,
+    "Mistral flagship commercial model featuring top-tier reasoning, 128K context, and native multilingual fluency.",
+    [
+      "llm",
+      "mistral",
+      "mistral-large",
+      "api"
+    ],
+    "#14b8a6",
+    "ML"
+  ],
+  [
+    "mistral_large2",
+    "Mistral Large 2",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2024",
+    "123B",
+    "open",
+    null,
+    null,
+    true,
+    95,
+    "Second generation flagship open-weights model from Mistral AI with 128K context and world-class coding capabilities.",
+    [
+      "llm",
+      "mistral",
+      "mistral-large2",
+      "123b",
+      "open"
+    ],
+    "#14b8a6",
+    "ML2"
+  ],
+  [
+    "mistral_large3",
+    "Mistral Large 3",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2025",
+    "Frontier MoE",
+    "open",
+    null,
+    null,
+    true,
+    97,
+    "Mistral AI 2025 flagship open frontier model with agentic reasoning and sparse MoE efficiency.",
+    [
+      "llm",
+      "mistral",
+      "mistral-large3",
+      "agentic",
+      "open"
+    ],
+    "#14b8a6",
+    "ML3"
+  ],
+  [
+    "media_branch_root",
+    "Generative Media",
+    "Generative Media",
+    "image",
+    "USA",
+    "2021",
+    "Foundation",
+    "open",
+    null,
+    null,
+    true,
+    90,
+    "Generative media synthesis foundation encompassing early image synthesis, VAEs, and video diffusion models.",
+    [
+      "image",
+      "video",
+      "media",
+      "diffusion",
+      "open"
+    ],
+    "#f97316",
+    "GM"
+  ],
+  [
+    "dalle",
+    "DALL·E",
+    "OpenAI",
+    "image",
+    "USA",
+    "2021",
+    "12B",
+    "api",
+    0.02,
+    0.02,
+    false,
+    88,
+    "OpenAI first-generation 12-billion parameter text-to-image transformer trained to generate images from text descriptions.",
+    [
+      "image",
+      "openai",
+      "dalle",
+      "text-to-image",
+      "api"
+    ],
+    "#3b82f6",
+    "D1"
+  ],
+  [
+    "dalle2",
+    "DALL·E 2",
+    "OpenAI",
+    "image",
+    "USA",
+    "2022",
+    "3.5B",
+    "api",
+    0.02,
+    0.02,
+    false,
+    92,
+    "Diffusion-based image generation model using unCLIP architecture for photorealistic 4x higher resolution generations.",
+    [
+      "image",
+      "openai",
+      "dalle2",
+      "diffusion",
+      "api"
+    ],
+    "#3b82f6",
+    "D2"
+  ],
+  [
+    "dalle3",
+    "DALL·E 3",
+    "OpenAI",
+    "image",
+    "USA",
+    "2023",
+    "Frontier Diffusion",
+    "api",
+    0.04,
+    0.04,
+    false,
+    96,
+    "OpenAI image generation model with exceptional prompt adherence and native ChatGPT integration.",
+    [
+      "image",
+      "openai",
+      "dalle3",
+      "diffusion",
+      "api"
+    ],
+    "#3b82f6",
+    "D3"
+  ],
+  [
+    "stable_diffusion",
+    "Stable Diffusion",
+    "Stability AI",
+    "image",
+    "UK",
+    "2022",
+    "890M",
+    "open",
+    null,
+    null,
+    true,
+    93,
+    "Open-source latent diffusion model for text-to-image synthesis that democratized generative image AI worldwide.",
+    [
+      "image",
+      "stability-ai",
+      "stable-diffusion",
+      "open-weights",
+      "open"
+    ],
+    "#f97316",
+    "SD"
+  ],
+  [
+    "sdxl",
+    "Stable Diffusion XL",
+    "Stability AI",
+    "image",
+    "UK",
+    "2023",
+    "3.5B",
+    "open",
+    null,
+    null,
+    true,
+    95,
+    "Flagship SDXL model with dual-text encoder architecture, delivering native 1024x1024 photorealistic outputs.",
+    [
+      "image",
+      "stability-ai",
+      "sdxl",
+      "open-weights",
+      "open"
+    ],
+    "#f97316",
+    "XL"
+  ],
+  [
+    "sd3",
+    "Stable Diffusion 3",
+    "Stability AI",
+    "image",
+    "UK",
+    "2024",
+    "8B / 2B",
+    "open",
+    null,
+    null,
+    true,
+    96,
+    "Multimodal Diffusion Transformer (MMDiT) architecture model with improved typography and multi-subject prompt handling.",
+    [
+      "image",
+      "stability-ai",
+      "sd3",
+      "mmdit",
+      "open"
+    ],
+    "#f97316",
+    "SD3"
+  ],
+  [
+    "sora",
+    "Sora",
+    "OpenAI",
+    "video",
+    "USA",
+    "2024",
+    "Diffusion Transformer (DiT)",
+    "api",
+    0.1,
+    0.1,
+    false,
+    97,
+    "Breakthrough diffusion transformer model generating photorealistic 60s video with complex camera motion and physics simulation.",
+    [
+      "video",
+      "openai",
+      "sora",
+      "dit",
+      "api"
+    ],
+    "#3b82f6",
+    "SO"
+  ],
+  [
+    "sora2",
+    "Sora 2",
+    "OpenAI",
+    "video",
+    "USA",
+    "2025",
+    "Frontier Video DiT",
+    "api",
+    0.12,
+    0.12,
+    false,
+    98,
+    "Second generation video diffusion engine with real-time interactive physics and high motion stability.",
+    [
+      "video",
+      "openai",
+      "sora2",
+      "video-gen",
+      "api"
+    ],
+    "#3b82f6",
+    "S2"
   ]
 ];
 
@@ -12178,5 +13569,263 @@ export function getModelContextInfo(model) {
     tokenUnitRatio: '1 Token ≈ 0.75 Words (~4 Characters)',
   };
 }
+
+// ── Model Minimum Hardware & System Requirements Helper ──
+export function getModelHardwareRequirements(model) {
+  if (!model) return null;
+  const name = Array.isArray(model) ? (model[1] || '') : (model.name || '');
+  const producer = Array.isArray(model) ? (model[2] || '') : (model.developer || '');
+  const cat = Array.isArray(model) ? (model[3] || '') : (model.cat || model.category || '');
+  const params = Array.isArray(model) ? (model[6] || '') : (model.params || '');
+  const access = Array.isArray(model) ? (model[7] || '') : (model.access || '');
+  const local = Array.isArray(model) ? !!model[10] : !!model.local;
+  const desc = Array.isArray(model) ? (model[12] || '') : (model.desc || model.description || '');
+
+  const nameLower = name.toLowerCase();
+  const descLower = (desc || '').toLowerCase();
+  const paramsLower = (params || '').toLowerCase();
+  const isLocal = local === true || access === 'open' || access === 'free';
+
+  if (isLocal) {
+    // ── Local Open-Weights Models ──
+    let paramVal = 0;
+    const matchB = paramsLower.match(/(\d+(?:\.\d+)?)\s*b/);
+    const matchM = paramsLower.match(/(\d+(?:\.\d+)?)\s*m/);
+    if (matchB) paramVal = parseFloat(matchB[1]);
+    else if (matchM) paramVal = parseFloat(matchM[1]) / 1000;
+
+    // Massive HPC scale (> 200B or 671B MoE or 405B or 1.6T)
+    if (
+      paramVal >= 200 ||
+      paramsLower.includes('405b') ||
+      paramsLower.includes('671b') ||
+      paramsLower.includes('1.6t') ||
+      paramsLower.includes('540b') ||
+      nameLower.includes('405b') ||
+      nameLower.includes('671b')
+    ) {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'On-Premise / Enterprise Cluster',
+        hardwareTier: 'HPC Multi-GPU Cluster (4x–8x 80GB)',
+        badge: '8x H100 Cluster',
+        badgeClass: 'bg-rose-500/15 border-rose-500/30 text-rose-300',
+        minVram: '240 GB VRAM (FP8 / Q4 Quantized)',
+        recVram: '640 GB – 800 GB VRAM (8x 80GB/141GB GPUs)',
+        minRam: '512 GB – 1 TB System RAM',
+        recGpu: '8x NVIDIA H100 SXM5 (80GB) / H200 (141GB) / 4x–8x A100 (80GB)',
+        storage: '230 GB (FP8) / ~810 GB (BF16 Unquantized)',
+        quantFormat: 'FP8 Block-Scaling, AWQ 4-bit, DualPipe MoE, BF16',
+        runtimeEngine: 'vLLM (TP=8, PP=2), SGLang, TensorRT-LLM, Megatron-LM',
+        networkReq: 'High-Speed InfiniBand (3.2 Tbps NDR) / 100% Offline Air-Gapped',
+        inferenceLatency: '~25-45 tokens/sec (Distributed TP8)',
+        powerRequirement: '~5.5 kW – 10.2 kW Server Rack',
+        summary: 'Requires high-performance enterprise cluster nodes with tensor parallelism across multiple 80GB accelerators.'
+      };
+    }
+
+    // Enterprise Multi-GPU (60B - 199B: 70B, 123B, 130B, Mixtral 8x22B)
+    if (
+      paramVal >= 60 ||
+      paramsLower.includes('70b') ||
+      paramsLower.includes('123b') ||
+      paramsLower.includes('8x22b') ||
+      paramsLower.includes('130b') ||
+      nameLower.includes('70b')
+    ) {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'On-Premise Server / High-End Workstation',
+        hardwareTier: 'Enterprise Multi-GPU Rig (40GB–80GB+)',
+        badge: '40GB+ VRAM Min',
+        badgeClass: 'bg-amber-500/15 border-amber-500/30 text-amber-300',
+        minVram: '40 GB VRAM (Q4 GGUF / AWQ 4-bit)',
+        recVram: '80 GB – 160 GB VRAM (1x–2x A100 / 4x RTX 4090)',
+        minRam: '128 GB System RAM',
+        recGpu: '2x–4x RTX 4090 (96GB VRAM) / 1x–2x NVIDIA A100 (80GB) / Apple M2/M3 Ultra (128GB+)',
+        storage: '42 GB (GGUF Q4) / 145 GB (BF16 Full)',
+        quantFormat: 'AWQ, GPTQ, FP8, GGUF (Q4_K_M / Q5_K_M), BF16',
+        runtimeEngine: 'vLLM (TP=2/4), TensorRT-LLM, llama.cpp, TGI, SGLang',
+        networkReq: 'Local LAN / 100% Offline Air-Gapped Safe',
+        inferenceLatency: '~35-70 tokens/sec',
+        powerRequirement: '~850W – 1600W Dedicated PSU',
+        summary: 'Ideal for enterprise on-premise deployments requiring full confidentiality with dual or quad professional GPUs.'
+      };
+    }
+
+    // Prosumer / Workstation scale (20B - 59B / Mixtral 8x7B MoE / 32B / 33B / 90B Vision Q4)
+    if (
+      paramVal >= 20 ||
+      paramsLower.includes('8x7b') ||
+      paramsLower.includes('32b') ||
+      paramsLower.includes('33b') ||
+      nameLower.includes('32b') ||
+      nameLower.includes('8x7b')
+    ) {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'Workstation / Prosumer GPU',
+        hardwareTier: 'High-End Prosumer GPU (24GB VRAM)',
+        badge: '24GB VRAM Min',
+        badgeClass: 'bg-purple-500/15 border-purple-500/30 text-purple-300',
+        minVram: '18 GB – 24 GB VRAM (Q4 Quantized)',
+        recVram: '32 GB – 48 GB VRAM (2x RTX 3090/4090)',
+        minRam: '64 GB System RAM',
+        recGpu: '1x NVIDIA RTX 3090 / 4090 (24GB) or Apple M2/M3 Max (64GB unified memory)',
+        storage: '20 GB (GGUF Q4) / ~65 GB (FP16)',
+        quantFormat: 'GGUF Q4_K_M, AWQ 4-bit, EXL2 (4.5 bpw), BF16',
+        runtimeEngine: 'Ollama, vLLM, llama.cpp, LM Studio, Text Generation WebUI',
+        networkReq: 'Offline Capable / Air-Gapped',
+        inferenceLatency: '~45-90 tokens/sec',
+        powerRequirement: '~450W – 750W GPU System',
+        summary: 'Fits fully in a single 24GB consumer flagship GPU (RTX 3090/4090) with 4-bit quantization or unified memory Mac.'
+      };
+    }
+
+    // Mid-Tier scale (10B - 19B: 11B, 12B, 13B, 14B)
+    if (
+      paramVal >= 10 ||
+      paramsLower.includes('11b') ||
+      paramsLower.includes('12b') ||
+      paramsLower.includes('13b') ||
+      paramsLower.includes('14b') ||
+      nameLower.includes('13b') ||
+      nameLower.includes('14b')
+    ) {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'Local Desktop / Dedicated GPU',
+        hardwareTier: 'Dedicated Mid-Tier GPU (10GB–16GB VRAM)',
+        badge: '10GB VRAM Min',
+        badgeClass: 'bg-indigo-500/15 border-indigo-500/30 text-indigo-300',
+        minVram: '10 GB VRAM (Q4 GGUF / AWQ)',
+        recVram: '16 GB – 24 GB VRAM (FP16 Full Weight)',
+        minRam: '32 GB System RAM',
+        recGpu: 'NVIDIA RTX 3080 (12GB) / RTX 4070 (12GB) / RTX 4080 (16GB) / Apple M2/M3 (32GB)',
+        storage: '9 GB (GGUF Q4) / 28 GB (FP16)',
+        quantFormat: 'GGUF (Q4_K_M / Q8_0), AWQ 4-bit, FP8, BF16',
+        runtimeEngine: 'Ollama, LM Studio, vLLM, llama.cpp, TGI',
+        networkReq: '100% Offline Capable',
+        inferenceLatency: '~60-110 tokens/sec',
+        powerRequirement: '~250W – 350W GPU System',
+        summary: 'Runs easily on 12GB–16GB modern gaming cards or high-RAM workstations with high throughput.'
+      };
+    }
+
+    // Standard Consumer scale (5B - 9B: 7B, 8B, SDXL, SD3)
+    if (
+      paramVal >= 5 ||
+      paramsLower.includes('7b') ||
+      paramsLower.includes('8b') ||
+      nameLower.includes('7b') ||
+      nameLower.includes('8b') ||
+      cat === 'image'
+    ) {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'Consumer PC / Laptop / Gaming Rig',
+        hardwareTier: 'Standard Consumer GPU (6GB–8GB VRAM)',
+        badge: '6GB VRAM Min',
+        badgeClass: 'bg-cyan-500/15 border-cyan-500/30 text-cyan-300',
+        minVram: '6 GB VRAM (Q4 Quantized) / 8 GB (Diffusion Image)',
+        recVram: '12 GB – 16 GB VRAM (FP16 / Q8)',
+        minRam: '16 GB – 32 GB System RAM',
+        recGpu: 'NVIDIA RTX 3060 (12GB) / RTX 4060 (8GB) / Apple M1/M2/M3 (16GB)',
+        storage: '5.2 GB (GGUF Q4) / ~16 GB (FP16 SafeTensors)',
+        quantFormat: 'GGUF (Q4_K_M / Q5_K_M / Q8_0), AWQ, EXL2, BF16',
+        runtimeEngine: 'Ollama, LM Studio, llama.cpp, ComfyUI, Automatic1111',
+        networkReq: '100% Offline Capable / No Internet Needed',
+        inferenceLatency: '~80-140 tokens/sec (or 2-5s per 1024x1024 image)',
+        powerRequirement: '~150W – 250W System',
+        summary: 'The sweet spot for local execution on laptops, consumer gaming PCs, and Apple Silicon Macs.'
+      };
+    }
+
+    // Small scale (1B - 4B: 1B, 2B, 3B, 3.8B, Whisper Large)
+    if (paramVal >= 1 || paramsLower.includes('1b') || paramsLower.includes('2b') || paramsLower.includes('3b') || cat === 'audio') {
+      return {
+        isLocalSupported: true,
+        deploymentMode: 'Lightweight Laptop / Edge Device',
+        hardwareTier: 'Entry-Level GPU / Modern CPU (4GB VRAM)',
+        badge: '4GB VRAM Min',
+        badgeClass: 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300',
+        minVram: '3 GB – 4 GB VRAM (Q4) or 8GB Host RAM for CPU',
+        recVram: '6 GB – 8 GB VRAM',
+        minRam: '16 GB System RAM',
+        recGpu: 'NVIDIA GTX 1650 / RTX 3050 (4GB) / Apple M1 (8GB-16GB) / Intel Core Ultra / AMD Ryzen AI',
+        storage: '2.2 GB (GGUF Q4) / 6 GB (FP16)',
+        quantFormat: 'GGUF Q4_K_M, ONNX, AWQ, BF16',
+        runtimeEngine: 'Ollama, LM Studio, llama.cpp, whisper.cpp, Jan.ai',
+        networkReq: '100% Offline Capable',
+        inferenceLatency: '~100-180 tokens/sec (or real-time audio 0.1x RTF)',
+        powerRequirement: '~45W – 100W Laptop / Mini-PC',
+        summary: 'Extremely fast on modern laptops, mini PCs, and embedded edge AI chips with low memory footprint.'
+      };
+    }
+
+    // Ultra-lightweight / Pre-Transformer / Classical (< 1B: BERT, ELMo, GPT-1, T5-Base)
+    return {
+      isLocalSupported: true,
+      deploymentMode: 'Universal CPU / Any Machine / Micro-Edge',
+      hardwareTier: 'Universal CPU / Integrated Graphics (< 2GB)',
+      badge: '2GB VRAM / CPU',
+      badgeClass: 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300',
+      minVram: '1 GB – 2 GB VRAM (or CPU RAM)',
+      recVram: '4 GB VRAM',
+      minRam: '8 GB System RAM',
+      recGpu: 'Any Standard CPU (Intel / AMD / ARM) or Basic Integrated GPU',
+      storage: '400 MB – 1.8 GB (SafeTensors / ONNX / GGUF)',
+      quantFormat: 'FP32, FP16, ONNX, INT8, GGUF',
+      runtimeEngine: 'HuggingFace Transformers, ONNX Runtime, PyTorch, llama.cpp',
+      networkReq: '100% Offline Capable',
+      inferenceLatency: '~150-300 tokens/sec (sub-5ms classification)',
+      powerRequirement: '~15W – 45W Standard Computer',
+      summary: 'Ultra-lightweight footprint capable of running on virtually any modern CPU, Raspberry Pi, or browser WASM.'
+    };
+  }
+
+  // ── Managed Cloud API Models (OpenAI, Anthropic, Google Gemini, Midjourney, Sora, etc.) ──
+  let apiTier = 'Standard Cloud API';
+  let latency = '~120-250ms TTFT (Time to First Token)';
+  let bandwidth = '> 10 Mbps Broadband Internet';
+  let badgeLabel = 'Cloud API (0 GB VRAM)';
+
+  if (nameLower.includes('realtime') || nameLower.includes('voice') || cat === 'audio') {
+    apiTier = 'Ultra-Low Latency Audio/Voice Stream';
+    latency = '< 200ms Bi-directional Voice Turnaround';
+    bandwidth = '> 25 Mbps Stable Low-Jitter WebRTC';
+    badgeLabel = 'Real-time Audio API';
+  } else if (cat === 'video' || nameLower.includes('sora') || nameLower.includes('veo') || nameLower.includes('kling')) {
+    apiTier = 'Asynchronous Video Rendering Queue';
+    latency = '15s – 60s Generation Queue';
+    bandwidth = '> 30 Mbps for 1080p/4K Video Payloads';
+    badgeLabel = 'Video Render Cloud';
+  } else if (nameLower.includes('thinking') || nameLower.includes('o1') || nameLower.includes('o3') || nameLower.includes('r1') || nameLower.includes('3.7')) {
+    apiTier = 'Deep Reasoning Deliberation Pipeline';
+    latency = 'Extended CoT Reasoning Budget (1s – 30s)';
+    bandwidth = '> 15 Mbps Broadband Internet';
+    badgeLabel = 'Reasoning Cloud API';
+  }
+
+  return {
+    isLocalSupported: false,
+    deploymentMode: 'Serverless Managed Cloud API',
+    hardwareTier: 'Zero Local Hardware Required (Provider Hosted)',
+    badge: badgeLabel,
+    badgeClass: 'bg-blue-500/15 border-blue-500/30 text-blue-300',
+    minVram: '0 GB VRAM (Runs in Cloud Provider Data Centers)',
+    recVram: 'Provider Cluster (NVIDIA H100 / Google TPU v5p / AWS Trainium)',
+    minRam: '2 GB – 4 GB RAM (Client Host / App Server)',
+    recGpu: 'Zero Local GPU Needed (Runs on any Smartphone, Browser, or Server)',
+    storage: '< 50 MB (Official Client SDKs: Python, Node.js, Go, cURL)',
+    quantFormat: 'Provider-Optimized Native Precision (FP16 / FP8 MoE)',
+    runtimeEngine: 'HTTPS REST API, SSE Streaming, WebSocket, WebRTC',
+    networkReq: bandwidth,
+    inferenceLatency: latency,
+    powerRequirement: '0W (Serverless API Compute)',
+    summary: 'No expensive local GPUs or memory needed. Managed and scaled serverlessly by the provider with zero infrastructure maintenance.'
+  };
+}
+
 
 

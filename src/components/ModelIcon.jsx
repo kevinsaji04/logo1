@@ -21,6 +21,8 @@ const ICON_MAP = {
   'Exa':                  'EXA.png',
   'Genmo':                'genmo.png',
   'Google':               'google.png',
+  'Google DeepMind':      'google.png',
+  'Google Research':      'google.png',
   'GPTZero':              'gptzeron.jfif',
   'HiDream':              'hidream.png',
   'Ideogram':             'ideogram.png',

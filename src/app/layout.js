@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata = {
   title: 'AI Model Decision Tree',
-  description: 'Interactive AI Model Decision Tree — Model Evolution & AI Landscape Analysis',
+  description: 'Interactive AI Model Directory & Evolutionary Intelligence Tree',
 };
 
 export default function RootLayout({ children }) {

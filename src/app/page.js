@@ -1,10 +1,15 @@
+import { Suspense } from 'react';
 import ModelGrid from '@/components/ModelGrid';
 
 export const metadata = {
-  title: 'NextGen AI Model Directory — 553 Models',
-  description: 'Explore 553 cutting-edge AI models. Browse by category, developer, and modality.',
+  title: 'NextGen AI Model Directory — 610 Models',
+  description: 'Explore 610 cutting-edge AI models. Browse by category, developer, and modality.',
 };
 
 export default function Home() {
-  return <ModelGrid />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#0a0d14]" />}>
+      <ModelGrid />
+    </Suspense>
+  );
 }

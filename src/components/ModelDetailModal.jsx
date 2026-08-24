@@ -1,6 +1,13 @@
 'use client';
 
-import { CAT_MAP, CAT_TAG, COUNTRY_FLAG, getArchitectureDetails, getModelContextInfo } from '@/data/intelligence_data';
+import {
+  CAT_MAP,
+  CAT_TAG,
+  COUNTRY_FLAG,
+  getArchitectureDetails,
+  getModelContextInfo,
+  getModelHardwareRequirements
+} from '@/data/intelligence_data';
 
 export default function ModelDetailModal({ model, onClose }) {
   if (!model) return null;
@@ -9,6 +16,7 @@ export default function ModelDetailModal({ model, onClose }) {
   const flag = COUNTRY_FLAG[country] || '🌐';
   const arch = getArchitectureDetails(model);
   const ctx = getModelContextInfo(model);
+  const hw = getModelHardwareRequirements(model);
 
   return (
     <div
@@ -34,6 +42,11 @@ export default function ModelDetailModal({ model, onClose }) {
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <h2 className="text-xl font-bold text-white leading-tight">{name}</h2>
+              {hw && (
+                <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${hw.badgeClass}`}>
+                  🖥️ {hw.badge}
+                </span>
+              )}
               {arch && (
                 <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${arch.badgeClass}`}>
                   {arch.icon} {arch.category}
@@ -121,6 +134,79 @@ export default function ModelDetailModal({ model, onClose }) {
               </div>
               <p className="text-[11px] text-[#ccd3e3] leading-relaxed pt-1">
                 <strong className="text-white">Best Workload: </strong>{ctx.bestFor}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* ── Minimum System & Hardware Requirements to Run ── */}
+        {hw && (
+          <div className="mb-5 bg-[#0a0d14]/80 p-4 rounded-xl border border-cyan-500/25 shadow-inner">
+            <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-[#6378ff]/15">
+              <div className="flex items-center gap-2">
+                <span className="text-base">🖥️</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-white">
+                  Minimum Hardware & System Requirements
+                </span>
+              </div>
+              <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${hw.badgeClass}`}>
+                {hw.deploymentMode}
+              </span>
+            </div>
+
+            {/* 4-Box Key Hardware Requirements Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+              <div className="bg-[#111520] p-2.5 rounded-lg border border-[#6378ff]/10">
+                <span className="text-[9px] font-mono text-[#8a94b0] block mb-0.5">MINIMUM VRAM</span>
+                <span className="text-xs font-bold text-cyan-300 leading-tight block">{hw.minVram}</span>
+              </div>
+              <div className="bg-[#111520] p-2.5 rounded-lg border border-[#6378ff]/10">
+                <span className="text-[9px] font-mono text-[#8a94b0] block mb-0.5">RECOMMENDED GPU</span>
+                <span className="text-xs font-bold text-white leading-tight block truncate" title={hw.recGpu}>{hw.recGpu}</span>
+              </div>
+              <div className="bg-[#111520] p-2.5 rounded-lg border border-[#6378ff]/10">
+                <span className="text-[9px] font-mono text-[#8a94b0] block mb-0.5">SYSTEM RAM</span>
+                <span className="text-xs font-bold text-emerald-400 leading-tight block">{hw.minRam}</span>
+              </div>
+              <div className="bg-[#111520] p-2.5 rounded-lg border border-[#6378ff]/10">
+                <span className="text-[9px] font-mono text-[#8a94b0] block mb-0.5">DISK STORAGE</span>
+                <span className="text-xs font-bold text-amber-400 leading-tight block">{hw.storage}</span>
+              </div>
+            </div>
+
+            {/* Quantization & Runtime Details */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+              <div className="bg-[#111520]/80 p-2.5 rounded-lg border border-slate-800 text-[11px]">
+                <span className="text-slate-500 block text-[9px] font-mono uppercase tracking-wider mb-0.5">QUANTIZATION / PRECISION</span>
+                <span className="text-slate-200 font-semibold">{hw.quantFormat}</span>
+              </div>
+              <div className="bg-[#111520]/80 p-2.5 rounded-lg border border-slate-800 text-[11px]">
+                <span className="text-slate-500 block text-[9px] font-mono uppercase tracking-wider mb-0.5">SUPPORTED RUNTIME</span>
+                <span className="text-indigo-300 font-semibold">{hw.runtimeEngine}</span>
+              </div>
+            </div>
+
+            {/* Operational Metrics (Network, Latency, Power) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3 text-[11px]">
+              <div className="bg-[#111520]/60 p-2 rounded-lg border border-slate-800/80">
+                <span className="text-slate-500 block text-[9px] font-mono">DEPLOYMENT / NETWORK</span>
+                <span className="text-slate-300 font-medium">{hw.networkReq}</span>
+              </div>
+              <div className="bg-[#111520]/60 p-2 rounded-lg border border-slate-800/80">
+                <span className="text-slate-500 block text-[9px] font-mono">SPEED / LATENCY</span>
+                <span className="text-emerald-400 font-medium">{hw.inferenceLatency}</span>
+              </div>
+              <div className="bg-[#111520]/60 p-2 rounded-lg border border-slate-800/80">
+                <span className="text-slate-500 block text-[9px] font-mono">POWER CONSUMPTION</span>
+                <span className="text-slate-300 font-medium">{hw.powerRequirement}</span>
+              </div>
+            </div>
+
+            {/* Summary Guideline */}
+            <div className="bg-[#111520]/60 p-2.5 rounded-lg text-xs">
+              <p className="text-[11px] text-[#ccd3e3] leading-relaxed">
+                <strong className="text-cyan-400 font-mono text-[10px] uppercase tracking-wider mr-1.5">Hardware Note:</strong>
+                {hw.summary}
               </p>
             </div>
           </div>

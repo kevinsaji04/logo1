@@ -234,7 +234,7 @@ export default function IntelligenceDashboard() {
           className="text-4xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-300 bg-clip-text text-transparent mb-4 max-w-4xl mx-auto leading-tight"
           style={{ fontFamily: 'var(--font-outfit)' }}
         >
-          Explore the Full Landscape of AI Intelligence
+          Explore the Full Directory of AI Intelligence
         </h1>
 
         <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-10">

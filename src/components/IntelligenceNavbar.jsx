@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 
@@ -10,7 +10,6 @@ export default function IntelligenceNavbar({ activeSection = 'overview' }) {
     { href: '#rankings', label: 'Rankings' },
     { href: '/decision-tree', label: '🎯 Decision Tree', isRoute: true, isHighlight: true },
     { href: '/tree', label: '🌳 Evolutionary Tree', isRoute: true },
-    { href: '/landscape', label: '🗺️ Landscape', isRoute: true },
     { href: '#countries', label: 'Origins' },
     { href: '#clients', label: 'Top Clients' },
     { href: '#benchmarks', label: 'Benchmarks' },

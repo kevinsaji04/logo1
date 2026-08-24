@@ -8,6 +8,8 @@ import { useState } from 'react';
 const LOGO_MAP = {
   'OpenAI':            { slug: 'openai',       bg: '#000000', color: 'ffffff' },
   'Google':            { slug: 'google',        bg: '#ffffff', color: '4285F4' },
+  'Google DeepMind':   { slug: 'google',        bg: '#ffffff', color: '4285F4' },
+  'Google Research':   { slug: 'google',        bg: '#ffffff', color: '4285F4' },
   'Anthropic':         { slug: 'anthropic',     bg: '#cc785c', color: 'ffffff' },
   'DeepSeek':          { slug: 'deepseek',      bg: '#ffffff', color: '4D6BFE' },
   'xAI':               { slug: 'x',             bg: '#000000', color: 'ffffff' },
@@ -15,6 +17,7 @@ const LOGO_MAP = {
   'Alibaba':           { slug: 'alibaba',       bg: '#ff6a00', color: 'ffffff' },
   'Meta':              { slug: 'meta',          bg: '#0082fb', color: 'ffffff' },
   'Mistral AI':        { slug: 'mistral',       bg: '#ff7000', color: 'ffffff' },
+  'Stability AI':      { slug: 'stabilityai',   bg: '#0f0f11', color: 'ffffff' },
   'Runway':            { slug: 'runway',        bg: '#161616', color: 'ffffff' },
   'ElevenLabs':        { slug: 'elevenlabs',    bg: '#000000', color: 'ffffff' },
   'Perplexity':        { slug: 'perplexity',    bg: '#1fb8cd', color: 'ffffff' },

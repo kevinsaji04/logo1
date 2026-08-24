@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import DeveloperIcon from '@/components/DeveloperIcon';
 import ModelIcon from '@/components/ModelIcon';
 import CategoryBadge from '@/components/CategoryBadge';
@@ -17,25 +18,28 @@ import {
   COMPLIANCE,
   COUNTRY_FLAG,
   getArchitectureDetails,
-  getModelContextInfo
+  getModelContextInfo,
+  getModelHardwareRequirements
 } from '@/data/intelligence_data';
 
-// Map raw 383 array models to object format compatible with original ModelGrid
+// Map raw 610 array models to object format compatible with original ModelGrid
 const FORMATTED_MODELS = RAW_MODELS.map((m) => {
   const [id, name, developer, cat, country, released, params, access, priceIn, priceOut, local, score, desc, tags, color, letter] = m;
   const ctx = getModelContextInfo(m);
+  const hw = getModelHardwareRequirements(m);
   
   // map category code to display category
   let category = 'Text';
   if (cat === 'image') category = 'Image';
   else if (cat === 'video') category = 'Video';
   else if (cat === 'audio') category = 'Audio';
-  else if (cat === 'code') category = 'Code/Agent';
+  else if (cat === 'code') category = 'Code';
   else if (cat === 'search') category = 'Search';
-  else if (cat === 'reason') category = 'Text';
-  else if (cat === 'multi') category = 'Text';
+  else if (cat === 'reason') category = 'Reasoning';
+  else if (cat === 'multi') category = 'Multimodal';
+  else if (cat === 'tool') category = 'Tools';
 
-  // Derive Transformer Architecture Type:
+  // Derive Transformer Architecture Type (String for badges, filters, and rendering):
   let arch = 'Decoder-Only';
   const nameLower = name.toLowerCase();
   const descLower = (desc || '').toLowerCase();
@@ -57,12 +61,14 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
     arch = 'Encoder-Only';
   }
 
+  const archDetails = getArchitectureDetails(m);
+
   return {
     id,
     name,
     developer,
     category,
-    arch,
+    cat,
     country,
     released,
     params,
@@ -71,12 +77,14 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
     priceOut,
     local,
     score,
-    context: ctx,
     description: desc,
-    color: color,
-    letter: letter,
-    cat: cat,
     tags: tags || [],
+    color: color || '#6378ff',
+    letter: letter || name.charAt(0),
+    arch,
+    archDetails,
+    context: ctx,
+    hardware: hw,
     gradient: color === '#f59e0b' ? 'from-amber-600 to-orange-800' :
               color === '#10b981' ? 'from-emerald-600 to-teal-800' :
               color === '#ec4899' ? 'from-pink-600 to-rose-800' :
@@ -84,6 +92,8 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
               color === '#3b82f6' ? 'from-blue-600 to-indigo-800' :
               color === '#8b5cf6' ? 'from-purple-600 to-violet-800' : 'from-indigo-600 to-purple-800',
     features: [
+      `Hardware: ${hw?.badge || (local ? 'Local GPU' : 'Cloud API')}`,
+      `Min VRAM: ${hw?.minVram || 'N/A'}`,
       `Context: ${ctx?.label || '128K tokens'}`,
       `Architecture: ${arch}`,
       `Parameters: ${params}`,
@@ -95,6 +105,7 @@ const FORMATTED_MODELS = RAW_MODELS.map((m) => {
 });
 
 export default function ModelGrid({ models = FORMATTED_MODELS }) {
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState('directory'); // directory | charts | rankings | origins | clients
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
@@ -106,6 +117,31 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
   const [selectedModel, setSelectedModel] = useState(models[0] || null);
   const [visible, setVisible] = useState(100);
   const { compareList, toggleModel, isSelected, setShowPanel } = useCompare();
+
+  // Support direct URL query parameter routing from Evolutionary Tree
+  useEffect(() => {
+    const modelParam = searchParams?.get('model');
+    const searchParam = searchParams?.get('search');
+    const target = modelParam || searchParam;
+
+    if (target) {
+      const q = target.toLowerCase().trim();
+      const found = models.find(m => {
+        const nameStr = String(m.name || '').toLowerCase();
+        const idStr = String(m.id || '').toLowerCase();
+        const devStr = String(m.developer || '').toLowerCase();
+        return nameStr === q || idStr === q || nameStr.includes(q) || idStr.includes(q) || devStr === q;
+      });
+
+      if (found) {
+        setSelectedModel(found);
+        setSearch(found.name);
+      } else {
+        setSearch(target);
+      }
+      setActiveTab('directory');
+    }
+  }, [searchParams, models]);
 
   const developers = useMemo(() => ['All', ...[...new Set(models.map(m => m.developer))].sort()], [models]);
 
@@ -497,7 +533,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                 <div className="flex flex-col items-center justify-center min-h-[300px] rounded-2xl border border-slate-800 text-center">
                   <span className="text-4xl mb-3">🔍</span>
                   <span className="text-slate-300 font-semibold text-sm">No models found</span>
-                  <button onClick={() => { setSearch(''); setCategory('All'); setDeveloper('All'); }}
+                  <button onClick={() => { setSearch(''); setCategory('all'); setDeveloper('All'); setArchitecture('All'); setAccessFilter('All'); setContextFilter('All'); }}
                     className="mt-4 text-xs text-indigo-400 border border-indigo-500/20 px-4 py-1.5 rounded-xl hover:bg-indigo-600/10 transition-colors">
                     Reset Filters
                   </button>
@@ -512,7 +548,7 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                       return (
                         <div key={model.id}
                           onClick={() => setSelectedModel(model)}
-                          className={`relative flex flex-col items-center p-4 rounded-2xl cursor-pointer border transition-all duration-200 select-none text-center group min-h-[135px] justify-between
+                          className={`relative flex flex-col items-center justify-center p-4 rounded-2xl cursor-pointer border transition-all duration-200 select-none text-center group min-h-[120px] gap-2.5
                             ${selected
                               ? 'bg-indigo-950/60 border-indigo-500/70 -translate-y-1 shadow-lg shadow-indigo-600/20 ring-1 ring-indigo-500/40'
                               : active
@@ -533,31 +569,15 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                           >
                             {selected ? '✓' : '+'}
                           </button>
-                          <div className="mb-2 group-hover:scale-105 transition-transform duration-200">
+                          <div className="group-hover:scale-105 transition-transform duration-200 mb-1">
                             <ModelIcon model={model} />
                           </div>
-                          <span className="text-xs font-bold text-slate-200 group-hover:text-white line-clamp-2">
+                          <span className="text-xs font-bold text-slate-200 group-hover:text-white line-clamp-2 leading-tight">
                             {model.name}
                           </span>
-                          <div className="mt-2 flex flex-wrap gap-1 items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
-                            <span className="text-[9px] text-slate-400 bg-slate-950/60 px-1.5 py-0.5 rounded border border-slate-800">
-                              {model.developer}
-                            </span>
-                            {model.context && (
-                              <span className="text-[9px] px-1.5 py-0.5 rounded border font-mono bg-indigo-500/10 text-indigo-300 border-indigo-500/25">
-                                {model.context.badge}
-                              </span>
-                            )}
-                            <span className={`text-[9px] px-1.5 py-0.5 rounded border font-mono ${
-                              model.arch === 'Decoder-Only'
-                                ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
-                                : model.arch === 'Encoder-Decoder'
-                                ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                                : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                            }`}>
-                              {model.arch}
-                            </span>
-                          </div>
+                          <span className="text-[9px] text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded-md border border-slate-800/80 truncate max-w-full font-medium mt-0.5">
+                            {model.developer}
+                          </span>
                         </div>
                       );
                     })}
@@ -704,6 +724,42 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                       <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
                         <span>Doc Capacity: <strong className="text-slate-200">{selectedModel.context.pages}</strong></span>
                         <span className="text-indigo-300 font-semibold">{selectedModel.context.needleRecall} Recall</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Minimum System & Hardware Requirements */}
+                  {selectedModel.hardware && (
+                    <div className="border-t border-slate-800 px-4 py-3 bg-cyan-950/20">
+                      <div className="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-300 mb-1.5">
+                        <span className="flex items-center gap-1"><span>🖥️</span> Min Hardware Specs</span>
+                        <span className={`px-2 py-0.5 rounded text-[9px] font-mono border ${selectedModel.hardware.badgeClass}`}>
+                          {selectedModel.hardware.badge}
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono mt-1 mb-2">
+                        <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                          <span className="text-slate-500 block text-[9px]">MIN VRAM</span>
+                          <span className="text-cyan-300 font-semibold">{selectedModel.hardware.minVram}</span>
+                        </div>
+                        <div className="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                          <span className="text-slate-500 block text-[9px]">SYSTEM RAM</span>
+                          <span className="text-slate-200 font-semibold">{selectedModel.hardware.minRam}</span>
+                        </div>
+                      </div>
+                      <div className="bg-slate-900/60 p-2 rounded border border-slate-800/80 text-[10px] space-y-1">
+                        <div className="flex justify-between text-slate-400">
+                          <span>GPU/Target:</span>
+                          <span className="text-slate-200 truncate max-w-[170px]" title={selectedModel.hardware.recGpu}>{selectedModel.hardware.recGpu}</span>
+                        </div>
+                        <div className="flex justify-between text-slate-400">
+                          <span>Storage:</span>
+                          <span className="text-amber-400 font-mono">{selectedModel.hardware.storage}</span>
+                        </div>
+                        <div className="flex justify-between text-slate-400">
+                          <span>Runtime:</span>
+                          <span className="text-indigo-300 truncate max-w-[170px]" title={selectedModel.hardware.runtimeEngine}>{selectedModel.hardware.runtimeEngine}</span>
+                        </div>
                       </div>
                     </div>
                   )}
