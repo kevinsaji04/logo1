@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import ModelIcon from '@/components/ModelIcon';
 import { NODES, EDGES, FAMILY_COLORS, W, H, NW, NH, YEAR_Y } from '@/data/ai_tree';
 import { getModelHardwareRequirements } from '@/data/intelligence_data';
@@ -25,6 +25,10 @@ const DEV_BADGES = {
 
 export default function EvolutionaryTree() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const targetModelParam = searchParams ? searchParams.get('model') : null;
+  const [focusedModelName, setFocusedModelName] = useState(null);
+
   const [selectedFamily, setSelectedFamily] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [hoveredId, setHoveredId] = useState(null);
@@ -132,15 +136,44 @@ export default function EvolutionaryTree() {
     return () => el.removeEventListener('wheel', onWheel);
   }, [onWheel]);
 
-  // Fit view on mount
+  // Fit view on mount or auto-focus on target model if provided in URL
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
+    if (targetModelParam) {
+      const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const targetNorm = norm(targetModelParam);
+
+      const foundNode = NODES.find(n => {
+        const nNorm = norm(n.name);
+        const idNorm = norm(n.id);
+        return nNorm === targetNorm || idNorm === targetNorm || nNorm.includes(targetNorm) || targetNorm.includes(nNorm);
+      });
+
+      if (foundNode && nodeCoords.has(foundNode.id)) {
+        const coords = nodeCoords.get(foundNode.id);
+        const { width, height } = el.getBoundingClientRect();
+        const targetZoom = 1.15;
+
+        setZoom(targetZoom);
+        setPan({
+          x: width / 2 - (coords.x + NW / 2) * targetZoom,
+          y: height / 2 - (coords.y + NH / 2) * targetZoom
+        });
+        setHoveredId(foundNode.id);
+        setFocusedModelName(foundNode.name);
+
+        const timer = setTimeout(() => setFocusedModelName(null), 6000);
+        return () => clearTimeout(timer);
+      }
+    }
+
     const { width, height } = el.getBoundingClientRect();
     const fitZoom = Math.min(width / W, height / H) * 0.95;
     setZoom(Math.max(MIN_ZOOM, Math.min(fitZoom, 1)));
     setPan({ x: (width - W * fitZoom) / 2, y: (height - H * fitZoom) / 2 });
-  }, []);
+  }, [targetModelParam, nodeCoords]);
 
   const resetView = () => {
     const el = containerRef.current;
@@ -256,6 +289,13 @@ export default function EvolutionaryTree() {
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
       >
+        {/* Floating Focus Indicator Banner */}
+        {focusedModelName && (
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-40 px-4 py-2 rounded-2xl bg-emerald-950/90 border border-emerald-500/60 text-emerald-300 text-xs font-bold shadow-2xl backdrop-blur-xl flex items-center gap-2 animate-bounce">
+            <span>🎯</span> Focused on <strong className="text-white font-mono">{focusedModelName}</strong> in Evolutionary Tree
+          </div>
+        )}
+
         {/* Transformed Canvas Container */}
         <div
           style={{

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import {
   CAT_MAP,
   CAT_TAG,
@@ -344,6 +345,17 @@ export default function ModelDetailModal({ model, onClose }) {
               </span>
             ))}
           </div>
+        </div>
+
+        {/* Actions */}
+        <div className="mt-5 pt-4 border-t border-[#6378ff]/15 flex items-center gap-3">
+          <Link
+            href={`/tree?model=${encodeURIComponent(name)}`}
+            className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600/20 via-teal-600/20 to-emerald-600/20 hover:from-emerald-600/30 hover:to-teal-600/30 border border-emerald-500/40 text-emerald-300 text-xs font-bold transition text-center flex items-center justify-center gap-2 shadow-sm"
+          >
+            <span>🌳</span>
+            <span>View in Evolutionary Tree →</span>
+          </Link>
         </div>
       </div>
     </div>

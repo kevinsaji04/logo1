@@ -552,6 +552,16 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                               ? 'bg-slate-800/90 border-indigo-500/80 -translate-y-1 shadow-xl shadow-indigo-600/15 ring-2 ring-indigo-500/50'
                               : 'bg-slate-900/40 border-slate-800 hover:bg-slate-800/40 hover:border-slate-700 hover:-translate-y-0.5'
                             }`}>
+                          {/* Evolutionary Tree quick link */}
+                          <Link
+                            href={`/tree?model=${encodeURIComponent(model.name)}`}
+                            onClick={e => e.stopPropagation()}
+                            title={`View ${model.name} in Evolutionary Tree`}
+                            className="absolute top-1.5 left-1.5 w-5 h-5 rounded-md border border-slate-700/80 bg-slate-900/90 text-[10px] flex items-center justify-center text-slate-400 opacity-0 group-hover:opacity-100 hover:border-emerald-500 hover:text-emerald-300 transition-all z-10 shadow-sm"
+                          >
+                            🌳
+                          </Link>
+
                           {/* Compare checkbox */}
                           <button
                             onClick={e => { e.stopPropagation(); if (!atLimit) toggleModel(model); }}
@@ -661,6 +671,17 @@ export default function ModelGrid({ models = FORMATTED_MODELS }) {
                         </div>
                       </div>
                     )}
+
+                    {/* View in Evolutionary Tree Button */}
+                    <div className="mt-3.5 pt-3 border-t border-slate-800/80">
+                      <Link
+                        href={`/tree?model=${encodeURIComponent(selectedModel.name)}`}
+                        className="flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-emerald-500/15 hover:from-emerald-500/25 hover:to-teal-500/25 border border-emerald-500/30 text-emerald-300 text-xs font-bold transition shadow-sm group"
+                      >
+                        <span className="group-hover:scale-110 transition-transform text-sm">🌳</span>
+                        <span>View Lineage in Evolutionary Tree →</span>
+                      </Link>
+                    </div>
                   </div>
 
                   {/* Architecture Characteristics Box */}
