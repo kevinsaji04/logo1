@@ -17353,6 +17353,52 @@ export const RAW_MODELS = [
     ],
     "#10b981",
     "OP"
+  ],
+  [
+    "or_minimax_minimax-m2_7_free",
+    "MiniMax M2.7 (free)",
+    "MiniMax",
+    "llm",
+    "China",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    83,
+    "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
+    [
+      "llm",
+      "china",
+      "minimax",
+      "open"
+    ],
+    "#6366f1",
+    "MI"
+  ],
+  [
+    "or_mistralai_devstral-2512",
+    "Devstral 2 2512",
+    "Mistral AI",
+    "llm",
+    "France",
+    "2025",
+    "Frontier",
+    "open",
+    0.44,
+    2.2,
+    true,
+    86,
+    "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring...",
+    [
+      "llm",
+      "france",
+      "mistralai",
+      "open"
+    ],
+    "#ff7000",
+    "MI"
   ]
 ];
 
