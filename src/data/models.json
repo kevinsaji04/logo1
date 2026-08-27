@@ -17444,5 +17444,28 @@
     ],
     "#6366f1",
     "MI"
+  ],
+  [
+    "or_inclusionai_ling-3_0-flash-fin_free",
+    "Ling 3.0 Flash Fin (free)",
+    "Inclusionai",
+    "llm",
+    "USA",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    82,
+    "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+    [
+      "llm",
+      "usa",
+      "inclusionai",
+      "open"
+    ],
+    "#6366f1",
+    "IN"
   ]
 ]
