@@ -17376,5 +17376,73 @@
     ],
     "#ff7000",
     "MI"
+  ],
+  [
+    "or_qwen_qwen3_8-flash",
+    "Qwen3.8 Flash",
+    "Alibaba",
+    "image",
+    "China",
+    "2026",
+    "Frontier",
+    "open",
+    0.15,
+    0.47,
+    true,
+    84,
+    "Qwen3.8 Flash is a multimodal reasoning model from Alibaba. It is suited for coding assistance, agentic workflows, visual understanding, document and codebase analysis, desktop interaction, chart analysis, and long-video analysis.",
+    [
+      "image",
+      "china",
+      "alibaba",
+      "open"
+    ],
+    "#ff6a00",
+    "AL"
+  ],
+  [
+    "or_z-ai_glm-5_3-flash",
+    "GLM 5.3 Flash",
+    "Z-ai",
+    "image",
+    "USA",
+    "2026",
+    "Frontier",
+    "api",
+    0.075,
+    0.25,
+    false,
+    85,
+    "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
+    [
+      "image",
+      "usa",
+      "z-ai"
+    ],
+    "#6366f1",
+    "Z-"
+  ],
+  [
+    "or_minimax_minimax-m3_free",
+    "MiniMax M3 (free)",
+    "MiniMax",
+    "image",
+    "China",
+    "2026",
+    "Frontier",
+    "open",
+    0,
+    0,
+    true,
+    86,
+    "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
+    [
+      "image",
+      "china",
+      "minimax",
+      "open"
+    ],
+    "#6366f1",
+    "MI"
   ]
 ]
